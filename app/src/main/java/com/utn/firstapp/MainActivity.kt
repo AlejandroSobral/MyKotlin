@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnRed: Button
     private lateinit var btnBlue: Button
 
-    var labelText: String = "Hi Text "
+    var labelText: String = "Appearing test"
     var labelTextVoid: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         btnBlue = findViewById(R.id.btnBlue)
 
 
+
         btnShow.setOnClickListener {
             label.text = labelText
         }
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnRed.setOnClickListener {
-            label.setTextColor(Color.parseColor("#0aad3f"))
+            label.setTextColor(Color.parseColor("#0afd3f"))
         }
 
         btnBlue.setOnClickListener {
