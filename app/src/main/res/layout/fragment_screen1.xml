@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Screen1Fragment">
+
+    <Button
+        android:id="@+id/btnNav2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="352dp"
+        android:layout_marginEnd="127dp"
+        android:layout_marginBottom="331dp"
+        android:text="Login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtScreen1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="111dp"
+        android:layout_marginEnd="177dp"
+        android:layout_marginBottom="222dp"
+        android:text="Welcome Screen"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnNav2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtInput_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="User"
+        android:inputType="textEmailAddress"
+        android:text="User"
+        app:layout_constraintBottom_toTopOf="@+id/txtInput_password"
+        app:layout_constraintEnd_toEndOf="@+id/txtScreen1"
+        app:layout_constraintStart_toStartOf="@+id/txtScreen1"
+        app:layout_constraintTop_toBottomOf="@+id/txtScreen1" />
+
+    <EditText
+        android:id="@+id/txtInput_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPersonName|textPassword"
+        android:text="Password"
+        app:layout_constraintBottom_toTopOf="@+id/btnNav2"
+        app:layout_constraintStart_toStartOf="@+id/txtInput_user" />
+</androidx.constraintlayout.widget.ConstraintLayout>
