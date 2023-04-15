@@ -2,6 +2,6 @@ package com.utn.firstapp.fragments
 
 import androidx.lifecycle.ViewModel
 
-class Screen2ViewModel : ViewModel() {
+class LoginFrgmtViewModel : ViewModel() {
     // TODO: Implement the ViewModel
 }

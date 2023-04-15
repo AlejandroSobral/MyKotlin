@@ -3,20 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navgraph"
-    app:startDestination="@id/screen1Fragment">
+    app:startDestination="@id/LoginFragment">
 
     <fragment
-        android:id="@+id/screen1Fragment"
-        android:name="com.utn.firstapp.fragments.Screen1Fragment"
-        android:label="fragment_screen1"
-        tools:layout="@layout/fragment_screen1" >
+        android:id="@+id/LoginFragment"
+        android:name="com.utn.firstapp.fragments.LoginFrgmt"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_screen1">
         <action
-            android:id="@+id/action_screen1Fragment_to_screen2Fragment"
-            app:destination="@id/screen2Fragment" />
+            android:id="@+id/action_LoginFragment_to_HomeFragment"
+            app:destination="@id/HomeFragment" />
     </fragment>
     <fragment
-        android:id="@+id/screen2Fragment"
-        android:name="com.utn.firstapp.fragments.Screen2Fragment"
-        android:label="fragment_screen2"
-        tools:layout="@layout/fragment_screen2" />
+        android:id="@+id/HomeFragment"
+        android:name="com.utn.firstapp.fragments.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_screen2">
+        <action
+            android:id="@+id/action_HomeFragment_to_clubDDetail"
+            app:destination="@id/clubDDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/clubDDetail"
+        android:name="com.utn.firstapp.fragments.ClubDDetail"
+        android:label="fragment_club_d_detail"
+        tools:layout="@layout/fragment_club_d_detail" >
+        <argument
+            android:name="passedclub"
+            app:argType="com.utn.firstapp.entities.Club" />
+    </fragment>
 </navigation>

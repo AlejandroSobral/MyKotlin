@@ -2,6 +2,6 @@ package com.utn.firstapp.fragments
 
 import androidx.lifecycle.ViewModel
 
-class Screen1ViewModel : ViewModel() {
+class ClubDDetailViewModel : ViewModel() {
     // TODO: Implement the ViewModel
 }
