@@ -224,5 +224,29 @@
         "Nick":"El Tatengue",
         "imageURL":"https://www.promiedos.com.ar/images/64/39.png",
         "League":"Liga Profesional de Fútbol"
+    },
+    {
+        "Club":"Arsenal FC",
+        "Founded":"Octubre 1886",
+        "Country":"Inglaterra",
+        "Nick":"Gunners",
+        "imageURL":"https://www.promiedos.com.ar/images/64/529.png",
+        "League":"Premier League"
+    },
+    {
+        "Club":"Chelsea FC",
+        "Founded":"10 Marzo 1905",
+        "Country":"Inglaterra",
+        "Nick":"The Blues",
+        "imageURL":"https://www.promiedos.com.ar/images/64/531.png",
+        "League":"Premier League"
+    },
+    {
+        "Club":"Astor Villa FC",
+        "Founded":"1874",
+        "Country":"Inglaterra",
+        "Nick":"The Villians",
+        "imageURL":"https://www.promiedos.com.ar/images/64/530.png",
+        "League":"Premier League"
     }
 ]

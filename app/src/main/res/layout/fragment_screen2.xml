@@ -11,7 +11,7 @@
         android:id="@+id/txtScreen2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Liga Profesional de Fútbol"
+        android:text="Football Data"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/imgHomeLogo"
         app:layout_constraintEnd_toEndOf="parent"

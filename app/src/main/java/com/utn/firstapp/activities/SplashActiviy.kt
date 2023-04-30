@@ -12,7 +12,7 @@ import com.utn.firstapp.R
 
 class SplashActiviy : AppCompatActivity() {
 
-    var imgHomeLogoURL: String = "https://upload.wikimedia.org/wikipedia/commons/8/85/Logo_lpf_afa.png"
+    var imgHomeLogoURL: String = "https://assets.stickpng.com/images/609912b13ae4510004af4a22.png"
     lateinit var imgSplashLogo: ImageView
     lateinit var v: View
 

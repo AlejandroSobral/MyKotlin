@@ -26,8 +26,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Liga Profesional de Fútbol"
-        android:textSize="25sp"
+        android:fontFamily="sans-serif-black"
+        android:text="FIFA Football Data"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="@+id/imgLoginLogo"
         app:layout_constraintStart_toStartOf="@+id/imgLoginLogo"
         app:layout_constraintTop_toBottomOf="@+id/imgLoginLogo" />
