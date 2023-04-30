@@ -1,6 +1,10 @@
 package com.utn.firstapp.entities
 
-class ClubRepository {
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
+class ClubRepository : Parcelable {
 
     var clubList = mutableListOf<Club>()
     init {
@@ -18,5 +22,24 @@ class ClubRepository {
         clubList.add(Club("Talleres", "12 de Septiembre de 1913", "Argentina", "El Matador", "https://www.promiedos.com.ar/images/64/52.png", "Liga Profesional de Fútbol", 12))
         clubList.add(Club("Colón", "05 de Mayo de 1905", "Argentina", "El Sabalero", "https://www.promiedos.com.ar/images/64/7.png", "Liga Profesional de Fútbol", 13))
         clubList.add(Club("Banfield", "21 de Enero de 1896", "Argentina", "El Taladro", "https://www.promiedos.com.ar/images/64/5.png", "Liga Profesional de Fútbol", 14))
+        clubList.add(Club("Central Cba (SdE)", "03 Junio de 1919", "Argentina", "El Ferroviario", "https://www.promiedos.com.ar/images/64/78.png", "Liga Profesional de Fútbol", 15))
+        clubList.add(Club("Argentinos Juniors", "15 Agosto de 1904", "Argentina", "El Bicho", "https://www.promiedos.com.ar/images/64/3.png", "Liga Profesional de Fútbol", 16))
+        clubList.add(Club("Arsenal", "11 Enero de 1957", "Argentina", "El Arse", "https://www.promiedos.com.ar/images/64/4.png", "Liga Profesional de Fútbol", 17))
+        clubList.add(Club("Atlético Tucuman", "27 Septiembre de 1902", "Argentina", "El Decano", "https://www.promiedos.com.ar/images/64/25.png", "Liga Profesional de Fútbol", 18))
+        clubList.add(Club("Barracas Central", "5 Abril de 1904", "Argentina", "El Camionero", "https://www.promiedos.com.ar/images/64/82.png", "Liga Profesional de Fútbol", 19))
+        clubList.add(Club("Club Atlético Belgrano", "19 Marzo de 1905", "Argentina", "El Pirata", "https://www.promiedos.com.ar/images/64/26.png", "Liga Profesional de Fútbol", 20))
+        clubList.add(Club("Club y Social Deportivo Defensa y Justicia", "20 Marzo de 1935", "Argentina", "El Halcón", "https://www.promiedos.com.ar/images/64/29.png", "Liga Profesional de Fútbol", 21))
+        clubList.add(Club("Club de Gimnasia y Esgrima La Plata", "03 Junio de 1887", "Argentina", "El Lobo", "https://www.promiedos.com.ar/images/64/9.png", "Liga Profesional de Fútbol", 22))
+        clubList.add(Club("Club Deportivo Godoy Cruz Antonio Tomba", "01 Junio de 1921", "Argentina", "El Tomba", "https://www.promiedos.com.ar/images/64/10.png", "Liga Profesional de Fútbol", 23))
+        clubList.add(Club("Instituto Atlético Central Córdoba", "08 Septiembre de 1918", "Argentina", "La Gloria", "https://www.promiedos.com.ar/images/64/33.png", "Liga Profesional de Fútbol", 24))
+        clubList.add(Club("Club Atlético Platense", "25 Mayo de 1905", "Argentina", "El Calamar", "https://www.promiedos.com.ar/images/64/45.png", "Liga Profesional de Fútbol", 25))
+        clubList.add(Club("Club Atlético Sarmiento", "1 Abril de 1911", "Argentina", "El Guerrero", "https://www.promiedos.com.ar/images/64/81.png", "Liga Profesional de Fútbol", 26))
+        clubList.add(Club("Club Atlético Tigre", "3 Septiembre de 1902", "Argentina", "El Matador", "https://www.promiedos.com.ar/images/64/20.png", "Liga Profesional de Fútbol", 27))
+        clubList.add(Club("Club Atlético Unión", "15 Abril de 1907", "Argentina", "El Tatengue", "https://www.promiedos.com.ar/images/64/39.png", "Liga Profesional de Fútbol", 28))
+
+
+
+
     }
+
 }

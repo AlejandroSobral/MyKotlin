@@ -11,25 +11,12 @@
         android:label="LoginFragment"
         tools:layout="@layout/fragment_screen1">
         <action
-            android:id="@+id/action_LoginFragment_to_HomeFragment"
-            app:destination="@id/HomeFragment" />
+            android:id="@+id/action_LoginFragment_to_userSignup2"
+            app:destination="@id/userSignup" />
     </fragment>
     <fragment
-        android:id="@+id/HomeFragment"
-        android:name="com.utn.firstapp.fragments.HomeFragment"
-        android:label="HomeFragment"
-        tools:layout="@layout/fragment_screen2">
-        <action
-            android:id="@+id/action_HomeFragment_to_clubDDetail"
-            app:destination="@id/clubDDetail" />
-    </fragment>
-    <fragment
-        android:id="@+id/clubDDetail"
-        android:name="com.utn.firstapp.fragments.ClubDDetail"
-        android:label="fragment_club_d_detail"
-        tools:layout="@layout/fragment_club_d_detail" >
-        <argument
-            android:name="passedclub"
-            app:argType="com.utn.firstapp.entities.Club" />
-    </fragment>
+        android:id="@+id/userSignup"
+        android:name="com.utn.firstapp.fragments.UserSignup"
+        android:label="fragment_user_signup2"
+        tools:layout="@layout/fragment_user_signup2" />
 </navigation>

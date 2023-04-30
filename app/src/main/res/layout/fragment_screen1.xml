@@ -7,12 +7,26 @@
     android:layout_height="match_parent"
     tools:context=".fragments.LoginFrgmt">
 
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:text="SIGN UP"
+        android:textColor="#F4F4F4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtInput_password"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/txtInput_password"
+        app:layout_constraintTop_toBottomOf="@+id/btnNav2"
+        app:layout_constraintVertical_bias="0.493"
+        app:rippleColor="#3F51B5" />
+
     <TextView
         android:id="@+id/txtScreen1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Welcome Screen"
+        android:text="Liga Profesional de Fútbol"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="@+id/imgLoginLogo"
         app:layout_constraintStart_toStartOf="@+id/imgLoginLogo"
@@ -24,14 +38,16 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="Login"
+        android:textColor="#F4F4F4"
         app:layout_constraintEnd_toEndOf="@+id/txtInput_password"
         app:layout_constraintStart_toStartOf="@+id/txtInput_password"
-        app:layout_constraintTop_toBottomOf="@+id/txtInput_password" />
+        app:layout_constraintTop_toBottomOf="@+id/txtInput_password"
+        app:rippleColor="#3F51B5" />
 
     <EditText
         android:id="@+id/txtInput_password"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="161dp"
+        android:layout_height="43dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="Password"
@@ -42,8 +58,8 @@
 
     <EditText
         android:id="@+id/txtInput_user"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="161dp"
+        android:layout_height="43dp"
         android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="User"
@@ -57,13 +73,13 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginStart="142dp"
-        android:layout_marginEnd="141dp"
+        android:layout_marginEnd="142dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.076"
+        app:layout_constraintVertical_bias="0.075"
         tools:src="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

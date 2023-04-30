@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navgraph"
+    app:startDestination="@id/HomeFragment">
+
+    <fragment
+        android:id="@+id/clubDDetail"
+        android:name="com.utn.firstapp.fragments.ClubDDetail"
+        android:label="fragment_club_d_detail"
+        tools:layout="@layout/fragment_club_d_detail">
+        <argument
+            android:name="passedclub"
+            app:argType="com.utn.firstapp.entities.Club" />
+    </fragment>
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.utn.firstapp.fragments.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_screen2">
+        <action
+            android:id="@+id/action_HomeFragment_to_clubDDetail"
+            app:destination="@id/clubDDetail" />
+        <action
+            android:id="@+id/action_HomeFragment_to_addClub"
+            app:destination="@id/addClub" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDdetailFragment2"
+        android:name="com.utn.firstapp.UserDdetailFragment"
+        android:label="fragment_user_ddetail"
+        tools:layout="@layout/fragment_user_ddetail" />
+    <fragment
+        android:id="@+id/addClub"
+        android:name="com.utn.firstapp.fragments.AddClub"
+        android:label="fragment_add_club"
+        tools:layout="@layout/fragment_add_club" >
+        <argument
+            android:name="ClubRepo"
+            app:argType="com.utn.firstapp.entities.ClubRepository" />
+    </fragment>
+</navigation>
