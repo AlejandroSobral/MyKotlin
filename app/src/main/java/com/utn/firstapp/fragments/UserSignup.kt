@@ -1,5 +1,6 @@
 package com.utn.firstapp.fragments
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -61,12 +62,12 @@ class UserSignup : Fragment() {
                 var usermail: String = addUserEmail.text.toString()
                 var userpass: String = addUserPassword.text.toString()
                 var userlastname: String = addUserLastName.text.toString()
-
+                lateinit var usertypeIn: User
 
                 val userFind = userDao?.fetchUserByUserAndMail(username, usermail)
                 if (userFind == null)
                     try {
-                        userDao?.insertUser(User(0, username, userlastname, usermail, userpass))
+                        userDao?.insertUser(User(0, username,usermail, userlastname,userpass))
 
                         val message = "User, ${username}, has been added correctly!"
                         //ADD USER TO DB
@@ -75,6 +76,19 @@ class UserSignup : Fragment() {
                         addUserEmail.setText("")
                         addUserPassword.setText("")
                         addUserLastName.setText("")
+
+                        usertypeIn = userDao?.fetchUserByUserAndPass(username, userpass) as User
+
+                        val sharedPref = context?.getSharedPreferences(
+                            getString(R.string.preference_file_key), Context.MODE_PRIVATE)
+
+                        if (sharedPref != null) {
+                            with (sharedPref.edit()) {
+                                putInt("UserID", usertypeIn.id)
+                                commit()
+                            }
+                        }
+
                         val intent = Intent(activity, SecondActivity::class.java)
                         startActivity(intent)
                     }

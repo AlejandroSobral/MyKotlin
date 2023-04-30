@@ -1,5 +1,6 @@
 package com.utn.firstapp.fragments
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -58,7 +59,12 @@ class HomeFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        val idUser = activity?.intent?.getIntExtra("idUser", -1)
+        val sharedPref = context?.getSharedPreferences(
+            getString(R.string.preference_file_key), Context.MODE_PRIVATE)
+
+        val idUser = sharedPref?.getInt("UserID", 0)
+
+
         btnLogOut.setOnClickListener{
 
             val intent = Intent(activity, MainActivity::class.java)

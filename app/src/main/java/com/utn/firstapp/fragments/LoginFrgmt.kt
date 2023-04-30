@@ -2,6 +2,7 @@ package com.utn.firstapp.fragments
 
 
 
+import android.content.Context
 import com.utn.firstapp.database.AppDatabase
 import android.content.Intent
 import android.os.Bundle
@@ -31,7 +32,6 @@ class LoginFrgmt : Fragment() {
 
     private var db: AppDatabase? = null
     private var userDao: UserDao? = null
-
     lateinit var imgLoginLogo : ImageView
     lateinit var label : TextView
     lateinit var btnNavigate: Button
@@ -90,6 +90,18 @@ class LoginFrgmt : Fragment() {
 
                 if(usertypeIn.name == usertypeIn.name && usertypeIn.password == usertypeIn.password)
                 {
+                    val sharedPref = context?.getSharedPreferences(
+                        getString(R.string.preference_file_key), Context.MODE_PRIVATE)
+
+                    if (sharedPref != null) {
+                        with (sharedPref.edit()) {
+                            putInt("UserID", usertypeIn.id)
+                            commit()
+                        }
+                    }
+
+
+
                     val intent = Intent(activity, SecondActivity::class.java)
                     intent.putExtra("CurrentUserID", usertypeIn.id)
                     startActivity(intent)
