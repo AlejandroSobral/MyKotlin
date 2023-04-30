@@ -45,7 +45,7 @@ class AddClub : Fragment() {
         super.onStart()
 
 
-        var PassedClubRepo: ClubRepository = AddClubArgs.fromBundle(requireArguments()).ClubRepo
+        //var PassedClubRepo: ClubRepository = AddClubArgs.fromBundle(requireArguments()).ClubRepo
 
         btnAdd.setOnClickListener {
             try {
@@ -56,7 +56,7 @@ class AddClub : Fragment() {
                 var clubnick: String = addClubNick.text.toString()
 
                 val message = "Club, ${clubname}, has been added correctly!"
-                PassedClubRepo.clubList.add(Club(clubname, clubfounded, clubcountry, clubnick, "https://www.vhv.rs/dpng/d/486-4867851_generic-football-club-logo-png-download-generic-football.png", clubleague, 0))
+                //PassedClubRepo.clubList.add(Club(clubname, clubfounded, clubcountry, clubnick, "https://www.vhv.rs/dpng/d/486-4867851_generic-football-club-logo-png-download-generic-football.png", clubleague, 0))
                 Snackbar.make(v, message, Snackbar.LENGTH_SHORT).show()
                 addClubCountry.setText("")
                 addClubName.setText("")

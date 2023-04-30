@@ -13,7 +13,7 @@ import com.utn.firstapp.R
 import com.utn.firstapp.entities.Club
 
 class ClubAdapter(
-    var ClubList: MutableList<Club>,
+    var ClubList: MutableList<Club?>?,
     var onClick: (Int) -> Unit
 ) : RecyclerView.Adapter<ClubAdapter.ClubHolder>() {
 
@@ -53,13 +53,14 @@ class ClubAdapter(
     }
 
     override fun getItemCount(): Int {
-        return ClubList.size
+        return ClubList?.size ?:0
     }
 
     override fun onBindViewHolder(holder: ClubHolder, position: Int) {
-        holder.setClub(ClubList[position].name)
-        holder.setImage(ClubList[position].imageURL)
-        holder.setNickName(ClubList[position].nickname)
+
+        ClubList?.get(position)?.let { holder.setClub(it.name) }
+        ClubList?.get(position)?.let { holder.setImage(it.imageURL) }
+        ClubList?.get(position)?.let { holder.setNickName(it.nickname) }
         holder.getCard().setOnClickListener{
             onClick(position)
 

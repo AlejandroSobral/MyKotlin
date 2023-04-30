@@ -11,8 +11,8 @@
         android:label="fragment_club_d_detail"
         tools:layout="@layout/fragment_club_d_detail">
         <argument
-            android:name="passedclub"
-            app:argType="com.utn.firstapp.entities.Club" />
+            android:name="clubID"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/HomeFragment"

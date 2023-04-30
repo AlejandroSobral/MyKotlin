@@ -1,0 +1,228 @@
+[
+    {
+        "Club":"San Lorenzo de Almagro",
+        "Founded":"1 de Abril de 1908",
+        "Country":"Argentina",
+        "Nick":"El Ciclón",
+        "imageURL":"https://www.promiedos.com.ar/images/64/19.png",
+        "League":"Liga Profesional de Fútbol"
+    },
+    {
+        "Club":"Boca Juniors",
+        "Founded":"3 de Abril de 1905",
+        "Country":"Argentina",
+        "Nick":"El Xeneize",
+        "imageURL":"https://www.promiedos.com.ar/images/64/6.png",
+        "League":"Liga Profesional de Fútbol"
+    },
+    {
+        "Club":"River Plate",
+        "Founded":"25 de Mayo de 1901",
+        "Country":"Argentina",
+        "Nick":"El Millonario",
+        "imageURL":"https://www.promiedos.com.ar/images/64/18.png",
+        "League":"Liga Profesional de Fútbol"
+    },    
+    {
+        "Club":"Independiente",
+        "Founded":"1 de Enero de 1905",
+        "Country":"Argentina",
+        "Nick":"El Rojo",
+        "imageURL":"https://www.promiedos.com.ar/images/64/12.png",
+        "League":"Liga Profesional de Fútbol"
+    },   
+    {
+        "Club":"Racing Club",
+        "Founded":"25 de Marzo de 1903",
+        "Country":"Argentina",
+        "Nick":"La Academia",
+        "imageURL":"https://www.promiedos.com.ar/images/64/17.png",
+        "League":"Liga Profesional de Fútbol"
+    },  
+    {
+        "Club":"Estudiantes de La Plata",
+        "Founded":"4 de Agosto de 1905",
+        "Country":"Argentina",
+        "Nick":"El Pincha",
+        "imageURL":"https://www.promiedos.com.ar/images/64/8.png",
+        "League":"Liga Profesional de Fútbol"
+    },  
+    {
+        "Club":"Vélez Sarsfield",
+        "Founded":"1 de Enero de 1910",
+        "Country":"Argentina",
+        "Nick":"El Fortin",
+        "imageURL":"https://www.promiedos.com.ar/images/64/21.png",
+        "League":"Liga Profesional de Fútbol"
+    },  
+    {
+        "Club":"Rosario Central",
+        "Founded":"24 de Diciembre de 1889",
+        "Country":"Argentina",
+        "Nick":"El Canalla",
+        "imageURL":"https://www.promiedos.com.ar/images/64/35.png",
+        "League":"Liga Profesional de Fútbol"
+    },  
+    {
+        "Club":"Newell's Old Boys",
+        "Founded":"3 de Noviembre de 1903",
+        "Country":"Argentina",
+        "Nick":"La Lepra",
+        "imageURL":"https://www.promiedos.com.ar/images/64/14.png",
+        "League":"Liga Profesional de Fútbol"
+    },
+    {
+        "Club":"Huracán",
+        "Founded":"1 de Noviembre de 1908",
+        "Country":"Argentina",
+        "Nick":"El Globo",
+        "imageURL":"https://www.promiedos.com.ar/images/64/11.png",
+        "League":"Liga Profesional de Fútbol"
+    },
+    {
+        "Club":"Lanus",
+        "Founded":"3 de Enero de 1915",
+        "Country":"Argentina",
+        "Nick":"El Granate",
+        "imageURL":"https://www.promiedos.com.ar/images/64/13.png",
+        "League":"Liga Profesional de Fútbol"
+    },       
+    {
+        "Club":"Talleres",
+        "Founded":"12 de Septiembre de 1913",
+        "Country":"Argentina",
+        "Nick":"El Matador",
+        "imageURL":"https://www.promiedos.com.ar/images/64/52.png",
+        "League":"Liga Profesional de Fútbol"
+    }, 
+    {
+        "Club":"Colon",
+        "Founded":"05 de Mayo de 1905",
+        "Country":"Argentina",
+        "Nick":"El Sabalero",
+        "imageURL":"https://www.promiedos.com.ar/images/64/7.png",
+        "League":"Liga Profesional de Fútbol"
+    }, 
+    {
+        "Club":"Banfield",
+        "Founded":"21 de Enero de 1896",
+        "Country":"Argentina",
+        "Nick":"El Taladro",
+        "imageURL":"https://www.promiedos.com.ar/images/64/5.png",
+        "League":"Liga Profesional de Fútbol"
+    },
+    {
+        "Club":"Central Cba (SdE)",
+        "Founded":"03 Junio de 1911",
+        "Country":"Argentina",
+        "Nick":"El Taladro",
+        "imageURL":"https://www.promiedos.com.ar/images/64/78.png",
+        "League":"Liga Profesional de Fútbol"
+    },  
+
+    {
+        "Club":"Argentinos Juniors",
+        "Founded":"15 Agosto de 1904",
+        "Country":"Argentina",
+        "Nick":"El Taladro",
+        "imageURL":"https://www.promiedos.com.ar/images/64/3.png",
+        "League":"Liga Profesional de Fútbol"
+    }, 
+    {
+        "Club":"Arsenal",
+        "Founded":"11 Enero de 1957",
+        "Country":"Argentina",
+        "Nick":"El Arse",
+        "imageURL":"https://www.promiedos.com.ar/images/64/4.png",
+        "League":"Liga Profesional de Fútbol"
+    }, 
+    {
+        "Club":"Atlético Tucuman",
+        "Founded":"27 Septiembre de 1902",
+        "Country":"Argentina",
+        "Nick":"El Decano",
+        "imageURL":"https://www.promiedos.com.ar/images/64/25.png",
+        "League":"Liga Profesional de Fútbol"
+    }, 
+
+    {
+        "Club":"Barracas Central",
+        "Founded":"5 de Abril de 1904",
+        "Country":"Argentina",
+        "Nick":"El Camionero",
+        "imageURL":"https://www.promiedos.com.ar/images/64/82.png",
+        "League":"Liga Profesional de Fútbol"
+    },
+    {
+        "Club":"Club Atlético Belgrano",
+        "Founded":"19 Marzo de de 1905",
+        "Country":"Argentina",
+        "Nick":"El Pirata",
+        "imageURL":"https://www.promiedos.com.ar/images/64/26.png",
+        "League":"Liga Profesional de Fútbol"
+    },  
+    {
+        "Club":"Club y Social Deportivo Defensa y Justicia",
+        "Founded":"20 Marzo de de 1935",
+        "Country":"Argentina",
+        "Nick":"El Halcón",
+        "imageURL":"https://www.promiedos.com.ar/images/64/29.png",
+        "League":"Liga Profesional de Fútbol"
+    },  
+    {
+        "Club":"Club de Gimnasia y Esgrima La Plata",
+        "Founded":"03 Junio de 1887",
+        "Country":"Argentina",
+        "Nick":"El Lobo",
+        "imageURL":"https://www.promiedos.com.ar/images/64/9.png",
+        "League":"Liga Profesional de Fútbol"
+    },
+    {
+        "Club":"Club Deportivo Godoy Cruz Antonio Tomba",
+        "Founded":"01 Junio de 1921",
+        "Country":"Argentina",
+        "Nick":"El Tomba",
+        "imageURL":"https://www.promiedos.com.ar/images/64/10.png",
+        "League":"Liga Profesional de Fútbol"
+    },
+    {
+        "Club":"Instituto Atlético Central Córdoba",
+        "Founded":"08 Septiembre de 1918",
+        "Country":"Argentina",
+        "Nick":"La Gloria",
+        "imageURL":"https://www.promiedos.com.ar/images/64/33.png",
+        "League":"Liga Profesional de Fútbol"
+    },
+    {
+        "Club":"Club Atlético Platense",
+        "Founded":"25 Mayo de 1905",
+        "Country":"Argentina",
+        "Nick":"El Calamar",
+        "imageURL":"https://www.promiedos.com.ar/images/64/45.png",
+        "League":"Liga Profesional de Fútbol"
+    },
+    {
+        "Club":"Club Atlético Sarmiento",
+        "Founded":"25 Mayo de 1911",
+        "Country":"Argentina",
+        "Nick":"El Guerrero",
+        "imageURL":"https://www.promiedos.com.ar/images/64/81.png",
+        "League":"Liga Profesional de Fútbol"
+    },
+    {
+        "Club":"Club Atlético Tigre",
+        "Founded":"3 Septiembre de 1902",
+        "Country":"Argentina",
+        "Nick":"El Matador",
+        "imageURL":"https://www.promiedos.com.ar/images/64/20.png",
+        "League":"Liga Profesional de Fútbol"
+    },
+    {
+        "Club":"Club Atlético Unión",
+        "Founded":"15 Abril de 1907",
+        "Country":"Argentina",
+        "Nick":"El Tatengue",
+        "imageURL":"https://www.promiedos.com.ar/images/64/39.png",
+        "League":"Liga Profesional de Fútbol"
+    }
+]

@@ -19,7 +19,9 @@ import com.bumptech.glide.Glide
 import com.google.android.material.snackbar.Snackbar
 import com.utn.firstapp.R
 import com.utn.firstapp.activities.SecondActivity
+import com.utn.firstapp.database.ClubDao
 import com.utn.firstapp.database.UserDao
+import com.utn.firstapp.entities.Club
 import com.utn.firstapp.entities.User
 import java.lang.Error
 
@@ -32,6 +34,7 @@ class LoginFrgmt : Fragment() {
 
     private var db: AppDatabase? = null
     private var userDao: UserDao? = null
+    private var clubdao: ClubDao? = null
     lateinit var imgLoginLogo : ImageView
     lateinit var label : TextView
     lateinit var btnNavigate: Button
@@ -41,6 +44,7 @@ class LoginFrgmt : Fragment() {
     lateinit var inputpass: EditText
     var imgLoginLogoURL: String = "https://upload.wikimedia.org/wikipedia/commons/8/85/Logo_lpf_afa.png"
     private lateinit var userList: MutableList<User>
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -65,9 +69,12 @@ class LoginFrgmt : Fragment() {
 
         db = AppDatabase.getInstance(v.context)
         userDao = db?.userDao()
+        clubdao = db?.clubDao()
 
         // Dummy call to pre-populate db
         userDao?.fetchAllUsers()
+
+        val clubList = clubdao?.fetchAllClubs()
 
 
         btnSignUp.setOnClickListener{

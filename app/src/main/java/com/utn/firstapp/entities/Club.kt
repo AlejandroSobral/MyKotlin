@@ -1,23 +1,45 @@
 package com.utn.firstapp.entities
 
-import android.os.Parcel
-import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
-import kotlinx.parcelize.Parceler
 
-@Suppress("DEPRECATED_ANNOTATION")
-@Parcelize
-class Club (var name: String,var founded : String, var country: String, var nickname: String, var imageURL: String, var league: String, var id: Int): Parcelable{
-    override fun describeContents(): Int {
-        TODO("Not yet implemented")
-    }
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
-    companion object : Parceler<Club> {
-        override fun Club.write(p0: Parcel, p1: Int) {
-            TODO("Not yet implemented")
+
+
+@Entity(tableName = "clubs")
+    class Club (id:Int, name: String,founded: String, country: String, nickname: String, imageURL: String, league: String)
+    {
+        @PrimaryKey(autoGenerate = true)
+        @ColumnInfo(name = "id")
+        var id: Int
+
+        @ColumnInfo(name = "name")
+        var name: String
+
+        @ColumnInfo(name = "founded")
+        var founded: String
+
+        @ColumnInfo(name = "country")
+        var country: String
+
+        @ColumnInfo(name = "nickname")
+        var nickname: String
+
+        @ColumnInfo(name = "imageURL")
+        var imageURL: String
+
+        @ColumnInfo(name = "league")
+        var league: String
+        init {
+            this.id = id
+            this.name = name
+            this.country = country
+            this.founded = founded
+            this.nickname = nickname
+            this.imageURL = imageURL
+            this.league = league
         }
 
-        override fun create(parcel: Parcel): Club = TODO()
-    }
 
-}
+    }

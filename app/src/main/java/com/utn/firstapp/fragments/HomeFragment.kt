@@ -17,6 +17,9 @@ import com.bumptech.glide.Glide
 import com.utn.firstapp.R
 import com.utn.firstapp.activities.MainActivity
 import com.utn.firstapp.adapters.ClubAdapter
+import com.utn.firstapp.database.AppDatabase
+import com.utn.firstapp.database.ClubDao
+import com.utn.firstapp.database.UserDao
 import com.utn.firstapp.entities.ClubRepository
 
 
@@ -25,6 +28,9 @@ import com.utn.firstapp.entities.ClubRepository
 class HomeFragment : Fragment() {
 
 
+    private var db: AppDatabase? = null
+    private var userDao: UserDao? = null
+    private var clubdao: ClubDao? = null
     lateinit var label: TextView
     //lateinit var btnNavigate: Button
     lateinit var v: View
@@ -78,12 +84,18 @@ class HomeFragment : Fragment() {
         }
 
 
-        adapter = ClubAdapter(clubRepository.clubList){
+        db = AppDatabase.getInstance(v.context)
+        userDao = db?.userDao()
+        clubdao = db?.clubDao()
+        val clubList = clubdao?.fetchAllClubs()
+        if(clubList != null){
+            adapter = ClubAdapter(clubList){
 
-            position ->
-            val action = HomeFragmentDirections.actionHomeFragmentToClubDDetail(clubRepository.clubList[position])//clubRepository.clubList[position])
-            findNavController().navigate(action)
-            //findNavController().navigate(action)
+                position ->
+                val action = HomeFragmentDirections.actionHomeFragmentToClubDDetail(clubList?.get(position)?.id ?: -1)//clubRepository.clubList[position])
+                findNavController().navigate(action)
+
+            }
         }
         recClubs.layoutManager = LinearLayoutManager(context)
         recClubs.adapter = adapter

@@ -8,7 +8,7 @@ class ClubRepository : Parcelable {
 
     var clubList = mutableListOf<Club>()
     init {
-        clubList.add(Club("San Lorenzo de Almagro", "1 de Abril de 1908", "Argentina", "El Ciclón", "https://www.promiedos.com.ar/images/64/19.png", "Liga Profesional de Fútbol", 1))
+        /*clubList.add(Club("San Lorenzo de Almagro", "1 de Abril de 1908", "Argentina", "El Ciclón", "https://www.promiedos.com.ar/images/64/19.png", "Liga Profesional de Fútbol", 1))
         clubList.add(Club("Boca Juniors", "3 de Abril de 1905", "Bolivia", "El Xeneize", "https://www.promiedos.com.ar/images/64/6.png", "Liga Profesional de Fútbol", 2))
         clubList.add(Club("River Plate", "25 de Mayo de 1901", "Argentina", "El Millonario", "https://www.promiedos.com.ar/images/64/18.png", "Liga Profesional de Fútbol", 3))
         clubList.add(Club("Independiente", "1 de Enero de 1905", "Argentina", "El Rojo", "https://www.promiedos.com.ar/images/64/12.png", "Liga Profesional de Fútbol",4))
@@ -35,7 +35,7 @@ class ClubRepository : Parcelable {
         clubList.add(Club("Club Atlético Platense", "25 Mayo de 1905", "Argentina", "El Calamar", "https://www.promiedos.com.ar/images/64/45.png", "Liga Profesional de Fútbol", 25))
         clubList.add(Club("Club Atlético Sarmiento", "1 Abril de 1911", "Argentina", "El Guerrero", "https://www.promiedos.com.ar/images/64/81.png", "Liga Profesional de Fútbol", 26))
         clubList.add(Club("Club Atlético Tigre", "3 Septiembre de 1902", "Argentina", "El Matador", "https://www.promiedos.com.ar/images/64/20.png", "Liga Profesional de Fútbol", 27))
-        clubList.add(Club("Club Atlético Unión", "15 Abril de 1907", "Argentina", "El Tatengue", "https://www.promiedos.com.ar/images/64/39.png", "Liga Profesional de Fútbol", 28))
+        clubList.add(Club("Club Atlético Unión", "15 Abril de 1907", "Argentina", "El Tatengue", "https://www.promiedos.com.ar/images/64/39.png", "Liga Profesional de Fútbol", 28)) */
 
 
 
