@@ -28,9 +28,35 @@ class ClubAdapter(
                 var txtClubName: TextView = view.findViewById(R.id.txtClub)
                 txtClubName.text = name
             }
-            fun setNickName(name: String){
-                var txtClubFounded: TextView = view.findViewById(R.id.txtNickName)
-                txtClubFounded.text = name
+            fun setCountry(name: String){
+                var txtCountry: TextView = view.findViewById(R.id.txtCountry)
+                txtCountry.text = name
+            }
+            fun setFlag(name: String){
+                lateinit var v: View
+                lateinit var imageURL: String
+
+                if (name == "Argentina") {
+                    imageURL =
+                        "https://www.promiedos.com.ar/images/paises/ar.png"
+                }
+
+                if (name == "Inglaterra") {
+                    imageURL = "https://www.promiedos.com.ar/images/paises/in.png"
+                }
+
+                if (name == "Italia") {
+                    imageURL =
+                        "https://www.promiedos.com.ar/images/paises/it.png"
+                }
+                if (name == "Francia") {
+                    imageURL =
+                        "https://www.promiedos.com.ar/images/paises/fr.png"
+                }
+
+
+                var imgFlag: ImageView = view.findViewById(R.id.imgFlag)
+                Glide.with(view).load(imageURL).into(imgFlag)
             }
 
             fun setImage(imageURL: String){
@@ -60,7 +86,8 @@ class ClubAdapter(
 
         ClubList?.get(position)?.let { holder.setClub(it.name) }
         ClubList?.get(position)?.let { holder.setImage(it.imageURL) }
-        ClubList?.get(position)?.let { holder.setNickName(it.nickname) }
+        ClubList?.get(position)?.let { holder.setCountry(it.country) }
+        ClubList?.get(position)?.let { holder.setFlag(it.country) }
         holder.getCard().setOnClickListener{
             onClick(position)
 

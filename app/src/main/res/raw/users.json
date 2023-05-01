@@ -1,29 +1,5 @@
 [
   {
-    "name": "Micho",
-    "lastname": "Tito",
-    "email": "john@gmail.com",
-    "password": "M1"
-  },
-  {
-    "name": "Jane",
-    "lastname": "Morgan",
-    "email": "jane@gmail.com",
-    "password": "J1"
-  },
-  {
-    "name": "Matt",
-    "lastname":"Groening",
-    "email": "matt@gmail.com",
-    "password": "M1"
-  },
-  {
-    "name": "Jeff",
-    "lastname": "Bezos",
-    "email": "jeff@gmail.com",
-    "password": "J1"
-  },
-  {
     "name": "MatiasSil",
     "lastname": "Bezos",
     "email": "Mati@frba.utn.com",

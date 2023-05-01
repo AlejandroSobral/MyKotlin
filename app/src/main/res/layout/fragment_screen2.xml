@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="Football Data"
+        android:text="FIFA Clubs Data"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/imgHomeLogo"
         app:layout_constraintEnd_toEndOf="parent"

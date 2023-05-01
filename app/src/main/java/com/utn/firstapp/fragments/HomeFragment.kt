@@ -90,7 +90,8 @@ class HomeFragment : Fragment() {
         db = AppDatabase.getInstance(v.context)
         userDao = db?.userDao()
         clubdao = db?.clubDao()
-        val clubList = clubdao?.fetchAllClubs()
+        //val clubList = clubdao?.fetchAllClubs()
+        val clubList = clubdao?.fetchAllClubsOrderByName()
         if(clubList != null){
             adapter = ClubAdapter(clubList){
 

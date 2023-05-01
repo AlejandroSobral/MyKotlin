@@ -124,7 +124,7 @@
         "Club":"Argentinos Juniors",
         "Founded":"15 Agosto de 1904",
         "Country":"Argentina",
-        "Nick":"El Taladro",
+        "Nick":"El Bicho",
         "imageURL":"https://www.promiedos.com.ar/images/64/3.png",
         "League":"Liga Profesional de Fútbol"
     }, 
@@ -374,7 +374,7 @@
         "Club":"West Ham United Football Club",
         "Founded":"1 de Enero de 1895",
         "Country":"Inglaterra",
-        "Nick":"The Hammers ",
+        "Nick":"The Hammers",
         "imageURL":"https://www.promiedos.com.ar/images/64/547.png",
         "League":"Premier League"
     },
@@ -382,8 +382,312 @@
         "Club":"Wolverhampton Wanderers Football Club",
         "Founded":"1877",
         "Country":"Inglaterra",
-        "Nick":"The Wolves ",
+        "Nick":"The Wolves",
         "imageURL":"https://www.promiedos.com.ar/images/64/780.png",
         "League":"Premier League"
+    },
+    {
+        "Club":"Agropecuario",
+        "Founded":"23 de Agosto de 2011",
+        "Country":"Argentina",
+        "Nick":"El Sojero",
+        "imageURL":"https://www.promiedos.com.ar/images/64/204.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Aldosivi",
+        "Founded":"29 de Marzo de 1913",
+        "Country":"Argentina",
+        "Nick":"El Tiburón",
+        "imageURL":"https://www.promiedos.com.ar/images/64/22.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Atlético All Boys",
+        "Founded":"15 de Marzo de 1913",
+        "Country":"Argentina",
+        "Nick":"El Albo",
+        "imageURL":"https://www.promiedos.com.ar/images/64/2.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Almagro",
+        "Founded":"6 de Enero de 1911",
+        "Country":"Argentina",
+        "Nick":"El Tricolor",
+        "imageURL":"https://www.promiedos.com.ar/images/64/70.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Almirante Brown",
+        "Founded":"6 de Enero de 1922",
+        "Country":"Argentina",
+        "Nick":"La Fragata",
+        "imageURL":"https://www.promiedos.com.ar/images/64/23.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Asociación Mutual Social y Deportiva Atlético de Rafaela",
+        "Founded":"13 de Enero de 1907",
+        "Country":"Argentina",
+        "Nick":"La Crema",
+        "imageURL":"https://www.promiedos.com.ar/images/64/24.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Atlético Atlanta",
+        "Founded":"12 de Octubre de 1904",
+        "Country":"Argentina",
+        "Nick":"Los Bohemios",
+        "imageURL":"https://www.promiedos.com.ar/images/64/41.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Atlético Brown",
+        "Founded":"03 de Marzo de 1945",
+        "Country":"Argentina",
+        "Nick":"El Tricolor",
+        "imageURL":"https://www.promiedos.com.ar/images/64/83.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Social y Atlético Guillermo Brown",
+        "Founded":"03 de Enero de 1945",
+        "Country":"Argentina",
+        "Nick":"La Banda",
+        "imageURL":"https://www.promiedos.com.ar/images/64/46.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Atlético Chacarita Juniors",
+        "Founded":"01 de Mayo de 1906",
+        "Country":"Argentina",
+        "Nick":"El Funebrero",
+        "imageURL":"https://www.promiedos.com.ar/images/64/28.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Atlético Chaco For Ever",
+        "Founded":"27 de Julio de 1913",
+        "Country":"Argentina",
+        "Nick":"El Albinegro",
+        "imageURL":"https://www.promiedos.com.ar/images/64/48.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Atlético Defensores de Belgrano",
+        "Founded":"25 de Mayo de 1906",
+        "Country":"Argentina",
+        "Nick":"El Dragón",
+        "imageURL":"https://www.promiedos.com.ar/images/64/43.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Atlético Defensores Unidos",
+        "Founded":"14 de Junio de 1914",
+        "Country":"Argentina",
+        "Nick":"Los Celestes",
+        "imageURL":"https://www.promiedos.com.ar/images/64/105.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Deportivo Madryn",
+        "Founded":"07 de Mayo de 1924",
+        "Country":"Argentina",
+        "Nick":"El Aurinegro",
+        "imageURL":"https://www.promiedos.com.ar/images/64/178.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Deportivo Maipú",
+        "Founded":"16 de Diciembre de 1927",
+        "Country":"Argentina",
+        "Nick":"El Botellero",
+        "imageURL":"https://www.promiedos.com.ar/images/64/89.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Deportivo Morón",
+        "Founded":"20 de Junio de 1947",
+        "Country":"Argentina",
+        "Nick":"El Gallo",
+        "imageURL":"https://www.promiedos.com.ar/images/64/44.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Estudiantes de Estudiantes (BA)",
+        "Founded":"15 de Agosto de 1898",
+        "Country":"Argentina",
+        "Nick":"El Pincha",
+        "imageURL":"https://www.promiedos.com.ar/images/64/64.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Asociación Atlética Estudiantes (RC)",
+        "Founded":"21 de Septiembre de 1912",
+        "Country":"Argentina",
+        "Nick":"El Celeste",
+        "imageURL":"https://www.promiedos.com.ar/images/64/154.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Ferro Carril Oeste",
+        "Founded":"28 de Julio de 1904",
+        "Country":"Argentina",
+        "Nick":"El Verdolaga",
+        "imageURL":"https://www.promiedos.com.ar/images/64/30.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Social y Deportivo Flandria",
+        "Founded":"9 de Febrero de 1941",
+        "Country":"Argentina",
+        "Nick":"El Canario",
+        "imageURL":"https://www.promiedos.com.ar/images/64/77.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Atlético Gimnasia y Esgrima (J)",
+        "Founded":"18 de Marzo de 1931",
+        "Country":"Argentina",
+        "Nick":"El Lobo Jujeño",
+        "imageURL":"https://www.promiedos.com.ar/images/64/31.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Atlético Gimnasia y Esgrima",
+        "Founded":"30 de Agosto de 1908",
+        "Country":"Argentina",
+        "Nick":"Mensana",
+        "imageURL":"https://www.promiedos.com.ar/images/64/156.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Atlético Guemes",
+        "Founded":"12 de Octubre de 1932",
+        "Country":"Argentina",
+        "Nick":"Gaucho",
+        "imageURL":"https://www.promiedos.com.ar/images/64/300.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Sportivo Independiente Rivadavia",
+        "Founded":"24 de Enero de 1913",
+        "Country":"Argentina",
+        "Nick":"La Lepra",
+        "imageURL":"https://www.promiedos.com.ar/images/64/32.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Atlético Mitre",
+        "Founded":"2 de Abril de 1907",
+        "Country":"Argentina",
+        "Nick":"Tigre de la Roca",
+        "imageURL":"https://www.promiedos.com.ar/images/64/133.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Atlético Nueva Chicago",
+        "Founded":"1 de Julio de 1911",
+        "Country":"Argentina",
+        "Nick":"El Torito",
+        "imageURL":"https://www.promiedos.com.ar/images/64/42.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Atlético Patronato de la Juventud Católica",
+        "Founded":"1 de Febrero de 1914",
+        "Country":"Argentina",
+        "Nick":"El Patrón",
+        "imageURL":"https://www.promiedos.com.ar/images/64/34.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Quilmes Atlético Club",
+        "Founded":"27 de Noviembre de 1887",
+        "Country":"Argentina",
+        "Nick":"El Cervecero",
+        "imageURL":"https://www.promiedos.com.ar/images/64/16.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Atlético Racing (C)",
+        "Founded":"14 de Diciembre de 1924",
+        "Country":"Argentina",
+        "Nick":"La Academia Cordobesa",
+        "imageURL":"https://www.promiedos.com.ar/images/64/79.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Deportivo Riestra",
+        "Founded":"22 de Febrero de 1931",
+        "Country":"Argentina",
+        "Nick":"El Albinegro",
+        "imageURL":"https://www.promiedos.com.ar/images/64/123.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Atlético San Martín (SJ)",
+        "Founded":"27 de Septiembre de 1907",
+        "Country":"Argentina",
+        "Nick":"El Verdinegro",
+        "imageURL":"https://www.promiedos.com.ar/images/64/36.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Atlético San Martín",
+        "Founded":"2 de Noviembre de 1909",
+        "Country":"Argentina",
+        "Nick":"El Ciruja",
+        "imageURL":"https://www.promiedos.com.ar/images/64/37.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Atlético San Telmo",
+        "Founded":"5 de Marzo de 1904",
+        "Country":"Argentina",
+        "Nick":"El Candombero",
+        "imageURL":"https://www.promiedos.com.ar/images/64/91.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Atlético Temperley",
+        "Founded":"1 de Noviembre de 1912",
+        "Country":"Argentina",
+        "Nick":"El Gasolero",
+        "imageURL":"https://www.promiedos.com.ar/images/64/76.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Social y Deportivo Tristán Suárez",
+        "Founded":"8 de Agosto de 1929",
+        "Country":"Argentina",
+        "Nick":"El Lechero",
+        "imageURL":"https://www.promiedos.com.ar/images/64/90.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Club Villa Dálmine",
+        "Founded":"8 de Agosto de 1957",
+        "Country":"Argentina",
+        "Nick":"El Viola",
+        "imageURL":"https://www.promiedos.com.ar/images/64/92.png",
+        "League":"Primera B Nacional."
+    },
+    {
+        "Club":"Atalanta",
+        "Founded":"17 de Octubre de 1907",
+        "Country":"Italia",
+        "Nick":"Orobici-Dea",
+        "imageURL":"https://www.promiedos.com.ar/images/64/549.png",
+        "League":"Serie A"
+    },
+    {
+        "Club":"París Saint-Germain Football Club",
+        "Founded":"10 de Junio de 1970",
+        "Country":"Francia",
+        "Nick":"Les Rouge-et-Bleu",
+        "imageURL":"https://www.promiedos.com.ar/images/64/652.png",
+        "League":"Ligue 1"
     }
 ]

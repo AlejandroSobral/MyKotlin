@@ -14,11 +14,11 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/txtNickName"
+            android:id="@+id/txtCountry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Founded"
+            android:text="Country"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="@+id/txtClub"
             app:layout_constraintStart_toStartOf="@+id/txtClub"
@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:text="Club"
             android:textAlignment="center"
-            android:textSize="24sp"
+            android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -46,6 +46,20 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/imgFlag"
+            android:layout_width="33dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="51dp"
+            android:layout_marginBottom="29dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.955"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"

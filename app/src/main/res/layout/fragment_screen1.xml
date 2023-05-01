@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:fontFamily="sans-serif-black"
-        android:text="FIFA Football Data"
+        android:text="FIFA Clubs Data"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="@+id/imgLoginLogo"
         app:layout_constraintStart_toStartOf="@+id/imgLoginLogo"

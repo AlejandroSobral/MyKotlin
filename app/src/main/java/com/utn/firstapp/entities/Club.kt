@@ -29,6 +29,7 @@ import androidx.room.PrimaryKey
         @ColumnInfo(name = "imageURL")
         var imageURL: String
 
+
         @ColumnInfo(name = "league")
         var league: String
         init {
