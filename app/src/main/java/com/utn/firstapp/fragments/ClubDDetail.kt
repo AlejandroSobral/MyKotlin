@@ -1,15 +1,21 @@
 package com.utn.firstapp.fragments
 
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
+import com.google.android.material.snackbar.Snackbar
 import com.utn.firstapp.R
+import com.utn.firstapp.activities.SecondActivity
 import com.utn.firstapp.database.AppDatabase
 import com.utn.firstapp.database.ClubDao
 import com.utn.firstapp.database.UserDao
@@ -28,6 +34,8 @@ class ClubDDetail : Fragment() {
     private var db: AppDatabase? = null
     private var userDao: UserDao? = null
     private var clubdao: ClubDao? = null
+    lateinit var btnDelete: Button
+    lateinit var btnEdit: Button
 
         //Club, Country, League, Founded, Nick
 
@@ -42,6 +50,8 @@ class ClubDDetail : Fragment() {
         txtNick = v.findViewById(R.id.txtDetailClubNick)
         txtCountry = v.findViewById(R.id.txtDetailClubCountry)
         imgClubDetail = v.findViewById(R.id.imgDetailClub)
+        btnDelete  = v.findViewById(R.id.btnDetailDeleteClub)
+        btnEdit = v.findViewById(R.id.btnDetailEdtClub)
         return v
     }
 
@@ -64,7 +74,41 @@ class ClubDDetail : Fragment() {
         txtCountry.text = getClub.country
         Glide.with(v).load(getClub.imageURL).into(imgClubDetail)
 
+        val navController = findNavController()
 
+        btnDelete.setOnClickListener{
+            try {
+                clubdao?.delete(getClub)
+                val message = "Club, ${getClub.name}, has been deleted correctly!"
+                //ADD USER TO DB
+                Snackbar.make(v, message, Snackbar.LENGTH_SHORT).show()
+                navController.navigateUp()
+
+            }
+            catch(e:Exception)
+            {
+                Snackbar.make(v, "Delete has failed.", Snackbar.LENGTH_SHORT).show()
+            }
+        }
+
+        btnEdit.setOnClickListener{
+
+            val sharedPref = context?.getSharedPreferences(
+                getString(R.string.preference_file_key), Context.MODE_PRIVATE)
+
+            if (sharedPref != null) {
+                with (sharedPref.edit()) {
+                    putInt("ClubID", getClub.id)
+                    commit()
+                }
+            }
+
+            //val action = HomeFragmentDirections.actionHomeFragmentToClubDDetail(
+            val action = ClubDDetailDirections.actionClubDDetailToEditClubDetail()
+            findNavController().navigate(action)
+
+
+        }
     }
 
 

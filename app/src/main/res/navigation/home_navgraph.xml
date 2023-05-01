@@ -13,6 +13,9 @@
         <argument
             android:name="clubID"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_clubDDetail_to_editClubDetail"
+            app:destination="@id/editClubDetail" />
     </fragment>
     <fragment
         android:id="@+id/HomeFragment"
@@ -21,7 +24,8 @@
         tools:layout="@layout/fragment_screen2">
         <action
             android:id="@+id/action_HomeFragment_to_clubDDetail"
-            app:destination="@id/clubDDetail" />
+            app:destination="@id/clubDDetail"
+            app:popUpTo="@id/HomeFragment" />
         <action
             android:id="@+id/action_HomeFragment_to_addClub"
             app:destination="@id/addClub" />
@@ -40,4 +44,9 @@
             android:name="ClubRepo"
             app:argType="com.utn.firstapp.entities.ClubRepository" />
     </fragment>
+    <fragment
+        android:id="@+id/editClubDetail"
+        android:name="com.utn.firstapp.fragments.EditClubDetail"
+        android:label="fragment_edit_club_detail"
+        tools:layout="@layout/fragment_edit_club_detail" />
 </navigation>

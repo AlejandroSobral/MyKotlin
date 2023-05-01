@@ -16,6 +16,8 @@ interface ClubDao {
     @Query("SELECT * FROM clubs WHERE id = :id")
     fun fetchClubById(id: Int): Club?
 
+    @Query("SELECT * FROM clubs WHERE name = :name")
+    fun fetchClubByName(name: String): Club?
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertClub(club: Club)
 

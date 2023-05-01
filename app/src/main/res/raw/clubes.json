@@ -242,11 +242,148 @@
         "League":"Premier League"
     },
     {
-        "Club":"Astor Villa FC",
-        "Founded":"1874",
+        "Club":"Aston Villa FC",
+        "Founded":"21 de Noviembre de 1874",
         "Country":"Inglaterra",
         "Nick":"The Villians",
         "imageURL":"https://www.promiedos.com.ar/images/64/530.png",
+        "League":"Premier League"
+    },
+    {
+        "Club":"Bournemouth",
+        "Founded":"1 Enero de 1890",
+        "Country":"Inglaterra",
+        "Nick":"The Cherries",
+        "imageURL":"https://www.promiedos.com.ar/images/64/677.png",
+        "League":"Premier League"
+    },
+    {
+        "Club":"Brentford",
+        "Founded":"10 de Noviembre de 1889",
+        "Country":"Inglaterra",
+        "Nick":"The Bees",
+        "imageURL":"https://www.promiedos.com.ar/images/64/1373.png",
+        "League":"Premier League"
+    },
+    {
+        "Club":"Brighton & Hove Albion Football Club",
+        "Founded":"24 de Junio de 1901",
+        "Country":"Inglaterra",
+        "Nick":"The Seagulls",
+        "imageURL":"https://www.promiedos.com.ar/images/64/694.png",
+        "League":"Premier League"
+    },
+    {
+        "Club":"Crystal Palace Football Club",
+        "Founded":"10 de Septiembre de 1905",
+        "Country":"Inglaterra",
+        "Nick":"The Eagles",
+        "imageURL":"https://www.promiedos.com.ar/images/64/621.png",
+        "League":"Premier League"
+    },
+    {
+        "Club":"Everton Football Club",
+        "Founded":"1 de enero de 1878",
+        "Country":"Inglaterra",
+        "Nick":"The Beatles",
+        "imageURL":"https://www.promiedos.com.ar/images/64/532.png",
+        "League":"Premier League"
+    },
+    {
+        "Club":"Fulham Football Club",
+        "Founded":"6 de marzo de 1879",
+        "Country":"Inglaterra",
+        "Nick":"The Cottagers",
+        "imageURL":"https://www.promiedos.com.ar/images/64/533.png",
+        "League":"Premier League"
+    },
+    {
+        "Club":"Leeds United Football Club",
+        "Founded":"17 de Noviembre de 1919",
+        "Country":"Inglaterra",
+        "Nick":"The Whites",
+        "imageURL":"https://www.promiedos.com.ar/images/64/685.png",
+        "League":"Premier League"
+    },
+    {
+        "Club":"Leicester City Football Club",
+        "Founded":"1 de Enero de 1884",
+        "Country":"Inglaterra",
+        "Nick":"The Foxes",
+        "imageURL":"https://www.promiedos.com.ar/images/64/633.png",
+        "League":"Premier League"
+    },
+    {
+        "Club":"Liverpool Football Club",
+        "Founded":"15 de Marzo de 1892",
+        "Country":"Inglaterra",
+        "Nick":"The Reds",
+        "imageURL":"https://www.promiedos.com.ar/images/64/534.png",
+        "League":"Premier League"
+    },
+    {
+        "Club":"Manchester City Football Club",
+        "Founded":"16 de Abril de 1894",
+        "Country":"Inglaterra",
+        "Nick":"The Citizens",
+        "imageURL":"https://www.promiedos.com.ar/images/64/535.png",
+        "League":"Premier League"
+    },
+
+    {
+        "Club":"Manchester City Football Club",
+        "Founded":"24 de Abril de 1902",
+        "Country":"Inglaterra",
+        "Nick":"The Red Devils",
+        "imageURL":"https://www.promiedos.com.ar/images/64/536.png",
+        "League":"Premier League"
+    },
+    {
+        "Club":"Newcastle United Football Club",
+        "Founded":"9 de Diciembre de 1892",
+        "Country":"Inglaterra",
+        "Nick":"The Magpies",
+        "imageURL":"https://www.promiedos.com.ar/images/64/537.png",
+        "League":"Premier League"
+    },
+    {
+        "Club":"Nottingham Forest Football Club",
+        "Founded":"1865",
+        "Country":"Inglaterra",
+        "Nick":"Tricky Trees",
+        "imageURL":"https://www.promiedos.com.ar/images/64/1046.png",
+        "League":"Premier League"
+    },
+    {
+        "Club":"Southampton Football Club",
+        "Founded":"21 de Noviembre de 1885",
+        "Country":"Inglaterra",
+        "Nick":"The Saints",
+        "imageURL":"https://www.promiedos.com.ar/images/64/541.png",
+        "League":"Premier League"
+    },
+    {
+        "Club":"Tottenham Hotspur Football Club",
+        "Founded":"1 de Enero de 1882",
+        "Country":"Inglaterra",
+        "Nick":"Spurs",
+        "imageURL":"https://www.promiedos.com.ar/images/64/545.png",
+        "League":"Premier League"
+    },
+    {
+        "Club":"West Ham United Football Club",
+        "Founded":"1 de Enero de 1895",
+        "Country":"Inglaterra",
+        "Nick":"The Hammers ",
+        "imageURL":"https://www.promiedos.com.ar/images/64/547.png",
+        "League":"Premier League"
+    },
+    {
+        "Club":"Wolverhampton Wanderers Football Club",
+        "Founded":"1877",
+        "Country":"Inglaterra",
+        "Nick":"The Wolves ",
+        "imageURL":"https://www.promiedos.com.ar/images/64/780.png",
         "League":"Premier League"
     }
 ]
