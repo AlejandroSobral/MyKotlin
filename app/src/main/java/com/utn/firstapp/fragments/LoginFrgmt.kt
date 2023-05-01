@@ -108,7 +108,8 @@ class LoginFrgmt : Fragment() {
                     }
 
 
-
+                    inputuser.setText("")
+                    inputpass.setText("")
                     val intent = Intent(activity, SecondActivity::class.java)
                     intent.putExtra("CurrentUserID", usertypeIn.id)
                     startActivity(intent)

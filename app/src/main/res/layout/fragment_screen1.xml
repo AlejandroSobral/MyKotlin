@@ -53,6 +53,7 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPersonName|textPassword"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/txtInput_user"
         app:layout_constraintStart_toStartOf="@+id/txtInput_user"
         app:layout_constraintTop_toBottomOf="@+id/txtInput_user" />
@@ -65,6 +66,7 @@
         android:ems="10"
         android:hint="User"
         android:inputType="textEmailAddress"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/txtScreen1"
         app:layout_constraintStart_toStartOf="@+id/txtScreen1"
         app:layout_constraintTop_toBottomOf="@+id/txtScreen1" />

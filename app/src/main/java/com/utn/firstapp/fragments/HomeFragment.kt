@@ -3,6 +3,7 @@ package com.utn.firstapp.fragments
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -73,9 +74,11 @@ class HomeFragment : Fragment() {
 
         btnLogOut.setOnClickListener{
 
+
             val intent = Intent(activity, MainActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
             intent.putExtra("fragmentId", R.id.LoginFragment)
-            startActivity(intent)
+           startActivity(intent)
         }
 
         btnAddClub.setOnClickListener{

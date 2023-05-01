@@ -14,11 +14,12 @@
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/edtSgnUpLastName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.5" />
 
     <EditText
@@ -28,6 +29,7 @@
         android:ems="10"
         android:hint="Lastname"
         android:inputType="textPersonName"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/edtSgnUpEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -42,6 +44,7 @@
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/edtSgnUpPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -56,6 +59,7 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPersonName"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btnSgnUpAddUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -73,6 +77,20 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtSgnUpPassword"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Sign Up"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/edtSgnUpName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

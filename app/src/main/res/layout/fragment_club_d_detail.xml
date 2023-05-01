@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:text="Club"
             android:textAlignment="center"
-            android:textSize="48sp"
+            android:textSize="44sp"
             android:textStyle="bold" />
 
         <TextView
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:text="League"
             android:textAlignment="center"
-            android:textSize="34sp" />
+            android:textSize="31sp" />
 
         <TextView
             android:id="@+id/txtDetailClubCountry"
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:text="Country"
             android:textAlignment="center"
-            android:textSize="34sp" />
+            android:textSize="31sp" />
 
         <TextView
             android:id="@+id/txtDetailClubNick"
@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:text="Nick"
             android:textAlignment="center"
-            android:textSize="34sp" />
+            android:textSize="31sp" />
 
         <Button
             android:id="@+id/btnDetailEdtClub"
