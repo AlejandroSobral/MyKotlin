@@ -36,6 +36,51 @@ class ClubAdapter(
                 lateinit var v: View
                 lateinit var imageURL: String
 
+                imageURL =
+                        "https://cdn-icons-png.flaticon.com/512/968/968547.png?w=826&t=st=1683033467~exp=1683034067~hmac=8620a0ffceba94b1a2c3eb487f2ff38384bcd12c8f39088b7c3de95ac853972b"
+
+                if (name == "Paraguay") {
+                    imageURL =
+                        "https://www.promiedos.com.ar/images/paises/py.png"
+                }
+                if (name == "Países Bajos") {
+                    imageURL =
+                        "https://www.promiedos.com.ar/images/paises/ho.png"
+                }
+                if (name == "España") {
+                    imageURL =
+                        "https://www.promiedos.com.ar/images/paises/es.png"
+                }
+                if (name == "Alemania") {
+                    imageURL =
+                        "https://www.promiedos.com.ar/images/paises/de.png"
+                }
+                if (name == "Uruguay") {
+                    imageURL =
+                        "https://www.promiedos.com.ar/images/paises/uy.png"
+                }
+
+                if (name == "Brasil") {
+                    imageURL =
+                        "https://www.promiedos.com.ar/images/paises/br.png"
+                }
+                if (name == "Colombia") {
+                    imageURL =
+                        "https://www.promiedos.com.ar/images/paises/co.png"
+                }
+                if (name == "Estados Unidos") {
+                    imageURL =
+                        "https://www.promiedos.com.ar/images/paises/us.png"
+                }
+                if (name == "México") {
+                    imageURL =
+                        "https://www.promiedos.com.ar/images/paises/mx.png"
+                }
+                if (name == "Chile") {
+                    imageURL =
+                        "https://www.promiedos.com.ar/images/paises/cl.png"
+                }
+
                 if (name == "Argentina") {
                     imageURL =
                         "https://www.promiedos.com.ar/images/paises/ar.png"
@@ -61,6 +106,7 @@ class ClubAdapter(
 
             fun setImage(imageURL: String){
                 lateinit var v: View
+
 
                 var imgClubImage: ImageView = view.findViewById(R.id.imgListItem)
                 Glide.with(view).load(imageURL).into(imgClubImage)

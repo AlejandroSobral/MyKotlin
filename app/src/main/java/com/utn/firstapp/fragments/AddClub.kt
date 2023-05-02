@@ -65,6 +65,10 @@ class AddClub : Fragment() {
                 var clubnick: String = addClubNick.text.toString()
                 var imageURL: String = addClubURL.text.toString()
 
+                if(imageURL == ""){
+                    imageURL = "https://www.vhv.rs/dpng/d/486-4867851_generic-football-club-logo-png-download-generic-football.png"
+                }
+
                 newClub.name = clubname
                 newClub.country = clubcountry
                 newClub.league = clubleague
