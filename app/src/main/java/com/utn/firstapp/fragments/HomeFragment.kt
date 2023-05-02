@@ -63,11 +63,21 @@ class HomeFragment : Fragment() {
     }
 
 
+
     override fun onStart() {
         super.onStart()
 
+
+
         val sharedPref = context?.getSharedPreferences(
             getString(R.string.preference_file_key), Context.MODE_PRIVATE)
+
+        var prevPosition = sharedPref?.getInt("RecViewPos", 0)
+
+        if(prevPosition==null){
+            prevPosition = 0
+        }
+
 
         val idUser = sharedPref?.getInt("UserID", 0)
 
@@ -91,18 +101,30 @@ class HomeFragment : Fragment() {
         userDao = db?.userDao()
         clubdao = db?.clubDao()
         //val clubList = clubdao?.fetchAllClubs()
+
+
+
         val clubList = clubdao?.fetchAllClubsOrderByName()
+
+
         if(clubList != null){
             adapter = ClubAdapter(clubList){
 
                 position ->
                 val action = HomeFragmentDirections.actionHomeFragmentToClubDDetail(clubList?.get(position)?.id ?: -1)//clubRepository.clubList[position])
+                if (sharedPref != null) {
+                    with (sharedPref.edit()) {
+                        putInt("RecViewPos", position)
+                        commit()
+                    }
+                }
                 findNavController().navigate(action)
 
             }
         }
         recClubs.layoutManager = LinearLayoutManager(context)
         recClubs.adapter = adapter
+        recClubs.scrollToPosition(prevPosition)
 
     }
 }

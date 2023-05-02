@@ -103,10 +103,10 @@ class LoginFrgmt : Fragment() {
                     if (sharedPref != null) {
                         with (sharedPref.edit()) {
                             putInt("UserID", usertypeIn.id)
+                            putInt("RecViewPos", 0)
                             commit()
                         }
                     }
-
 
                     inputuser.setText("")
                     inputpass.setText("")
