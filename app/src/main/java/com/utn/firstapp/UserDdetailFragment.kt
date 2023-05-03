@@ -1,6 +1,8 @@
 package com.utn.firstapp
 
 import android.content.Context
+import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ScaleGestureDetector
@@ -9,8 +11,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
+import com.utn.firstapp.activities.MainActivity
 import com.utn.firstapp.entities.User
 import com.utn.firstapp.database.UserDao
 import com.utn.firstapp.database.AppDatabase
@@ -76,20 +80,44 @@ class UserDdetailFragment : Fragment() {    private lateinit var viewModel: User
         updatebtn.setOnClickListener {
 
 
-            if (idUser != null) {
-                    val username = txtUserName.text.toString()
-                    val lastname = txtUserLastName.text.toString()
-                    val pass = txtPassword.text.toString()
-                    val email = txtUserEmail.text.toString()
+            val context = requireContext()
+            val builder = AlertDialog.Builder(context)
 
-                    usertypeIn.name = username
-                    usertypeIn.lastName = lastname
-                    usertypeIn.password = pass
-                    usertypeIn.email = email
+            // set the message and title of the dialog
+            builder.setMessage("Are you sure you want to update user information?")
+                .setTitle("Logout")
 
-                userDao?.updateUser(usertypeIn)
-                Snackbar.make(v, "User data correctly updated", Snackbar.LENGTH_SHORT).show()
-            }
+            // add buttons to the dialog
+            builder.setPositiveButton("Accept",
+                DialogInterface.OnClickListener { dialog, id ->
+                    // user clicked Accept button
+                    // do your logout logic here
+                    if (idUser != null) {
+                        val username = txtUserName.text.toString()
+                        val lastname = txtUserLastName.text.toString()
+                        val pass = txtPassword.text.toString()
+                        val email = txtUserEmail.text.toString()
+
+                        usertypeIn.name = username
+                        usertypeIn.lastName = lastname
+                        usertypeIn.password = pass
+                        usertypeIn.email = email
+
+                        userDao?.updateUser(usertypeIn)
+                        Snackbar.make(v, "User data correctly updated", Snackbar.LENGTH_SHORT).show()
+                    }
+
+                })
+            builder.setNegativeButton("Cancel",
+                DialogInterface.OnClickListener { dialog, id ->
+                    // user cancelled the dialog
+                    dialog.dismiss()
+                })
+
+            // create and show the dialog
+            val dialog = builder.create()
+            dialog.show()
+
         }
 
     }

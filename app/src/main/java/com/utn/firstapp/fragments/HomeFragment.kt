@@ -1,6 +1,7 @@
 package com.utn.firstapp.fragments
 
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -10,6 +11,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -83,12 +86,34 @@ class HomeFragment : Fragment() {
 
 
         btnLogOut.setOnClickListener{
+            val context = requireContext()
+            val builder = AlertDialog.Builder(context)
 
+            // set the message and title of the dialog
+            builder.setMessage("Are you sure you want to log out?")
+                .setTitle("Logout")
 
-            val intent = Intent(activity, MainActivity::class.java)
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
-            intent.putExtra("fragmentId", R.id.LoginFragment)
-           startActivity(intent)
+            // add buttons to the dialog
+            builder.setPositiveButton("Accept",
+                DialogInterface.OnClickListener { dialog, id ->
+                    // user clicked Accept button
+                    // do your logout logic here
+                    val intent = Intent(activity, MainActivity::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+                    intent.putExtra("fragmentId", R.id.LoginFragment)
+                    startActivity(intent)
+
+                })
+            builder.setNegativeButton("Cancel",
+                DialogInterface.OnClickListener { dialog, id ->
+                    // user cancelled the dialog
+                    dialog.dismiss()
+                })
+
+            // create and show the dialog
+            val dialog = builder.create()
+            dialog.show()
+
         }
 
         btnAddClub.setOnClickListener{
