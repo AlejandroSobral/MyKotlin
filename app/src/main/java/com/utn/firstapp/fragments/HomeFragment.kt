@@ -82,7 +82,7 @@ class HomeFragment : Fragment() {
         }
 
 
-        val idUser = sharedPref?.getInt("UserID", 0)
+        val idUser = sharedPref?.getString("UserID", "0")
 
 
         btnLogOut.setOnClickListener{

@@ -33,7 +33,7 @@ class StartingUsers(private val context: Context) : RoomDatabase.Callback() {
             for (i in 0 until users.length()) {
                 val item = users.getJSONObject(i)
                 val user = User(
-                    id = 0,
+                    id = "",
                     name = item.getString("name"),
                     email = item.getString("email"),
                     lastName = item.getString("lastname"),

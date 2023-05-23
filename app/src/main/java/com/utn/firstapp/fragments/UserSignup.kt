@@ -67,7 +67,7 @@ class UserSignup : Fragment() {
                 val userFind = userDao?.fetchUserByUserAndMail(username, usermail)
                 if (userFind == null)
                     try {
-                        userDao?.insertUser(User(0, username,usermail, userlastname,userpass))
+                        userDao?.insertUser(User("", username,usermail, userlastname,userpass))
 
                         val message = "User, ${username}, has been added correctly!"
                         //ADD USER TO DB
@@ -84,7 +84,7 @@ class UserSignup : Fragment() {
 
                         if (sharedPref != null) {
                             with (sharedPref.edit()) {
-                                putInt("UserID", usertypeIn.id)
+                                putString("UserID", usertypeIn.id)
                                 commit()
                             }
                         }

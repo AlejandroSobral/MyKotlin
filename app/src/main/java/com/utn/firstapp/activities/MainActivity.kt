@@ -5,7 +5,9 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.utn.firstapp.R
 import com.utn.firstapp.entities.User
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
 

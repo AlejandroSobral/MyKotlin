@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "623993136975",
+    "project_id": "fifaapp-194c2",
+    "storage_bucket": "fifaapp-194c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:623993136975:android:fd2c5e129c892eedae873a",
+        "android_client_info": {
+          "package_name": "com.utn.firstapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "623993136975-snjvn2u0h29vnq6dagdv21postsmb3eb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRFB7LKV0cnL77fZddeDQjRjlJ_D3rh2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "623993136975-snjvn2u0h29vnq6dagdv21postsmb3eb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
