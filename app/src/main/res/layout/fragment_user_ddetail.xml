@@ -71,7 +71,7 @@
         android:hint="UserName"
         android:inputType="text"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtUserLastNameDetail"
+        app:layout_constraintBottom_toTopOf="@+id/txtUserlastnameDetail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,15 +90,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtUserLastNameDetail"
+        app:layout_constraintTop_toBottomOf="@+id/txtUserlastnameDetail"
         app:layout_constraintVertical_bias="0.5" />
 
     <EditText
-        android:id="@+id/txtUserLastNameDetail"
+        android:id="@+id/txtUserlastnameDetail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="LastName"
+        android:hint="lastname"
         android:inputType="text"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/txtUserEmailDetail"

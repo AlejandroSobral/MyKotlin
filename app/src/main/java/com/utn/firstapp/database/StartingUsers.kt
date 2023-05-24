@@ -36,7 +36,7 @@ class StartingUsers(private val context: Context) : RoomDatabase.Callback() {
                     id = "",
                     name = item.getString("name"),
                     email = item.getString("email"),
-                    lastName = item.getString("lastname"),
+                    lastname = item.getString("lastname"),
                     password = item.getString("password")
                 )
 

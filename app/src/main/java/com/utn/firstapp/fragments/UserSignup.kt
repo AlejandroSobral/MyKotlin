@@ -21,7 +21,7 @@ import com.utn.firstapp.database.UserDao
 class UserSignup : Fragment() {
     lateinit var v: View
     lateinit var addUserName : EditText
-    lateinit var addUserLastName : EditText
+    lateinit var addUserlastname : EditText
     lateinit var addUserEmail : EditText
     lateinit var addUserPassword : EditText
     lateinit var addUserbtn : Button
@@ -39,7 +39,7 @@ class UserSignup : Fragment() {
         addUserName = v.findViewById(R.id.edtSgnUpName)
         addUserEmail = v.findViewById(R.id.edtSgnUpEmail)
         addUserPassword = v.findViewById(R.id.edtSgnUpPassword)
-        addUserLastName = v.findViewById(R.id.edtSgnUpLastName)
+        addUserlastname = v.findViewById(R.id.edtSgnUplastname)
         addUserbtn = v.findViewById(R.id.btnSgnUpAddUser)
 
         return v
@@ -61,7 +61,7 @@ class UserSignup : Fragment() {
                 var username: String = addUserName.text.toString()
                 var usermail: String = addUserEmail.text.toString()
                 var userpass: String = addUserPassword.text.toString()
-                var userlastname: String = addUserLastName.text.toString()
+                var userlastname: String = addUserlastname.text.toString()
                 lateinit var usertypeIn: User
 
                 val userFind = userDao?.fetchUserByUserAndMail(username, usermail)
@@ -75,7 +75,7 @@ class UserSignup : Fragment() {
                         addUserName.setText("")
                         addUserEmail.setText("")
                         addUserPassword.setText("")
-                        addUserLastName.setText("")
+                        addUserlastname.setText("")
 
                         usertypeIn = userDao?.fetchUserByUserAndPass(username, userpass) as User
 

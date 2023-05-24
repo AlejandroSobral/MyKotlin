@@ -10,7 +10,7 @@ import com.utn.firstapp.R
 import dagger.hilt.android.AndroidEntryPoint
 
 
-
+@AndroidEntryPoint
 class SecondActivity : AppCompatActivity() {
 
     lateinit var bottomNav: BottomNavigationView

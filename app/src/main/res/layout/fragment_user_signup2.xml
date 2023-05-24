@@ -15,7 +15,7 @@
         android:hint="Username"
         android:inputType="textPersonName"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/edtSgnUpLastName"
+        app:layout_constraintBottom_toTopOf="@+id/edtSgnUplastname"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,11 +23,11 @@
         app:layout_constraintVertical_bias="0.5" />
 
     <EditText
-        android:id="@+id/edtSgnUpLastName"
+        android:id="@+id/edtSgnUplastname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Lastname"
+        android:hint="lastname"
         android:inputType="textPersonName"
         android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/edtSgnUpEmail"
@@ -49,7 +49,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtSgnUpLastName"
+        app:layout_constraintTop_toBottomOf="@+id/edtSgnUplastname"
         app:layout_constraintVertical_bias="0.5" />
 
     <EditText

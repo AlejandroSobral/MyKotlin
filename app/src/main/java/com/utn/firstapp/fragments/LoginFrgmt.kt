@@ -17,6 +17,7 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
@@ -42,8 +43,7 @@ class LoginFrgmt : Fragment() {
     companion object {
         fun newInstance() = LoginFrgmt()
     }
-    @Inject
-    lateinit var viewModel: LoginFrgmtViewModel // Inject the ViewModel with Fragment Context
+    private val viewModel: LoginFrgmtViewModel by viewModels()
 
     private var db: AppDatabase? = null
     private var userDao: UserDao? = null
@@ -58,10 +58,6 @@ class LoginFrgmt : Fragment() {
     var imgLoginLogoURL: String = "https://assets.stickpng.com/images/609912b13ae4510004af4a22.png"
     private lateinit var userList: MutableList<User>
     private lateinit var userIntList: MutableList<User>
-
-
-
-
 
 
     override fun onCreateView(
@@ -83,13 +79,6 @@ class LoginFrgmt : Fragment() {
 
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(requireActivity())[LoginFrgmtViewModel::class.java]
-
-    }
-
-
     override fun onStart() {
         super.onStart()
 
@@ -105,7 +94,7 @@ class LoginFrgmt : Fragment() {
 //                    auxUser.id = document.getString("id") ?: ""
 //                    auxUser.name = document.getString("name") ?: ""
 //                    auxUser.email = document.getString("email") ?: ""
-//                    auxUser.lastName = document.getString("lastName") ?: ""
+//                    auxUser.lastname = document.getString("lastname") ?: ""
 //                    auxUser.password = document.getString("password") ?: ""
 //
 //
