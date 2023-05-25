@@ -8,11 +8,11 @@ import androidx.room.PrimaryKey
 
 
 @Entity(tableName = "clubs")
-    class Club (id:Int, name: String,founded: String, country: String, nickname: String, imageURL: String, league: String)
+    class Club (id:String, name: String,founded: String, country: String, nickname: String, imageURL: String, league: String, countryFlag:String)
     {
-        @PrimaryKey(autoGenerate = true)
+        @PrimaryKey(autoGenerate = false)
         @ColumnInfo(name = "id")
-        var id: Int
+        var id: String
 
         @ColumnInfo(name = "name")
         var name: String
@@ -29,6 +29,9 @@ import androidx.room.PrimaryKey
         @ColumnInfo(name = "imageURL")
         var imageURL: String
 
+        @ColumnInfo(name = "countryFlag")
+        var countryFlag: String
+
 
         @ColumnInfo(name = "league")
         var league: String
@@ -40,6 +43,7 @@ import androidx.room.PrimaryKey
             this.nickname = nickname
             this.imageURL = imageURL
             this.league = league
+            this.countryFlag = countryFlag
         }
 
 

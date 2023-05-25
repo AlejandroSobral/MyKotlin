@@ -17,7 +17,7 @@ interface ClubDao {
     fun fetchAllClubsOrderByName(): MutableList<Club?>?
 
     @Query("SELECT * FROM clubs WHERE id = :id")
-    fun fetchClubById(id: Int): Club?
+    fun fetchClubById(id: String): Club?
 
     @Query("SELECT * FROM clubs WHERE name = :name")
     fun fetchClubByName(name: String): Club?

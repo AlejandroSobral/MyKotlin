@@ -17,9 +17,6 @@ class LoginFrgmtViewModel @Inject constructor(
 ) : ViewModel() {
 
 
-
-
-
     private val _user = MutableLiveData<User>()
     val user: LiveData<User>
         get() = _user

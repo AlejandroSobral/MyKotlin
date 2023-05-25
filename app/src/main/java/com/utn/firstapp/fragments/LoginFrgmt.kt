@@ -56,8 +56,7 @@ class LoginFrgmt : Fragment() {
     lateinit var inputuser: EditText
     lateinit var inputpass: EditText
     var imgLoginLogoURL: String = "https://assets.stickpng.com/images/609912b13ae4510004af4a22.png"
-    private lateinit var userList: MutableList<User>
-    private lateinit var userIntList: MutableList<User>
+
 
 
     override fun onCreateView(

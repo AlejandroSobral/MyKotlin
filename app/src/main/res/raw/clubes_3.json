@@ -1,0 +1,3845 @@
+[
+  {
+    "Club": "Club Atlético All Boys",
+    "Founded": "15-03-1913",
+    "Country": "Argentina",
+    "Nick": "Albo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/2.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Asociación Atlética Argentinos Juniors",
+    "Founded": "15-08-1904",
+    "Country": "Argentina",
+    "Nick": "Bichos Colorados",
+    "imageURL": "https://www.promiedos.com.ar/images/64/3.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Arsenal Fútbol Club",
+    "Founded": "11-01-1957",
+    "Country": "Argentina",
+    "Nick": "El Arse",
+    "imageURL": "https://www.promiedos.com.ar/images/64/4.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Banfield",
+    "Founded": "21-01-1896",
+    "Country": "Argentina",
+    "Nick": "Taladro",
+    "imageURL": "https://www.promiedos.com.ar/images/64/5.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Boca Juniors",
+    "Founded": "03-04-1905",
+    "Country": "Argentina",
+    "Nick": "Xeneizes",
+    "imageURL": "https://www.promiedos.com.ar/images/64/6.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Colón",
+    "Founded": "05-05-1905",
+    "Country": "Argentina",
+    "Nick": "Sabalero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/7.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Estudiantes de La Plata",
+    "Founded": "04-08-1905",
+    "Country": "Argentina",
+    "Nick": "Pincharrata / León",
+    "imageURL": "https://www.promiedos.com.ar/images/64/8.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club de Gimnasia y Esgrima La Plata",
+    "Founded": "03-06-1887",
+    "Country": "Argentina",
+    "Nick": "Lobo / Tripero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/9.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Deportivo Godoy Cruz Antonio Tomba",
+    "Founded": "01-06-1921",
+    "Country": "Argentina",
+    "Nick": "El Tomba / Bodeguero / Expreso",
+    "imageURL": "https://www.promiedos.com.ar/images/64/10.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Huracán",
+    "Founded": "01-11-1908",
+    "Country": "Argentina",
+    "Nick": "El Globo / Quemero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/11.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Independiente",
+    "Founded": "01-01-1905",
+    "Country": "Argentina",
+    "Nick": "Diablos Rojos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/12.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Lanús",
+    "Founded": "03-01-1915",
+    "Country": "Argentina",
+    "Nick": "Granate",
+    "imageURL": "https://www.promiedos.com.ar/images/64/13.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Newells Old Boys",
+    "Founded": "03-11-1903",
+    "Country": "Argentina",
+    "Nick": "La Lepra",
+    "imageURL": "https://www.promiedos.com.ar/images/64/14.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Olimpo",
+    "Founded": "15-10-1910",
+    "Country": "Argentina",
+    "Nick": "Aurinegro",
+    "imageURL": "https://www.promiedos.com.ar/images/64/15.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Quilmes Atlético Club",
+    "Founded": "27-11-1887",
+    "Country": "Argentina",
+    "Nick": "El Cervecero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/16.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Racing Club",
+    "Founded": "25-03-1903",
+    "Country": "Argentina",
+    "Nick": "La Academia",
+    "imageURL": "https://www.promiedos.com.ar/images/64/17.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético River Plate",
+    "Founded": "25-05-1901",
+    "Country": "Argentina",
+    "Nick": "Millonarios",
+    "imageURL": "https://www.promiedos.com.ar/images/64/18.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético San Lorenzo de Almagro",
+    "Founded": "01-04-1908",
+    "Country": "Argentina",
+    "Nick": "Ciclón / Cuervo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/19.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Tigre",
+    "Founded": "03-08-1902",
+    "Country": "Argentina",
+    "Nick": "Matador",
+    "imageURL": "https://www.promiedos.com.ar/images/64/20.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Vélez Sarsfield",
+    "Founded": "01-01-1910",
+    "Country": "Argentina",
+    "Nick": "El Fortín",
+    "imageURL": "https://www.promiedos.com.ar/images/64/21.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Aldosivi",
+    "Founded": "29-03-1913",
+    "Country": "Argentina",
+    "Nick": "Tiburón",
+    "imageURL": "https://www.promiedos.com.ar/images/64/22.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Almirante Brown",
+    "Founded": "17-01-1922",
+    "Country": "Argentina",
+    "Nick": "La Fragata",
+    "imageURL": "https://www.promiedos.com.ar/images/64/23.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Asociación Mutual Social y Deportiva Atlético de Rafaela",
+    "Founded": "13-01-1907",
+    "Country": "Argentina",
+    "Nick": "La Crema",
+    "imageURL": "https://www.promiedos.com.ar/images/64/24.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Tucumán",
+    "Founded": "27-09-1902",
+    "Country": "Argentina",
+    "Nick": "El Decano",
+    "imageURL": "https://www.promiedos.com.ar/images/64/25.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Belgrano",
+    "Founded": "19-03-1905",
+    "Country": "Argentina",
+    "Nick": "Pirata",
+    "imageURL": "https://www.promiedos.com.ar/images/64/26.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Chacarita Juniors",
+    "Founded": "01-05-1906",
+    "Country": "Argentina",
+    "Nick": "Funebrero / Tricolor",
+    "imageURL": "https://www.promiedos.com.ar/images/64/28.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club y Social Deportivo Defensa y Justicia",
+    "Founded": "20-03-1935",
+    "Country": "Argentina",
+    "Nick": "El Halcón",
+    "imageURL": "https://www.promiedos.com.ar/images/64/29.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Ferro Carril Oeste",
+    "Founded": "28-07-1904",
+    "Country": "Argentina",
+    "Nick": "Verdolaga",
+    "imageURL": "https://www.promiedos.com.ar/images/64/30.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Gimnasia y Esgrima",
+    "Founded": "18-03-1931",
+    "Country": "Argentina",
+    "Nick": "Lobo Jujeño",
+    "imageURL": "https://www.promiedos.com.ar/images/64/31.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Sportivo Independiente Rivadavia",
+    "Founded": "24-01-1913",
+    "Country": "Argentina",
+    "Nick": "La Lepra",
+    "imageURL": "https://www.promiedos.com.ar/images/64/32.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Instituto Atlético Central Córdoba",
+    "Founded": "08-08-1918",
+    "Country": "Argentina",
+    "Nick": "La Gloria",
+    "imageURL": "https://www.promiedos.com.ar/images/64/33.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Patronato de la Juventud Católica",
+    "Founded": "01-02-1914",
+    "Country": "Argentina",
+    "Nick": "El Patrón, Negro",
+    "imageURL": "https://www.promiedos.com.ar/images/64/34.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Rosario Central",
+    "Founded": "24-12-1889",
+    "Country": "Argentina",
+    "Nick": "El Canalla / La Academia",
+    "imageURL": "https://www.promiedos.com.ar/images/64/35.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético San Martín (SJ)",
+    "Founded": "27-09-1907",
+    "Country": "Argentina",
+    "Nick": "Santo / Verdinegro",
+    "imageURL": "https://www.promiedos.com.ar/images/64/36.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético San Martín (T)",
+    "Founded": "02-11-1909",
+    "Country": "Argentina",
+    "Nick": "Santo / Ciruja",
+    "imageURL": "https://www.promiedos.com.ar/images/64/37.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Unión",
+    "Founded": "15-04-1907",
+    "Country": "Argentina",
+    "Nick": "Tatengue",
+    "imageURL": "https://www.promiedos.com.ar/images/64/39.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Los Andes",
+    "Founded": "01-01-1917",
+    "Country": "Argentina",
+    "Nick": "Milrayitas",
+    "imageURL": "https://www.promiedos.com.ar/images/64/40.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Atlanta",
+    "Founded": "12-10-1904",
+    "Country": "Argentina",
+    "Nick": "Bohemios",
+    "imageURL": "https://www.promiedos.com.ar/images/64/41.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Nueva Chicago",
+    "Founded": "01-07-1911",
+    "Country": "Argentina",
+    "Nick": "El Torito",
+    "imageURL": "https://www.promiedos.com.ar/images/64/42.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Defensores de Belgrano",
+    "Founded": "25-05-1906",
+    "Country": "Argentina",
+    "Nick": "El Dragón / Defe",
+    "imageURL": "https://www.promiedos.com.ar/images/64/43.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Deportivo Morón",
+    "Founded": "20-06-1947",
+    "Country": "Argentina",
+    "Nick": "El Gallo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/44.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Platense",
+    "Founded": "25-05-1905",
+    "Country": "Argentina",
+    "Nick": "Calamar",
+    "imageURL": "https://www.promiedos.com.ar/images/64/45.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Social y Atlético Guillermo Brown",
+    "Founded": "14-01-1945",
+    "Country": "Argentina",
+    "Nick": "La Banda",
+    "imageURL": "https://www.promiedos.com.ar/images/64/46.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Central Norte",
+    "Founded": "09-03-1921",
+    "Country": "Argentina",
+    "Nick": "Cuervos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/47.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Chaco For Ever",
+    "Founded": "27-07-1913",
+    "Country": "Argentina",
+    "Nick": "Negro / Albinegro",
+    "imageURL": "https://www.promiedos.com.ar/images/64/48.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Cipolletti",
+    "Founded": "26-10-1926",
+    "Country": "Argentina",
+    "Nick": "Cipo, Albinegro",
+    "imageURL": "https://www.promiedos.com.ar/images/64/49.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Sportivo Desamparados",
+    "Founded": "10-09-1919",
+    "Country": "Argentina",
+    "Nick": "Puyutano",
+    "imageURL": "https://www.promiedos.com.ar/images/64/50.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Talleres",
+    "Founded": "12-10-1913",
+    "Country": "Argentina",
+    "Nick": "El Matador",
+    "imageURL": "https://www.promiedos.com.ar/images/64/52.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club de Gimnasia y Tiro de Salta",
+    "Founded": "29-11-1902",
+    "Country": "Argentina",
+    "Nick": "Albo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/53.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Boca Unidos",
+    "Founded": "27-07-1927",
+    "Country": "Argentina",
+    "Nick": "Aurirrojo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/54.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Social y Deportivo Merlo",
+    "Founded": "08-10-1954",
+    "Country": "Argentina",
+    "Nick": "Los Charros",
+    "imageURL": "https://www.promiedos.com.ar/images/64/55.png",
+    "League": "Primera B Metropolitana",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Centro Juventud Antoniana",
+    "Founded": "12-01-1916",
+    "Country": "Argentina",
+    "Nick": "Santo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/56.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Gimnasia y Esgrima",
+    "Founded": "08-02-1917",
+    "Country": "Argentina",
+    "Nick": "Lobo / Menssana",
+    "imageURL": "https://www.promiedos.com.ar/images/64/57.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Social y Deportivo Liniers",
+    "Founded": "02-07-1931",
+    "Country": "Argentina",
+    "Nick": "Topadora del Oeste",
+    "imageURL": "https://www.promiedos.com.ar/images/64/59.png",
+    "League": "Torneo Primera C",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Deportivo Español",
+    "Founded": "12-10-1956",
+    "Country": "Argentina",
+    "Nick": "Gallego",
+    "imageURL": "https://www.promiedos.com.ar/images/64/60.png",
+    "League": "Torneo Primera C",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Talleres",
+    "Founded": "01-06-1906",
+    "Country": "Argentina",
+    "Nick": "Albirrojo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/61.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Central Córdoba",
+    "Founded": "20-10-1906",
+    "Country": "Argentina",
+    "Nick": "Los Charrúas",
+    "imageURL": "https://www.promiedos.com.ar/images/64/62.png",
+    "League": "Torneo Primera C",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Estudiantes",
+    "Founded": "15-08-1898",
+    "Country": "Argentina",
+    "Nick": "El Pincha",
+    "imageURL": "https://www.promiedos.com.ar/images/64/64.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Ferrocarril Midland",
+    "Founded": "28-06-1914",
+    "Country": "Argentina",
+    "Nick": "Funebreros",
+    "imageURL": "https://www.promiedos.com.ar/images/64/65.png",
+    "League": "Torneo Primera C",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club El Porvenir",
+    "Founded": "11-09-1915",
+    "Country": "Argentina",
+    "Nick": "Porve",
+    "imageURL": "https://www.promiedos.com.ar/images/64/66.png",
+    "League": "Torneo Primera D",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Social y Cultural Deportivo Laferrere",
+    "Founded": "09-07-1956",
+    "Country": "Argentina",
+    "Nick": "Villeros / Lafe",
+    "imageURL": "https://www.promiedos.com.ar/images/64/67.png",
+    "League": "Torneo Primera C",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Douglas Haig",
+    "Founded": "18-11-1918",
+    "Country": "Argentina",
+    "Nick": "Fogonero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/68.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Sportivo Italiano",
+    "Founded": "07-05-1955",
+    "Country": "Argentina",
+    "Nick": "El Acia / El Tano / Azzurro",
+    "imageURL": "https://www.promiedos.com.ar/images/64/69.png",
+    "League": "Torneo Primera C",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Almagro",
+    "Founded": "06-01-1911",
+    "Country": "Argentina",
+    "Nick": "Tricolor",
+    "imageURL": "https://www.promiedos.com.ar/images/64/70.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Sportivo Belgrano",
+    "Founded": "15-04-1914",
+    "Country": "Argentina",
+    "Nick": "La Verde",
+    "imageURL": "https://www.promiedos.com.ar/images/64/71.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club y Biblioteca Ramón Santamarina",
+    "Founded": "20-12-1913",
+    "Country": "Argentina",
+    "Nick": "Aurinegro",
+    "imageURL": "https://www.promiedos.com.ar/images/64/73.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Colegiales",
+    "Founded": "01-04-1908",
+    "Country": "Argentina",
+    "Nick": "Cole / Tricolor",
+    "imageURL": "https://www.promiedos.com.ar/images/64/74.png",
+    "League": "Primera B Metropolitana",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Acassuso",
+    "Founded": "07-09-1922",
+    "Country": "Argentina",
+    "Nick": "Ssuso / Quemero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/75.png",
+    "League": "Primera B Metropolitana",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Temperley",
+    "Founded": "01-11-1912",
+    "Country": "Argentina",
+    "Nick": "Gasolero / Celeste",
+    "imageURL": "https://www.promiedos.com.ar/images/64/76.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Social y Deportivo Flandria",
+    "Founded": "09-02-1941",
+    "Country": "Argentina",
+    "Nick": "El Canario",
+    "imageURL": "https://www.promiedos.com.ar/images/64/77.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Central Córdoba",
+    "Founded": "03-06-1919",
+    "Country": "Argentina",
+    "Nick": "Ferroviarios",
+    "imageURL": "https://www.promiedos.com.ar/images/64/78.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Racing",
+    "Founded": "14-12-1924",
+    "Country": "Argentina",
+    "Nick": "La Academia Cordobesa",
+    "imageURL": "https://www.promiedos.com.ar/images/64/79.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Mutual Crucero del Norte",
+    "Founded": "28-06-2003",
+    "Country": "Argentina",
+    "Nick": "Colectivero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/80.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Sarmiento",
+    "Founded": "01-04-1911",
+    "Country": "Argentina",
+    "Nick": "Guerrero / Verdolaga",
+    "imageURL": "https://www.promiedos.com.ar/images/64/81.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Barracas Central",
+    "Founded": "05-04-1904",
+    "Country": "Argentina",
+    "Nick": "Camionero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/82.png",
+    "League": "Liga Profesional de Fútbol",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Brown",
+    "Founded": "03-03-1945",
+    "Country": "Argentina",
+    "Nick": "Tricolor",
+    "imageURL": "https://www.promiedos.com.ar/images/64/83.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Comunicaciones",
+    "Founded": "15-03-1931",
+    "Country": "Argentina",
+    "Nick": "El Cartero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/84.png",
+    "League": "Primera B Metropolitana",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Alvarado",
+    "Founded": "21-06-1928",
+    "Country": "Argentina",
+    "Nick": "Torito",
+    "imageURL": "https://www.promiedos.com.ar/images/64/85.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Deportivo Armenio",
+    "Founded": "02-11-1962",
+    "Country": "Argentina",
+    "Nick": "Tricolor",
+    "imageURL": "https://www.promiedos.com.ar/images/64/86.png",
+    "League": "Primera B Metropolitana",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Deportivo Maipú",
+    "Founded": "16-12-1927",
+    "Country": "Argentina",
+    "Nick": "Botellero / Cruzado",
+    "imageURL": "https://www.promiedos.com.ar/images/64/89.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Social y Deportivo Tristán Suárez",
+    "Founded": "08-08-1929",
+    "Country": "Argentina",
+    "Nick": "Lechero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/90.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético San Telmo",
+    "Founded": "05-03-1904",
+    "Country": "Argentina",
+    "Nick": "Candombero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/91.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Villa Dálmine",
+    "Founded": "20-11-1957",
+    "Country": "Argentina",
+    "Nick": "El Viola / Violeta",
+    "imageURL": "https://www.promiedos.com.ar/images/64/92.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Villa San Carlos",
+    "Founded": "25-04-1925",
+    "Country": "Argentina",
+    "Nick": "Los Villeros / El Cele",
+    "imageURL": "https://www.promiedos.com.ar/images/64/93.png",
+    "League": "Primera B Metropolitana",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Juventud Unida Universitario",
+    "Founded": "08-11-1920",
+    "Country": "Argentina",
+    "Nick": "La Juve",
+    "imageURL": "https://www.promiedos.com.ar/images/64/97.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético y Social Defensores de Belgrano",
+    "Founded": "01-04-1946",
+    "Country": "Argentina",
+    "Nick": "Granate / Elefante",
+    "imageURL": "https://www.promiedos.com.ar/images/64/99.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Sportivo Dock Sud",
+    "Founded": "01-09-1916",
+    "Country": "Argentina",
+    "Nick": "El Docke",
+    "imageURL": "https://www.promiedos.com.ar/images/64/100.png",
+    "League": "Primera B Metropolitana",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético San Miguel",
+    "Founded": "07-08-1922",
+    "Country": "Argentina",
+    "Nick": "Trueno Verde",
+    "imageURL": "https://www.promiedos.com.ar/images/64/101.png",
+    "League": "Primera B Metropolitana",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Argentino",
+    "Founded": "30-08-1906",
+    "Country": "Argentina",
+    "Nick": "Academia",
+    "imageURL": "https://www.promiedos.com.ar/images/64/102.png",
+    "League": "Primera B Metropolitana",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Asociación Deportiva Berazategui",
+    "Founded": "18-09-1975",
+    "Country": "Argentina",
+    "Nick": "Bera / Naranja",
+    "imageURL": "https://www.promiedos.com.ar/images/64/103.png",
+    "League": "Torneo Primera C",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Defensores de Cambaceres",
+    "Founded": "12-10-1921",
+    "Country": "Argentina",
+    "Nick": "Camba / Rojo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/104.png",
+    "League": "Primera D Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Defensores Unidos",
+    "Founded": "14-07-1914",
+    "Country": "Argentina",
+    "Nick": "CADU / Celestes",
+    "imageURL": "https://www.promiedos.com.ar/images/64/105.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Excursionistas",
+    "Founded": "01-02-1910",
+    "Country": "Argentina",
+    "Nick": "Excursio/Villero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/106.png",
+    "League": "Primera C Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Fénix",
+    "Founded": "26-04-1948",
+    "Country": "Argentina",
+    "Nick": "Cuervos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/107.png",
+    "League": "Primera B Metropolitana",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético General Lamadrid",
+    "Founded": "11-05-1950",
+    "Country": "Argentina",
+    "Nick": "Carcelero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/108.png",
+    "League": "Primera C Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Asociación Social y Deportiva Justo José de Urquiza",
+    "Founded": "08-06-1936",
+    "Country": "Argentina",
+    "Nick": "Celeste / Jota Jota",
+    "imageURL": "https://www.promiedos.com.ar/images/64/109.png",
+    "League": "Primera C Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Luján",
+    "Founded": "01-04-1936",
+    "Country": "Argentina",
+    "Nick": "Lujanero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/110.png",
+    "League": "Primera C Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Sacachispas Fútbol Club",
+    "Founded": "17-10-1948",
+    "Country": "Argentina",
+    "Nick": "Lila / Villero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/111.png",
+    "League": "Primera B Metropolitana",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Deportivo Universidad Abierta Interamericana Urquiza",
+    "Founded": "21-05-1950",
+    "Country": "Argentina",
+    "Nick": "Furgonero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/112.png",
+    "League": "Primera B Metropolitana",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Argentino (Quilmes)",
+    "Founded": "01-12-1899",
+    "Country": "Argentina",
+    "Nick": "Mate",
+    "imageURL": "https://www.promiedos.com.ar/images/64/113.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Argentino (Rosario)",
+    "Founded": "15-01-1912",
+    "Country": "Argentina",
+    "Nick": "Salaíto",
+    "imageURL": "https://www.promiedos.com.ar/images/64/114.png",
+    "League": "Primera B Metropolitana",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Atlas",
+    "Founded": "17-08-1951",
+    "Country": "Argentina",
+    "Nick": "Marrón",
+    "imageURL": "https://www.promiedos.com.ar/images/64/115.png",
+    "League": "Primera C Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Lugano",
+    "Founded": "18-11-1915",
+    "Country": "Argentina",
+    "Nick": "Naranja",
+    "imageURL": "https://www.promiedos.com.ar/images/64/116.png",
+    "League": "Primera D Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Cañuelas Fútbol Club",
+    "Founded": "01-01-1911",
+    "Country": "Argentina",
+    "Nick": "Tambero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/117.png",
+    "League": "Primera B Metropolitana",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Social y Deportivo Central Ballester",
+    "Founded": "26-10-1974",
+    "Country": "Argentina",
+    "Nick": "Canalla",
+    "imageURL": "https://www.promiedos.com.ar/images/64/118.png",
+    "League": "Primera D Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Centro Social y Recreativo Español",
+    "Founded": "24-06-1934",
+    "Country": "Argentina",
+    "Nick": "Gallego",
+    "imageURL": "https://www.promiedos.com.ar/images/64/119.png",
+    "League": "Primera D Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Claypole",
+    "Founded": "01-10-1923",
+    "Country": "Argentina",
+    "Nick": "Tambero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/120.png",
+    "League": "Primera C Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Social, Cultural y Deportivo Muñiz",
+    "Founded": "09-07-1932",
+    "Country": "Argentina",
+    "Nick": "Rojo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/121.png",
+    "League": "Primera D Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Deportivo Paraguayo",
+    "Founded": "15-08-1961",
+    "Country": "Argentina",
+    "Nick": "El Depor",
+    "imageURL": "https://www.promiedos.com.ar/images/64/122.png",
+    "League": "Primera D Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Deportivo Riestra",
+    "Founded": "22-02-1931",
+    "Country": "Argentina",
+    "Nick": "Albinegro",
+    "imageURL": "https://www.promiedos.com.ar/images/64/123.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Ituzaingó",
+    "Founded": "01-04-1912",
+    "Country": "Argentina",
+    "Nick": "Verde",
+    "imageURL": "https://www.promiedos.com.ar/images/64/124.png",
+    "League": "Primera B Metropolitana",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Deportivo y Social Juventud Unida",
+    "Founded": "06-09-1949",
+    "Country": "Argentina",
+    "Nick": "Lobo Rojo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/125.png",
+    "League": "Primera D Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Deportivo y Mutual Leandro N. Alem",
+    "Founded": "24-05-1925",
+    "Country": "Argentina",
+    "Nick": "Lechero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/126.png",
+    "League": "Primera C Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Puerto Nuevo",
+    "Founded": "12-10-1939",
+    "Country": "Argentina",
+    "Nick": "Portuario",
+    "imageURL": "https://www.promiedos.com.ar/images/64/127.png",
+    "League": "Primera C Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Social y Deportivo San Martín (Burzaco)",
+    "Founded": "01-05-1936",
+    "Country": "Argentina",
+    "Nick": "Sanma",
+    "imageURL": "https://www.promiedos.com.ar/images/64/128.png",
+    "League": "Primera C Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Victoriano Arenas",
+    "Founded": "02-01-1928",
+    "Country": "Argentina",
+    "Nick": "CAVA",
+    "imageURL": "https://www.promiedos.com.ar/images/64/129.png",
+    "League": "Primera C Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Social y Deportivo Yupanqui",
+    "Founded": "12-10-1935",
+    "Country": "Argentina",
+    "Nick": "Trapero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/130.png",
+    "League": "Primera C Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Mitre",
+    "Founded": "02-04-1907",
+    "Country": "Argentina",
+    "Nick": "Aurinegro/Tigre de la Roca",
+    "imageURL": "https://www.promiedos.com.ar/images/64/133.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Asociación Atlética Estudiantes",
+    "Founded": "21-09-1912",
+    "Country": "Argentina",
+    "Nick": "Celeste / Leones",
+    "imageURL": "https://www.promiedos.com.ar/images/64/154.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Atlético Club San Martín (Mendoza)",
+    "Founded": "22-12-1927",
+    "Country": "Argentina",
+    "Nick": "Chacarero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/155.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Gimnasia y Esgrima (Mendoza)",
+    "Founded": "30-08-1908",
+    "Country": "Argentina",
+    "Nick": "Lobo / Mensana",
+    "imageURL": "https://www.promiedos.com.ar/images/64/156.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Ferro Carril Oeste (La Pampa)",
+    "Founded": "24-06-1934",
+    "Country": "Argentina",
+    "Nick": "Verde",
+    "imageURL": "https://www.promiedos.com.ar/images/64/158.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Sportivo Estudiantes",
+    "Founded": "20-06-1920",
+    "Country": "Argentina",
+    "Nick": "Verde",
+    "imageURL": "https://www.promiedos.com.ar/images/64/160.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Social y Deportivo Juventud Unida",
+    "Founded": "01-05-1907",
+    "Country": "Argentina",
+    "Nick": "Decano",
+    "imageURL": "https://www.promiedos.com.ar/images/64/165.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Sarmiento",
+    "Founded": "24-09-1910",
+    "Country": "Argentina",
+    "Nick": "Decano",
+    "imageURL": "https://www.promiedos.com.ar/images/64/167.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Sportivo General San Martín",
+    "Founded": "08-04-1941",
+    "Country": "Argentina",
+    "Nick": "Franjeado",
+    "imageURL": "https://www.promiedos.com.ar/images/64/169.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Sol de América",
+    "Founded": "05-01-1947",
+    "Country": "Argentina",
+    "Nick": "Danzarín",
+    "imageURL": "https://www.promiedos.com.ar/images/64/171.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Social y Deportivo Madryn",
+    "Founded": "07-05-1924",
+    "Country": "Argentina",
+    "Nick": "Aurinegro / Depo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/178.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Social y Deportivo Sol de Mayo",
+    "Founded": "02-08-1920",
+    "Country": "Argentina",
+    "Nick": "Albiceleste",
+    "imageURL": "https://www.promiedos.com.ar/images/64/183.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Germinal (Rawson)",
+    "Founded": "03-09-1922",
+    "Country": "Argentina",
+    "Nick": "Verde",
+    "imageURL": "https://www.promiedos.com.ar/images/64/185.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético y Social Camioneros",
+    "Founded": "26-08-2009",
+    "Country": "Argentina",
+    "Nick": "Verde",
+    "imageURL": "https://www.promiedos.com.ar/images/64/186.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético 9 de Julio",
+    "Founded": "09-07-1904",
+    "Country": "Argentina",
+    "Nick": "León",
+    "imageURL": "https://www.promiedos.com.ar/images/64/187.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Sportivo Atlético Club",
+    "Founded": "18-03-1922",
+    "Country": "Argentina",
+    "Nick": "Lobo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/190.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Paraná",
+    "Founded": "16-06-1907",
+    "Country": "Argentina",
+    "Nick": "Decano",
+    "imageURL": "https://www.promiedos.com.ar/images/64/192.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Unión",
+    "Founded": "02-04-1948",
+    "Country": "Argentina",
+    "Nick": "Bichos verdes",
+    "imageURL": "https://www.promiedos.com.ar/images/64/193.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Liniers (Bahía Blanca)",
+    "Founded": "08-10-1908",
+    "Country": "Argentina",
+    "Nick": "Chivo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/200.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético El Linqueño",
+    "Founded": "06-06-1915",
+    "Country": "Argentina",
+    "Nick": "León",
+    "imageURL": "https://www.promiedos.com.ar/images/64/202.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Villa Mitre (Bahía Blanca)",
+    "Founded": "14-08-1924",
+    "Country": "Argentina",
+    "Nick": "Tricolor / Villero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/203.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Agropecuario Argentino",
+    "Founded": "23-08-2011",
+    "Country": "Argentina",
+    "Nick": "Sojero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/204.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Independiente",
+    "Founded": "05-04-1930",
+    "Country": "Argentina",
+    "Nick": "Rojo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/208.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Sportivo Barracas",
+    "Founded": "30-10-1913",
+    "Country": "Argentina",
+    "Nick": "Arrabalero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/216.png",
+    "League": "Primera D Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Defensores de Pronunciamiento",
+    "Founded": "18-09-1972",
+    "Country": "Argentina",
+    "Nick": "Depro",
+    "imageURL": "https://www.promiedos.com.ar/images/64/288.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Guemes (Stgo. del Estero)",
+    "Founded": "12-10-1932",
+    "Country": "Argentina",
+    "Nick": "Gaucho",
+    "imageURL": "https://www.promiedos.com.ar/images/64/300.png",
+    "League": "Primera B Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Sportivo Peñarol",
+    "Founded": "24-11-1918",
+    "Country": "Argentina",
+    "Nick": "Bohemio/Tricolor",
+    "imageURL": "https://www.promiedos.com.ar/images/64/306.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Huracán Las Heras",
+    "Founded": "24-12-1939",
+    "Country": "Argentina",
+    "Nick": "Globo Laserino",
+    "imageURL": "https://www.promiedos.com.ar/images/64/308.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Sportivo y Biblioteca Atenas",
+    "Founded": "09-07-1916",
+    "Country": "Argentina",
+    "Nick": "Albo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/311.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Atlético Sansinena Social y Deportivo",
+    "Founded": "12-06-1914",
+    "Country": "Argentina",
+    "Nick": "Rojo,Triperos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/312.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Circulo Deportivo",
+    "Founded": "23-12-1921",
+    "Country": "Argentina",
+    "Nick": "Papero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/330.png",
+    "League": "Torneo Federal A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Club Mercedes",
+    "Founded": "12-05-1875",
+    "Country": "Argentina",
+    "Nick": "Blanquinegros",
+    "imageURL": "https://www.promiedos.com.ar/images/64/364.png",
+    "League": "Primera D Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Real Pilar Fútbol Club",
+    "Founded": "17-02-2017",
+    "Country": "Argentina",
+    "Nick": "Monarca",
+    "imageURL": "https://www.promiedos.com.ar/images/64/386.png",
+    "League": "Primera C Nacional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ar.png"
+  },
+  {
+    "Club": "Athletic Club",
+    "Founded": "1898",
+    "Country": "España",
+    "Nick": "Leones",
+    "imageURL": "https://www.promiedos.com.ar/images/64/509.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Club Atlético de Madrid",
+    "Founded": "26-04-1903",
+    "Country": "España",
+    "Nick": "Atleti / Colchoneros",
+    "imageURL": "https://www.promiedos.com.ar/images/64/510.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Club Atlético Osasuna",
+    "Founded": "25-10-1920",
+    "Country": "España",
+    "Nick": "Rojillos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/511.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Getafe Club de Fútbol",
+    "Founded": "08-07-1983",
+    "Country": "España",
+    "Nick": "Getafenses / Azules",
+    "imageURL": "https://www.promiedos.com.ar/images/64/512.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Granada Club de Fútbol",
+    "Founded": "14-04-1931",
+    "Country": "España",
+    "Nick": "Nazaríes",
+    "imageURL": "https://www.promiedos.com.ar/images/64/513.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Levante Unión Deportiva",
+    "Founded": "09-09-1909",
+    "Country": "España",
+    "Nick": "Granotas / Azulgranas",
+    "imageURL": "https://www.promiedos.com.ar/images/64/514.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Rayo Vallecano de Madrid",
+    "Founded": "29-05-1924",
+    "Country": "España",
+    "Nick": "Franjirrojo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/516.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Real Betis Balompié",
+    "Founded": "12-09-1907",
+    "Country": "España",
+    "Nick": "Béticos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/517.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Real Club Celta de Vigo",
+    "Founded": "23-08-1923",
+    "Country": "España",
+    "Nick": "Célticos / Celtiñas",
+    "imageURL": "https://www.promiedos.com.ar/images/64/518.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Real Club Deportiu Espanyol de Barcelona",
+    "Founded": "28-10-1900",
+    "Country": "España",
+    "Nick": "Periquitos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/520.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Real Club Deportivo Mallorca",
+    "Founded": "27-02-1916",
+    "Country": "España",
+    "Nick": "Barralets / Bermellones",
+    "imageURL": "https://www.promiedos.com.ar/images/64/521.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Real Sociedad de Fútbol",
+    "Founded": "07-09-1909",
+    "Country": "España",
+    "Nick": "Txuri-urdin (Blanquiazul en euskera)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/522.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Real Valladolid Club de Fútbol",
+    "Founded": "20-06-1928",
+    "Country": "España",
+    "Nick": "Pucela",
+    "imageURL": "https://www.promiedos.com.ar/images/64/523.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Sevilla Fútbol Club",
+    "Founded": "14-10-1905",
+    "Country": "España",
+    "Nick": "Sevillista",
+    "imageURL": "https://www.promiedos.com.ar/images/64/525.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Valencia Club de Fútbol",
+    "Founded": "18-03-1919",
+    "Country": "España",
+    "Nick": "Ches / Taronges / Murciélagos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/526.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Real Madrid Club de Fútbol",
+    "Founded": "06-03-1902",
+    "Country": "España",
+    "Nick": "Merengues /  Blancos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/527.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Fútbol Club Barcelona",
+    "Founded": "29-11-1899",
+    "Country": "España",
+    "Nick": "Barça / Culés / Blaugrana",
+    "imageURL": "https://www.promiedos.com.ar/images/64/528.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Arsenal Football Club",
+    "Founded": "1886",
+    "Country": "Inglaterra",
+    "Nick": "Gunners (Artilleros)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/529.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Aston Villa Football Club",
+    "Founded": "1874",
+    "Country": "Inglaterra",
+    "Nick": "The Villains (Los Villanos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/530.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Chelsea Football Club",
+    "Founded": "10-03-1905",
+    "Country": "Inglaterra",
+    "Nick": "The Blues (Los Azules)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/531.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Everton Football Club",
+    "Founded": "1878",
+    "Country": "Inglaterra",
+    "Nick": "The Toffees",
+    "imageURL": "https://www.promiedos.com.ar/images/64/532.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Fulham Football Club",
+    "Founded": "1879",
+    "Country": "Inglaterra",
+    "Nick": "Blancos / Cottagers",
+    "imageURL": "https://www.promiedos.com.ar/images/64/533.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Liverpool Football Club",
+    "Founded": "15-03-1892",
+    "Country": "Inglaterra",
+    "Nick": "The Reds (Rojos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/534.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Manchester City Football Club",
+    "Founded": "1880",
+    "Country": "Inglaterra",
+    "Nick": "Citizens (Ciudadanos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/535.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Manchester United Football Club",
+    "Founded": "1878",
+    "Country": "Inglaterra",
+    "Nick": "The Red Devils (Diablos Rojos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/536.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Newcastle United Football Club",
+    "Founded": "1892",
+    "Country": "Inglaterra",
+    "Nick": "The Magpies (Las Urracas)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/537.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Norwich City Football Club",
+    "Founded": "17-06-1902",
+    "Country": "Inglaterra",
+    "Nick": "The Canaries (Los Canarios)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/538.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Southampton Football Club",
+    "Founded": "21-11-1885",
+    "Country": "Inglaterra",
+    "Nick": "The Saints (Los Santos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/541.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Tottenham Hotspur Football Club",
+    "Founded": "01-01-1882",
+    "Country": "Inglaterra",
+    "Nick": "Spurs",
+    "imageURL": "https://www.promiedos.com.ar/images/64/545.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "West Bromwich Albion Football Club",
+    "Founded": "1878",
+    "Country": "Inglaterra",
+    "Nick": "The Baggies",
+    "imageURL": "https://www.promiedos.com.ar/images/64/546.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "West Ham United Football Club",
+    "Founded": "1895",
+    "Country": "Inglaterra",
+    "Nick": "The Hammers (Martillos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/547.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Atalanta Bergamasca Calcio",
+    "Founded": "17-10-1907",
+    "Country": "Italia",
+    "Nick": "Orobici-Dea",
+    "imageURL": "https://www.promiedos.com.ar/images/64/549.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Bologna Football Club 1909",
+    "Founded": "03-10-1909",
+    "Country": "Italia",
+    "Nick": "Rossoblu",
+    "imageURL": "https://www.promiedos.com.ar/images/64/550.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Cagliari Calcio",
+    "Founded": "20-08-1920",
+    "Country": "Italia",
+    "Nick": "Rossoblu",
+    "imageURL": "https://www.promiedos.com.ar/images/64/551.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Associazione Calcio Firenze Fiorentina",
+    "Founded": "01-08-1926",
+    "Country": "Italia",
+    "Nick": "Viola / Fiore",
+    "imageURL": "https://www.promiedos.com.ar/images/64/554.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Genoa Cricket & Football Club",
+    "Founded": "07-09-1893",
+    "Country": "Italia",
+    "Nick": "Grifo (animal mitológico)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/555.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Football Club Internazionale Milano",
+    "Founded": "09-03-1908",
+    "Country": "Italia",
+    "Nick": "Nerazzurri (Los Negriazules)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/556.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Juventus Football Club",
+    "Founded": "01-11-1897",
+    "Country": "Italia",
+    "Nick": "La Vecchia Signora (La Vieja Señora)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/557.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Società Sportiva Lazio",
+    "Founded": "09-01-1900",
+    "Country": "Italia",
+    "Nick": "Biancocelesti (Blanquiceleste)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/558.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Associazione Calcio Milan",
+    "Founded": "16-12-1899",
+    "Country": "Italia",
+    "Nick": "Rossoneri (Rojinegros)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/559.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Società Sportiva Calcio Napoli",
+    "Founded": "01-08-1926",
+    "Country": "Italia",
+    "Nick": "Azurri (Azul)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/560.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Parma Football Club",
+    "Founded": "27-07-1913",
+    "Country": "Italia",
+    "Nick": "Crociati (Cruzado)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/562.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Associazione Sportiva Roma",
+    "Founded": "22-07-1927",
+    "Country": "Italia",
+    "Nick": "Giallorossi (Rojoamarillos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/564.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Unione Calcio Sampdoria",
+    "Founded": "01-08-1946",
+    "Country": "Italia",
+    "Nick": "Blucerchiati",
+    "imageURL": "https://www.promiedos.com.ar/images/64/565.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Torino Football Club",
+    "Founded": "03-12-1906",
+    "Country": "Italia",
+    "Nick": "Granata / Toro",
+    "imageURL": "https://www.promiedos.com.ar/images/64/567.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Udinese Calcio",
+    "Founded": "01-01-1896",
+    "Country": "Italia",
+    "Nick": "Bianconeri (Blanquinegros)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/568.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Sao Paulo Futebol Clube",
+    "Founded": "25-01-1930",
+    "Country": "Italia",
+    "Nick": "Tricolor / Soberano",
+    "imageURL": "https://www.promiedos.com.ar/images/64/569.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Amsterdamsche Football Club Ajax",
+    "Founded": "18-03-1900",
+    "Country": "Italia",
+    "Nick": "Ajacieden",
+    "imageURL": "https://www.promiedos.com.ar/images/64/571.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Club Olimpia",
+    "Founded": "25-07-1902",
+    "Country": "Paraguay",
+    "Nick": "Decano / Franjeado",
+    "imageURL": "https://www.promiedos.com.ar/images/64/575.png",
+    "League": "Copa de Primera Tigo Visión Banco",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/py.png"
+  },
+  {
+    "Club": "Club Nacional de Football",
+    "Founded": "14-05-1899",
+    "Country": "Uruguay",
+    "Nick": "Bolso/Decano/Albo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/579.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "Club Atlético Peñarol",
+    "Founded": "28-09-1891",
+    "Country": "Uruguay",
+    "Nick": "Carbonero/Manya",
+    "imageURL": "https://www.promiedos.com.ar/images/64/580.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "Cruzeiro Esporte Clube",
+    "Founded": "02-01-1921",
+    "Country": "Brasil",
+    "Nick": "Raposa / Zero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/582.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Clube Atlético Mineiro",
+    "Founded": "25-03-1908",
+    "Country": "Brasil",
+    "Nick": "Galo / Alvinegro",
+    "imageURL": "https://www.promiedos.com.ar/images/64/583.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Clube Atlético Paranaense",
+    "Founded": "26-03-1924",
+    "Country": "Brasil",
+    "Nick": "Furacão (huracán)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/584.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Esporte Clube Bahia",
+    "Founded": "01-01-1931",
+    "Country": "Brasil",
+    "Nick": "Salvador de Bahía",
+    "imageURL": "https://www.promiedos.com.ar/images/64/585.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Botafogo de Futebol e Regatas",
+    "Founded": "12-08-1904",
+    "Country": "Brasil",
+    "Nick": "Fogão",
+    "imageURL": "https://www.promiedos.com.ar/images/64/586.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Sport Club Corinthians Paulista",
+    "Founded": "01-09-1910",
+    "Country": "Brasil",
+    "Nick": "Timão (equipazo)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/587.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Coritiba Football Club",
+    "Founded": "12-10-1909",
+    "Country": "Brasil",
+    "Nick": "Coxa",
+    "imageURL": "https://www.promiedos.com.ar/images/64/588.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Clube de Regatas do Flamengo",
+    "Founded": "15-11-1895",
+    "Country": "Brasil",
+    "Nick": "Fla / Mengão / Rubro-Negro",
+    "imageURL": "https://www.promiedos.com.ar/images/64/590.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Fluminense Football Club",
+    "Founded": "21-07-1902",
+    "Country": "Brasil",
+    "Nick": "Flu / Fluzão",
+    "imageURL": "https://www.promiedos.com.ar/images/64/591.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Goiás Esporte Clube",
+    "Founded": "06-04-1943",
+    "Country": "Brasil",
+    "Nick": "Verdão",
+    "imageURL": "https://www.promiedos.com.ar/images/64/592.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Grêmio Foot-Ball Porto Alegrense",
+    "Founded": "15-09-1903",
+    "Country": "Brasil",
+    "Nick": "Imortal Tricolor",
+    "imageURL": "https://www.promiedos.com.ar/images/64/593.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Sport Club Internacional",
+    "Founded": "04-04-1909",
+    "Country": "Brasil",
+    "Nick": "Inter",
+    "imageURL": "https://www.promiedos.com.ar/images/64/594.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Santos Futebol Clube",
+    "Founded": "14-04-1912",
+    "Country": "Brasil",
+    "Nick": "Peixe (pez)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/598.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Club de Regatas Vasco da Gama",
+    "Founded": "21-08-1898",
+    "Country": "Brasil",
+    "Nick": "Gigante da Colina / Vascão",
+    "imageURL": "https://www.promiedos.com.ar/images/64/599.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Fußball-Club Augsburg 1907 e. V.",
+    "Founded": "08-08-1907",
+    "Country": "Alemania",
+    "Nick": "Fuggerstädter",
+    "imageURL": "https://www.promiedos.com.ar/images/64/601.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "Fußball Club Bayern München e.V.",
+    "Founded": "27-02-1900",
+    "Country": "Alemania",
+    "Nick": "Die Bayern (los bávaros)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/602.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "Ballspiel-Verein Borussia 1909 e.V. Dortmund",
+    "Founded": "19-12-1909",
+    "Country": "Alemania",
+    "Nick": "Die Schwarzgelben (aurinegros)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/603.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "Borussia VfL 1900 e.V. Mönchengladbach",
+    "Founded": "01-08-1900",
+    "Country": "Alemania",
+    "Nick": "Die Fohlen  (los potros)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/604.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "TSV Bayer 04 Leverkusen e.V.",
+    "Founded": "01-07-1904",
+    "Country": "Alemania",
+    "Nick": "Werkself (equipo de fábrica)/Löwen (leones)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/605.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "Eintracht Frankfurt Fußball A.G.",
+    "Founded": "08-03-1899",
+    "Country": "Alemania",
+    "Nick": "Die Adler (las águilas)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/607.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "Sport-Club Freiburg",
+    "Founded": "30-05-1904",
+    "Country": "Alemania",
+    "Nick": "Breisgau-Brasilianer (brasileños de Breisgau)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/608.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "Hertha Berliner Sport Club",
+    "Founded": "25-07-1892",
+    "Country": "Alemania",
+    "Nick": "Die Alte Dame (la vieja dama)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/611.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "Turn-und Sportgemeinschaft 1899 Hoffenheim e.V.",
+    "Founded": "01-07-1899",
+    "Country": "Alemania",
+    "Nick": "Hoffe (esperanza)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/612.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "Fußball- und Sport-Verein Mainz 05 e.V.",
+    "Founded": "16-03-1905",
+    "Country": "Alemania",
+    "Nick": "Die Nullfünfer (los cero-cinco)/Karnevalsverein (club del carnaval)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/613.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "Fußball-Club Gelsenkirchen-Schalke 04 e. V.",
+    "Founded": "04-05-1904",
+    "Country": "Alemania",
+    "Nick": "Die Königsblauen (los azules Reales)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/615.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "Verein für Bewegungsspiele Stuttgart 1893 e.V.",
+    "Founded": "09-09-1893",
+    "Country": "Alemania",
+    "Nick": "Die Roten (los rojos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/616.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "Sport-Verein Werder von 1899 e. V. Bremen",
+    "Founded": "04-02-1899",
+    "Country": "Alemania",
+    "Nick": "Die Werderaner (los isleños del río)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/617.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "VfL Wolfsburg-Fußball GmbH",
+    "Founded": "12-09-1945",
+    "Country": "Alemania",
+    "Nick": "Die Wölfe (los lobos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/618.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "Crystal Palace Football Club",
+    "Founded": "10-09-1905",
+    "Country": "Inglaterra",
+    "Nick": "Eagles (Aguilas)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/621.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Elche Club de Fútbol",
+    "Founded": "01-08-1922",
+    "Country": "España",
+    "Nick": "Franjiverdes / Ilicitanos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/622.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Unión Deportiva Almería",
+    "Founded": "26-07-1989",
+    "Country": "España",
+    "Nick": "Rojiblancos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/623.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Villarreal Club de Fútbol",
+    "Founded": "10-03-1923",
+    "Country": "España",
+    "Nick": "Submarino Amarillo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/624.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Hellas Verona Football Club",
+    "Founded": "1903",
+    "Country": "Italia",
+    "Nick": "Gialloblu / Mastini",
+    "imageURL": "https://www.promiedos.com.ar/images/64/626.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Unione Sportiva Sassuolo Calcio",
+    "Founded": "1922",
+    "Country": "Italia",
+    "Nick": "Sassuolo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/627.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Sociedade Esportiva Palmeiras",
+    "Founded": "26-08-1914",
+    "Country": "Brasil",
+    "Nick": "Verdāo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/629.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Associação Chapecoense de Futebol",
+    "Founded": "10-05-1973",
+    "Country": "Brasil",
+    "Nick": "Furacao (huracán) del Oeste",
+    "imageURL": "https://www.promiedos.com.ar/images/64/630.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Sport Club do Recife",
+    "Founded": "13-05-1905",
+    "Country": "Brasil",
+    "Nick": "León",
+    "imageURL": "https://www.promiedos.com.ar/images/64/632.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Leicester City Football Club",
+    "Founded": "1884",
+    "Country": "Inglaterra",
+    "Nick": "The Foxes (los Zorros)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/633.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Burnley Football Club",
+    "Founded": "1882",
+    "Country": "Inglaterra",
+    "Nick": "The Clarets",
+    "imageURL": "https://www.promiedos.com.ar/images/64/634.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "1. FC Köln",
+    "Founded": "13-02-1948",
+    "Country": "Alemania",
+    "Nick": "Die Geißböcke (Machos Cabríos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/635.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "Sport-Club Paderborn 07 e.V.",
+    "Founded": "1907",
+    "Country": "Alemania",
+    "Nick": "Schwarz-Blau (Negriazul)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/636.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "Football Club des Girondins de Bordeaux",
+    "Founded": "1881",
+    "Country": "Francia",
+    "Nick": "Marines et blancs",
+    "imageURL": "https://www.promiedos.com.ar/images/64/641.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Racing Club de Lens",
+    "Founded": "1906",
+    "Country": "Francia",
+    "Nick": "Les Sang et Or (La Sangre y Oro)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/642.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Lille Olympique Sporting Club",
+    "Founded": "23-09-1944",
+    "Country": "Francia",
+    "Nick": "Les Dogues (Los Dogos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/643.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Football Club Lorient",
+    "Founded": "1926",
+    "Country": "Francia",
+    "Nick": "Les Merlus (Las Merluzas)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/644.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Olympique Lyonnais",
+    "Founded": "1950",
+    "Country": "Francia",
+    "Nick": "Les Gones (Los Chicos) / Les Lions (Los Leones)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/645.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Olympique de Marseille",
+    "Founded": "1899",
+    "Country": "Francia",
+    "Nick": "Ohaime / Les Phocéens / Les Olympiens",
+    "imageURL": "https://www.promiedos.com.ar/images/64/646.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Football Club de Metz",
+    "Founded": "1919",
+    "Country": "Francia",
+    "Nick": "Les Grenats (Los Granates) / Les Graoullys",
+    "imageURL": "https://www.promiedos.com.ar/images/64/647.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Association Sportive de Monaco Football Club",
+    "Founded": "23-08-1924",
+    "Country": "Francia",
+    "Nick": "Les Rouge et Blanc (Los Rojiblancos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/648.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Montpellier Hérault Sport Club",
+    "Founded": "1974",
+    "Country": "Francia",
+    "Nick": "La Paillade",
+    "imageURL": "https://www.promiedos.com.ar/images/64/649.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Football Club de Nantes",
+    "Founded": "21-04-1943",
+    "Country": "Francia",
+    "Nick": "Les Canaris (Los canarios)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/650.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Olympique Gymnaste Club de Nice Cote d Azur",
+    "Founded": "1904",
+    "Country": "Francia",
+    "Nick": "Les Aiglons / Le Gym",
+    "imageURL": "https://www.promiedos.com.ar/images/64/651.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "París Saint-Germain Football Club",
+    "Founded": "10-06-1970",
+    "Country": "Francia",
+    "Nick": "Les Parisiens (Los Parisinos) / Les Rouge-et-Bleu (Los Rojiazules)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/652.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Association Sportive de Saint-Étienne",
+    "Founded": "1919",
+    "Country": "Francia",
+    "Nick": "Les Verts (Los Verdes)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/653.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Stade de Reims",
+    "Founded": "1911",
+    "Country": "Francia",
+    "Nick": "Les rouges et blancs (Los Rojiblancos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/654.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Stade Rennais Football Club",
+    "Founded": "1901",
+    "Country": "Francia",
+    "Nick": "Les Rouges et Noirs (Rojinegros)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/655.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Toulouse Football Club",
+    "Founded": "1970",
+    "Country": "Francia",
+    "Nick": "-",
+    "imageURL": "https://www.promiedos.com.ar/images/64/656.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Sociedad Deportiva Eibar",
+    "Founded": "Armer",
+    "Country": "España",
+    "Nick": "Éibar",
+    "imageURL": "https://www.promiedos.com.ar/images/64/658.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Empoli Football Club",
+    "Founded": "01-08-1920",
+    "Country": "Italia",
+    "Nick": "-",
+    "imageURL": "https://www.promiedos.com.ar/images/64/659.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Atlético Nacional S. A.",
+    "Founded": "30-04-1947",
+    "Country": "Colombia",
+    "Nick": "Verde",
+    "imageURL": "https://www.promiedos.com.ar/images/64/662.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Espérance Sportive Troyes Aube Champagne",
+    "Founded": "1986",
+    "Country": "Francia",
+    "Nick": "ESTAC",
+    "imageURL": "https://www.promiedos.com.ar/images/64/675.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Angers Sporting Club de lOuest",
+    "Founded": "1919",
+    "Country": "Francia",
+    "Nick": "Le SCO",
+    "imageURL": "https://www.promiedos.com.ar/images/64/676.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Athletic Football Club Bournemouth",
+    "Founded": "1890",
+    "Country": "Inglaterra",
+    "Nick": "Cherries (Cerezas)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/677.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Watford Football Club",
+    "Founded": "1881",
+    "Country": "Inglaterra",
+    "Nick": "The Hornets (Las abejas)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/678.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Montevideo Wanderers Fútbol Club",
+    "Founded": "15-08-1902",
+    "Country": "Uruguay",
+    "Nick": "Bohemios",
+    "imageURL": "https://www.promiedos.com.ar/images/64/683.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "Philips Sport Vereniging",
+    "Founded": "31-08-1913",
+    "Country": "Países Bajos",
+    "Nick": "Boeren (Granjeros)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/684.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Leeds United Football Club",
+    "Founded": "17-10-1919",
+    "Country": "Inglaterra",
+    "Nick": "The Whites (Los Blancos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/685.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Club América",
+    "Founded": "12-10-1916",
+    "Country": "México",
+    "Nick": "Águilas",
+    "imageURL": "https://www.promiedos.com.ar/images/64/688.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Deportivo Alavés",
+    "Founded": "23-01-1921",
+    "Country": "España",
+    "Nick": "Babazorros, El Glorioso, Albiazules",
+    "imageURL": "https://www.promiedos.com.ar/images/64/689.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "RasenBallsport Leipzig e.V",
+    "Founded": "19-05-2009",
+    "Country": "Alemania",
+    "Nick": "Die roten Bullen (Los toros rojos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/691.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "Football Club Crotone",
+    "Founded": "1910",
+    "Country": "Italia",
+    "Nick": "Squali (Tiburones) / Pitagorici (Pitagoricos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/693.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Brighton & Hove Albion Football Club",
+    "Founded": "24-06-1901",
+    "Country": "Inglaterra",
+    "Nick": "The Seagulls (Las Gaviotas)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/694.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Girona Futbol Club S.A.D.",
+    "Founded": "23-07-1930",
+    "Country": "Italia",
+    "Nick": "Blanquivermells",
+    "imageURL": "https://www.promiedos.com.ar/images/64/696.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Società Polisportiva Ars et Labor 2013",
+    "Founded": "1907",
+    "Country": "Italia",
+    "Nick": "Spallini",
+    "imageURL": "https://www.promiedos.com.ar/images/64/697.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Benevento Calcio S.p.A.",
+    "Founded": "1929",
+    "Country": "Italia",
+    "Nick": "Stregoni (Brujos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/698.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Amiens Sporting Club Football",
+    "Founded": "06-10-1901",
+    "Country": "Francia",
+    "Nick": "Les Licornes (Los Unicornios)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/699.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Dijon Football Cote dOr",
+    "Founded": "1998",
+    "Country": "Francia",
+    "Nick": "S/D",
+    "imageURL": "https://www.promiedos.com.ar/images/64/700.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Racing Club de Strasbourg Alsace",
+    "Founded": "1906",
+    "Country": "Francia",
+    "Nick": "S/D",
+    "imageURL": "https://www.promiedos.com.ar/images/64/701.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Club Cerro Porteño",
+    "Founded": "01-10-1912",
+    "Country": "Paraguay",
+    "Nick": "Ciclón / Azulgrana",
+    "imageURL": "https://www.promiedos.com.ar/images/64/718.png",
+    "League": "Copa de Primera Tigo Visión Banco",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/py.png"
+  },
+  {
+    "Club": "Club Libertad",
+    "Founded": "30-07-1905",
+    "Country": "Paraguay",
+    "Nick": "Gumarelo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/719.png",
+    "League": "Copa de Primera Tigo Visión Banco",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/py.png"
+  },
+  {
+    "Club": "Club Social y Deportivo Colo Colo",
+    "Founded": "19-04-1925",
+    "Country": "Chile",
+    "Nick": "Cacique",
+    "imageURL": "https://www.promiedos.com.ar/images/64/723.png",
+    "League": "Campeonato Betsson",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/cl.png"
+  },
+  {
+    "Club": "Defensor Sporting Club",
+    "Founded": "15-03-1913",
+    "Country": "Uruguay",
+    "Nick": "Tuerto/Farola/Viola",
+    "imageURL": "https://www.promiedos.com.ar/images/64/724.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "Azul y Blanco Millonarios Fútbol Club S. A.",
+    "Founded": "18-06-1946",
+    "Country": "Uruguay",
+    "Nick": "Millos/Embajadores",
+    "imageURL": "https://www.promiedos.com.ar/images/64/727.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "Club Independiente Santa Fe S. A.",
+    "Founded": "28-02-1941",
+    "Country": "Colombia",
+    "Nick": "Cardenal/Expreso Rojo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/735.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Club Guaraní",
+    "Founded": "12-10-1903",
+    "Country": "Paraguay",
+    "Nick": "Aborigen / Cacique",
+    "imageURL": "https://www.promiedos.com.ar/images/64/736.png",
+    "League": "Copa de Primera Tigo Visión Banco",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/py.png"
+  },
+  {
+    "Club": "Club Deportivo Popular Junior Fútbol Club S.A.",
+    "Founded": "07-08-1924",
+    "Country": "Colombia",
+    "Nick": "Tiburón",
+    "imageURL": "https://www.promiedos.com.ar/images/64/739.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Audax Italiano La Florida",
+    "Founded": "30-11-1910",
+    "Country": "Chile",
+    "Nick": "Tanos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/747.png",
+    "League": "Campeonato Betsson",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/cl.png"
+  },
+  {
+    "Club": "Everton de Viña del Mar",
+    "Founded": "24-06-1909",
+    "Country": "Chile",
+    "Nick": "Oro y Cielo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/749.png",
+    "League": "Campeonato Betsson",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/cl.png"
+  },
+  {
+    "Club": "Club Nacional",
+    "Founded": "05-06-1904",
+    "Country": "Paraguay",
+    "Nick": "Tricolor",
+    "imageURL": "https://www.promiedos.com.ar/images/64/751.png",
+    "League": "Copa de Primera Tigo Visión Banco",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/py.png"
+  },
+  {
+    "Club": "Club Sol de América",
+    "Founded": "22-03-1909",
+    "Country": "Paraguay",
+    "Nick": "Danzarín",
+    "imageURL": "https://www.promiedos.com.ar/images/64/752.png",
+    "League": "Copa de Primera Tigo Visión Banco",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/py.png"
+  },
+  {
+    "Club": "Club Sportivo Luqueño",
+    "Founded": "01-05-1921",
+    "Country": "Paraguay",
+    "Nick": "Auriazul",
+    "imageURL": "https://www.promiedos.com.ar/images/64/753.png",
+    "League": "Copa de Primera Tigo Visión Banco",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/py.png"
+  },
+  {
+    "Club": "Club Atlético Boston River",
+    "Founded": "20-02-1939",
+    "Country": "Uruguay",
+    "Nick": "Boston/Sastre",
+    "imageURL": "https://www.promiedos.com.ar/images/64/754.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "Club Atlético Cerro",
+    "Founded": "01-12-1922",
+    "Country": "Uruguay",
+    "Nick": "Villeros",
+    "imageURL": "https://www.promiedos.com.ar/images/64/755.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "Danubio Fútbol Club",
+    "Founded": "01-03-1932",
+    "Country": "Uruguay",
+    "Nick": "La Franja",
+    "imageURL": "https://www.promiedos.com.ar/images/64/756.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "América de Cali S. A.",
+    "Founded": "13-02-1927",
+    "Country": "México",
+    "Nick": "Diablos Rojos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/758.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Deportivo Independiente Medellín",
+    "Founded": "14-11-1913",
+    "Country": "Colombia",
+    "Nick": "Poderoso de la Montaña",
+    "imageURL": "https://www.promiedos.com.ar/images/64/759.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Jaguares de Córdoba Fútbol Club S. A.",
+    "Founded": "24-12-2012",
+    "Country": "Colombia",
+    "Nick": "Celestes",
+    "imageURL": "https://www.promiedos.com.ar/images/64/760.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Asociación Deportivo Cali",
+    "Founded": "23-11-1912",
+    "Country": "Colombia",
+    "Nick": "Azucarero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/773.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Ceará Sporting Club",
+    "Founded": "02-06-1914",
+    "Country": "Brasil",
+    "Nick": "Vozao (gran abuelo)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/777.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "América Futebol Clube",
+    "Founded": "30-04-1912",
+    "Country": "Brasil",
+    "Nick": "Coelho (conejo)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/779.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Wolverhampton Wanderers Football Club",
+    "Founded": "1877",
+    "Country": "Inglaterra",
+    "Nick": "Wolves (Lobos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/780.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Düsseldorfer Turn- und Sportverein Fortuna 1895 e.V.",
+    "Founded": "05-05-1895",
+    "Country": "Alemania",
+    "Nick": "F95, Flingeraner",
+    "imageURL": "https://www.promiedos.com.ar/images/64/781.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "Nimes Olympique Football Club",
+    "Founded": "10-04-1937",
+    "Country": "Francia",
+    "Nick": "Les Gators",
+    "imageURL": "https://www.promiedos.com.ar/images/64/782.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Sociedad Deportiva Huesca",
+    "Founded": "29-03-1960",
+    "Country": "España",
+    "Nick": "Oscenses",
+    "imageURL": "https://www.promiedos.com.ar/images/64/784.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Club Deportivo Guadalajara",
+    "Founded": "08-05-1906",
+    "Country": "México",
+    "Nick": "Chivas",
+    "imageURL": "https://www.promiedos.com.ar/images/64/844.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Fortaleza Esporte Clube",
+    "Founded": "18-10-1918",
+    "Country": "Brasil",
+    "Nick": "Leão (León)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/863.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Avaí Futebol Clube",
+    "Founded": "01-09-1923",
+    "Country": "Brasil",
+    "Nick": "Leão da Ilha (León de la Isla)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/865.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Club Deportes Tolima S. A.",
+    "Founded": "18-12-1954",
+    "Country": "México",
+    "Nick": "Pijaos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/875.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Club de Deportes Antofagasta",
+    "Founded": "14-05-1966",
+    "Country": "Chile",
+    "Nick": "Pumas",
+    "imageURL": "https://www.promiedos.com.ar/images/64/879.png",
+    "League": "Campeonato Betsson",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/cl.png"
+  },
+  {
+    "Club": "Once Caldas S. A.",
+    "Founded": "17-03-1947",
+    "Country": "Colombia",
+    "Nick": "Blanco Blanco/Equipo del Alma",
+    "imageURL": "https://www.promiedos.com.ar/images/64/880.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Club Deportivo La Equidad",
+    "Founded": "01-12-1982",
+    "Country": "Colombia",
+    "Nick": "Aseguradores",
+    "imageURL": "https://www.promiedos.com.ar/images/64/881.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Águilas Doradas Rionegro",
+    "Founded": "16-07-2008",
+    "Country": "Colombia",
+    "Nick": "Equipo del Oriente",
+    "imageURL": "https://www.promiedos.com.ar/images/64/882.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Liverpool Fútbol Club",
+    "Founded": "15-02-1915",
+    "Country": "Uruguay",
+    "Nick": "Cuchilla",
+    "imageURL": "https://www.promiedos.com.ar/images/64/889.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "Club Atlético River Plate",
+    "Founded": "11-05-1932",
+    "Country": "Uruguay",
+    "Nick": "Darseneros",
+    "imageURL": "https://www.promiedos.com.ar/images/64/890.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "Club de Deportes Unión La Calera",
+    "Founded": "26-01-1954",
+    "Country": "Chile",
+    "Nick": "Cementeros",
+    "imageURL": "https://www.promiedos.com.ar/images/64/892.png",
+    "League": "Campeonato Betsson",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/cl.png"
+  },
+  {
+    "Club": "Atlas Fútbol Club",
+    "Founded": "15-08-1916",
+    "Country": "México",
+    "Nick": "Zorros",
+    "imageURL": "https://www.promiedos.com.ar/images/64/895.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Cruz Azul Fútbol Club",
+    "Founded": "22-03-1927",
+    "Country": "México",
+    "Nick": "Máquina Celeste",
+    "imageURL": "https://www.promiedos.com.ar/images/64/896.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Club León Fútbol Club",
+    "Founded": "31-08-1943",
+    "Country": "México",
+    "Nick": "Esmeraldas",
+    "imageURL": "https://www.promiedos.com.ar/images/64/897.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Club de Fútbol Monterrey Rayados S. A. de C. V.",
+    "Founded": "28-06-1945",
+    "Country": "México",
+    "Nick": "Rayados",
+    "imageURL": "https://www.promiedos.com.ar/images/64/899.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Atlético Morelia S. A. de C. V.",
+    "Founded": "21-11-1924",
+    "Country": "México",
+    "Nick": "Monarcas",
+    "imageURL": "https://www.promiedos.com.ar/images/64/900.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Impulsora del Deportivo Necaxa S.A. de C.V.",
+    "Founded": "21-08-1923",
+    "Country": "México",
+    "Nick": "Electricistas, Rayos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/901.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Club de Fútbol Pachuca",
+    "Founded": "01-11-1892",
+    "Country": "México",
+    "Nick": "Tuzos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/902.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Club Puebla",
+    "Founded": "07-05-1944",
+    "Country": "México",
+    "Nick": "Franja",
+    "imageURL": "https://www.promiedos.com.ar/images/64/903.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Querétaro Fútbol Club",
+    "Founded": "08-07-1950",
+    "Country": "México",
+    "Nick": "Gallos Blancos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/904.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Club Santos Laguna S.A. de C.V.",
+    "Founded": "04-09-1983",
+    "Country": "México",
+    "Nick": "Guerreros, Laguneros",
+    "imageURL": "https://www.promiedos.com.ar/images/64/905.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Club de Fútbol Tigres de la Universidad Autónoma de Nuevo León",
+    "Founded": "07-03-1960",
+    "Country": "México",
+    "Nick": "Auriazules, Felinos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/906.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Club Tijuana Xoloitzcuintles de Caliente",
+    "Founded": "14-01-2007",
+    "Country": "México",
+    "Nick": "Xolos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/907.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Deportivo Toluca Fútbol Club S. A. de C. V.",
+    "Founded": "12-02-1917",
+    "Country": "México",
+    "Nick": "Diablos Rojos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/908.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Club Universidad Nacional A. C.",
+    "Founded": "02-08-1954",
+    "Country": "México",
+    "Nick": "Auriazules",
+    "imageURL": "https://www.promiedos.com.ar/images/64/909.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Atlanta United Football Club",
+    "Founded": "16-05-2014",
+    "Country": "Estados Unidos",
+    "Nick": "The Five Stripes (Las 5 rayas)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/911.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Chicago Fire Soccer Club",
+    "Founded": "08-10-1997",
+    "Country": "Estados Unidos",
+    "Nick": "The Fire, Red Machine",
+    "imageURL": "https://www.promiedos.com.ar/images/64/912.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Football Club Cincinnati",
+    "Founded": "29-05-2018",
+    "Country": "Estados Unidos",
+    "Nick": "FCC",
+    "imageURL": "https://www.promiedos.com.ar/images/64/913.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Columbus Crew Soccer Club",
+    "Founded": "10-05-1994",
+    "Country": "Estados Unidos",
+    "Nick": "The Crew (La Pandilla)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/914.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "D.C. United",
+    "Founded": "15-06-1994",
+    "Country": "Estados Unidos",
+    "Nick": "Black and Red",
+    "imageURL": "https://www.promiedos.com.ar/images/64/915.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Impact de Montreal",
+    "Founded": "1992",
+    "Country": "Estados Unidos",
+    "Nick": "Impact",
+    "imageURL": "https://www.promiedos.com.ar/images/64/916.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "New England Revolution",
+    "Founded": "17-10-1995",
+    "Country": "Estados Unidos",
+    "Nick": "Revs",
+    "imageURL": "https://www.promiedos.com.ar/images/64/917.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "New York City Football Club",
+    "Founded": "21-05-2013",
+    "Country": "Estados Unidos",
+    "Nick": "Newyorkers",
+    "imageURL": "https://www.promiedos.com.ar/images/64/918.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "New York Red Bulls",
+    "Founded": "1994",
+    "Country": "Estados Unidos",
+    "Nick": "Red Bulls",
+    "imageURL": "https://www.promiedos.com.ar/images/64/919.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Orlando City Soccer Club",
+    "Founded": "19-11-2013",
+    "Country": "Estados Unidos",
+    "Nick": "The Lions (Los Leones)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/920.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Philadelphia Union",
+    "Founded": "28-02-2008",
+    "Country": "Estados Unidos",
+    "Nick": "The U",
+    "imageURL": "https://www.promiedos.com.ar/images/64/921.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Toronto Football Club",
+    "Founded": "2005",
+    "Country": "Estados Unidos",
+    "Nick": "The Reds",
+    "imageURL": "https://www.promiedos.com.ar/images/64/922.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Colorado Rapids",
+    "Founded": "06-06-1995",
+    "Country": "Estados Unidos",
+    "Nick": "Rapids",
+    "imageURL": "https://www.promiedos.com.ar/images/64/923.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Football Club Dallas",
+    "Founded": "14-04-1996",
+    "Country": "Estados Unidos",
+    "Nick": "Cowboys",
+    "imageURL": "https://www.promiedos.com.ar/images/64/924.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Houston Dynamo",
+    "Founded": "15-12-2005",
+    "Country": "Estados Unidos",
+    "Nick": "La Naranja",
+    "imageURL": "https://www.promiedos.com.ar/images/64/925.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Los Angeles Football Club",
+    "Founded": "30-10-2014",
+    "Country": "Estados Unidos",
+    "Nick": "The Black and Gold",
+    "imageURL": "https://www.promiedos.com.ar/images/64/926.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Los Angeles Galaxy",
+    "Founded": "15-06-1994",
+    "Country": "Estados Unidos",
+    "Nick": "Los Galacticos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/927.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Minnesota United Football Club",
+    "Founded": "05-02-2010",
+    "Country": "Estados Unidos",
+    "Nick": "The Loons (Gavias)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/928.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Portland Timbers",
+    "Founded": "20-03-2009",
+    "Country": "Estados Unidos",
+    "Nick": "The Timbers",
+    "imageURL": "https://www.promiedos.com.ar/images/64/929.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Real Salt Lake",
+    "Founded": "14-07-2004",
+    "Country": "Estados Unidos",
+    "Nick": "RSL",
+    "imageURL": "https://www.promiedos.com.ar/images/64/930.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "San Jose Earthquakes",
+    "Founded": "15-06-1994",
+    "Country": "Estados Unidos",
+    "Nick": "Quakes",
+    "imageURL": "https://www.promiedos.com.ar/images/64/931.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Seattle Sounders FC",
+    "Founded": "13-11-2007",
+    "Country": "Estados Unidos",
+    "Nick": "The Sounders",
+    "imageURL": "https://www.promiedos.com.ar/images/64/932.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Sporting Kansas City",
+    "Founded": "1995",
+    "Country": "Estados Unidos",
+    "Nick": "Wizards (Magos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/933.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Vancouver Whitecaps FC",
+    "Founded": "1974",
+    "Country": "Estados Unidos",
+    "Nick": "Caps",
+    "imageURL": "https://www.promiedos.com.ar/images/64/934.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Sheffield United Football Club",
+    "Founded": "22-03-1889",
+    "Country": "Estados Unidos",
+    "Nick": "The Blades (Las Cuchillas)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/938.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Stade Brestois 29",
+    "Founded": "1950",
+    "Country": "Francia",
+    "Nick": "Pirata",
+    "imageURL": "https://www.promiedos.com.ar/images/64/940.png",
+    "League": "Ligue 1 Uber Eats",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/fr.png"
+  },
+  {
+    "Club": "Club Atlético de San Luis",
+    "Founded": "28-05-2013",
+    "Country": "México",
+    "Nick": "Rojiblancos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/941.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Unione Sportiva Lecce",
+    "Founded": "1908",
+    "Country": "Italia",
+    "Nick": "Giallorossi (Aurirrojos)/Lupi (Lobos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/942.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "1. FC Union Berlin",
+    "Founded": "1906",
+    "Country": "Alemania",
+    "Nick": "Die Eisernen (Los Hierros)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/943.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "Fútbol Club Juárez S. de R. L. de C. V.",
+    "Founded": "29-05-2015",
+    "Country": "México",
+    "Nick": "Bravos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/970.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Feyenoord Rotterdam",
+    "Founded": "19-07-1908",
+    "Country": "Países Bajos",
+    "Nick": "De club van het volk (Club del pueblo)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/978.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Alkmaar Zaanstreek",
+    "Founded": "10-05-1967",
+    "Country": "Países Bajos",
+    "Nick": "Granjeros",
+    "imageURL": "https://www.promiedos.com.ar/images/64/985.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Red Bull Bragantino",
+    "Founded": "08-01-1928",
+    "Country": "Brasil",
+    "Nick": "Braga",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1025.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Goian",
+    "Founded": "02-04-1937",
+    "Country": "Brasil",
+    "Nick": "Goias",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1027.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Coquimbo Unido S.A.D.P.",
+    "Founded": "30-08-1958",
+    "Country": "Chile",
+    "Nick": "Aurinegro / Barbón",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1028.png",
+    "League": "Campeonato Betsson",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/cl.png"
+  },
+  {
+    "Club": "Huachipato S.A.D.P.",
+    "Founded": "07-06-1947",
+    "Country": "Chile",
+    "Nick": "Acerero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1029.png",
+    "League": "Campeonato Betsson",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/cl.png"
+  },
+  {
+    "Club": "Asociación Deportivo Pasto",
+    "Founded": "12-10-1949",
+    "Country": "Colombia",
+    "Nick": "Volcánicos/Tricolor",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1030.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Club Plaza Colonia de Deportes",
+    "Founded": "22-04-1917",
+    "Country": "Colombia",
+    "Nick": "Colonia del Sacramento",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1034.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Centro Atlético Fénix",
+    "Founded": "07-07-1916",
+    "Country": "Uruguay",
+    "Nick": "Ave",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1035.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "Asociación Civil, Social y Cultural Cerro Largo Futbol Club",
+    "Founded": "19-11-2002",
+    "Country": "Uruguay",
+    "Nick": "Arachanes",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1036.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "Club Atlético Progreso",
+    "Founded": "30-04-1917",
+    "Country": "Uruguay",
+    "Nick": "Montevideo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1037.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "Nottingham Forest Football Club",
+    "Founded": "1865",
+    "Country": "Inglaterra",
+    "Nick": "Reds / Tricky Trees (Arboles astutos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1046.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Football Club Twente",
+    "Founded": "01-07-1965",
+    "Country": "Países Bajos",
+    "Nick": "Tukkers",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1072.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Spielvereinigung Greuther Fürth",
+    "Founded": "23-09-1903",
+    "Country": "Países Bajos",
+    "Nick": "Kleeblätter (Tréboles)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1170.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "VfL Bochum",
+    "Founded": "1848",
+    "Country": "Países Bajos",
+    "Nick": "Bochum",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1266.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Sparta Rotterdam",
+    "Founded": "01-04-1888",
+    "Country": "Países Bajos",
+    "Nick": "Kasteelheren (Los señores del castillo)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1285.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Willem II Tilburg",
+    "Founded": "12-08-1896",
+    "Country": "Países Bajos",
+    "Nick": "Tricolores",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1286.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Go Ahead",
+    "Founded": "Aguil",
+    "Country": "Países Bajos",
+    "Nick": "Águilas",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1287.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Heracles Almelo",
+    "Founded": "03-05-1903",
+    "Country": "Países Bajos",
+    "Nick": "Heraclieden",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1292.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Football Club Utrecht",
+    "Founded": "01-07-1970",
+    "Country": "Países Bajos",
+    "Nick": "Utrecht",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1299.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Haaglandse Football Club Alles Door Oefening Den Haag",
+    "Founded": "01-02-1905",
+    "Country": "Países Bajos",
+    "Nick": "Cigueñas",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1301.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Sportclub Heerenveen",
+    "Founded": "20-07-1920",
+    "Country": "Países Bajos",
+    "Nick": "Orgullo de Frisia",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1318.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Football Club Groningen",
+    "Founded": "16-06-1971",
+    "Country": "Países Bajos",
+    "Nick": "Granjeros",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1319.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Fortuna Sittard Combinatie",
+    "Founded": "01-07-1968",
+    "Country": "Países Bajos",
+    "Nick": "Sittard",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1320.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Football Club Emmen",
+    "Founded": "21-08-1925",
+    "Country": "Países Bajos",
+    "Nick": "Caníbales",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1321.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Prins Hendrik Ende Desespereert Nimmer Combinatie Zwolle",
+    "Founded": "12-06-1910",
+    "Country": "Países Bajos",
+    "Nick": "Dedos azules",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1322.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Venlose Voetbal Vereniging Venlo",
+    "Founded": "07-02-1903",
+    "Country": "Países Bajos",
+    "Nick": "Venlo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1323.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Rooms Katholieke Combinatie Waalwijk",
+    "Founded": "26-08-1940",
+    "Country": "Países Bajos",
+    "Nick": "Waalwijk",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1324.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Stichting Betaald Voetbal Vitesse",
+    "Founded": "14-05-1892",
+    "Country": "Países Bajos",
+    "Nick": "Geel en Zwart (Negros y amarillos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1325.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Club Deportivo Maldonado",
+    "Founded": "25-08-1928",
+    "Country": "Uruguay",
+    "Nick": "Depor",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1326.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "Club Atlético Rentistas",
+    "Founded": "26-03-1933",
+    "Country": "Uruguay",
+    "Nick": "Bichos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1327.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "Montevideo City Torque",
+    "Founded": "26-12-2007",
+    "Country": "Uruguay",
+    "Nick": "La T",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1328.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "Corporación Social Deportiva y Cultural de Pereira",
+    "Founded": "12-02-1944",
+    "Country": "Colombia",
+    "Nick": "Matecaña",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1329.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Boyacá Chicó Fútbol Club",
+    "Founded": "26-03-2002",
+    "Country": "Colombia",
+    "Nick": "Ajedrezados",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1330.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Cúcuta Deportivo Fútbol Club S. A.",
+    "Founded": "10-09-1924",
+    "Country": "Colombia",
+    "Nick": "Motilones",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1331.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Alianza Petrolera Fútbol Club S. A.",
+    "Founded": "24-10-1991",
+    "Country": "Colombia",
+    "Nick": "Máquina Amarilla/Petroleros",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1332.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Club Atlético Bucaramanga S.A.",
+    "Founded": "11-05-1948",
+    "Country": "Colombia",
+    "Nick": "Auriverdes/Búcaros/Leopardos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1333.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Envigado Fútbol Club S.A.",
+    "Founded": "14-10-1989",
+    "Country": "Colombia",
+    "Nick": "Naranja/Guerreros del Ayurá",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1334.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Patriotas Boyacá S. A.",
+    "Founded": "18-02-2003",
+    "Country": "Colombia",
+    "Nick": "Boyacá",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1335.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Club de Deportes Cobresal",
+    "Founded": "05-05-1979",
+    "Country": "Chile",
+    "Nick": "Mineros",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1336.png",
+    "League": "Campeonato Betsson",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/cl.png"
+  },
+  {
+    "Club": "Club de Deportes Provincial Curicó Unido",
+    "Founded": "23-02-1973",
+    "Country": "Chile",
+    "Nick": "Albirrojos / Torteros",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1337.png",
+    "League": "Campeonato Betsson",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/cl.png"
+  },
+  {
+    "Club": "OHiggins S.A.D.P.",
+    "Founded": "07-04-1955",
+    "Country": "Chile",
+    "Nick": "Celeste",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1338.png",
+    "League": "Campeonato Betsson",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/cl.png"
+  },
+  {
+    "Club": "12 de Octubre Football Club",
+    "Founded": "14-08-1914",
+    "Country": "Paraguay",
+    "Nick": "El 12",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1340.png",
+    "League": "Copa de Primera Tigo Visión Banco",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/py.png"
+  },
+  {
+    "Club": "Guaireña Fútbol Club",
+    "Founded": "28-03-2016",
+    "Country": "Paraguay",
+    "Nick": "Albiceleste",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1341.png",
+    "League": "Copa de Primera Tigo Visión Banco",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/py.png"
+  },
+  {
+    "Club": "Deportes Magallanes",
+    "Founded": "27-10-1897",
+    "Country": "Chile",
+    "Nick": "Academia",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1367.png",
+    "League": "Campeonato Betsson",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/cl.png"
+  },
+  {
+    "Club": "Club Internacional de Fútbol Miami",
+    "Founded": "28-01-2018",
+    "Country": "Estados Unidos",
+    "Nick": "Garzas",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1371.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Nashville Soccer Club",
+    "Founded": "20-12-2017",
+    "Country": "Estados Unidos",
+    "Nick": "Nashville",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1372.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Brentford Football Club",
+    "Founded": "10-10-1889",
+    "Country": "Inglaterra",
+    "Nick": "The Bees (Las Abejas)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1373.png",
+    "League": "Premier League",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/in.png"
+  },
+  {
+    "Club": "Deutscher Sport Club Arminia Bielefeld",
+    "Founded": "03-05-1905",
+    "Country": "Alemania",
+    "Nick": "Die Blauen (Los azules)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1544.png",
+    "League": "Bundesliga",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/de.png"
+  },
+  {
+    "Club": "Cádiz Club de Fútbol",
+    "Founded": "10-09-1910",
+    "Country": "España",
+    "Nick": "Submarino Amarillo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1547.png",
+    "League": "La Liga Santander",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/es.png"
+  },
+  {
+    "Club": "Mazatlán Fútbol Club",
+    "Founded": "02-06-2020",
+    "Country": "México",
+    "Nick": "Mazatlán",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1548.png",
+    "League": "Liga BBVA MX",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/mx.png"
+  },
+  {
+    "Club": "Spezia Calcio",
+    "Founded": "1906",
+    "Country": "Italia",
+    "Nick": "Aquilotti (Aguiluchos)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1549.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Cuiaba",
+    "Founded": "Dora",
+    "Country": "Brasil",
+    "Nick": "Cuiaba",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1594.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Juventude",
+    "Founded": "Caxias do S",
+    "Country": "Brasil",
+    "Nick": "Rio Grande do Sul",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1595.png",
+    "League": "Brasileirão Assaí",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/br.png"
+  },
+  {
+    "Club": "Institución Atlética Sud América",
+    "Founded": "15-02-1914",
+    "Country": "Uruguay",
+    "Nick": "Buzones",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1601.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "Club Social y Deportivo Villa Española",
+    "Founded": "18-08-1940",
+    "Country": "Uruguay",
+    "Nick": "El Villa",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1602.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "Club Sportivo Cerrito",
+    "Founded": "28-10-1929",
+    "Country": "Uruguay",
+    "Nick": "Montevideo",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1603.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "Austin FC",
+    "Founded": "15-01-2019",
+    "Country": "Estados Unidos",
+    "Nick": "Austin",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1605.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "SC Cambuur Leeuwarden",
+    "Founded": "19-06-1964",
+    "Country": "Países Bajos",
+    "Nick": "Leeuwarden",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1606.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Unione Sportiva Salernitana 1919",
+    "Founded": "1919",
+    "Country": "Italia",
+    "Nick": "Granata (Granates)",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1608.png",
+    "League": "Serie A TIM",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/it.png"
+  },
+  {
+    "Club": "Clermont Foot Auvergne",
+    "Founded": "1911",
+    "Country": "Estados Unidos",
+    "Nick": "S/D",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1609.png",
+    "League": "MLS (Major League Soccer)",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/us.png"
+  },
+  {
+    "Club": "Nijmegen Eendracht Combinatie",
+    "Founded": "15-11-1900",
+    "Country": "Países Bajos",
+    "Nick": "NEC",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1610.png",
+    "League": "FEB Eredivisie",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/ho.png"
+  },
+  {
+    "Club": "Club Deportivo Atlético Huila",
+    "Founded": "29-11-1990",
+    "Country": "Colombia",
+    "Nick": "Opitas, Bambuqueros",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1611.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Albion Football Club",
+    "Founded": "01-06-1891",
+    "Country": "Uruguay",
+    "Nick": "Leones/Pionero",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1648.png",
+    "League": "Campeonato Uruguayo de Primera División Profesional",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/uy.png"
+  },
+  {
+    "Club": "Corporación Club Deportivo Tuluá",
+    "Founded": "12-11-1967",
+    "Country": "Colombia",
+    "Nick": "Paneleros",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1650.png",
+    "League": "Categoría Primera A",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/co.png"
+  },
+  {
+    "Club": "Club Deportivo Ñublense",
+    "Founded": "20-08-1916",
+    "Country": "Chile",
+    "Nick": "Diablos Rojos",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1692.png",
+    "League": "Campeonato Betsson",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/cl.png"
+  },
+  {
+    "Club": "Club General Caballero",
+    "Founded": "21-06-1962",
+    "Country": "Paraguay",
+    "Nick": "Rojo de Mallorquín",
+    "imageURL": "https://www.promiedos.com.ar/images/64/1694.png",
+    "League": "Copa de Primera Tigo Visión Banco",
+    "countryFlag": "https://www.promiedos.com.ar/images/paises/py.png"
+  }
+]

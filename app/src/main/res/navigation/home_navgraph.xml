@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_club_d_detail">
         <argument
             android:name="clubID"
-            app:argType="integer" />
+            app:argType="string" />
         <action
             android:id="@+id/action_clubDDetail_to_editClubDetail"
             app:destination="@id/editClubDetail" />

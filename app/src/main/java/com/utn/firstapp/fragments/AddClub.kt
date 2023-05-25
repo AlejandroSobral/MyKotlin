@@ -52,7 +52,7 @@ class AddClub : Fragment() {
 
         db = AppDatabase.getInstance(v.context)
         clubDao = db?.clubDao()
-        var newClub =  Club(0,"","","","","", "")
+        var newClub =  Club("0","","","","","", "", "")
 
         //var PassedClubRepo: ClubRepository = AddClubArgs.fromBundle(requireArguments()).ClubRepo
 

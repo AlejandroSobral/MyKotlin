@@ -4,16 +4,15 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -25,25 +24,26 @@ import com.utn.firstapp.database.AppDatabase
 import com.utn.firstapp.database.ClubDao
 import com.utn.firstapp.database.UserDao
 import com.utn.firstapp.entities.ClubRepository
+import dagger.hilt.android.AndroidEntryPoint
 
 
-
-
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
-
+    private val viewModel: HomeFrgmtViewModel by viewModels()
     private var db: AppDatabase? = null
     private var userDao: UserDao? = null
     private var clubdao: ClubDao? = null
     lateinit var label: TextView
+
     //lateinit var btnNavigate: Button
     lateinit var v: View
     lateinit var recClubs: RecyclerView
     lateinit var adapter: ClubAdapter
     var imgHomeLogoURL: String = "https://assets.stickpng.com/images/609912b13ae4510004af4a22.png"
     lateinit var imgHomeLogo: ImageView
-    lateinit var btnLogOut : Button
-    lateinit var btnAddClub : Button
+    lateinit var btnLogOut: Button
+    lateinit var btnAddClub: Button
 
 
     var clubRepository: ClubRepository = ClubRepository()
@@ -66,18 +66,17 @@ class HomeFragment : Fragment() {
     }
 
 
-
     override fun onStart() {
         super.onStart()
 
 
-
         val sharedPref = context?.getSharedPreferences(
-            getString(R.string.preference_file_key), Context.MODE_PRIVATE)
+            getString(R.string.preference_file_key), Context.MODE_PRIVATE
+        )
 
         var prevPosition = sharedPref?.getInt("RecViewPos", 0)
 
-        if(prevPosition==null){
+        if (prevPosition == null) {
             prevPosition = 0
         }
 
@@ -85,7 +84,7 @@ class HomeFragment : Fragment() {
         val idUser = sharedPref?.getString("UserID", "0")
 
 
-        btnLogOut.setOnClickListener{
+        btnLogOut.setOnClickListener {
             val context = requireContext()
             val builder = AlertDialog.Builder(context)
 
@@ -116,7 +115,7 @@ class HomeFragment : Fragment() {
 
         }
 
-        btnAddClub.setOnClickListener{
+        btnAddClub.setOnClickListener {
             val action = HomeFragmentDirections.actionHomeFragmentToAddClub(clubRepository)
             findNavController().navigate(action)
         }
@@ -128,28 +127,34 @@ class HomeFragment : Fragment() {
         //val clubList = clubdao?.fetchAllClubs()
 
 
+        //val clubList = clubdao?.fetchAllClubsOrderByName()
+        //var clubList = viewModel.getClubsFromDB()
+        viewModel.getClubsFromDB()
+        viewModel.teams.observe(viewLifecycleOwner) { getClubList ->
+            //viewModel.//.observe(viewLifecycleOwner) { currentUser ->
 
-        val clubList = clubdao?.fetchAllClubsOrderByName()
+            var adapterclubList = getClubList.clubList
+            if (adapterclubList != null) {
+                adapter = ClubAdapter(adapterclubList) {
 
-
-        if(clubList != null){
-            adapter = ClubAdapter(clubList){
-
-                position ->
-                val action = HomeFragmentDirections.actionHomeFragmentToClubDDetail(clubList?.get(position)?.id ?: -1)//clubRepository.clubList[position])
-                if (sharedPref != null) {
-                    with (sharedPref.edit()) {
-                        putInt("RecViewPos", position)
-                        commit()
+                        position ->
+                    val action = HomeFragmentDirections.actionHomeFragmentToClubDDetail(
+                        ((adapterclubList?.get(position)?.id ?: -1) as String) )//as Int
+                    //)//clubRepository.clubList[position])
+                    if (sharedPref != null) {
+                        with(sharedPref.edit()) {
+                            putInt("RecViewPos", position)
+                            commit()
+                        }
                     }
+                    findNavController().navigate(action)
+
                 }
-                findNavController().navigate(action)
-
             }
-        }
-        recClubs.layoutManager = LinearLayoutManager(context)
-        recClubs.adapter = adapter
-        recClubs.scrollToPosition(prevPosition)
+            recClubs.layoutManager = LinearLayoutManager(context)
+            recClubs.adapter = adapter
+            recClubs.scrollToPosition(prevPosition)
 
+        }
     }
 }

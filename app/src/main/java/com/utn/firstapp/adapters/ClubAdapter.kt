@@ -13,7 +13,7 @@ import com.utn.firstapp.R
 import com.utn.firstapp.entities.Club
 
 class ClubAdapter(
-    var ClubList: MutableList<Club?>?,
+    var ClubList: MutableList<Club>,
     var onClick: (Int) -> Unit
 ) : RecyclerView.Adapter<ClubAdapter.ClubHolder>() {
 
@@ -32,73 +32,7 @@ class ClubAdapter(
                 var txtCountry: TextView = view.findViewById(R.id.txtCountry)
                 txtCountry.text = name
             }
-            fun setFlag(name: String){
-                lateinit var v: View
-                lateinit var imageURL: String
-
-                imageURL =
-                        "https://cdn-icons-png.flaticon.com/512/968/968547.png?w=826&t=st=1683033467~exp=1683034067~hmac=8620a0ffceba94b1a2c3eb487f2ff38384bcd12c8f39088b7c3de95ac853972b"
-
-                if (name == "Paraguay") {
-                    imageURL =
-                        "https://www.promiedos.com.ar/images/paises/py.png"
-                }
-                if (name == "Países Bajos") {
-                    imageURL =
-                        "https://www.promiedos.com.ar/images/paises/ho.png"
-                }
-                if (name == "España") {
-                    imageURL =
-                        "https://www.promiedos.com.ar/images/paises/es.png"
-                }
-                if (name == "Alemania") {
-                    imageURL =
-                        "https://www.promiedos.com.ar/images/paises/de.png"
-                }
-                if (name == "Uruguay") {
-                    imageURL =
-                        "https://www.promiedos.com.ar/images/paises/uy.png"
-                }
-
-                if (name == "Brasil") {
-                    imageURL =
-                        "https://www.promiedos.com.ar/images/paises/br.png"
-                }
-                if (name == "Colombia") {
-                    imageURL =
-                        "https://www.promiedos.com.ar/images/paises/co.png"
-                }
-                if (name == "Estados Unidos") {
-                    imageURL =
-                        "https://www.promiedos.com.ar/images/paises/us.png"
-                }
-                if (name == "México") {
-                    imageURL =
-                        "https://www.promiedos.com.ar/images/paises/mx.png"
-                }
-                if (name == "Chile") {
-                    imageURL =
-                        "https://www.promiedos.com.ar/images/paises/cl.png"
-                }
-
-                if (name == "Argentina") {
-                    imageURL =
-                        "https://www.promiedos.com.ar/images/paises/ar.png"
-                }
-
-                if (name == "Inglaterra") {
-                    imageURL = "https://www.promiedos.com.ar/images/paises/in.png"
-                }
-
-                if (name == "Italia") {
-                    imageURL =
-                        "https://www.promiedos.com.ar/images/paises/it.png"
-                }
-                if (name == "Francia") {
-                    imageURL =
-                        "https://www.promiedos.com.ar/images/paises/fr.png"
-                }
-
+            fun setCountryFlag(imageURL: String){
 
                 var imgFlag: ImageView = view.findViewById(R.id.imgFlag)
                 Glide.with(view).load(imageURL).into(imgFlag)
@@ -133,7 +67,7 @@ class ClubAdapter(
         ClubList?.get(position)?.let { holder.setClub(it.name) }
         ClubList?.get(position)?.let { holder.setImage(it.imageURL) }
         ClubList?.get(position)?.let { holder.setCountry(it.country) }
-        ClubList?.get(position)?.let { holder.setFlag(it.country) }
+        ClubList?.get(position)?.let { holder.setCountryFlag(it.countryFlag) }
         holder.getCard().setOnClickListener{
             onClick(position)
 

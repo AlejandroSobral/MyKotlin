@@ -64,6 +64,8 @@ class ClubDDetail : Fragment() {
         lateinit var getClub:Club
 
         var clubID  = ClubDDetailArgs.fromBundle(requireArguments()).clubID
+
+
         getClub = clubdao?.fetchClubById(clubID) as Club
 
 
@@ -98,7 +100,7 @@ class ClubDDetail : Fragment() {
 
             if (sharedPref != null) {
                 with (sharedPref.edit()) {
-                    putInt("ClubID", getClub.id)
+                    putString("ClubID", getClub.id)
                     commit()
                 }
             }
