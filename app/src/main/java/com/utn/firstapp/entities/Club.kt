@@ -4,11 +4,12 @@ package com.utn.firstapp.entities
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import javax.inject.Inject
 
 
 
 @Entity(tableName = "clubs")
-    class Club (id:String, name: String,founded: String, country: String, nickname: String, imageURL: String, league: String, countryFlag:String)
+    class Club (id:String, name: String,founded: String, country: String, nickname: String, imageurl: String, league: String, countryflag:String)
     {
         @PrimaryKey(autoGenerate = false)
         @ColumnInfo(name = "id")
@@ -26,11 +27,11 @@ import androidx.room.PrimaryKey
         @ColumnInfo(name = "nickname")
         var nickname: String
 
-        @ColumnInfo(name = "imageURL")
-        var imageURL: String
+        @ColumnInfo(name = "imageurl")
+        var imageurl: String
 
-        @ColumnInfo(name = "countryFlag")
-        var countryFlag: String
+        @ColumnInfo(name = "countryflag")
+        var countryflag: String
 
 
         @ColumnInfo(name = "league")
@@ -41,9 +42,9 @@ import androidx.room.PrimaryKey
             this.country = country
             this.founded = founded
             this.nickname = nickname
-            this.imageURL = imageURL
+            this.imageurl = imageurl
             this.league = league
-            this.countryFlag = countryFlag
+            this.countryflag = countryflag
         }
 
 

@@ -1,8 +1,6 @@
 package com.utn.firstapp.fragments
 
 
-import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,19 +9,20 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.google.android.material.snackbar.Snackbar
 import com.utn.firstapp.R
-import com.utn.firstapp.activities.SecondActivity
 import com.utn.firstapp.database.AppDatabase
 import com.utn.firstapp.database.ClubDao
 import com.utn.firstapp.database.UserDao
 import com.utn.firstapp.entities.Club
-import com.utn.firstapp.entities.User
 
 class ClubDDetail : Fragment() {
 
+
+    private val viewModel: ClubDDetailViewModel by viewModels()
     lateinit var v: View
     lateinit var txtNick: TextView
     lateinit var txtName: TextView
@@ -66,15 +65,18 @@ class ClubDDetail : Fragment() {
         var clubID  = ClubDDetailArgs.fromBundle(requireArguments()).clubID
 
 
-        getClub = clubdao?.fetchClubById(clubID) as Club
+        //getClub = clubdao?.fetchClubById(clubID) as Club
+        // This getClub should come from DataBase, processed on ViewModel
+        viewModel.getClubFromID(clubID)
+        viewModel.team.observe(viewLifecycleOwner) { getClub ->
 
-
-        txtName.text = getClub.name
-        txtFounded.text = getClub.founded
-        txtLeague.text = getClub.league
-        txtNick.text = getClub.nickname
-        txtCountry.text = getClub.country
-        Glide.with(v).load(getClub.imageURL).into(imgClubDetail)
+            txtName.text = getClub.name
+            txtFounded.text = getClub.founded
+            txtLeague.text = getClub.league
+            txtNick.text = getClub.nickname
+            txtCountry.text = getClub.country
+            Glide.with(v).load(getClub.imageurl).into(imgClubDetail)
+        }
 
         val navController = findNavController()
 
@@ -95,18 +97,9 @@ class ClubDDetail : Fragment() {
 
         btnEdit.setOnClickListener{
 
-            val sharedPref = context?.getSharedPreferences(
-                getString(R.string.preference_file_key), Context.MODE_PRIVATE)
-
-            if (sharedPref != null) {
-                with (sharedPref.edit()) {
-                    putString("ClubID", getClub.id)
-                    commit()
-                }
-            }
 
             //val action = HomeFragmentDirections.actionHomeFragmentToClubDDetail(
-            val action = ClubDDetailDirections.actionClubDDetailToEditClubDetail()
+            val action = ClubDDetailDirections.actionClubDDetailToEditClubDetail(clubID)
             findNavController().navigate(action)
 
 

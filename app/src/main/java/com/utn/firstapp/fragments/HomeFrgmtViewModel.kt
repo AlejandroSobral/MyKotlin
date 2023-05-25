@@ -45,13 +45,13 @@ class HomeFrgmtViewModel @Inject constructor(
                         var auxClub: Club = Club("", "", "", "", "", "", "", "")
                         //Log.d("TestDB", "${document.id} => ${document.data}")
                         auxClub.id = document.id
-                        auxClub.name = document.getString("Club") ?: ""
-                        auxClub.country = document.getString("Country") ?: ""
-                        auxClub.founded = document.getString("Founded") ?: ""
-                        auxClub.league = document.getString("League") ?: ""
-                        auxClub.nickname = document.getString("Nick") ?: ""
-                        auxClub.countryFlag = document.getString("countryFlag") ?: ""
-                        auxClub.imageURL = document.getString("imageURL") ?: ""
+                        auxClub.name = document.getString("name") ?: ""
+                        auxClub.country = document.getString("country") ?: ""
+                        auxClub.founded = document.getString("founded") ?: ""
+                        auxClub.league = document.getString("league") ?: ""
+                        auxClub.nickname = document.getString("nickname") ?: ""
+                        auxClub.countryflag = document.getString("countryflag") ?: ""
+                        auxClub.imageurl = document.getString("imageurl") ?: ""
 
                         clubRepo.clubList.add(auxClub)
                     }

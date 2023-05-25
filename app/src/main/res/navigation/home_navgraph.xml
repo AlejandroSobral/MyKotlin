@@ -48,5 +48,9 @@
         android:id="@+id/editClubDetail"
         android:name="com.utn.firstapp.fragments.EditClubDetail"
         android:label="fragment_edit_club_detail"
-        tools:layout="@layout/fragment_edit_club_detail" />
+        tools:layout="@layout/fragment_edit_club_detail" >
+        <argument
+            android:name="clubID"
+            app:argType="string" />
+    </fragment>
 </navigation>

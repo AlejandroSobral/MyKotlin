@@ -33,13 +33,13 @@ class StartingClubs(private val context: Context) : RoomDatabase.Callback() {
                 val item = clubs.getJSONObject(i)
                 val club = Club(
                     id = "0",
-                    name = item.getString("Club"),
-                    founded = item.getString("Founded"),
-                    country = item.getString("Country"),
-                    nickname = item.getString("Nick"),
-                    imageURL = item.getString("imageURL"),
-                    league = item.getString("League"),
-                countryFlag = item.getString("countryFlag")
+                    name = item.getString("club"),
+                    founded = item.getString("founded"),
+                    country = item.getString("country"),
+                    nickname = item.getString("nick"),
+                    imageurl = item.getString("imageurl"),
+                    league = item.getString("league"),
+                countryflag = item.getString("countryflag")
                 )
 
                 dao?.insertClub(club)

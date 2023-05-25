@@ -32,7 +32,7 @@
         android:hint="Image URL"
         android:inputType="text"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnUpdateEditClub"
+        app:layout_constraintBottom_toTopOf="@+id/edtEditClubNatFlag"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -112,7 +112,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtEditClubTextImageURL"
+        app:layout_constraintTop_toBottomOf="@+id/edtEditClubNatFlag"
         app:layout_constraintVertical_bias="0.5" />
 
     <TextView
@@ -127,6 +127,20 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:id="@+id/edtEditClubNatFlag"
+        android:layout_width="235dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="National Flag URL"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/btnUpdateEditClub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEditClubTextImageURL"
         app:layout_constraintVertical_bias="0.5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

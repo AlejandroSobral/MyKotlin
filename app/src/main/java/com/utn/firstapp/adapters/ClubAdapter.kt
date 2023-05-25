@@ -32,10 +32,10 @@ class ClubAdapter(
                 var txtCountry: TextView = view.findViewById(R.id.txtCountry)
                 txtCountry.text = name
             }
-            fun setCountryFlag(imageURL: String){
+            fun setCountryFlag(imageurl: String){
 
                 var imgFlag: ImageView = view.findViewById(R.id.imgFlag)
-                Glide.with(view).load(imageURL).into(imgFlag)
+                Glide.with(view).load(imageurl).into(imgFlag)
             }
 
             fun setImage(imageURL: String){
@@ -65,9 +65,9 @@ class ClubAdapter(
     override fun onBindViewHolder(holder: ClubHolder, position: Int) {
 
         ClubList?.get(position)?.let { holder.setClub(it.name) }
-        ClubList?.get(position)?.let { holder.setImage(it.imageURL) }
+        ClubList?.get(position)?.let { holder.setImage(it.imageurl) }
         ClubList?.get(position)?.let { holder.setCountry(it.country) }
-        ClubList?.get(position)?.let { holder.setCountryFlag(it.countryFlag) }
+        ClubList?.get(position)?.let { holder.setCountryFlag(it.countryflag) }
         holder.getCard().setOnClickListener{
             onClick(position)
 

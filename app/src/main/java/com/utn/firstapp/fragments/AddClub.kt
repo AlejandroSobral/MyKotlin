@@ -74,7 +74,7 @@ class AddClub : Fragment() {
                 newClub.league = clubleague
                 newClub.founded = clubfounded
                 newClub.nickname = clubnick
-                newClub.imageURL = imageURL
+                newClub.imageurl = imageURL
 
                 //PassedClubRepo.clubList.add(Club(clubname, clubfounded, clubcountry, clubnick, "https://www.vhv.rs/dpng/d/486-4867851_generic-football-club-logo-png-download-generic-football.png", clubleague, 0))
 

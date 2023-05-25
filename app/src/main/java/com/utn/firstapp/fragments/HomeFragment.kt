@@ -140,6 +140,7 @@ class HomeFragment : Fragment() {
                         position ->
                     val action = HomeFragmentDirections.actionHomeFragmentToClubDDetail(
                         ((adapterclubList?.get(position)?.id ?: -1) as String) )//as Int
+
                     //)//clubRepository.clubList[position])
                     if (sharedPref != null) {
                         with(sharedPref.edit()) {

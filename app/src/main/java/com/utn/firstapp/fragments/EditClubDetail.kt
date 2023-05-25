@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import androidx.fragment.app.viewModels
 import com.google.android.material.snackbar.Snackbar
 import com.utn.firstapp.R
 import com.utn.firstapp.UserDetailViewModel
@@ -20,14 +21,16 @@ import com.utn.firstapp.entities.User
 
 class EditClubDetail : Fragment() {
 
+    private val viewModel: EditClubDetailViewModel by viewModels()
     lateinit var v: View
-    lateinit var btnUpdate : Button
+    lateinit var btnUpdate: Button
     lateinit var txtName: EditText
     lateinit var txtFounded: EditText
     lateinit var txtCountry: EditText
     lateinit var txtNick: EditText
-    lateinit var txtLeague : EditText
-    lateinit var txtURL : EditText
+    lateinit var txtLeague: EditText
+    lateinit var txtURL: EditText
+    lateinit var txtNatFlag: EditText
     private var db: AppDatabase? = null
     private var clubDao: ClubDao? = null
     lateinit var getClub: Club
@@ -46,61 +49,52 @@ class EditClubDetail : Fragment() {
         txtLeague = v.findViewById(R.id.edtEditClubTextLeague)
         txtNick = v.findViewById(R.id.edtEditClubTextNick)
         txtURL = v.findViewById(R.id.edtEditClubTextImageURL)
+        txtNatFlag = v.findViewById(R.id.edtEditClubNatFlag)
 
 
         return v
     }
-    override fun onStart(){
+
+    override fun onStart() {
         super.onStart()
 
+        var clubID = EditClubDetailArgs.fromBundle(requireArguments()).clubID
+
+        viewModel.getClubFromID(clubID)
+        viewModel.team.observe(viewLifecycleOwner) { getClub ->
+
+            txtName.setText(getClub.name)
+            txtFounded.setText(getClub.founded)
+            txtCountry.setText(getClub.country)
+            txtLeague.setText(getClub.league)
+            txtNick.setText(getClub.nickname)
+            txtURL.setText(getClub.imageurl)
+            txtNatFlag.setText(getClub.countryflag)
+        }
 
 
-        db = AppDatabase.getInstance(v.context)
-        clubDao = db?.clubDao()
+        btnUpdate.setOnClickListener {
 
+            try {
+                if (clubID != null) {
+                    val auxClub = Club(
+                        clubID,
+                        txtName.text.toString(),
+                        txtFounded.text.toString(),
+                        txtCountry.text.toString(),
+                        txtNick.text.toString(),
+                        txtURL.text.toString(),
+                        txtLeague.text.toString(),
+                        txtNatFlag.text.toString()
+                    )
 
-        val sharedPref = context?.getSharedPreferences(
-            getString(R.string.preference_file_key), Context.MODE_PRIVATE)
-
-        val idClub = sharedPref!!.getInt("ClubID", 0)
-
-        getClub = clubDao?.fetchClubById(idClub) as Club
-
-        txtName.setText(getClub.name)
-        txtFounded.setText(getClub.founded)
-        txtCountry.setText(getClub.country)
-        txtLeague.setText(getClub.league)
-        txtNick.setText(getClub.nickname)
-        txtURL.setText(getClub.imageURL)
-
-
-        btnUpdate.setOnClickListener{
-        try {
-            if (idClub != null) {
-                val clubname = txtName.text.toString()
-                val founded = txtFounded.text.toString()
-                val country = txtCountry.text.toString()
-                val league = txtLeague.text.toString()
-                val nick = txtNick.text.toString()
-                val url = txtURL.text.toString()
-
-                getClub.name = clubname
-                getClub.founded = founded
-                getClub.country = country
-                getClub.league = league
-                getClub.nickname = nick
-                getClub.imageURL = url
-
-                clubDao?.updateClub(getClub)
+                    viewModel.updateClub(auxClub)
+                }
                 Snackbar.make(v, "Club data correctly updated", Snackbar.LENGTH_SHORT).show()
 
-
+            } catch (e: Exception) {
+                Snackbar.make(v, "Wrong try editing club info.", Snackbar.LENGTH_SHORT).show()
             }
-        }
-        catch(e:Exception)
-        {
-            Snackbar.make(v, "Wrong try editing club info.", Snackbar.LENGTH_SHORT).show()
-        }
         }
     }
 
