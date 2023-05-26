@@ -39,6 +39,7 @@ class LoginFrgmtViewModel @Inject constructor(
                         auxUser.lastname = document.getString("lastname") ?: ""
                         auxUser.email = document.getString("email") ?: ""
                         auxUser.name = document.getString("name") ?: ""
+                        auxUser.lastposition = document.getString("lastposition") ?: ""
                         _user.value = auxUser
 
                         preferencesManager.saveCurrentUser(auxUser)

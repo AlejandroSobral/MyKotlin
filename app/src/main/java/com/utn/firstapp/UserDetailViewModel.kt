@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.gson.Gson
+import com.utn.firstapp.entities.State
 import com.utn.firstapp.entities.User
 import dagger.hilt.android.lifecycle.HiltViewModel
 import org.json.JSONObject
@@ -15,35 +16,35 @@ import javax.inject.Inject
 
 @HiltViewModel
 class UserDetailViewModel @Inject constructor(
-    private val sharedPreferences: SharedPreferences
+    private val preferencesManager: PreferencesManager
 ) : ViewModel() {
 
+    val state : MutableLiveData<State> = MutableLiveData()
     private val _user = MutableLiveData<User>()
     val user: LiveData<User>
         get() = _user
     val dbInt = Firebase.firestore
 
-    fun getUser(): User {
-        val gson: Gson = Gson()
-        val userJson = sharedPreferences.getString("currentUser", null)
-        return gson.fromJson(userJson, User::class.java)
+    fun getUser(): User? {
+        return preferencesManager.getCurrentUser()
+        state.postValue(State.SUCCESS)
     }
 
     fun updateUser(user: User)
     {
-
-        val gson: Gson = Gson()
-        val userJson = sharedPreferences.getString("currentUser", null)
-        val pureJsonUser = JSONObject(userJson)
+        state.postValue(State.LOADING)
+        preferencesManager.saveCurrentUser(user)
         val usersCollection = dbInt.collection("users")
-        user.id = pureJsonUser.getString("id")
-        usersCollection.document(pureJsonUser.getString("id"))
+
+        usersCollection.document(user.id)
             .set(user)
             .addOnSuccessListener {
                 Log.d("UpdateUser", "OK")
+                state.postValue(State.SUCCESS)
             }
             .addOnFailureListener { exception ->
                 Log.d("UpdateUser", "FAILED")
+                state.postValue(State.FAILURE)
             }
     }
 

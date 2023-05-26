@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,6 +18,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.google.android.material.snackbar.Snackbar
 import com.utn.firstapp.R
 import com.utn.firstapp.activities.MainActivity
 import com.utn.firstapp.adapters.ClubAdapter
@@ -24,6 +26,7 @@ import com.utn.firstapp.database.AppDatabase
 import com.utn.firstapp.database.ClubDao
 import com.utn.firstapp.database.UserDao
 import com.utn.firstapp.entities.ClubRepository
+import com.utn.firstapp.entities.State
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -60,8 +63,6 @@ class HomeFragment : Fragment() {
         btnAddClub = v.findViewById(R.id.btnAddClub)
         Glide.with(v).load(imgHomeLogoURL).into(imgHomeLogo)
 
-
-
         return v
     }
 
@@ -69,20 +70,80 @@ class HomeFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
-
+        /* OLD SHAR PREF
         val sharedPref = context?.getSharedPreferences(
             getString(R.string.preference_file_key), Context.MODE_PRIVATE
         )
+         var prevPosition = sharedPref?.getInt("RecViewPos", 0)
+        */
 
-        var prevPosition = sharedPref?.getInt("RecViewPos", 0)
+        var currentUser = viewModel.getUser()
 
-        if (prevPosition == null) {
-            prevPosition = 0
+        if (currentUser != null) {
+            Log.d("PositionUser", "L81, ${currentUser.lastposition}")
+        }
+
+        viewModel.state.observe(this) { state ->
+            when (state) {
+                State.SUCCESS -> {
+                    Log.d("PositionUser", "GetCurrentOK")
+                }
+
+                State.FAILURE -> {}
+                State.LOADING -> {}
+                null -> {
+                }
+            }
         }
 
 
-        val idUser = sharedPref?.getString("UserID", "0")
+        /*db = AppDatabase.getInstance(v.context)
+        userDao = db?.userDao()
+        //clubdao = db?.clubDao()
+        //val clubList = clubdao?.fetchAllClubs()
+        //val clubList = clubdao?.fetchAllClubsOrderByName()
+        //var clubList = viewModel.getClubsFromDB()*/
 
+        viewModel.getClubsFromDB()
+        viewModel.teams.observe(viewLifecycleOwner) { getClubList ->
+
+            var adapterclubList = getClubList.clubList
+            if (adapterclubList != null) {
+                adapter = ClubAdapter(adapterclubList) { position ->
+                    val action = HomeFragmentDirections.actionHomeFragmentToClubDDetail(
+                        ((adapterclubList?.get(position)?.id ?: -1) as String)
+                    )//as Int
+
+                    /*if (sharedPref != null) {
+                        with(sharedPref.edit()) {
+                            putInt("RecViewPos", position)
+                            commit()
+                        }
+                    }*/
+                    currentUser?.lastposition = (position).toString()
+                    if (currentUser != null) {
+                        Log.d("PositionUser", "L124, ${currentUser.lastposition}")
+                        Log.d("PositionUser", "Position, $position")
+                    }
+
+
+                    if (currentUser != null) {
+                        viewModel.updateUser(currentUser)
+                        Log.d("PositionUser", "Guardo Position, ${currentUser.lastposition}")
+
+                    }
+                    findNavController().navigate(action)
+
+                }
+            }
+            recClubs.layoutManager = LinearLayoutManager(context)
+            recClubs.adapter = adapter
+            if (currentUser != null) {
+                Log.d("PositionUser", "Scroll to , ${currentUser.lastposition}")
+                recClubs.scrollToPosition((currentUser.lastposition).toInt())
+            }
+
+        }
 
         btnLogOut.setOnClickListener {
             val context = requireContext()
@@ -91,7 +152,6 @@ class HomeFragment : Fragment() {
             // set the message and title of the dialog
             builder.setMessage("Are you sure you want to log out?")
                 .setTitle("Logout")
-
             // add buttons to the dialog
             builder.setPositiveButton("Accept",
                 DialogInterface.OnClickListener { dialog, id ->
@@ -112,50 +172,10 @@ class HomeFragment : Fragment() {
             // create and show the dialog
             val dialog = builder.create()
             dialog.show()
-
         }
-
         btnAddClub.setOnClickListener {
             val action = HomeFragmentDirections.actionHomeFragmentToAddClub(clubRepository)
             findNavController().navigate(action)
-        }
-
-
-        db = AppDatabase.getInstance(v.context)
-        userDao = db?.userDao()
-        clubdao = db?.clubDao()
-        //val clubList = clubdao?.fetchAllClubs()
-
-
-        //val clubList = clubdao?.fetchAllClubsOrderByName()
-        //var clubList = viewModel.getClubsFromDB()
-        viewModel.getClubsFromDB()
-        viewModel.teams.observe(viewLifecycleOwner) { getClubList ->
-            //viewModel.//.observe(viewLifecycleOwner) { currentUser ->
-
-            var adapterclubList = getClubList.clubList
-            if (adapterclubList != null) {
-                adapter = ClubAdapter(adapterclubList) {
-
-                        position ->
-                    val action = HomeFragmentDirections.actionHomeFragmentToClubDDetail(
-                        ((adapterclubList?.get(position)?.id ?: -1) as String) )//as Int
-
-                    //)//clubRepository.clubList[position])
-                    if (sharedPref != null) {
-                        with(sharedPref.edit()) {
-                            putInt("RecViewPos", position)
-                            commit()
-                        }
-                    }
-                    findNavController().navigate(action)
-
-                }
-            }
-            recClubs.layoutManager = LinearLayoutManager(context)
-            recClubs.adapter = adapter
-            recClubs.scrollToPosition(prevPosition)
-
         }
     }
 }

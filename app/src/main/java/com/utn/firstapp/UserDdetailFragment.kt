@@ -14,8 +14,10 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.snackbar.Snackbar
 import com.utn.firstapp.database.AppDatabase
 import com.utn.firstapp.database.UserDao
+import com.utn.firstapp.entities.State
 import com.utn.firstapp.entities.User
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -23,8 +25,6 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class UserDdetailFragment() : Fragment() {
 
-    @Inject
-    lateinit var sharedPreferences: SharedPreferences
 
     private val viewModel: UserDetailViewModel by viewModels()
     lateinit var v: View
@@ -58,31 +58,52 @@ class UserDdetailFragment() : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        var auxUser:User = User("", "", "", "", "") // Instance un User
-        val getUser: User = viewModel.getUser()
+        var auxUser: User = User("", "", "", "", "", "") // Instance un User
+        val getUser: User? = viewModel.getUser()
 
-        txtUserName.setText(getUser.name)
-        txtUserlastname.setText(getUser.lastname)
-        txtUserEmail.setText(getUser.email)
-        txtPassword.setText(getUser.password)
-
-
-        updatebtn.setOnClickListener{
+        txtUserName.setText(getUser?.name)
+        txtUserlastname.setText(getUser?.lastname)
+        txtUserEmail.setText(getUser?.email)
+        txtPassword.setText(getUser?.password)
 
 
-            auxUser.name = txtUserName.text.toString()
-            auxUser.lastname = txtUserlastname.text.toString()
-            auxUser.password =  txtPassword.text.toString()
-            auxUser.email = txtUserEmail.text.toString()
+        updatebtn.setOnClickListener {
 
-            viewModel.updateUser(auxUser)
+
+            if (getUser != null) {
+                getUser.name = txtUserName.text.toString()
+                getUser.lastname = txtUserlastname.text.toString()
+                getUser.password = txtPassword.text.toString()
+                getUser.email = txtUserEmail.text.toString()
+
+                viewModel.updateUser(getUser)
+
+                viewModel.state.observe(this) { state ->
+                    when (state) {
+                        State.SUCCESS -> {
+                            Snackbar.make(v, "User has been edited", Snackbar.LENGTH_SHORT).show()
+                        }
+
+                        State.FAILURE -> {
+                            Snackbar.make(v, "User edit has failed", Snackbar.LENGTH_SHORT).show()
+                        }
+
+                        State.LOADING -> {
+                            Snackbar.make(v, "Loading", Snackbar.LENGTH_SHORT).show()
+                        }
+
+                        null -> {
+                        }
+                    }
+                }
+            }
 
 
         }
 
     }
 }
-//        updatebtn.setOnClickListener {
+/*        updatebtn.setOnClickListener {
 //
 //
 //            val context = requireContext()
@@ -126,7 +147,7 @@ class UserDdetailFragment() : Fragment() {
 //        }
 //
 //    }
-//}
+//}*/
 
 
 

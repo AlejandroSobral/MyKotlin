@@ -120,14 +120,14 @@ class LoginFrgmt : Fragment() {
         // })*/
 
 
-        db = AppDatabase.getInstance(v.context)
-        userDao = db?.userDao()
-        clubdao = db?.clubDao()
+        /*db = AppDatabase.getInstance(v.context)
+        //userDao = db?.userDao()
+        //clubdao = db?.clubDao()
 
         // Dummy call to pre-populate db
-        userDao?.fetchAllUsers()
+        //userDao?.fetchAllUsers()
 
-        val clubList = clubdao?.fetchAllClubs()
+        //val clubList = clubdao?.fetchAllClubs()*/
 
 
         btnSignUp.setOnClickListener {

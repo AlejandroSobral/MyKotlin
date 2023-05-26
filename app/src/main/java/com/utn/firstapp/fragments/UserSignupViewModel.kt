@@ -16,6 +16,7 @@ class UserSignupViewModel @Inject constructor(
     private val preferencesManager: PreferencesManager
 ) : ViewModel() {
     fun insertUser(insertUser: User) {
+        insertUser.lastposition = "0"
         val dbInt = Firebase.firestore
         dbInt.collection("users")
             .add(insertUser)
@@ -59,6 +60,7 @@ class UserSignupViewModel @Inject constructor(
                         auxUser.password = document.getString("password") ?: ""
                         auxUser.email = document.getString("email") ?: ""
                         auxUser.lastname = document.getString("lastname") ?: ""
+
                     }
 
                 }

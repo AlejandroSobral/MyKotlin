@@ -31,10 +31,6 @@ class EditClubDetail : Fragment() {
     lateinit var txtLeague: EditText
     lateinit var txtURL: EditText
     lateinit var txtNatFlag: EditText
-    private var db: AppDatabase? = null
-    private var clubDao: ClubDao? = null
-    lateinit var getClub: Club
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,7 +46,6 @@ class EditClubDetail : Fragment() {
         txtNick = v.findViewById(R.id.edtEditClubTextNick)
         txtURL = v.findViewById(R.id.edtEditClubTextImageURL)
         txtNatFlag = v.findViewById(R.id.edtEditClubNatFlag)
-
 
         return v
     }

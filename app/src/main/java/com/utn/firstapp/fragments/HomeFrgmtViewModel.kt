@@ -14,6 +14,7 @@ import com.google.gson.Gson
 import com.utn.firstapp.PreferencesManager
 import com.utn.firstapp.entities.Club
 import com.utn.firstapp.entities.ClubRepository
+import com.utn.firstapp.entities.State
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
@@ -23,10 +24,38 @@ class HomeFrgmtViewModel @Inject constructor(
     private val preferencesManager: PreferencesManager
 ) : ViewModel() {
 
-
+    val state : MutableLiveData<State> = MutableLiveData()
     private val _teams = MutableLiveData<ClubRepository>()
+    val dbInt = Firebase.firestore
     val teams: LiveData<ClubRepository>
         get() = _teams
+
+    fun getUser(): User? {
+        return preferencesManager.getCurrentUser()
+        state.postValue(State.SUCCESS)
+    }
+
+    fun updateUser(user: User)
+    {
+        state.postValue(State.LOADING)
+        preferencesManager.saveCurrentUser(user)
+        var auxUser = preferencesManager.getCurrentUser()
+        val usersCollection = dbInt.collection("users")
+        if (auxUser != null) {
+            user.id = auxUser.id
+        }
+        usersCollection.document(user.id)
+            .set(user)
+            .addOnSuccessListener {
+                Log.d("UpdateUser", "OK")
+                state.postValue(State.SUCCESS)
+            }
+            .addOnFailureListener { exception ->
+                Log.d("UpdateUser", "FAILED")
+                state.postValue(State.FAILURE)
+            }
+    }
+
 
     fun getClubsFromDB(): MutableList<Club> {
         val dbInt = Firebase.firestore

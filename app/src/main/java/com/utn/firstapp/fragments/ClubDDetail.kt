@@ -22,7 +22,6 @@ import com.utn.firstapp.entities.State
 
 class ClubDDetail : Fragment() {
 
-
     private val viewModel: ClubDDetailViewModel by viewModels()
     lateinit var v: View
     lateinit var txtNick: TextView
@@ -31,9 +30,6 @@ class ClubDDetail : Fragment() {
     lateinit var txtLeague: TextView
     lateinit var txtCountry: TextView
     lateinit var imgClubDetail : ImageView
-    private var db: AppDatabase? = null
-    private var userDao: UserDao? = null
-    private var clubdao: ClubDao? = null
     lateinit var btnDelete: Button
     lateinit var btnEdit: Button
 
@@ -57,17 +53,18 @@ class ClubDDetail : Fragment() {
 
     override fun onStart(){
         super.onStart()
-        db = AppDatabase.getInstance(v.context)
+        /*
 
-        clubdao = db?.clubDao()
-
-        lateinit var getClub:Club
+        //db = AppDatabase.getInstance(v.context)
+        //clubdao = db?.clubDao()
+        //lateinit var getClub:Club
+        //getClub = clubdao?.fetchClubById(clubID) as Club*/
 
         var clubID  = ClubDDetailArgs.fromBundle(requireArguments()).clubID
 
 
-        //getClub = clubdao?.fetchClubById(clubID) as Club
         // This getClub should come from DataBase, processed on ViewModel
+        lateinit var getClub: Club
         viewModel.getClubFromID(clubID)
         viewModel.team.observe(viewLifecycleOwner) { getClub ->
 
@@ -85,11 +82,9 @@ class ClubDDetail : Fragment() {
             try {
 
                 viewModel.deleteClubFromID(clubID)
-
                 viewModel.state.observe(this){state ->
                     when(state){
                         State.SUCCESS ->{
-
                             Snackbar.make(v, "Club has been deleted", Snackbar.LENGTH_SHORT).show()
                             navController.navigateUp()
                         }
@@ -100,11 +95,9 @@ class ClubDDetail : Fragment() {
                             Snackbar.make(v, "Loading", Snackbar.LENGTH_SHORT).show()
                         }
                         null ->{
-
                         }
                     }
                 }
-
             }
             catch(e:Exception)
             {
@@ -113,7 +106,6 @@ class ClubDDetail : Fragment() {
         }
 
         btnEdit.setOnClickListener{
-
 
             //val action = HomeFragmentDirections.actionHomeFragmentToClubDDetail(
             val action = ClubDDetailDirections.actionClubDDetailToEditClubDetail(clubID)

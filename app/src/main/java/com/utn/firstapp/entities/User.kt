@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 
 
 @Entity(tableName = "users")
-class User (id:String, name: String,lastname: String, email: String, password: String)
+class User (id:String, name: String,lastname: String, email: String, password: String, lastposition: String = "0")
 {
     @PrimaryKey(autoGenerate = false)
     @ColumnInfo(name = "id")
@@ -25,12 +25,16 @@ class User (id:String, name: String,lastname: String, email: String, password: S
     @ColumnInfo(name = "password")
     var password: String
 
+    @ColumnInfo(name = "lastposition")
+    var lastposition: String
+
     init {
         this.id = id
         this.name = name
         this.email = email
         this.password = password
         this.lastname = lastname
+        this.lastposition = lastposition
     }
 
 
