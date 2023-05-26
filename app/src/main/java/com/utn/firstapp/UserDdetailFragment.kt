@@ -68,15 +68,12 @@ class UserDdetailFragment() : Fragment() {
 
 
         updatebtn.setOnClickListener{
-            val username = txtUserName.text.toString()
-            val lastname = txtUserlastname.text.toString()
-            val pass = txtPassword.text.toString()
-            val email = txtUserEmail.text.toString()
 
-            auxUser.name = username
-            auxUser.lastname = lastname
-            auxUser.password = pass
-            auxUser.email = email
+
+            auxUser.name = txtUserName.text.toString()
+            auxUser.lastname = txtUserlastname.text.toString()
+            auxUser.password =  txtPassword.text.toString()
+            auxUser.email = txtUserEmail.text.toString()
 
             viewModel.updateUser(auxUser)
 

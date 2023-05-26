@@ -18,6 +18,7 @@ import com.utn.firstapp.database.AppDatabase
 import com.utn.firstapp.database.ClubDao
 import com.utn.firstapp.database.UserDao
 import com.utn.firstapp.entities.Club
+import com.utn.firstapp.entities.State
 
 class ClubDDetail : Fragment() {
 
@@ -82,11 +83,27 @@ class ClubDDetail : Fragment() {
 
         btnDelete.setOnClickListener{
             try {
-                clubdao?.delete(getClub)
-                val message = "Club, ${getClub.name}, has been deleted correctly!"
-                //ADD USER TO DB
-                Snackbar.make(v, message, Snackbar.LENGTH_SHORT).show()
-                navController.navigateUp()
+
+                viewModel.deleteClubFromID(clubID)
+
+                viewModel.state.observe(this){state ->
+                    when(state){
+                        State.SUCCESS ->{
+
+                            Snackbar.make(v, "Club has been deleted", Snackbar.LENGTH_SHORT).show()
+                            navController.navigateUp()
+                        }
+                        State.FAILURE ->{
+                            Snackbar.make(v, "Delete failed", Snackbar.LENGTH_SHORT).show()
+                        }
+                        State.LOADING ->{
+                            Snackbar.make(v, "Loading", Snackbar.LENGTH_SHORT).show()
+                        }
+                        null ->{
+
+                        }
+                    }
+                }
 
             }
             catch(e:Exception)

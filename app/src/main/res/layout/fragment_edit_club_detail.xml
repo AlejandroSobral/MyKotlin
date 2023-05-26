@@ -131,11 +131,12 @@
 
     <EditText
         android:id="@+id/edtEditClubNatFlag"
-        android:layout_width="235dp"
-        android:layout_height="48dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="National Flag URL"
         android:inputType="text"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/btnUpdateEditClub"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

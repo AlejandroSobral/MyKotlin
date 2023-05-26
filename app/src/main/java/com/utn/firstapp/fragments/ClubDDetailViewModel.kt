@@ -9,14 +9,19 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.utn.firstapp.entities.Club
 import com.utn.firstapp.entities.ClubRepository
+import com.utn.firstapp.entities.State
 import com.utn.firstapp.entities.User
 import javax.inject.Inject
 
+
 class ClubDDetailViewModel : ViewModel() {
 
+    val state : MutableLiveData<State> = MutableLiveData()
     private val _detailClub = MutableLiveData<Club>()
     val team: LiveData<Club>
         get() = _detailClub
+
+
 
     fun getClubFromID(clubID: String) {
         val dbInt = Firebase.firestore
@@ -49,6 +54,22 @@ class ClubDDetailViewModel : ViewModel() {
             }
             .addOnFailureListener { exception ->
                 Log.d("TestDB", "Error DB connection Club Detail: ", exception)
+
+            }
+    }
+
+    fun deleteClubFromID (clubID: String) {
+        val dbInt = Firebase.firestore
+        state.postValue(State.LOADING)
+        dbInt.collection("teams").document(clubID)
+            .delete()
+            .addOnSuccessListener {
+                Log.d("TestDB", "Club has been deleted.")
+                state.postValue(State.SUCCESS)
+                    }
+
+            .addOnFailureListener { exception ->
+                Log.d("TestDB", "Club deleting has failed: ", exception)
 
             }
     }

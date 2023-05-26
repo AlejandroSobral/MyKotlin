@@ -33,15 +33,13 @@ class HomeFrgmtViewModel @Inject constructor(
         var clubRepo: ClubRepository = ClubRepository()
         var auxClub: Club = Club("", "", "", "", "", "", "", "")
 
-
         dbInt.collection("teams")
+            .orderBy("name")
             .get()
-
             .addOnSuccessListener { result ->
 
                 if (!result.isEmpty) {
                     for (document in result) {
-
                         var auxClub: Club = Club("", "", "", "", "", "", "", "")
                         //Log.d("TestDB", "${document.id} => ${document.data}")
                         auxClub.id = document.id
@@ -66,8 +64,5 @@ class HomeFrgmtViewModel @Inject constructor(
             }
 
         return clubRepo.clubList
-
     }
-
-
 }

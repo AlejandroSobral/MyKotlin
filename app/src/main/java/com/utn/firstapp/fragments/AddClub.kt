@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
 import com.utn.firstapp.R
@@ -14,23 +15,23 @@ import com.utn.firstapp.database.AppDatabase
 import com.utn.firstapp.database.ClubDao
 import com.utn.firstapp.entities.Club
 import com.utn.firstapp.entities.ClubRepository
+import com.utn.firstapp.entities.State
 
 class AddClub : Fragment() {
 
     lateinit var v: View
     lateinit var btnAdd: Button
-    lateinit var addClubName : EditText
-    lateinit var addClubFounded : EditText
-    lateinit var addClubLeague : EditText
-    lateinit var addClubCountry : EditText
-    lateinit var addClubNick : EditText
-    lateinit var addClubURL : EditText
+    lateinit var addClubName: EditText
+    lateinit var addClubFounded: EditText
+    lateinit var addClubLeague: EditText
+    lateinit var addClubCountry: EditText
+    lateinit var addClubNick: EditText
+    lateinit var addClubURL: EditText
+    lateinit var addClubCountryFlag : EditText
     private var db: AppDatabase? = null
     private var clubDao: ClubDao? = null
+    private val viewModel: AddClubViewModel by viewModels()
 
-
-
-    private lateinit var viewModel: AddClubViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -44,39 +45,43 @@ class AddClub : Fragment() {
         addClubLeague = v.findViewById(R.id.edtTxtAddClubLeague)
         addClubNick = v.findViewById(R.id.edtTxtAddClubNick)
         addClubURL = v.findViewById(R.id.edtTxtAddClubURL)
+        addClubCountryFlag = v.findViewById(R.id.edtTxtCountryFlagURL)
 
         return v
     }
+
     override fun onStart() {
         super.onStart()
 
         db = AppDatabase.getInstance(v.context)
         clubDao = db?.clubDao()
-        var newClub =  Club("0","","","","","", "", "")
+        var newClub = Club("0", "", "", "", "", "", "", "")
 
-        //var PassedClubRepo: ClubRepository = AddClubArgs.fromBundle(requireArguments()).ClubRepo
 
         btnAdd.setOnClickListener {
             try {
+                /*
                 var clubname: String = addClubName.text.toString()
-                var clubcountry: String = addClubCountry.text.toString()
-                var clubleague: String = addClubLeague.text.toString()
-                var clubfounded: String = addClubFounded.text.toString()
-                var clubnick: String = addClubNick.text.toString()
-                var imageURL: String = addClubURL.text.toString()
+                 var clubcountry: String = addClubCountry.text.toString()
+                 var clubleague: String = addClubLeague.text.toString()
+                 var clubfounded: String = addClubFounded.text.toString()
+                 var clubnick: String = addClubNick.text.toString()
+                 var imageURL: String = addClubURL.text.toString()*/
 
-                if(imageURL == ""){
-                    imageURL = "https://www.vhv.rs/dpng/d/486-4867851_generic-football-club-logo-png-download-generic-football.png"
+                newClub.name = addClubName.text.toString()
+                newClub.country = addClubCountry.text.toString()
+                newClub.league = addClubLeague.text.toString()
+                newClub.founded = addClubFounded.text.toString()
+                newClub.nickname = addClubNick.text.toString()
+                newClub.imageurl = addClubURL.text.toString()
+                newClub.countryflag = addClubCountryFlag.text.toString()
+
+
+                if (newClub.imageurl == "") {
+                    newClub.imageurl =
+                        "https://www.vhv.rs/dpng/d/486-4867851_generic-football-club-logo-png-download-generic-football.png"
                 }
 
-                newClub.name = clubname
-                newClub.country = clubcountry
-                newClub.league = clubleague
-                newClub.founded = clubfounded
-                newClub.nickname = clubnick
-                newClub.imageurl = imageURL
-
-                //PassedClubRepo.clubList.add(Club(clubname, clubfounded, clubcountry, clubnick, "https://www.vhv.rs/dpng/d/486-4867851_generic-football-club-logo-png-download-generic-football.png", clubleague, 0))
 
                 addClubCountry.setText("")
                 addClubName.setText("")
@@ -84,8 +89,29 @@ class AddClub : Fragment() {
                 addClubNick.setText("")
                 addClubFounded.setText("")
                 addClubURL.setText("")
+                addClubCountryFlag.setText("")
 
+                viewModel.addClub(newClub)
 
+                viewModel.state.observe(this) { state ->
+                    when (state) {
+                        State.SUCCESS -> {
+                            Snackbar.make(v, "Club has been added", Snackbar.LENGTH_SHORT).show()
+                        }
+
+                        State.FAILURE -> {
+                            Snackbar.make(v, "Club Add failed", Snackbar.LENGTH_SHORT).show()
+                        }
+
+                        State.LOADING -> {
+                            Snackbar.make(v, "Loading", Snackbar.LENGTH_SHORT).show()
+                        }
+
+                        null -> {
+                        }
+                    }
+                }
+                /*
                 if(clubDao?.fetchClubByName(newClub.name)==null)
                 {
                     clubDao?.insertClub(newClub)
@@ -97,12 +123,10 @@ class AddClub : Fragment() {
                 {
                     val message = "Club, ${clubname}, has already exists!"
                     Snackbar.make(v, message, Snackbar.LENGTH_SHORT).show()
-                }
+                }*/
 
 
-
-            }
-            catch (e: Exception) {
+            } catch (e: Exception) {
                 Snackbar.make(v, "Wrong Club insert.", Snackbar.LENGTH_SHORT).show()
 
             }

@@ -81,7 +81,8 @@ class LoginFrgmt : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        //val userIntList = mutableListOf<User>()
+        /* Old implementations
+        val userIntList = mutableListOf<User>()
 
 //        db_int.collection("users")
 //            //.whereEqualTo("userName", inputTxtUserName)
@@ -102,7 +103,7 @@ class LoginFrgmt : Fragment() {
 //            }
 //            .addOnFailureListener { exception ->
 //                Log.d("TestDB", "Error getting documents: ", exception)
-//            }
+           }
 
         //val TAGINT = "DBINT"
         //db_int.collection("users")
@@ -116,7 +117,7 @@ class LoginFrgmt : Fragment() {
         //  } else {
         //       Log.d("TestDB", "Error getting documents: ", task.exception)
         //    }
-        // })
+        // })*/
 
 
         db = AppDatabase.getInstance(v.context)
@@ -163,7 +164,8 @@ class LoginFrgmt : Fragment() {
                 }
 
 
-                //if(inputTextuser == rightUser.email && inputTextpass == rightUser.password  ) {
+                /* Old local stuff
+                if(inputTextuser == rightUser.email && inputTextpass == rightUser.password  ) {
                 //  val intent = Intent(activity, SecondActivity::class.java)
                 //intent.putExtra("fragmentId", R.id.HomeFragment)
                 //intent.putExtra("bundle_key", userBundle)
@@ -172,7 +174,7 @@ class LoginFrgmt : Fragment() {
                 //}
                 //else
                 //Snackbar.make(v, "Wrong credentials", Snackbar.LENGTH_SHORT).show()
-                //}
+                //}*/
 
             }
 
