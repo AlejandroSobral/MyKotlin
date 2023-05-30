@@ -10,6 +10,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
@@ -34,12 +35,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private val viewModel: HomeFrgmtViewModel by viewModels()
-    private var db: AppDatabase? = null
-    private var userDao: UserDao? = null
-    private var clubdao: ClubDao? = null
-    lateinit var label: TextView
-
-    //lateinit var btnNavigate: Button
+    lateinit var loadingPb: ProgressBar
     lateinit var v: View
     lateinit var recClubs: RecyclerView
     lateinit var adapter: ClubAdapter
@@ -61,6 +57,7 @@ class HomeFragment : Fragment() {
         imgHomeLogo = v.findViewById(R.id.imgHomeLogo)
         btnLogOut = v.findViewById(R.id.btnLogOut)
         btnAddClub = v.findViewById(R.id.btnAddClub)
+        loadingPb = v.findViewById(R.id.homeLoadingProgressBar)
         Glide.with(v).load(imgHomeLogoURL).into(imgHomeLogo)
 
         return v
@@ -70,13 +67,7 @@ class HomeFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        /* OLD SHAR PREF
-        val sharedPref = context?.getSharedPreferences(
-            getString(R.string.preference_file_key), Context.MODE_PRIVATE
-        )
-         var prevPosition = sharedPref?.getInt("RecViewPos", 0)
-        */
-
+        loadingPb.visibility = View.VISIBLE
         var currentUser = viewModel.getUser()
 
         if (currentUser != null) {
@@ -90,19 +81,14 @@ class HomeFragment : Fragment() {
                 }
 
                 State.FAILURE -> {}
-                State.LOADING -> {}
+                State.LOADING -> {
+
+                }
                 null -> {
                 }
             }
         }
 
-
-        /*db = AppDatabase.getInstance(v.context)
-        userDao = db?.userDao()
-        //clubdao = db?.clubDao()
-        //val clubList = clubdao?.fetchAllClubs()
-        //val clubList = clubdao?.fetchAllClubsOrderByName()
-        //var clubList = viewModel.getClubsFromDB()*/
 
         viewModel.getClubsFromDB()
         viewModel.teams.observe(viewLifecycleOwner) { getClubList ->
@@ -114,12 +100,7 @@ class HomeFragment : Fragment() {
                         ((adapterclubList?.get(position)?.id ?: -1) as String)
                     )//as Int
 
-                    /*if (sharedPref != null) {
-                        with(sharedPref.edit()) {
-                            putInt("RecViewPos", position)
-                            commit()
-                        }
-                    }*/
+
                     currentUser?.lastposition = (position).toString()
                     if (currentUser != null) {
                         Log.d("PositionUser", "L124, ${currentUser.lastposition}")
@@ -141,6 +122,7 @@ class HomeFragment : Fragment() {
             if (currentUser != null) {
                 Log.d("PositionUser", "Scroll to , ${currentUser.lastposition}")
                 recClubs.scrollToPosition((currentUser.lastposition).toInt())
+                loadingPb.visibility = View.GONE
             }
 
         }

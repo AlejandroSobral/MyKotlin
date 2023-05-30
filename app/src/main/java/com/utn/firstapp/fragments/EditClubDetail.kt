@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
 import androidx.fragment.app.viewModels
 import com.google.android.material.snackbar.Snackbar
 import com.utn.firstapp.R
@@ -17,6 +18,7 @@ import com.utn.firstapp.database.AppDatabase
 import com.utn.firstapp.database.ClubDao
 import com.utn.firstapp.database.UserDao
 import com.utn.firstapp.entities.Club
+import com.utn.firstapp.entities.State
 import com.utn.firstapp.entities.User
 
 class EditClubDetail : Fragment() {
@@ -31,6 +33,7 @@ class EditClubDetail : Fragment() {
     lateinit var txtLeague: EditText
     lateinit var txtURL: EditText
     lateinit var txtNatFlag: EditText
+    lateinit var loadingPb: ProgressBar
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,12 +49,22 @@ class EditClubDetail : Fragment() {
         txtNick = v.findViewById(R.id.edtEditClubTextNick)
         txtURL = v.findViewById(R.id.edtEditClubTextImageURL)
         txtNatFlag = v.findViewById(R.id.edtEditClubNatFlag)
+        loadingPb = v.findViewById(R.id.editClubLoadingProgressBar)
 
         return v
     }
 
     override fun onStart() {
         super.onStart()
+
+        loadingPb.visibility = View.VISIBLE
+        txtName.visibility = View.INVISIBLE
+        txtFounded.visibility = View.INVISIBLE
+        txtCountry.visibility = View.INVISIBLE
+        txtLeague.visibility = View.INVISIBLE
+        txtNick.visibility = View.INVISIBLE
+        txtURL.visibility = View.INVISIBLE
+        txtNatFlag.visibility = View.INVISIBLE
 
         var clubID = EditClubDetailArgs.fromBundle(requireArguments()).clubID
 
@@ -65,33 +78,69 @@ class EditClubDetail : Fragment() {
             txtNick.setText(getClub.nickname)
             txtURL.setText(getClub.imageurl)
             txtNatFlag.setText(getClub.countryflag)
-        }
 
+            txtName.visibility = View.VISIBLE
+            txtFounded.visibility = View.VISIBLE
+            txtCountry.visibility = View.VISIBLE
+            txtLeague.visibility = View.VISIBLE
+            txtNick.visibility = View.VISIBLE
+            txtURL.visibility = View.VISIBLE
+            txtNatFlag.visibility = View.VISIBLE
+            loadingPb.visibility = View.GONE
+
+        }
 
         btnUpdate.setOnClickListener {
 
-            try {
-                if (clubID != null) {
-                    val auxClub = Club(
-                        clubID,
-                        txtName.text.toString(),
-                        txtFounded.text.toString(),
-                        txtCountry.text.toString(),
-                        txtNick.text.toString(),
-                        txtURL.text.toString(),
-                        txtLeague.text.toString(),
-                        txtNatFlag.text.toString()
-                    )
+            if (clubID != null) {
+                val auxClub = Club(
+                    clubID,
+                    txtName.text.toString(),
+                    txtFounded.text.toString(),
+                    txtCountry.text.toString(),
+                    txtNick.text.toString(),
+                    txtURL.text.toString(),
+                    txtLeague.text.toString(),
+                    txtNatFlag.text.toString()
+                )
 
-                    viewModel.updateClub(auxClub)
+                viewModel.updateClub(auxClub)
+                viewModel.state.observe(this) { state ->
+                    when (state) {
+                        State.SUCCESS -> {
+                            txtName.visibility = View.VISIBLE
+                            txtFounded.visibility = View.VISIBLE
+                            txtCountry.visibility = View.VISIBLE
+                            txtLeague.visibility = View.VISIBLE
+                            txtNick.visibility = View.VISIBLE
+                            txtURL.visibility = View.VISIBLE
+                            txtNatFlag.visibility = View.VISIBLE
+                            loadingPb.visibility = View.GONE
+                            Snackbar.make(v, "Club data correctly updated", Snackbar.LENGTH_SHORT).show()
+                        }
+
+                        State.FAILURE -> {
+                            Snackbar.make(v, "Wrong try editing club info.", Snackbar.LENGTH_SHORT
+                            ).show()
+                        }
+
+                        State.LOADING -> {
+                            loadingPb.visibility = View.VISIBLE
+                            txtName.visibility = View.INVISIBLE
+                            txtFounded.visibility = View.INVISIBLE
+                            txtCountry.visibility = View.INVISIBLE
+                            txtLeague.visibility = View.INVISIBLE
+                            txtNick.visibility = View.INVISIBLE
+                            txtURL.visibility = View.INVISIBLE
+                            txtNatFlag.visibility = View.INVISIBLE
+                        }
+
+                        null -> {}
+                    }
                 }
-                Snackbar.make(v, "Club data correctly updated", Snackbar.LENGTH_SHORT).show()
-
-            } catch (e: Exception) {
-                Snackbar.make(v, "Wrong try editing club info.", Snackbar.LENGTH_SHORT).show()
             }
         }
     }
-
-
 }
+
+

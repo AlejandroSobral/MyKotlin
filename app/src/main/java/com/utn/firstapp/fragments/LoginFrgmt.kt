@@ -1,7 +1,6 @@
 package com.utn.firstapp.fragments
 
 
-
 import android.content.ContentValues
 import android.content.Context
 import com.utn.firstapp.database.AppDatabase
@@ -15,6 +14,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.ProgressBar
+import android.widget.Spinner
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -43,12 +44,10 @@ class LoginFrgmt : Fragment() {
     companion object {
         fun newInstance() = LoginFrgmt()
     }
-    private val viewModel: LoginFrgmtViewModel by viewModels()
 
-    private var db: AppDatabase? = null
-    private var userDao: UserDao? = null
-    private var clubdao: ClubDao? = null
+    private val viewModel: LoginFrgmtViewModel by viewModels()
     lateinit var imgLoginLogo: ImageView
+    lateinit var loadingPb: ProgressBar
     lateinit var label: TextView
     lateinit var btnNavigate: Button
     lateinit var btnSignUp: Button
@@ -56,7 +55,6 @@ class LoginFrgmt : Fragment() {
     lateinit var inputuser: EditText
     lateinit var inputpass: EditText
     var imgLoginLogoURL: String = "https://assets.stickpng.com/images/609912b13ae4510004af4a22.png"
-
 
 
     override fun onCreateView(
@@ -72,6 +70,7 @@ class LoginFrgmt : Fragment() {
         inputuser = v.findViewById(R.id.txtInput_user)
         inputpass = v.findViewById(R.id.txtInput_password)
         imgLoginLogo = v.findViewById(R.id.imgLoginLogo)
+        loadingPb = v.findViewById(R.id.LoginProgressBar);
         Glide.with(v).load(imgLoginLogoURL).into(imgLoginLogo)
 
         return v
@@ -81,57 +80,7 @@ class LoginFrgmt : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        /* Old implementations
-        val userIntList = mutableListOf<User>()
-
-//        db_int.collection("users")
-//            //.whereEqualTo("userName", inputTxtUserName)
-//            .get()
-//            .addOnSuccessListener { result ->
-//                for (document in result) {
-//                    Log.d("TestDB", "${document.id} => ${document.data}")
-//
-//                    auxUser.id = document.getString("id") ?: ""
-//                    auxUser.name = document.getString("name") ?: ""
-//                    auxUser.email = document.getString("email") ?: ""
-//                    auxUser.lastname = document.getString("lastname") ?: ""
-//                    auxUser.password = document.getString("password") ?: ""
-//
-//
-//                    userIntList.add(auxUser)
-//                }
-//            }
-//            .addOnFailureListener { exception ->
-//                Log.d("TestDB", "Error getting documents: ", exception)
-           }
-
-        //val TAGINT = "DBINT"
-        //db_int.collection("users")
-        //  .get()
-        //   .addOnCompleteListener(OnCompleteListener<QuerySnapshot> { task ->
-        //       if (task.isSuccessful) {
-        //  for (document in task.result) {
-        //       Log.d("TestDB", document.id + " => " + document.data)
-        //        //Log.d("TestDB", document.key + " => " + document.data)
-        //     }
-        //  } else {
-        //       Log.d("TestDB", "Error getting documents: ", task.exception)
-        //    }
-        // })*/
-
-
-        /*db = AppDatabase.getInstance(v.context)
-        //userDao = db?.userDao()
-        //clubdao = db?.clubDao()
-
-        // Dummy call to pre-populate db
-        //userDao?.fetchAllUsers()
-
-        //val clubList = clubdao?.fetchAllClubs()*/
-
-
         btnSignUp.setOnClickListener {
-
 
             val action = LoginFrgmtDirections.actionLoginFragmentToUserSignup2()
             findNavController().navigate(action)
@@ -139,45 +88,27 @@ class LoginFrgmt : Fragment() {
 
         btnNavigate.setOnClickListener {
 
-            //lateinit var usertypeIn: User
-            //var rightUser: User = User(0, "User", "asd", "1", "asd") // Instance un User
-            var inputTextuser: String = inputuser.text.toString()
-            var inputTextpass: String = inputpass.text.toString()
-            var auxUser:User = User("", "User", "asd", "1", "asd") // Instance un User
-
-            viewModel.getUserFromUsernameAndPassword(inputTextuser, inputTextpass)
-
+            loadingPb.visibility = View.VISIBLE;
+            viewModel.getUserFromUsernameAndPassword(
+                inputuser.text.toString(),
+                inputpass.text.toString()
+            )
 
             viewModel.user.observe(viewLifecycleOwner) { currentUser ->
 
-                if (currentUser != null) {
+                if (currentUser!= null) {
+                    Log.d("TestDB", "ID:" + currentUser.id)
 
-                    Log.d("TestDB", "ID:"+currentUser.id)
-
-                    inputuser.setText("")
-                    inputpass.setText("")
                     val intent = Intent(activity, SecondActivity::class.java)
                     intent.putExtra("CurrentUserID", currentUser.id)
                     startActivity(intent)
+                    inputuser.setText("")
+                    inputpass.setText("")
                 } else {
                     Snackbar.make(v, "Wrong credentials", Snackbar.LENGTH_SHORT).show()
+                    loadingPb.visibility = View.GONE;
                 }
-
-
-                /* Old local stuff
-                if(inputTextuser == rightUser.email && inputTextpass == rightUser.password  ) {
-                //  val intent = Intent(activity, SecondActivity::class.java)
-                //intent.putExtra("fragmentId", R.id.HomeFragment)
-                //intent.putExtra("bundle_key", userBundle)
-
-                //startActivity(intent)
-                //}
-                //else
-                //Snackbar.make(v, "Wrong credentials", Snackbar.LENGTH_SHORT).show()
-                //}*/
-
             }
-
         }
     }
 }

@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.LiveData
@@ -32,8 +33,7 @@ class UserDdetailFragment() : Fragment() {
     lateinit var txtUserName: EditText
     lateinit var txtUserEmail: EditText
     lateinit var txtPassword: EditText
-    private var db: AppDatabase? = null
-    private var userDao: UserDao? = null
+    lateinit var loadingPb: ProgressBar
     lateinit var updatebtn: Button
 
 
@@ -49,6 +49,7 @@ class UserDdetailFragment() : Fragment() {
         txtUserEmail = v.findViewById(R.id.txtUserEmailDetail)
         txtPassword = v.findViewById(R.id.txtPasswordDetail)
         updatebtn = v.findViewById(R.id.btnUpdateUser)
+        loadingPb = v.findViewById(R.id.loadingUserDetailprogressBar)
 
 
         return v
@@ -57,14 +58,24 @@ class UserDdetailFragment() : Fragment() {
 
     override fun onStart() {
         super.onStart()
+        loadingPb.visibility = View.VISIBLE
+        txtUserName.visibility = View.INVISIBLE
+        txtUserlastname.visibility = View.INVISIBLE
+        txtUserEmail.visibility = View.INVISIBLE
+        txtPassword.visibility = View.INVISIBLE
 
-        var auxUser: User = User("", "", "", "", "", "") // Instance un User
         val getUser: User? = viewModel.getUser()
 
         txtUserName.setText(getUser?.name)
         txtUserlastname.setText(getUser?.lastname)
         txtUserEmail.setText(getUser?.email)
         txtPassword.setText(getUser?.password)
+
+        txtUserName.visibility = View.VISIBLE
+        txtUserlastname.visibility = View.VISIBLE
+        txtUserEmail.visibility = View.VISIBLE
+        txtPassword.visibility = View.VISIBLE
+        loadingPb.visibility = View.GONE
 
 
         updatebtn.setOnClickListener {
@@ -81,7 +92,12 @@ class UserDdetailFragment() : Fragment() {
                 viewModel.state.observe(this) { state ->
                     when (state) {
                         State.SUCCESS -> {
-                            Snackbar.make(v, "User has been edited", Snackbar.LENGTH_SHORT).show()
+                            Snackbar.make(v, "User has been edited properly.", Snackbar.LENGTH_SHORT).show()
+                            txtUserName.visibility = View.VISIBLE
+                            txtUserlastname.visibility = View.VISIBLE
+                            txtUserEmail.visibility = View.VISIBLE
+                            txtPassword.visibility = View.VISIBLE
+                            loadingPb.visibility = View.INVISIBLE
                         }
 
                         State.FAILURE -> {
@@ -89,7 +105,12 @@ class UserDdetailFragment() : Fragment() {
                         }
 
                         State.LOADING -> {
-                            Snackbar.make(v, "Loading", Snackbar.LENGTH_SHORT).show()
+                            //Snackbar.make(v, "Loading", Snackbar.LENGTH_SHORT).show()
+                            loadingPb.visibility = View.VISIBLE
+                            txtUserName.visibility = View.INVISIBLE
+                            txtUserlastname.visibility = View.INVISIBLE
+                            txtUserEmail.visibility = View.INVISIBLE
+                            txtPassword.visibility = View.INVISIBLE
                         }
 
                         null -> {

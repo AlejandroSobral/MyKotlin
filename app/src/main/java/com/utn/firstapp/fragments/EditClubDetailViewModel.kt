@@ -7,24 +7,29 @@ import androidx.lifecycle.ViewModel
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.utn.firstapp.entities.Club
+import com.utn.firstapp.entities.State
 
 class EditClubDetailViewModel : ViewModel() {
 
+    val state : MutableLiveData<State> = MutableLiveData()
     private val _detailClub = MutableLiveData<Club>()
     val team: LiveData<Club>
         get() = _detailClub
 
     fun updateClub(getClub: Club)
     {
+        state.postValue(State.LOADING)
         val dbInt = Firebase.firestore
         val teamsCollection = dbInt.collection("teams")
         teamsCollection.document(getClub.id)
             .set(getClub)
             .addOnSuccessListener {
                 Log.d("UpdateClub", "OK")
+                state.postValue(State.SUCCESS)
             }
             .addOnFailureListener { exception ->
                 Log.d("UpdateClub", "FAILED")
+                state.postValue(State.FAILURE)
             }
     }
 

@@ -17,13 +17,13 @@ class LoginFrgmtViewModel @Inject constructor(
 ) : ViewModel() {
 
 
-    private val _user = MutableLiveData<User>()
-    val user: LiveData<User>
+    private val _user = MutableLiveData<User?>()
+    val user: MutableLiveData<User?>
         get() = _user
 
     fun getUserFromUsernameAndPassword(userString: String, passwordString: String) {
         val dbInt = Firebase.firestore
-        var auxUser: User = User("", "User", "asd", "1", "asd") // Instance un User
+        var auxUser: User = User("", "", "", "", "") // Instance un User
 
         dbInt.collection("users")
             .whereEqualTo("name", userString)
@@ -32,7 +32,6 @@ class LoginFrgmtViewModel @Inject constructor(
             .get()
             .addOnSuccessListener { result ->
                 if (!result.isEmpty) {
-                    // FIXME - Deberias cambiar la logica para traer solo un user, o para asegurarte de que hay un solo doc...
                     for (document in result) {
                         auxUser.id = document.getString("id") ?: ""
                         auxUser.password = document.getString("password") ?: ""
@@ -45,6 +44,10 @@ class LoginFrgmtViewModel @Inject constructor(
                         preferencesManager.saveCurrentUser(auxUser)
                     }
 
+                }
+
+                if(result.isEmpty){
+                    _user.value = null
                 }
 
             }

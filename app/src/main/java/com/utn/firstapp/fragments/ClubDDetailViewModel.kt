@@ -17,8 +17,8 @@ import javax.inject.Inject
 class ClubDDetailViewModel : ViewModel() {
 
     val state : MutableLiveData<State> = MutableLiveData()
-    private val _detailClub = MutableLiveData<Club>()
-    val team: LiveData<Club>
+    private val _detailClub = MutableLiveData<Club?>()
+    val team: MutableLiveData<Club?>
         get() = _detailClub
 
 
@@ -27,6 +27,7 @@ class ClubDDetailViewModel : ViewModel() {
         val dbInt = Firebase.firestore
         var auxClub: Club = Club("", "", "", "", "", "", "", "") // Instance un User
 
+        state.postValue(State.LOADING)
         dbInt.collection("teams")
             .whereEqualTo("id", clubID)
             .limit(1)
@@ -44,8 +45,8 @@ class ClubDDetailViewModel : ViewModel() {
                         auxClub.countryflag = document.getString("countryflag") ?: ""
                         auxClub.id = document.getString("id") ?: ""
                         auxClub.imageurl = document.getString("imageurl") ?: ""
-
                         _detailClub.value = auxClub
+
 
                     }
                     _detailClub.postValue(auxClub)
@@ -54,6 +55,7 @@ class ClubDDetailViewModel : ViewModel() {
             }
             .addOnFailureListener { exception ->
                 Log.d("TestDB", "Error DB connection Club Detail: ", exception)
+                _detailClub.value = null
 
             }
     }

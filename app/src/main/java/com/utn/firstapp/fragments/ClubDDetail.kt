@@ -1,12 +1,14 @@
 package com.utn.firstapp.fragments
 
 
+import android.media.tv.TvContract.Programs
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -32,6 +34,7 @@ class ClubDDetail : Fragment() {
     lateinit var imgClubDetail : ImageView
     lateinit var btnDelete: Button
     lateinit var btnEdit: Button
+    lateinit var loadingBar : ProgressBar
 
         //Club, Country, League, Founded, Nick
 
@@ -48,32 +51,42 @@ class ClubDDetail : Fragment() {
         imgClubDetail = v.findViewById(R.id.imgDetailClub)
         btnDelete  = v.findViewById(R.id.btnDetailDeleteClub)
         btnEdit = v.findViewById(R.id.btnDetailEdtClub)
+        loadingBar = v.findViewById(R.id.clubDetailLoadingProgressBar)
         return v
     }
 
     override fun onStart(){
         super.onStart()
-        /*
 
-        //db = AppDatabase.getInstance(v.context)
-        //clubdao = db?.clubDao()
-        //lateinit var getClub:Club
-        //getClub = clubdao?.fetchClubById(clubID) as Club*/
-
+        loadingBar.visibility = View.VISIBLE
+        txtName.visibility = View.GONE
+        txtFounded.visibility = View.GONE
+        txtLeague.visibility = View.GONE
+        txtNick.visibility = View.GONE
+        txtCountry.visibility = View.GONE
         var clubID  = ClubDDetailArgs.fromBundle(requireArguments()).clubID
 
-
-        // This getClub should come from DataBase, processed on ViewModel
-        lateinit var getClub: Club
         viewModel.getClubFromID(clubID)
+
+
         viewModel.team.observe(viewLifecycleOwner) { getClub ->
 
-            txtName.text = getClub.name
-            txtFounded.text = getClub.founded
-            txtLeague.text = getClub.league
-            txtNick.text = getClub.nickname
-            txtCountry.text = getClub.country
-            Glide.with(v).load(getClub.imageurl).into(imgClubDetail)
+            if(getClub != null) {
+                txtName.text = getClub.name
+                txtFounded.text = getClub.founded
+                txtLeague.text = getClub.league
+                txtNick.text = getClub.nickname
+                txtCountry.text = getClub.country
+                Glide.with(v).load(getClub.imageurl).into(imgClubDetail)
+
+                txtName.visibility = View.VISIBLE
+                txtFounded.visibility = View.VISIBLE
+                txtLeague.visibility = View.VISIBLE
+                txtNick.visibility = View.VISIBLE
+                txtCountry.visibility = View.VISIBLE
+
+                loadingBar.visibility = View.GONE
+            }
         }
 
         val navController = findNavController()
