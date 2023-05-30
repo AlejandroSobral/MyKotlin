@@ -7,6 +7,13 @@
     android:layout_height="match_parent"
     tools:context=".fragments.AddClub">
 
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fifa_background"
+        />
+
     <EditText
         android:id="@+id/edtTxtAddClubURL"
         android:layout_width="wrap_content"

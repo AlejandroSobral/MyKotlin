@@ -7,6 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".fragments.HomeFragment">
 
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fifa_background"
+        />
 
     <TextView
         android:id="@+id/txtScreen2"

@@ -7,6 +7,13 @@
     tools:context=".activities.SplashActiviy">
 
     <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fifa_background"
+        />
+
+    <ImageView
         android:id="@+id/imgSplashLogo"
         android:layout_width="403dp"
         android:layout_height="627dp"

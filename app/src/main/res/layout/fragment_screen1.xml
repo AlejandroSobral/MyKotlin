@@ -7,14 +7,36 @@
     android:layout_height="match_parent"
     tools:context=".fragments.LoginFrgmt">
 
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fifa_background" />
+
+    <ImageView
+        android:id="@+id/imgLoginLogo"
+        android:layout_width="330dp"
+        android:layout_height="330dp"
+        android:layout_marginStart="142dp"
+        android:layout_marginEnd="142dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075"
+        tools:src="@tools:sample/avatars" />
+
     <Button
         android:id="@+id/btnSignUp"
-        android:layout_width="158dp"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:text="SIGN UP"
 
-        android:textColor="#F4F4F4"
+        android:textColor="#191515"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnNav2"
         app:layout_constraintHorizontal_bias="1.0"
@@ -31,17 +53,21 @@
         android:fontFamily="sans-serif-black"
         android:text="FIFA Clubs Data"
         android:textSize="48sp"
+        android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintEnd_toEndOf="@+id/imgLoginLogo"
         app:layout_constraintStart_toStartOf="@+id/imgLoginLogo"
         app:layout_constraintTop_toBottomOf="@+id/imgLoginLogo" />
 
     <Button
         android:id="@+id/btnNav2"
-        android:layout_width="158dp"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:text="Login"
-        android:textColor="#F4F4F4"
+        android:textColor="#191515"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/txtInput_password"
         app:layout_constraintStart_toStartOf="@+id/txtInput_password"
         app:layout_constraintTop_toBottomOf="@+id/txtInput_password"
@@ -49,60 +75,47 @@
 
     <EditText
         android:id="@+id/txtInput_password"
-        android:layout_width="161dp"
-        android:layout_height="43dp"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPersonName|textPassword"
-        android:textSize="20sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/txtInput_user"
         app:layout_constraintStart_toStartOf="@+id/txtInput_user"
         app:layout_constraintTop_toBottomOf="@+id/txtInput_user" />
 
     <EditText
         android:id="@+id/txtInput_user"
-        android:layout_width="161dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="-60dp"
         android:ems="10"
         android:hint="User"
         android:inputType="textEmailAddress"
-        android:textSize="20sp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/txtScreen1"
         app:layout_constraintStart_toStartOf="@+id/txtScreen1"
         app:layout_constraintTop_toBottomOf="@+id/txtScreen1" />
 
-    <ImageView
-        android:id="@+id/imgLoginLogo"
-        android:layout_width="211dp"
-        android:layout_height="195dp"
-        android:layout_marginStart="142dp"
-        android:layout_marginEnd="142dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.075"
-        tools:src="@tools:sample/avatars" />
 
     <ProgressBar
         android:id="@+id/LoginProgressBar"
         style="?android:attr/progressBarStyleLarge"
-        android:layout_width="104dp"
-        android:layout_height="117dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="45dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="-80dp"
+        android:layout_marginBottom="80dp"
         android:max="100"
         android:progress="50"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/imgBackground"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSignUp"
-        app:layout_constraintVertical_bias="0.347" />
+        app:layout_constraintTop_toBottomOf="@+id/imgLoginLogo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

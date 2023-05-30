@@ -89,6 +89,10 @@ class LoginFrgmt : Fragment() {
         btnNavigate.setOnClickListener {
 
             loadingPb.visibility = View.VISIBLE;
+            btnSignUp.visibility = View.INVISIBLE
+            btnNavigate.visibility = View.INVISIBLE
+            inputpass.visibility = View.INVISIBLE
+            inputuser.visibility = View.INVISIBLE
             viewModel.getUserFromUsernameAndPassword(
                 inputuser.text.toString(),
                 inputpass.text.toString()
@@ -106,6 +110,10 @@ class LoginFrgmt : Fragment() {
                     inputpass.setText("")
                 } else {
                     Snackbar.make(v, "Wrong credentials", Snackbar.LENGTH_SHORT).show()
+                    btnSignUp.visibility = View.VISIBLE
+                    btnNavigate.visibility = View.VISIBLE
+                    inputpass.visibility = View.VISIBLE
+                    inputuser.visibility = View.VISIBLE
                     loadingPb.visibility = View.GONE;
                 }
             }

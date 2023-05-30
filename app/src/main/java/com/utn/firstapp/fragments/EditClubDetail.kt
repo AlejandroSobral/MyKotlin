@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.fragment.app.viewModels
 import com.google.android.material.snackbar.Snackbar
 import com.utn.firstapp.R
@@ -34,6 +35,13 @@ class EditClubDetail : Fragment() {
     lateinit var txtURL: EditText
     lateinit var txtNatFlag: EditText
     lateinit var loadingPb: ProgressBar
+    lateinit var htnName : TextView
+    lateinit var htnFounDate: TextView
+    lateinit var htnLeague: TextView
+    lateinit var htnCountry : TextView
+    lateinit var htnNick : TextView
+    lateinit var htnImgURL : TextView
+    lateinit var htnNatFlag : TextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,6 +58,14 @@ class EditClubDetail : Fragment() {
         txtURL = v.findViewById(R.id.edtEditClubTextImageURL)
         txtNatFlag = v.findViewById(R.id.edtEditClubNatFlag)
         loadingPb = v.findViewById(R.id.editClubLoadingProgressBar)
+        htnName = v.findViewById(R.id.hntClubName)
+        htnFounDate = v.findViewById(R.id.hntFounDate)
+        htnLeague = v.findViewById(R.id.hntLeague)
+        htnCountry = v.findViewById(R.id.hntCountry)
+        htnNick = v.findViewById(R.id.hntNick)
+        htnImgURL = v.findViewById(R.id.hntImageURL)
+        htnNatFlag = v.findViewById(R.id.hntNationalFlagURL)
+
 
         return v
     }
@@ -57,7 +73,9 @@ class EditClubDetail : Fragment() {
     override fun onStart() {
         super.onStart()
 
+        //ProgressBar
         loadingPb.visibility = View.VISIBLE
+        //Texts
         txtName.visibility = View.INVISIBLE
         txtFounded.visibility = View.INVISIBLE
         txtCountry.visibility = View.INVISIBLE
@@ -65,7 +83,14 @@ class EditClubDetail : Fragment() {
         txtNick.visibility = View.INVISIBLE
         txtURL.visibility = View.INVISIBLE
         txtNatFlag.visibility = View.INVISIBLE
-
+        //Hints
+        htnName.visibility = View.INVISIBLE
+        htnFounDate.visibility = View.INVISIBLE
+        htnLeague.visibility = View.INVISIBLE
+        htnCountry.visibility = View.INVISIBLE
+        htnNick.visibility = View.INVISIBLE
+        htnImgURL.visibility = View.INVISIBLE
+        htnNatFlag.visibility = View.INVISIBLE
         var clubID = EditClubDetailArgs.fromBundle(requireArguments()).clubID
 
         viewModel.getClubFromID(clubID)
@@ -79,6 +104,15 @@ class EditClubDetail : Fragment() {
             txtURL.setText(getClub.imageurl)
             txtNatFlag.setText(getClub.countryflag)
 
+            //Hints
+            htnName.visibility = View.VISIBLE
+            htnFounDate.visibility = View.VISIBLE
+            htnLeague.visibility = View.VISIBLE
+            htnCountry.visibility = View.VISIBLE
+            htnNick.visibility = View.VISIBLE
+            htnImgURL.visibility = View.VISIBLE
+            htnNatFlag.visibility = View.VISIBLE
+            //Texts
             txtName.visibility = View.VISIBLE
             txtFounded.visibility = View.VISIBLE
             txtCountry.visibility = View.VISIBLE
@@ -86,6 +120,7 @@ class EditClubDetail : Fragment() {
             txtNick.visibility = View.VISIBLE
             txtURL.visibility = View.VISIBLE
             txtNatFlag.visibility = View.VISIBLE
+            //ProgressBar
             loadingPb.visibility = View.GONE
 
         }
@@ -108,6 +143,7 @@ class EditClubDetail : Fragment() {
                 viewModel.state.observe(this) { state ->
                     when (state) {
                         State.SUCCESS -> {
+                            //Texts
                             txtName.visibility = View.VISIBLE
                             txtFounded.visibility = View.VISIBLE
                             txtCountry.visibility = View.VISIBLE
@@ -115,6 +151,17 @@ class EditClubDetail : Fragment() {
                             txtNick.visibility = View.VISIBLE
                             txtURL.visibility = View.VISIBLE
                             txtNatFlag.visibility = View.VISIBLE
+
+                            //Hints
+                            htnName.visibility = View.VISIBLE
+                            htnFounDate.visibility = View.VISIBLE
+                            htnLeague.visibility = View.VISIBLE
+                            htnCountry.visibility = View.VISIBLE
+                            htnNick.visibility = View.VISIBLE
+                            htnImgURL.visibility = View.VISIBLE
+                            htnNatFlag.visibility = View.VISIBLE
+
+                            //ProgressBar
                             loadingPb.visibility = View.GONE
                             Snackbar.make(v, "Club data correctly updated", Snackbar.LENGTH_SHORT).show()
                         }
@@ -125,6 +172,7 @@ class EditClubDetail : Fragment() {
                         }
 
                         State.LOADING -> {
+                            //Texts
                             loadingPb.visibility = View.VISIBLE
                             txtName.visibility = View.INVISIBLE
                             txtFounded.visibility = View.INVISIBLE
@@ -133,6 +181,15 @@ class EditClubDetail : Fragment() {
                             txtNick.visibility = View.INVISIBLE
                             txtURL.visibility = View.INVISIBLE
                             txtNatFlag.visibility = View.INVISIBLE
+
+                            //Hints
+                            htnName.visibility = View.INVISIBLE
+                            htnFounDate.visibility = View.INVISIBLE
+                            htnLeague.visibility = View.INVISIBLE
+                            htnCountry.visibility = View.INVISIBLE
+                            htnNick.visibility = View.INVISIBLE
+                            htnImgURL.visibility = View.INVISIBLE
+                            htnNatFlag.visibility = View.INVISIBLE
                         }
 
                         null -> {}

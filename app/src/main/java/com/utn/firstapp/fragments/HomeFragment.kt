@@ -58,6 +58,8 @@ class HomeFragment : Fragment() {
         btnLogOut = v.findViewById(R.id.btnLogOut)
         btnAddClub = v.findViewById(R.id.btnAddClub)
         loadingPb = v.findViewById(R.id.homeLoadingProgressBar)
+
+
         Glide.with(v).load(imgHomeLogoURL).into(imgHomeLogo)
 
         return v
