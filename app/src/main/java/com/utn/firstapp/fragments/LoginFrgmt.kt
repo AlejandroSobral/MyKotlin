@@ -1,11 +1,7 @@
 package com.utn.firstapp.fragments
 
 
-import android.content.ContentValues
-import android.content.Context
-import com.utn.firstapp.database.AppDatabase
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -15,27 +11,15 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.ProgressBar
-import android.widget.Spinner
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.google.android.material.snackbar.Snackbar
-import com.google.firebase.firestore.QuerySnapshot
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.firestore.ktx.toObject
-import com.google.firebase.ktx.Firebase
 import com.utn.firstapp.R
 import com.utn.firstapp.activities.SecondActivity
-import com.utn.firstapp.database.ClubDao
-import com.utn.firstapp.database.UserDao
-import com.utn.firstapp.entities.Club
-import com.utn.firstapp.entities.User
 import dagger.hilt.android.AndroidEntryPoint
-import java.lang.Error
-import javax.inject.Inject
 
 
 @AndroidEntryPoint
@@ -87,34 +71,34 @@ class LoginFrgmt : Fragment() {
         }
 
         btnNavigate.setOnClickListener {
+            if (inputuser.text.toString() != "" && inputpass.text.toString() != "") {
 
-            loadingPb.visibility = View.VISIBLE;
-            btnSignUp.visibility = View.INVISIBLE
-            btnNavigate.visibility = View.INVISIBLE
-            inputpass.visibility = View.INVISIBLE
-            inputuser.visibility = View.INVISIBLE
-            viewModel.getUserFromUsernameAndPassword(
-                inputuser.text.toString(),
-                inputpass.text.toString()
-            )
+                loadingPb.visibility = View.VISIBLE;
+                btnSignUp.visibility = View.INVISIBLE
+                btnNavigate.visibility = View.INVISIBLE
+                inputpass.visibility = View.INVISIBLE
+                inputuser.visibility = View.INVISIBLE
 
-            viewModel.user.observe(viewLifecycleOwner) { currentUser ->
+                viewModel.getAuthFromFirestone(inputuser.text.toString(), inputpass.text.toString())
 
-                if (currentUser!= null) {
-                    Log.d("TestDB", "ID:" + currentUser.id)
+                viewModel.user.observe(viewLifecycleOwner) { currentUser ->
 
-                    val intent = Intent(activity, SecondActivity::class.java)
-                    intent.putExtra("CurrentUserID", currentUser.id)
-                    startActivity(intent)
-                    inputuser.setText("")
-                    inputpass.setText("")
-                } else {
-                    Snackbar.make(v, "Wrong credentials", Snackbar.LENGTH_SHORT).show()
-                    btnSignUp.visibility = View.VISIBLE
-                    btnNavigate.visibility = View.VISIBLE
-                    inputpass.visibility = View.VISIBLE
-                    inputuser.visibility = View.VISIBLE
-                    loadingPb.visibility = View.GONE;
+                    if (currentUser != null) {
+                        Log.d("TestDB", "ID:" + currentUser.uid)
+
+                        val intent = Intent(activity, SecondActivity::class.java)
+                        intent.putExtra("CurrentUserID", currentUser.uid)
+                        startActivity(intent)
+                        inputuser.setText("")
+                        inputpass.setText("")
+                    } else {
+                        Snackbar.make(v, "Wrong credentials", Snackbar.LENGTH_SHORT).show()
+                        btnSignUp.visibility = View.VISIBLE
+                        btnNavigate.visibility = View.VISIBLE
+                        inputpass.visibility = View.VISIBLE
+                        inputuser.visibility = View.VISIBLE
+                        loadingPb.visibility = View.GONE;
+                    }
                 }
             }
         }

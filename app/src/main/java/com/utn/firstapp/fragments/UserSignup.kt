@@ -82,7 +82,7 @@ class UserSignup : Fragment() {
             userFind = viewModel.getUserFromNameAndPass(auxUser.name, auxUser.password)
             if (userFind.name == "")
                 try {
-                    viewModel.insertUser(auxUser)                     //ADD USER TO DB
+                    viewModel.insertUserAuth(auxUser)                     //ADD USER TO DB
 
                     val message = "User, ${auxUser.name}, has been added correctly!"
 

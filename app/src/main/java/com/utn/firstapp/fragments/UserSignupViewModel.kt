@@ -2,6 +2,8 @@ package com.utn.firstapp.fragments
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.utn.firstapp.PreferencesManager
@@ -15,7 +17,36 @@ import javax.inject.Inject
 class UserSignupViewModel @Inject constructor(
     private val preferencesManager: PreferencesManager
 ) : ViewModel() {
-    fun insertUser(insertUser: User) {
+
+    fun insertUserAuth(insertUser: User) {
+
+        var auth: FirebaseAuth = Firebase.auth
+
+        auth.createUserWithEmailAndPassword(insertUser.email, insertUser.password)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    // Sign in success, update UI with the signed-in user's information
+                    Log.d("FirestoreAuth", "createUserWithEmail:success")
+                    val user = auth.currentUser
+
+                    val userId = user?.uid
+                    if (userId != null) {
+                        // Use the UID as needed
+                        insertUser.id = userId
+                        insertUserLocal(insertUser)
+                    }
+
+                } else {
+                    // If sign in fails, display a message to the user.
+                    Log.w("FirestoreAuth", "createUserWithEmail:failure", task.exception)
+
+                }
+            }
+
+    }
+
+
+    fun insertUserLocal(insertUser: User) {
         insertUser.lastposition = "0"
         val dbInt = Firebase.firestore
         dbInt.collection("users")
@@ -27,8 +58,9 @@ class UserSignupViewModel @Inject constructor(
                 val userId = documentReference.id
                 insertUser.id = userId
                 dbInt.collection("users").document(userId)
-                    .update("id",userId)
-                    .addOnSuccessListener { Log.d("TestDB", "DocumentSnapshot successfully updated!")
+                    .update("id", userId)
+                    .addOnSuccessListener {
+                        Log.d("TestDB", "DocumentSnapshot successfully updated!")
 
                         preferencesManager.saveCurrentUser(insertUser)
                     }
@@ -38,6 +70,8 @@ class UserSignupViewModel @Inject constructor(
                     }
             }
     }
+
+
 
     fun getUserFromNameAndPass(email: String, password: String): User {
         val dbInt = Firebase.firestore
