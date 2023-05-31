@@ -3,6 +3,7 @@ package com.utn.firstapp.fragments
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -43,6 +44,40 @@ class UserSignupViewModel @Inject constructor(
                 }
             }
 
+    }
+
+    fun insertUserAuthv2(insertUser: User) {
+        val auth = FirebaseAuth.getInstance()
+
+        auth.createUserWithEmailAndPassword(insertUser.email, insertUser.password)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val user = auth.currentUser
+
+                    val userProfileChangeRequest = UserProfileChangeRequest.Builder()
+                        .setDisplayName(insertUser.name)
+                        //.setPhotoUri(photoUri)
+                        .build()
+
+                    user?.updateProfile(userProfileChangeRequest)
+                        ?.addOnCompleteListener { profileUpdateTask ->
+                            if (profileUpdateTask.isSuccessful) {
+
+                                preferencesManager.saveCurrentUser(insertUser)
+                            } else {
+                                // Profile update failed
+                                val exception = profileUpdateTask.exception
+                                // Handle the error
+                                println("Failed to update user profile: ${exception?.message}")
+                            }
+                        }
+                } else {
+                    // User creation failed
+                    val exception = task.exception
+                    // Handle the error
+                    println("User creation failed: ${exception?.message}")
+                }
+            }
     }
 
 

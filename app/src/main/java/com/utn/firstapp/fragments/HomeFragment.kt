@@ -70,11 +70,8 @@ class HomeFragment : Fragment() {
         super.onStart()
 
         loadingPb.visibility = View.VISIBLE
-        var currentUser = viewModel.getUser()
 
-        if (currentUser != null) {
-            Log.d("PositionUser", "L81, ${currentUser.lastposition}")
-        }
+
 
         viewModel.state.observe(this) { state ->
             when (state) {
@@ -91,7 +88,7 @@ class HomeFragment : Fragment() {
             }
         }
 
-
+        var currentUser = viewModel.getUserfromPref() //Get current user information
         viewModel.getClubsFromDB()
         viewModel.teams.observe(viewLifecycleOwner) { getClubList ->
 
@@ -101,19 +98,10 @@ class HomeFragment : Fragment() {
                     val action = HomeFragmentDirections.actionHomeFragmentToClubDDetail(
                         ((adapterclubList?.get(position)?.id ?: -1) as String)
                     )//as Int
-
-
                     currentUser?.lastposition = (position).toString()
-                    if (currentUser != null) {
-                        Log.d("PositionUser", "L124, ${currentUser.lastposition}")
-                        Log.d("PositionUser", "Position, $position")
-                    }
-
 
                     if (currentUser != null) {
-                        viewModel.updateUser(currentUser)
-                        Log.d("PositionUser", "Guardo Position, ${currentUser.lastposition}")
-
+                        viewModel.updateUserPref(currentUser)
                     }
                     findNavController().navigate(action)
 
@@ -121,6 +109,7 @@ class HomeFragment : Fragment() {
             }
             recClubs.layoutManager = LinearLayoutManager(context)
             recClubs.adapter = adapter
+
             if (currentUser != null) {
                 Log.d("PositionUser", "Scroll to , ${currentUser.lastposition}")
                 recClubs.scrollToPosition((currentUser.lastposition).toInt())
@@ -132,6 +121,14 @@ class HomeFragment : Fragment() {
         btnLogOut.setOnClickListener {
             val context = requireContext()
             val builder = AlertDialog.Builder(context)
+
+            var currentUser = viewModel.getUserfromPref()
+            if (currentUser != null) { // When logging out, position returns to zero.
+                currentUser.lastposition = "0"
+                viewModel.updateUserPref(currentUser)
+            }
+
+
 
             // set the message and title of the dialog
             builder.setMessage("Are you sure you want to log out?")

@@ -6,6 +6,11 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.UserProfileChangeRequest
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.auth.ktx.userProfileChangeRequest
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.utn.firstapp.R
@@ -30,8 +35,13 @@ class HomeFrgmtViewModel @Inject constructor(
     val teams: LiveData<ClubRepository>
         get() = _teams
 
-    fun getUser(): User? {
+    fun getUserfromPref(): User? {
         return preferencesManager.getCurrentUser()
+        state.postValue(State.SUCCESS)
+    }
+
+    fun updateUserPref(user:User) {
+        preferencesManager.saveCurrentUser(user)
         state.postValue(State.SUCCESS)
     }
 
@@ -56,6 +66,54 @@ class HomeFrgmtViewModel @Inject constructor(
             }
     }
 
+
+    fun updateUserInFirestore(updateUser: User) {
+
+            state.postValue(State.LOADING)
+            preferencesManager.saveCurrentUser(updateUser)
+            var auxUser = preferencesManager.getCurrentUser()
+            val auth = FirebaseAuth.getInstance()
+            val currentUser = auth.currentUser
+
+            currentUser?.let { firebaseUser ->
+                val profileUpdates = UserProfileChangeRequest.Builder()
+                    .setDisplayName(updateUser.name)
+                    //.setPhotoUri(Updateuser.photoUrl)
+                    .build()
+
+                // Create a HashMap to store the "position" parameter
+                val positionMap = hashMapOf("position" to updateUser.lastposition)
+
+                // Update the user's profile and custom claims in parallel
+                firebaseUser.updateProfile(profileUpdates)
+                    .addOnCompleteListener { profileTask ->
+                        if (profileTask.isSuccessful) {
+                            // User profile update successful
+                            println("User profile updated successfully: ${firebaseUser.uid}")
+
+                            // Update the "position" field in Firestore user document
+                            val db = FirebaseFirestore.getInstance()
+                            val userRef = db.collection("users").document(firebaseUser.uid)
+                            userRef.update(positionMap as Map<String, Any>)
+                                .addOnSuccessListener {
+                                    // "position" field update successful
+                                    println("Position updated in Firestore: ${firebaseUser.uid}")
+                                    state.postValue(State.SUCCESS)
+                                }
+                                .addOnFailureListener { positionException ->
+                                    // Error occurred while updating "position" field
+                                    println("Failed to update position in Firestore: ${positionException.message}")
+                                }
+                        } else {
+                            // User profile update failed
+                            state.postValue(State.LOADING)
+                            val profileException = profileTask.exception
+                            // Handle the error
+                            println("Failed to update user profile: ${profileException?.message}")
+                        }
+                    }
+            }
+        }
 
     fun getClubsFromDB(): MutableList<Club> {
         val dbInt = Firebase.firestore
