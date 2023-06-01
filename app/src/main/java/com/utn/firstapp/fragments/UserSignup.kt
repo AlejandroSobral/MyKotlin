@@ -62,11 +62,9 @@ class UserSignup : Fragment() {
         // Dummy call to pre-populate db
         //userDao?.fetchAllUsers()*/
 
-
         addUserbtn.setOnClickListener {
 
-            lateinit var userFind:User
-
+            lateinit var userFind: User
 
             var auxUser = User(
                 "",
@@ -77,16 +75,13 @@ class UserSignup : Fragment() {
                 "0"
 
             )
-
             //val userFind = userDao?.fetchUserByUserAndMail(username, usermail)
-
             userFind = viewModel.getUserFromNameAndPass(auxUser.name, auxUser.password)
             if (userFind.name == "")
                 try {
                     viewModel.insertUserAuthv2(auxUser)                     //ADD USER TO DB
 
                     val message = "User, ${auxUser.name}, has been added correctly!"
-
                     Snackbar.make(v, message, Snackbar.LENGTH_SHORT).show()
                     addUserName.setText("")
                     addUserEmail.setText("")
@@ -97,9 +92,7 @@ class UserSignup : Fragment() {
                     startActivity(intent)
                 } catch (e: Exception) {
                     Snackbar.make(v, "Error on Signing Up", Snackbar.LENGTH_SHORT).show()
-
                 }
-
         }
     }
 

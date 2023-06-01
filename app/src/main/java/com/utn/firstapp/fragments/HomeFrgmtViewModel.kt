@@ -17,6 +17,7 @@ import com.utn.firstapp.R
 import com.utn.firstapp.entities.User
 import com.google.gson.Gson
 import com.utn.firstapp.PreferencesManager
+import com.utn.firstapp.SingleLiveEvent
 import com.utn.firstapp.entities.Club
 import com.utn.firstapp.entities.ClubRepository
 import com.utn.firstapp.entities.State
@@ -29,7 +30,7 @@ class HomeFrgmtViewModel @Inject constructor(
     private val preferencesManager: PreferencesManager
 ) : ViewModel() {
 
-    val state : MutableLiveData<State> = MutableLiveData()
+    val state = SingleLiveEvent<State>()
     private val _teams = MutableLiveData<ClubRepository>()
     val dbInt = Firebase.firestore
     val teams: LiveData<ClubRepository>

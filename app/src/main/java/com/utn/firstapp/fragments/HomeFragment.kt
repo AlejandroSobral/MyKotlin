@@ -62,36 +62,9 @@ class HomeFragment : Fragment() {
 
         Glide.with(v).load(imgHomeLogoURL).into(imgHomeLogo)
 
-        return v
-    }
-
-
-    override fun onStart() {
-        super.onStart()
-
-        loadingPb.visibility = View.VISIBLE
-
-
-
-        viewModel.state.observe(this) { state ->
-            when (state) {
-                State.SUCCESS -> {
-                    Log.d("PositionUser", "GetCurrentOK")
-                }
-
-                State.FAILURE -> {}
-                State.LOADING -> {
-
-                }
-                null -> {
-                }
-            }
-        }
-
-        var currentUser = viewModel.getUserfromPref() //Get current user information
-        viewModel.getClubsFromDB()
         viewModel.teams.observe(viewLifecycleOwner) { getClubList ->
 
+            var currentUser = viewModel.getUserfromPref()
             var adapterclubList = getClubList.clubList
             if (adapterclubList != null) {
                 adapter = ClubAdapter(adapterclubList) { position ->
@@ -118,6 +91,33 @@ class HomeFragment : Fragment() {
 
         }
 
+        return v
+    }
+
+
+    override fun onStart() {
+        super.onStart()
+
+        loadingPb.visibility = View.VISIBLE
+
+        viewModel.state.observe(this) { state ->
+            when (state) {
+                State.SUCCESS -> {
+                    Log.d("PositionUser", "GetCurrentOK")
+                }
+
+                State.FAILURE -> {}
+                State.LOADING -> {
+
+                }
+                null -> {
+                }
+            }
+        }
+
+        var currentUser = viewModel.getUserfromPref() //Get current user information
+        viewModel.getClubsFromDB()
+
         btnLogOut.setOnClickListener {
             val context = requireContext()
             val builder = AlertDialog.Builder(context)
@@ -127,8 +127,6 @@ class HomeFragment : Fragment() {
                 currentUser.lastposition = "0"
                 viewModel.updateUserPref(currentUser)
             }
-
-
 
             // set the message and title of the dialog
             builder.setMessage("Are you sure you want to log out?")

@@ -52,6 +52,45 @@ class ClubDDetail : Fragment() {
         btnDelete  = v.findViewById(R.id.btnDetailDeleteClub)
         btnEdit = v.findViewById(R.id.btnDetailEdtClub)
         loadingBar = v.findViewById(R.id.clubDetailLoadingProgressBar)
+
+        viewModel.team.observe(viewLifecycleOwner) { getClub ->
+
+            if(getClub != null) {
+
+                txtName.text = getClub.name
+                txtFounded.text = getClub.founded
+                txtLeague.text = getClub.league
+                txtNick.text = getClub.nickname
+                txtCountry.text = getClub.country
+                //Visibility
+                txtName.visibility = View.VISIBLE
+                txtFounded.visibility = View.VISIBLE
+                txtLeague.visibility = View.VISIBLE
+                txtNick.visibility = View.VISIBLE
+                txtCountry.visibility = View.VISIBLE
+                loadingBar.visibility = View.GONE
+
+                Glide.with(v).load(getClub.imageurl).into(imgClubDetail)
+            }
+        }
+        val navController = findNavController()
+        viewModel.state.observe(viewLifecycleOwner){state ->
+            when(state){
+                State.SUCCESS ->{
+                    Snackbar.make(v, "Club has been deleted", Snackbar.LENGTH_SHORT).show()
+                    navController.navigateUp()
+                }
+                State.FAILURE ->{
+                    Snackbar.make(v, "Delete failed", Snackbar.LENGTH_SHORT).show()
+                }
+                State.LOADING ->{
+                    Snackbar.make(v, "Loading", Snackbar.LENGTH_SHORT).show()
+                }
+                null ->{
+                }
+            }
+        }
+
         return v
     }
 
@@ -69,62 +108,15 @@ class ClubDDetail : Fragment() {
         viewModel.getClubFromID(clubID)
 
 
-        viewModel.team.observe(viewLifecycleOwner) { getClub ->
-
-            if(getClub != null) {
-                txtName.text = getClub.name
-                txtFounded.text = getClub.founded
-                txtLeague.text = getClub.league
-                txtNick.text = getClub.nickname
-                txtCountry.text = getClub.country
-                Glide.with(v).load(getClub.imageurl).into(imgClubDetail)
-
-                txtName.visibility = View.VISIBLE
-                txtFounded.visibility = View.VISIBLE
-                txtLeague.visibility = View.VISIBLE
-                txtNick.visibility = View.VISIBLE
-                txtCountry.visibility = View.VISIBLE
-
-                loadingBar.visibility = View.GONE
-            }
-        }
-
-        val navController = findNavController()
-
         btnDelete.setOnClickListener{
-            try {
 
                 viewModel.deleteClubFromID(clubID)
-                viewModel.state.observe(this){state ->
-                    when(state){
-                        State.SUCCESS ->{
-                            Snackbar.make(v, "Club has been deleted", Snackbar.LENGTH_SHORT).show()
-                            navController.navigateUp()
-                        }
-                        State.FAILURE ->{
-                            Snackbar.make(v, "Delete failed", Snackbar.LENGTH_SHORT).show()
-                        }
-                        State.LOADING ->{
-                            Snackbar.make(v, "Loading", Snackbar.LENGTH_SHORT).show()
-                        }
-                        null ->{
-                        }
-                    }
-                }
-            }
-            catch(e:Exception)
-            {
-                Snackbar.make(v, "Delete has failed.", Snackbar.LENGTH_SHORT).show()
-            }
         }
-
         btnEdit.setOnClickListener{
 
             //val action = HomeFragmentDirections.actionHomeFragmentToClubDDetail(
             val action = ClubDDetailDirections.actionClubDDetailToEditClubDetail(clubID)
             findNavController().navigate(action)
-
-
         }
     }
 

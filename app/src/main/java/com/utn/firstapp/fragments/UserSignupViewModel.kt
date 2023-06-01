@@ -8,8 +8,10 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.utn.firstapp.PreferencesManager
+import com.utn.firstapp.SingleLiveEvent
 import com.utn.firstapp.entities.Club
 import com.utn.firstapp.entities.ClubRepository
+import com.utn.firstapp.entities.State
 import com.utn.firstapp.entities.User
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -18,6 +20,8 @@ import javax.inject.Inject
 class UserSignupViewModel @Inject constructor(
     private val preferencesManager: PreferencesManager
 ) : ViewModel() {
+
+    val state = SingleLiveEvent<State>()
 
     fun insertUserAuth(insertUser: User) {
 

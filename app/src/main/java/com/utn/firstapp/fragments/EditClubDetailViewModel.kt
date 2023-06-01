@@ -6,12 +6,13 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.utn.firstapp.SingleLiveEvent
 import com.utn.firstapp.entities.Club
 import com.utn.firstapp.entities.State
 
 class EditClubDetailViewModel : ViewModel() {
 
-    val state : MutableLiveData<State> = MutableLiveData()
+    val state = SingleLiveEvent<State>()
     private val _detailClub = MutableLiveData<Club>()
     val team: LiveData<Club>
         get() = _detailClub

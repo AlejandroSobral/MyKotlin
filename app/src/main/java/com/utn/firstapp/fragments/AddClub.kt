@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
 import com.utn.firstapp.R
@@ -46,6 +47,25 @@ class AddClub : Fragment() {
         addClubNick = v.findViewById(R.id.edtTxtAddClubNick)
         addClubURL = v.findViewById(R.id.edtTxtAddClubURL)
         addClubCountryFlag = v.findViewById(R.id.edtTxtCountryFlagURL)
+
+        viewModel.state.observe(viewLifecycleOwner) { state ->
+            when (state) {
+                State.SUCCESS -> {
+                    Snackbar.make(v, "Club has been added", Snackbar.LENGTH_SHORT).show()
+                }
+
+                State.FAILURE -> {
+                    Snackbar.make(v, "Club Add failed", Snackbar.LENGTH_SHORT).show()
+                }
+
+                State.LOADING -> {
+                    Snackbar.make(v, "Loading", Snackbar.LENGTH_SHORT).show()
+                }
+
+                null -> {
+                }
+            }
+        }
 
         return v
     }
@@ -93,24 +113,7 @@ class AddClub : Fragment() {
 
                 viewModel.addClub(newClub)
 
-                viewModel.state.observe(this) { state ->
-                    when (state) {
-                        State.SUCCESS -> {
-                            Snackbar.make(v, "Club has been added", Snackbar.LENGTH_SHORT).show()
-                        }
 
-                        State.FAILURE -> {
-                            Snackbar.make(v, "Club Add failed", Snackbar.LENGTH_SHORT).show()
-                        }
-
-                        State.LOADING -> {
-                            Snackbar.make(v, "Loading", Snackbar.LENGTH_SHORT).show()
-                        }
-
-                        null -> {
-                        }
-                    }
-                }
                 /*
                 if(clubDao?.fetchClubByName(newClub.name)==null)
                 {

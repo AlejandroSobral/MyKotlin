@@ -14,6 +14,8 @@ import org.json.JSONObject
 class AddClubViewModel : ViewModel() {
 
     val state : MutableLiveData<State> = MutableLiveData()
+
+
     fun addClub(newClub: Club)
     {
         val dbInt = Firebase.firestore

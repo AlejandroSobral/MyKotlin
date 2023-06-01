@@ -19,7 +19,7 @@ class UserDetailViewModel @Inject constructor(
     private val preferencesManager: PreferencesManager
 ) : ViewModel() {
 
-    val state : MutableLiveData<State> = MutableLiveData()
+    val state = SingleLiveEvent<State>()
     private val _user = MutableLiveData<User>()
     val user: LiveData<User>
         get() = _user

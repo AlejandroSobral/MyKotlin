@@ -38,9 +38,7 @@ class UserDdetailFragment() : Fragment() {
 
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         v = inflater.inflate(R.layout.fragment_user_ddetail, container, false)
 
@@ -52,6 +50,34 @@ class UserDdetailFragment() : Fragment() {
         loadingPb = v.findViewById(R.id.loadingUserDetailprogressBar)
 
 
+        viewModel.state.observe(viewLifecycleOwner) { state ->
+            when (state) {
+                State.SUCCESS -> {
+                    Snackbar.make(v, "User has been edited properly.", Snackbar.LENGTH_SHORT).show()
+                    txtUserName.visibility = View.VISIBLE
+                    txtUserlastname.visibility = View.VISIBLE
+                    txtUserEmail.visibility = View.VISIBLE
+                    txtPassword.visibility = View.VISIBLE
+                    loadingPb.visibility = View.INVISIBLE
+                }
+
+                State.FAILURE -> {
+                    Snackbar.make(v, "User edit has failed", Snackbar.LENGTH_SHORT).show()
+                }
+
+                State.LOADING -> {
+                    //Snackbar.make(v, "Loading", Snackbar.LENGTH_SHORT).show()
+                    loadingPb.visibility = View.VISIBLE
+                    txtUserName.visibility = View.INVISIBLE
+                    txtUserlastname.visibility = View.INVISIBLE
+                    txtUserEmail.visibility = View.INVISIBLE
+                    txtPassword.visibility = View.INVISIBLE
+                }
+
+                null -> {
+                }
+            }
+        }
         return v
     }
 
@@ -80,7 +106,6 @@ class UserDdetailFragment() : Fragment() {
 
         updatebtn.setOnClickListener {
 
-
             if (getUser != null) {
                 getUser.name = txtUserName.text.toString()
                 getUser.lastname = txtUserlastname.text.toString()
@@ -88,43 +113,10 @@ class UserDdetailFragment() : Fragment() {
                 getUser.email = txtUserEmail.text.toString()
 
                 viewModel.updateUser(getUser)
-
-                viewModel.state.observe(this) { state ->
-                    when (state) {
-                        State.SUCCESS -> {
-                            Snackbar.make(v, "User has been edited properly.", Snackbar.LENGTH_SHORT).show()
-                            txtUserName.visibility = View.VISIBLE
-                            txtUserlastname.visibility = View.VISIBLE
-                            txtUserEmail.visibility = View.VISIBLE
-                            txtPassword.visibility = View.VISIBLE
-                            loadingPb.visibility = View.INVISIBLE
-                        }
-
-                        State.FAILURE -> {
-                            Snackbar.make(v, "User edit has failed", Snackbar.LENGTH_SHORT).show()
-                        }
-
-                        State.LOADING -> {
-                            //Snackbar.make(v, "Loading", Snackbar.LENGTH_SHORT).show()
-                            loadingPb.visibility = View.VISIBLE
-                            txtUserName.visibility = View.INVISIBLE
-                            txtUserlastname.visibility = View.INVISIBLE
-                            txtUserEmail.visibility = View.INVISIBLE
-                            txtPassword.visibility = View.INVISIBLE
-                        }
-
-                        null -> {
-                        }
-                    }
-                }
             }
-
-
         }
-
     }
-}
-/*        updatebtn.setOnClickListener {
+}/*        updatebtn.setOnClickListener {
 //
 //
 //            val context = requireContext()

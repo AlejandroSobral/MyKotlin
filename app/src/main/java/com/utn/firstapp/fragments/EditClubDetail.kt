@@ -67,6 +67,62 @@ class EditClubDetail : Fragment() {
         htnNatFlag = v.findViewById(R.id.hntNationalFlagURL)
 
 
+        viewModel.state.observe(viewLifecycleOwner) { state ->
+            when (state) {
+                State.SUCCESS -> {
+                    //Texts
+                    txtName.visibility = View.VISIBLE
+                    txtFounded.visibility = View.VISIBLE
+                    txtCountry.visibility = View.VISIBLE
+                    txtLeague.visibility = View.VISIBLE
+                    txtNick.visibility = View.VISIBLE
+                    txtURL.visibility = View.VISIBLE
+                    txtNatFlag.visibility = View.VISIBLE
+
+                    //Hints
+                    htnName.visibility = View.VISIBLE
+                    htnFounDate.visibility = View.VISIBLE
+                    htnLeague.visibility = View.VISIBLE
+                    htnCountry.visibility = View.VISIBLE
+                    htnNick.visibility = View.VISIBLE
+                    htnImgURL.visibility = View.VISIBLE
+                    htnNatFlag.visibility = View.VISIBLE
+
+                    //ProgressBar
+                    loadingPb.visibility = View.GONE
+                    Snackbar.make(v, "Club data correctly updated", Snackbar.LENGTH_SHORT).show()
+                }
+
+                State.FAILURE -> {
+                    Snackbar.make(v, "Wrong try editing club info.", Snackbar.LENGTH_SHORT
+                    ).show()
+                }
+
+                State.LOADING -> {
+                    //Texts
+                    loadingPb.visibility = View.VISIBLE
+                    txtName.visibility = View.INVISIBLE
+                    txtFounded.visibility = View.INVISIBLE
+                    txtCountry.visibility = View.INVISIBLE
+                    txtLeague.visibility = View.INVISIBLE
+                    txtNick.visibility = View.INVISIBLE
+                    txtURL.visibility = View.INVISIBLE
+                    txtNatFlag.visibility = View.INVISIBLE
+
+                    //Hints
+                    htnName.visibility = View.INVISIBLE
+                    htnFounDate.visibility = View.INVISIBLE
+                    htnLeague.visibility = View.INVISIBLE
+                    htnCountry.visibility = View.INVISIBLE
+                    htnNick.visibility = View.INVISIBLE
+                    htnImgURL.visibility = View.INVISIBLE
+                    htnNatFlag.visibility = View.INVISIBLE
+                }
+
+                null -> {}
+            }
+        }
+
         return v
     }
 
@@ -140,61 +196,7 @@ class EditClubDetail : Fragment() {
                 )
 
                 viewModel.updateClub(auxClub)
-                viewModel.state.observe(this) { state ->
-                    when (state) {
-                        State.SUCCESS -> {
-                            //Texts
-                            txtName.visibility = View.VISIBLE
-                            txtFounded.visibility = View.VISIBLE
-                            txtCountry.visibility = View.VISIBLE
-                            txtLeague.visibility = View.VISIBLE
-                            txtNick.visibility = View.VISIBLE
-                            txtURL.visibility = View.VISIBLE
-                            txtNatFlag.visibility = View.VISIBLE
 
-                            //Hints
-                            htnName.visibility = View.VISIBLE
-                            htnFounDate.visibility = View.VISIBLE
-                            htnLeague.visibility = View.VISIBLE
-                            htnCountry.visibility = View.VISIBLE
-                            htnNick.visibility = View.VISIBLE
-                            htnImgURL.visibility = View.VISIBLE
-                            htnNatFlag.visibility = View.VISIBLE
-
-                            //ProgressBar
-                            loadingPb.visibility = View.GONE
-                            Snackbar.make(v, "Club data correctly updated", Snackbar.LENGTH_SHORT).show()
-                        }
-
-                        State.FAILURE -> {
-                            Snackbar.make(v, "Wrong try editing club info.", Snackbar.LENGTH_SHORT
-                            ).show()
-                        }
-
-                        State.LOADING -> {
-                            //Texts
-                            loadingPb.visibility = View.VISIBLE
-                            txtName.visibility = View.INVISIBLE
-                            txtFounded.visibility = View.INVISIBLE
-                            txtCountry.visibility = View.INVISIBLE
-                            txtLeague.visibility = View.INVISIBLE
-                            txtNick.visibility = View.INVISIBLE
-                            txtURL.visibility = View.INVISIBLE
-                            txtNatFlag.visibility = View.INVISIBLE
-
-                            //Hints
-                            htnName.visibility = View.INVISIBLE
-                            htnFounDate.visibility = View.INVISIBLE
-                            htnLeague.visibility = View.INVISIBLE
-                            htnCountry.visibility = View.INVISIBLE
-                            htnNick.visibility = View.INVISIBLE
-                            htnImgURL.visibility = View.INVISIBLE
-                            htnNatFlag.visibility = View.INVISIBLE
-                        }
-
-                        null -> {}
-                    }
-                }
             }
         }
     }

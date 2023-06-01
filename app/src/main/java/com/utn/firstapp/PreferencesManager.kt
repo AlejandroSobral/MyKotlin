@@ -1,6 +1,7 @@
 package com.utn.firstapp
 
 import android.content.SharedPreferences
+import com.google.firebase.auth.FirebaseUser
 import com.google.gson.Gson
 import com.utn.firstapp.entities.User
 
@@ -18,6 +19,11 @@ class PreferencesManager(private val sharedPreferences: SharedPreferences, priva
 
     fun saveCurrentUser(user: User) {
         val userJson = gson.toJson(user)
+        sharedPreferences.edit().putString("currentUser", userJson).apply()
+    }
+
+    fun myFireBasesaveCurrentUser(firebaseUser: FirebaseUser) {
+        val userJson = gson.toJson(firebaseUser)
         sharedPreferences.edit().putString("currentUser", userJson).apply()
     }
 

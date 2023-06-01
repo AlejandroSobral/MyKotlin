@@ -3,14 +3,23 @@ package com.utn.firstapp.fragments
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.utn.firstapp.PreferencesManager
+import com.utn.firstapp.SingleLiveEvent
+import com.utn.firstapp.entities.State
 import com.utn.firstapp.entities.User
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
+import kotlinx.coroutines.withContext
+import javax.annotation.Nullable
 import javax.inject.Inject
 
 @HiltViewModel
@@ -18,7 +27,7 @@ class LoginFrgmtViewModel @Inject constructor(
     private val preferencesManager: PreferencesManager
 ) : ViewModel() {
 
-
+    val state = SingleLiveEvent<State>()
     private val _user = MutableLiveData<FirebaseUser?>()
     val user: MutableLiveData<FirebaseUser?>
         get() = _user
@@ -59,7 +68,7 @@ class LoginFrgmtViewModel @Inject constructor(
             }
     }*/
 
-    fun getAuthFromFirestone(email:String, password:String) {
+    fun getAuthFromFirestone(email: String, password: String) {
 
         var auth: FirebaseAuth = Firebase.auth
         auth.signInWithEmailAndPassword(email, password)
@@ -83,4 +92,49 @@ class LoginFrgmtViewModel @Inject constructor(
                 }
             }
     }
+
+    suspend fun getAuthFromFirestoneCour(email: String, password: String): FirebaseUser? {
+        var result: FirebaseUser?= null
+
+
+        try {
+            var auth: FirebaseAuth = Firebase.auth
+            result = (auth.signInWithEmailAndPassword(email, password).await()).user
+
+            if (result != null) { //Save user into the Shared Preference
+                val auxUser = User(result.uid, "", "", result.email.toString(), "", "0")
+                preferencesManager.saveCurrentUser(auxUser)
+            }
+
+        } catch (e: Exception) {
+            Log.d("getAuthFrom", "Raised Exception")
+            return null
+        }
+        Log.d("getAuthFrom - Result:","$result")
+        return result
+    }
+
+    fun myFirebaseLogin(email: String, password: String): FirebaseUser? {
+        state.postValue(State.LOADING)
+        var result: FirebaseUser? = null
+
+        try {
+            viewModelScope.launch(Dispatchers.IO) {
+                result = getAuthFromFirestoneCour(email, password)
+                Log.d("myFirebaseLogin - Resultado", "$result")
+                if(result!=null) {
+                    state.postValue(State.SUCCESS)
+                }
+                else{
+                    state.postValue(State.FAILURE)
+                }
+            }
+        } catch (e: Exception) {
+            Log.d("myFireBaseLogin", "A ver $e")
+            state.postValue(State.FAILURE)
+        }
+
+        return result
+    }
+
 }
