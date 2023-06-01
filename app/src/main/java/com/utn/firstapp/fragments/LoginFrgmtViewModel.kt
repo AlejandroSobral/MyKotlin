@@ -94,10 +94,9 @@ class LoginFrgmtViewModel @Inject constructor(
     }
 
     suspend fun getAuthFromFirestoneCour(email: String, password: String): FirebaseUser? {
-        var result: FirebaseUser?= null
 
-
-        try {
+        return try {
+            var result: FirebaseUser?= null
             var auth: FirebaseAuth = Firebase.auth
             result = (auth.signInWithEmailAndPassword(email, password).await()).user
 
@@ -105,20 +104,16 @@ class LoginFrgmtViewModel @Inject constructor(
                 val auxUser = User(result.uid, "", "", result.email.toString(), "", "0")
                 preferencesManager.saveCurrentUser(auxUser)
             }
-
+            result
         } catch (e: Exception) {
             Log.d("getAuthFrom", "Raised Exception")
-            return null
+            null
         }
-        Log.d("getAuthFrom - Result:","$result")
-        return result
     }
-
     fun myFirebaseLogin(email: String, password: String): FirebaseUser? {
         state.postValue(State.LOADING)
-        var result: FirebaseUser? = null
-
-        try {
+        return try {
+            var result: FirebaseUser? = null
             viewModelScope.launch(Dispatchers.IO) {
                 result = getAuthFromFirestoneCour(email, password)
                 Log.d("myFirebaseLogin - Resultado", "$result")
@@ -129,12 +124,12 @@ class LoginFrgmtViewModel @Inject constructor(
                     state.postValue(State.FAILURE)
                 }
             }
+            result
         } catch (e: Exception) {
             Log.d("myFireBaseLogin", "A ver $e")
             state.postValue(State.FAILURE)
+            null
         }
-
-        return result
     }
 
 }

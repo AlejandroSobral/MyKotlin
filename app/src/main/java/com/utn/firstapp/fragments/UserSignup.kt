@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
@@ -17,6 +18,7 @@ import com.utn.firstapp.activities.SecondActivity
 import com.utn.firstapp.database.AppDatabase
 import com.utn.firstapp.entities.User
 import com.utn.firstapp.database.UserDao
+import com.utn.firstapp.entities.State
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -27,13 +29,11 @@ class UserSignup : Fragment() {
 
     lateinit var v: View
     lateinit var addUserName: EditText
-    lateinit var addUserlastname: EditText
     lateinit var addUserEmail: EditText
     lateinit var addUserPassword: EditText
+    lateinit var addUserConfPasswd: EditText
     lateinit var addUserbtn: Button
-
-    //private var db: AppDatabase? = null
-    private var userDao: UserDao? = null
+    lateinit var loadingPb : ProgressBar
 
 
     override fun onCreateView(
@@ -45,8 +45,57 @@ class UserSignup : Fragment() {
         addUserName = v.findViewById(R.id.edtSgnUpName)
         addUserEmail = v.findViewById(R.id.edtSgnUpEmail)
         addUserPassword = v.findViewById(R.id.edtSgnUpPassword)
-        addUserlastname = v.findViewById(R.id.edtSgnUplastname)
+        addUserConfPasswd = v.findViewById(R.id.edtSgnUpConfirmPassword)
         addUserbtn = v.findViewById(R.id.btnSgnUpAddUser)
+        loadingPb = v.findViewById(R.id.signUpProgressBar)
+
+
+
+        viewModel.state.observe(viewLifecycleOwner) { state ->
+            when (state) {
+
+                State.LOADING -> {
+                    loadingPb.visibility = View.VISIBLE;
+                    addUserEmail.visibility = View.INVISIBLE
+                    addUserPassword.visibility = View.INVISIBLE
+                    addUserConfPasswd.visibility = View.INVISIBLE
+                    addUserPassword.visibility = View.INVISIBLE
+                }
+
+                State.FAILURE -> {
+                    Snackbar.make(v, "Wrong credentials", Snackbar.LENGTH_SHORT).show()
+                    addUserEmail.visibility = View.VISIBLE
+                    addUserPassword.visibility = View.VISIBLE
+                    addUserConfPasswd.visibility = View.VISIBLE
+                    addUserPassword.visibility = View.VISIBLE
+                    loadingPb.visibility = View.GONE;
+                }
+
+                State.SUCCESS -> {
+                    val intent = Intent(activity, SecondActivity::class.java)
+                    startActivity(intent)
+                    addUserEmail.setText("")
+                    addUserPassword.setText("")
+                    addUserConfPasswd.setText("")
+                }
+
+                State.PASSLENGTH ->
+                {
+                    Snackbar.make(v, "Password requires 6 characters at least", Snackbar.LENGTH_SHORT).show()
+                    addUserPassword.setText("")
+                    addUserConfPasswd.setText("")
+                }
+
+                State.PASSNOTEQUAL ->
+                {
+                    Snackbar.make(v, "Password must match each other", Snackbar.LENGTH_SHORT).show()
+                    addUserPassword.setText("")
+                    addUserConfPasswd.setText("")
+                }
+
+                else -> {}
+            }
+        }
 
         return v
     }
@@ -54,29 +103,18 @@ class UserSignup : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        /* Old room DB
-        lateinit var usertypeIn: User
-        //db = AppDatabase.getInstance(v.context)
-        //userDao = db?.userDao()
-
-        // Dummy call to pre-populate db
-        //userDao?.fetchAllUsers()*/
 
         addUserbtn.setOnClickListener {
 
-            lateinit var userFind: User
-
-            var auxUser = User(
-                "",
-                addUserName.text.toString(),
-                addUserlastname.text.toString(),
+            viewModel.userSignUpCor(
                 addUserEmail.text.toString(),
                 addUserPassword.text.toString(),
-                "0"
-
+                addUserConfPasswd.text.toString()
             )
-            //val userFind = userDao?.fetchUserByUserAndMail(username, usermail)
-            userFind = viewModel.getUserFromNameAndPass(auxUser.name, auxUser.password)
+
+            /* OLD METHOD NO-COR
+
+            userFind = viewModel.getUserFromNameAndPass(addUserName.text.toString(), addUserPassword.text.toString())
             if (userFind.name == "")
                 try {
                     viewModel.insertUserAuthv2(auxUser)                     //ADD USER TO DB
@@ -86,15 +124,13 @@ class UserSignup : Fragment() {
                     addUserName.setText("")
                     addUserEmail.setText("")
                     addUserPassword.setText("")
-                    addUserlastname.setText("")
+                    //addUserlastname.setText("")
 
                     val intent = Intent(activity, SecondActivity::class.java)
                     startActivity(intent)
                 } catch (e: Exception) {
                     Snackbar.make(v, "Error on Signing Up", Snackbar.LENGTH_SHORT).show()
-                }
+                }*/
         }
     }
-
-
 }

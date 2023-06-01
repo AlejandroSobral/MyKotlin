@@ -104,6 +104,8 @@ class LoginFrgmt : Fragment() {
                     inputuser.visibility = View.VISIBLE
                     loadingPb.visibility = View.GONE;
                 }
+
+                else -> {}
             }
         }
         return v
@@ -113,19 +115,30 @@ class LoginFrgmt : Fragment() {
         super.onStart()
 
         btnSignUp.setOnClickListener {
-
             val action = LoginFrgmtDirections.actionLoginFragmentToUserSignup2()
             findNavController().navigate(action)
         }
 
         btnNavigate.setOnClickListener {
             if (inputuser.text.toString() != "" && inputpass.text.toString() != "") {
+                /* OLD METHODS
+                viewModel.getAuthFromFirestone(inputuser.text.toString(), inputpass.text.toString())
 
-                //viewModel.getAuthFromFirestone(inputuser.text.toString(), inputpass.text.toString())
-                //viewModel.getAuthFromFirestoneCour(inputuser.text.toString(), inputpass.text.toString())
+                viewModel.getAuthFromFirestoneCour(inputuser.text.toString(), inputpass.text.toString()) */
                 viewModel.myFirebaseLogin(inputuser.text.toString(), inputpass.text.toString())
-
             }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

@@ -120,6 +120,7 @@ class EditClubDetail : Fragment() {
                 }
 
                 null -> {}
+                else -> {}
             }
         }
 

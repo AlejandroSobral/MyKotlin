@@ -88,6 +88,8 @@ class ClubDDetail : Fragment() {
                 }
                 null ->{
                 }
+
+                else -> {}
             }
         }
 

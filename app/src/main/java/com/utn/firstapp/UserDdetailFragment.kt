@@ -76,6 +76,8 @@ class UserDdetailFragment() : Fragment() {
 
                 null -> {
                 }
+
+                else -> {}
             }
         }
         return v

@@ -64,6 +64,8 @@ class AddClub : Fragment() {
 
                 null -> {
                 }
+
+                else -> {}
             }
         }
 
