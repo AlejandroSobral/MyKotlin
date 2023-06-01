@@ -7,104 +7,133 @@
     android:layout_height="match_parent"
     tools:context=".fragments.UserSignup">
 
+
     <ImageView
         android:id="@+id/imgBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/fifa_background"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteY="-364dp" />
 
-
-    <EditText
-        android:id="@+id/edtSgnUpName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="38dp"
-        android:ems="10"
-        android:hint="Username"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="@+id/edtSgnUpEmail"
-        app:layout_constraintEnd_toEndOf="@+id/edtSgnUpEmail"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/edtSgnUpEmail"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="38dp"
+        android:layout_width="172dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="52dp"
         android:fontFamily="sans-serif-black"
         android:text="Sign Up"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/edtSgnUpName"
-        app:layout_constraintEnd_toEndOf="@+id/edtSgnUpName"
-        app:layout_constraintHorizontal_bias="0.452"
-        app:layout_constraintStart_toStartOf="@+id/edtSgnUpName"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgBackground" />
 
     <Button
         android:id="@+id/btnSgnUpAddUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="104dp"
+        android:layout_width="151dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="400dp"
         android:text="ADD USER"
+        app:cornerRadius="180dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.105" />
 
-    <EditText
-        android:id="@+id/edtSgnUpConfirmPassword"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtLoginSgnUpPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="51dp"
-        android:ems="10"
-        android:hint="Confirm Password"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnSgnUpAddUser"
-        app:layout_constraintEnd_toEndOf="@+id/btnSgnUpAddUser"
-        app:layout_constraintHorizontal_bias="0.453"
-        app:layout_constraintStart_toStartOf="@+id/btnSgnUpAddUser"
-        app:layout_constraintTop_toBottomOf="@+id/edtSgnUpPassword" />
-
-    <EditText
-        android:id="@+id/edtSgnUpEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="49dp"
-        android:ems="10"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/edtSgnUpPassword"
-        app:layout_constraintEnd_toEndOf="@+id/edtSgnUpPassword"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/edtSgnUpPassword"
-        app:layout_constraintTop_toBottomOf="@+id/edtSgnUpName" />
-
-    <EditText
-        android:id="@+id/edtSgnUpPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
         android:layout_marginBottom="30dp"
-        android:ems="10"
         android:hint="Password"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeErrorColor="@color/black"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:counterTextColor="@color/black"
+        app:endIconMode="password_toggle"
+        app:helperText="Min length 6"
+        app:helperTextTextColor="@color/black"
+
+        app:hintTextColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/edtSgnUpConfirmPassword"
-        app:layout_constraintEnd_toEndOf="@+id/edtSgnUpConfirmPassword"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/edtSgnUpConfirmPassword"
-        app:layout_constraintTop_toBottomOf="@+id/edtSgnUpEmail" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.803">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/beautyboxPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="20"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtSgnUpConfirmPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:hint="Confirm Password"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeErrorColor="@color/black"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:counterTextColor="@color/black"
+        app:endIconMode="password_toggle"
+        app:helperTextTextColor="@color/black"
+        app:hintTextColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnSgnUpAddUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBackground"
+        app:layout_constraintVertical_bias="0.929">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/beautyboxPassConf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="20"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtSgnUpEmail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeErrorColor="@color/black"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="@color/black"
+        app:hintTextColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/edtLoginSgnUpPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.22">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/beautyboxEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="20"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <ProgressBar
         android:id="@+id/signUpProgressBar"
@@ -116,5 +145,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

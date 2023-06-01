@@ -3,7 +3,7 @@ package com.utn.firstapp.fragments
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
+import android.text.method.PasswordTransformationMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,6 +17,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.google.android.material.snackbar.Snackbar
+import com.google.android.material.textfield.TextInputLayout
 import com.utn.firstapp.R
 import com.utn.firstapp.activities.SecondActivity
 import com.utn.firstapp.entities.State
@@ -29,16 +30,14 @@ class LoginFrgmt : Fragment() {
     companion object {
         fun newInstance() = LoginFrgmt()
     }
-
     private val viewModel: LoginFrgmtViewModel by viewModels()
     lateinit var imgLoginLogo: ImageView
     lateinit var loadingPb: ProgressBar
-    lateinit var label: TextView
     lateinit var btnNavigate: Button
     lateinit var btnSignUp: Button
     lateinit var v: View
-    lateinit var inputuser: EditText
-    lateinit var inputpass: EditText
+    lateinit var inputuser: TextInputLayout
+    lateinit var inputpass: TextInputLayout
     var imgLoginLogoURL: String = "https://assets.stickpng.com/images/609912b13ae4510004af4a22.png"
 
 
@@ -49,14 +48,19 @@ class LoginFrgmt : Fragment() {
 
         v = inflater.inflate(R.layout.fragment_screen1, container, false)
 
-        label = v.findViewById(R.id.txtScreen1)
-        btnNavigate = v.findViewById(R.id.btnNav2)
+
+        btnNavigate = v.findViewById(R.id.btnLogin)
         btnSignUp = v.findViewById(R.id.btnSignUp)
-        inputuser = v.findViewById(R.id.txtInput_user)
-        inputpass = v.findViewById(R.id.txtInput_password)
+        inputuser = v.findViewById(R.id.edtLoginInputUser)
+        inputpass = v.findViewById(R.id.edtLoginSgnUpPassword)
         imgLoginLogo = v.findViewById(R.id.imgLoginLogo)
         loadingPb = v.findViewById(R.id.LoginProgressBar);
         Glide.with(v).load(imgLoginLogoURL).into(imgLoginLogo)
+
+        //Password stars hidden
+        inputpass.editText?.transformationMethod =
+            PasswordTransformationMethod.getInstance()
+        inputpass.editText?.text = inputpass.editText?.text
 
         /*viewModel.user.observe(viewLifecycleOwner) { currentUser ->
 
@@ -84,8 +88,8 @@ class LoginFrgmt : Fragment() {
                     val intent = Intent(activity, SecondActivity::class.java)
                     //intent.putExtra("CurrentUserID", currentUser.uid)
                     startActivity(intent)
-                    inputuser.setText("")
-                    inputpass.setText("")
+                    inputuser.editText?.setText("")
+                    inputpass.editText?.setText("")
                 }
 
                 State.LOADING -> {
@@ -120,13 +124,11 @@ class LoginFrgmt : Fragment() {
         }
 
         btnNavigate.setOnClickListener {
-            if (inputuser.text.toString() != "" && inputpass.text.toString() != "") {
                 /* OLD METHODS
                 viewModel.getAuthFromFirestone(inputuser.text.toString(), inputpass.text.toString())
 
                 viewModel.getAuthFromFirestoneCour(inputuser.text.toString(), inputpass.text.toString()) */
-                viewModel.myFirebaseLogin(inputuser.text.toString(), inputpass.text.toString())
-            }
+                viewModel.myFirebaseLogin(inputuser.editText?.text.toString(), inputpass.editText?.text.toString())
         }
     }
 }

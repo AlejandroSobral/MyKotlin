@@ -11,7 +11,11 @@
         android:id="@+id/imgBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/fifa_background" />
+        android:background="@drawable/fifa_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgLoginLogo"
@@ -27,80 +31,98 @@
         app:layout_constraintVertical_bias="0.075"
         tools:src="@tools:sample/avatars" />
 
+
     <Button
         android:id="@+id/btnSignUp"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
         android:text="SIGN UP"
 
         android:textColor="#191515"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnNav2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/btnNav2"
-        app:layout_constraintTop_toBottomOf="@+id/btnNav2"
-        app:layout_constraintVertical_bias="0.077"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin"
+        app:layout_constraintVertical_bias="0.122"
         app:rippleColor="#3F51B5" />
 
-    <TextView
-        android:id="@+id/txtScreen1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:fontFamily="sans-serif-black"
-        android:text="FIFA Clubs Data"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@+id/imgLoginLogo"
-        app:layout_constraintStart_toStartOf="@+id/imgLoginLogo"
-        app:layout_constraintTop_toBottomOf="@+id/imgLoginLogo" />
-
     <Button
-        android:id="@+id/btnNav2"
+        android:id="@+id/btnLogin"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="9dp"
         android:text="Login"
         android:textColor="#191515"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/txtInput_password"
-        app:layout_constraintStart_toStartOf="@+id/txtInput_password"
-        app:layout_constraintTop_toBottomOf="@+id/txtInput_password"
+        app:layout_constraintBottom_toBottomOf="@+id/imgBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtLoginSgnUpPassword"
+        app:layout_constraintVertical_bias="0.025"
         app:rippleColor="#3F51B5" />
 
-    <EditText
-        android:id="@+id/txtInput_password"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtLoginSgnUpPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
         android:hint="Password"
-        android:inputType="textPersonName|textPassword"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/txtInput_user"
-        app:layout_constraintStart_toStartOf="@+id/txtInput_user"
-        app:layout_constraintTop_toBottomOf="@+id/txtInput_user" />
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeErrorColor="@color/black"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:counterTextColor="@color/black"
+        app:endIconMode="password_toggle"
+        app:helperTextTextColor="@color/black"
+        app:hintTextColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/LoginProgressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtLoginInputUser"
+        app:layout_constraintVertical_bias="0.197">
 
-    <EditText
-        android:id="@+id/txtInput_user"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="-60dp"
-        android:ems="10"
-        android:hint="User"
-        android:inputType="textEmailAddress"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/txtScreen1"
-        app:layout_constraintStart_toStartOf="@+id/txtScreen1"
-        app:layout_constraintTop_toBottomOf="@+id/txtScreen1" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/beautyboxPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="20"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtLoginInputUser"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeErrorColor="@color/black"
+        app:counterEnabled="true"
+        app:counterMaxLength="20"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="@color/black"
+        app:hintTextColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/imgLoginLogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imgLoginLogo"
+        app:layout_constraintVertical_bias="0.907">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/beautyboxUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="20"
+            android:textColor="@color/black" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <ProgressBar
         android:id="@+id/LoginProgressBar"
