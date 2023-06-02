@@ -34,9 +34,7 @@ class StartingUsers(private val context: Context) : RoomDatabase.Callback() {
                 val item = users.getJSONObject(i)
                 val user = User(
                     id = "",
-                    name = item.getString("name"),
                     email = item.getString("email"),
-                    lastname = item.getString("lastname"),
                     password = item.getString("password")
                 )
 

@@ -1,27 +1,18 @@
 package com.utn.firstapp
 
-import android.annotation.SuppressLint
-import android.content.Context
-import android.content.SharedPreferences
 import android.os.Bundle
+import android.text.method.PasswordTransformationMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.EditText
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.snackbar.Snackbar
-import com.utn.firstapp.database.AppDatabase
-import com.utn.firstapp.database.UserDao
+import com.google.android.material.textfield.TextInputLayout
 import com.utn.firstapp.entities.State
-import com.utn.firstapp.entities.User
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class UserDdetailFragment() : Fragment() {
@@ -29,10 +20,9 @@ class UserDdetailFragment() : Fragment() {
 
     private val viewModel: UserDetailViewModel by viewModels()
     lateinit var v: View
-    lateinit var txtUserlastname: EditText
-    lateinit var txtUserName: EditText
-    lateinit var txtUserEmail: EditText
-    lateinit var txtPassword: EditText
+    lateinit var txtUserOldPass: TextInputLayout
+    lateinit var txtPassword: TextInputLayout
+    lateinit var txtPasswordCheck: TextInputLayout
     lateinit var loadingPb: ProgressBar
     lateinit var updatebtn: Button
 
@@ -42,83 +32,113 @@ class UserDdetailFragment() : Fragment() {
     ): View? {
         v = inflater.inflate(R.layout.fragment_user_ddetail, container, false)
 
-        txtUserName = v.findViewById(R.id.txtUserNameDetail)
-        txtUserlastname = v.findViewById(R.id.txtUserlastnameDetail)
-        txtUserEmail = v.findViewById(R.id.txtUserEmailDetail)
-        txtPassword = v.findViewById(R.id.txtPasswordDetail)
+
+        txtUserOldPass = v.findViewById(R.id.edtUserDetailOldPass)
+        txtPassword = v.findViewById(R.id.edtUserDetailTextPass)
+        txtPasswordCheck = v.findViewById(R.id.edtUserDetailTextPassCheck)
         updatebtn = v.findViewById(R.id.btnUpdateUser)
         loadingPb = v.findViewById(R.id.loadingUserDetailprogressBar)
-
 
         viewModel.state.observe(viewLifecycleOwner) { state ->
             when (state) {
                 State.SUCCESS -> {
-                    Snackbar.make(v, "User has been edited properly.", Snackbar.LENGTH_SHORT).show()
-                    txtUserName.visibility = View.VISIBLE
-                    txtUserlastname.visibility = View.VISIBLE
-                    txtUserEmail.visibility = View.VISIBLE
+                    Snackbar.make(v, "User has been updated properly.", Snackbar.LENGTH_SHORT).show()
+                    txtUserOldPass.visibility = View.VISIBLE
                     txtPassword.visibility = View.VISIBLE
+                    txtPasswordCheck.visibility = View.VISIBLE
                     loadingPb.visibility = View.INVISIBLE
+                    txtPassword.editText?.setText("")
+                    txtPasswordCheck.editText?.setText("")
+                    txtUserOldPass.editText?.setText("")
                 }
-
                 State.FAILURE -> {
-                    Snackbar.make(v, "User edit has failed", Snackbar.LENGTH_SHORT).show()
+                    Snackbar.make(v, "User update has failed", Snackbar.LENGTH_SHORT).show()
+                    txtUserOldPass.visibility = View.VISIBLE
+                    txtPassword.visibility = View.VISIBLE
+                    txtPasswordCheck.visibility = View.VISIBLE
+                    loadingPb.visibility = View.INVISIBLE
+                    txtPassword.editText?.setText("")
+                    txtPasswordCheck.editText?.setText("")
+                    txtUserOldPass.editText?.setText("")
                 }
-
                 State.LOADING -> {
                     //Snackbar.make(v, "Loading", Snackbar.LENGTH_SHORT).show()
                     loadingPb.visibility = View.VISIBLE
-                    txtUserName.visibility = View.INVISIBLE
-                    txtUserlastname.visibility = View.INVISIBLE
-                    txtUserEmail.visibility = View.INVISIBLE
                     txtPassword.visibility = View.INVISIBLE
+                    txtPasswordCheck.visibility = View.INVISIBLE
+                    txtUserOldPass.visibility = View.INVISIBLE
+
                 }
 
+                State.PASSLENGTH ->
+                {
+                    Snackbar.make(v, "Password requires 6 characters at least", Snackbar.LENGTH_SHORT).show()
+                    txtPassword.editText?.setText("")
+                    txtPasswordCheck.editText?.setText("")
+                    txtUserOldPass.visibility = View.VISIBLE
+                    txtPassword.visibility = View.VISIBLE
+                    txtPasswordCheck.visibility = View.VISIBLE
+                    loadingPb.visibility = View.INVISIBLE
+                }
+
+                State.PASSNOTEQUAL ->
+                {
+                    Snackbar.make(v, "Password does not match", Snackbar.LENGTH_SHORT).show()
+                    txtPassword.editText?.setText("")
+                    txtPasswordCheck.editText?.setText("")
+                    txtUserOldPass.visibility = View.VISIBLE
+                    txtPassword.visibility = View.VISIBLE
+                    txtPasswordCheck.visibility = View.VISIBLE
+                    loadingPb.visibility = View.INVISIBLE
+                }
                 null -> {
                 }
-
                 else -> {}
             }
         }
         return v
     }
 
-
     override fun onStart() {
         super.onStart()
         loadingPb.visibility = View.VISIBLE
-        txtUserName.visibility = View.INVISIBLE
-        txtUserlastname.visibility = View.INVISIBLE
-        txtUserEmail.visibility = View.INVISIBLE
+        txtUserOldPass.visibility = View.INVISIBLE
         txtPassword.visibility = View.INVISIBLE
+        txtPasswordCheck.visibility = View.INVISIBLE
 
-        val getUser: User? = viewModel.getUser()
+        //Password stars hidden
+        txtPassword.editText?.transformationMethod =
+            PasswordTransformationMethod.getInstance()
+        txtPassword.editText?.text = txtPassword.editText?.text
 
-        txtUserName.setText(getUser?.name)
-        txtUserlastname.setText(getUser?.lastname)
-        txtUserEmail.setText(getUser?.email)
-        txtPassword.setText(getUser?.password)
+        txtPasswordCheck.editText?.transformationMethod =
+            PasswordTransformationMethod.getInstance()
+        txtPasswordCheck.editText?.text = txtPasswordCheck.editText?.text
 
-        txtUserName.visibility = View.VISIBLE
-        txtUserlastname.visibility = View.VISIBLE
-        txtUserEmail.visibility = View.VISIBLE
+        val getUser = viewModel.getUser()
+
+
+        txtUserOldPass.visibility = View.VISIBLE
         txtPassword.visibility = View.VISIBLE
+        txtPasswordCheck.visibility = View.VISIBLE
         loadingPb.visibility = View.GONE
 
 
         updatebtn.setOnClickListener {
 
-            if (getUser != null) {
-                getUser.name = txtUserName.text.toString()
-                getUser.lastname = txtUserlastname.text.toString()
-                getUser.password = txtPassword.text.toString()
-                getUser.email = txtUserEmail.text.toString()
+                viewModel.myUpdatePassFirebaseUser(getUser!!.email,
+                    txtUserOldPass.editText?.text.toString(),
+                    txtPassword.editText?.text.toString(),
+                    txtPasswordCheck.editText?.text.toString()
+                )
 
-                viewModel.updateUser(getUser)
+            }
+
+
             }
         }
-    }
-}/*        updatebtn.setOnClickListener {
+
+/*        updatebtn.setOnClickListener {
 //
 //
 //            val context = requireContext()

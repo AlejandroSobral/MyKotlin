@@ -78,7 +78,6 @@ class HomeFrgmtViewModel @Inject constructor(
 
             currentUser?.let { firebaseUser ->
                 val profileUpdates = UserProfileChangeRequest.Builder()
-                    .setDisplayName(updateUser.name)
                     //.setPhotoUri(Updateuser.photoUrl)
                     .build()
 

@@ -4,11 +4,9 @@ import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
-import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.utn.firstapp.PreferencesManager
 import com.utn.firstapp.SingleLiveEvent
@@ -18,8 +16,6 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
-import kotlinx.coroutines.withContext
-import javax.annotation.Nullable
 import javax.inject.Inject
 
 @HiltViewModel
@@ -96,13 +92,14 @@ class LoginFrgmtViewModel @Inject constructor(
     suspend fun getAuthFromFirestoneCour(email: String, password: String): FirebaseUser? {
 
         return try {
-            var result: FirebaseUser?= null
+            var result: FirebaseUser? = null
             var auth: FirebaseAuth = Firebase.auth
             result = (auth.signInWithEmailAndPassword(email, password).await()).user
 
             if (result != null) { //Save user into the Shared Preference
-                val auxUser = User(result.uid, "", "", result.email.toString(), "", "0")
+                val auxUser = User(result.uid,  result.email.toString(), "", "0")
                 preferencesManager.saveCurrentUser(auxUser)
+
             }
             result
         } catch (e: Exception) {
@@ -110,6 +107,9 @@ class LoginFrgmtViewModel @Inject constructor(
             null
         }
     }
+
+
+
     fun myFirebaseLogin(email: String, password: String): FirebaseUser? {
         state.postValue(State.LOADING)
         return try {
@@ -117,10 +117,9 @@ class LoginFrgmtViewModel @Inject constructor(
             viewModelScope.launch(Dispatchers.IO) {
                 result = getAuthFromFirestoneCour(email, password)
                 Log.d("myFirebaseLogin - Resultado", "$result")
-                if(result!=null) {
+                if (result != null) {
                     state.postValue(State.SUCCESS)
-                }
-                else{
+                } else {
                     state.postValue(State.FAILURE)
                 }
             }
@@ -131,5 +130,7 @@ class LoginFrgmtViewModel @Inject constructor(
             null
         }
     }
+
+
 
 }

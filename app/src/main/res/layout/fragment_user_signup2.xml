@@ -63,10 +63,10 @@
         app:hintTextColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/edtSgnUpConfirmPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.803">
+        app:layout_constraintVertical_bias="0.936">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/beautyboxPass"
@@ -81,7 +81,6 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
         android:hint="Confirm Password"
         app:boxStrokeColor="@color/black"
         app:boxStrokeErrorColor="@color/black"
@@ -93,10 +92,9 @@
         app:hintTextColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/btnSgnUpAddUser"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBackground"
-        app:layout_constraintVertical_bias="0.929">
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.81">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/beautyboxPassConf"
@@ -124,8 +122,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.22">
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/beautyboxEmail"
@@ -144,5 +141,6 @@
         app:layout_constraintBottom_toTopOf="@+id/btnSgnUpAddUser"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:visibility="gone" />
 </androidx.constraintlayout.widget.ConstraintLayout>

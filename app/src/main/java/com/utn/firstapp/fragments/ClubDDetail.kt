@@ -84,7 +84,8 @@ class ClubDDetail : Fragment() {
                     Snackbar.make(v, "Delete failed", Snackbar.LENGTH_SHORT).show()
                 }
                 State.LOADING ->{
-                    Snackbar.make(v, "Loading", Snackbar.LENGTH_SHORT).show()
+                    //Snackbar.make(v, "Loading", Snackbar.LENGTH_SHORT).show()
+                    loadingBar.visibility = View.VISIBLE
                 }
                 null ->{
                 }

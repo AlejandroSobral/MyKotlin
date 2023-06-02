@@ -54,7 +54,7 @@ class UserSignupViewModel @Inject constructor(
                 if (user == null) {
                     result = insertUserAuthCor(email, password)
                     if (result != null) { //Save user into the Shared Preference
-                        val auxUser = User(result!!.uid, "", "", result!!.email.toString(), "", "0")
+                        val auxUser = User(result!!.uid, result!!.email.toString(), "",  "0")
                         preferencesManager.saveCurrentUser(auxUser)
                         state.postValue(State.SUCCESS)
                     }
@@ -79,7 +79,7 @@ class UserSignupViewModel @Inject constructor(
             result = (auth.signInWithEmailAndPassword(email, password).await()).user
 
             if (result != null) { //Save user into the Shared Preference
-                val auxUser = User(result.uid, "", "", result.email.toString(), "", "0")
+                val auxUser = User(result.uid, result.email.toString(), "", "0")
                 preferencesManager.saveCurrentUser(auxUser)
             }
             result
@@ -144,7 +144,7 @@ class UserSignupViewModel @Inject constructor(
                     val user = auth.currentUser
 
                     val userProfileChangeRequest = UserProfileChangeRequest.Builder()
-                        .setDisplayName(insertUser.name)
+                        //.setDisplayName(insertUser.name)
                         //.setPhotoUri(photoUri)
                         .build()
 
@@ -198,7 +198,7 @@ class UserSignupViewModel @Inject constructor(
     fun getUserFromNameAndPass(email: String, password: String): User {
         val dbInt = Firebase.firestore
 
-        var auxUser: User = User("", "", "", "", "")
+        var auxUser: User = User("", "", "", "")
 
         dbInt.collection("users")
             .whereEqualTo("email", email)
@@ -212,10 +212,10 @@ class UserSignupViewModel @Inject constructor(
 
                         //Log.d("TestDB", "${document.id} => ${document.data}")
                         auxUser.id = document.id
-                        auxUser.name = document.getString("name") ?: ""
+                        //auxUser.name = document.getString("name") ?: ""
                         auxUser.password = document.getString("password") ?: ""
                         auxUser.email = document.getString("email") ?: ""
-                        auxUser.lastname = document.getString("lastname") ?: ""
+                        //auxUser.lastname = document.getString("lastname") ?: ""
 
                     }
 

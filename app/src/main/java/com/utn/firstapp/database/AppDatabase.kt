@@ -10,7 +10,7 @@ import com.utn.firstapp.entities.User
 
 
 
-@Database(entities = [User::class, Club::class],  version = 10, exportSchema = false)
+@Database(entities = [User::class, Club::class],  version = 12, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
