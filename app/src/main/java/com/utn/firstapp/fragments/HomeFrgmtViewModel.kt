@@ -35,10 +35,11 @@ class HomeFrgmtViewModel @Inject constructor(
 ) : ViewModel() {
 
     val state = SingleLiveEvent<State>()
+    var teams = SingleLiveEvent<ClubRepository?>()
 
     val dbInt = Firebase.firestore
 
-    var teams: MutableLiveData<ClubRepository?>? = null
+    //var teams: MutableLiveData<ClubRepository?>? = null
 
     fun getUserfromPref(): User? {
         return preferencesManager.getCurrentUser()
@@ -177,7 +178,7 @@ class HomeFrgmtViewModel @Inject constructor(
                 if (result != null) {
                     //saveDataClubShPr(result!!)
                     state.postValue(State.SUCCESS)
-                    teams?.postValue(result)
+                    teams.postValue(result!!)
 
                 }
                 if (result == null) {

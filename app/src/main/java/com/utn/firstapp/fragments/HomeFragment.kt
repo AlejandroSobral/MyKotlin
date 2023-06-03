@@ -65,7 +65,35 @@ class HomeFragment : Fragment() {
         Glide.with(v).load(imgHomeLogoURL).into(imgHomeLogo)
 
 
-        viewModel.teams?.observe(viewLifecycleOwner){clubRepo ->
+
+
+        viewModel.state.observe(viewLifecycleOwner) { state ->
+            when (state) {
+                State.SUCCESS -> {
+                    recClubs.visibility = View.VISIBLE
+                    loadingPb.visibility = View.INVISIBLE
+
+
+                    Log.d("PositionUser", "GetCurrentOK")
+                    //var clubRepo = viewModel.getDataClubShPr()
+
+
+                }
+
+            State.FAILURE -> {}
+            State.LOADING -> {
+            recClubs.visibility = View.INVISIBLE
+            loadingPb.visibility = View.VISIBLE
+
+        }
+            null -> {
+        }
+
+            else -> {}
+        }
+    }
+
+        viewModel.teams?.observe(viewLifecycleOwner){ clubRepo ->
             Log.d("PositionUser", "ObserveClubRepo")
             var currentUser = viewModel.getUserfromPref()
             var adapterclubList = clubRepo?.clubList
@@ -92,34 +120,6 @@ class HomeFragment : Fragment() {
                 loadingPb.visibility = View.GONE
             }
         }
-
-        viewModel.state.observe(viewLifecycleOwner) { state ->
-            when (state) {
-                State.SUCCESS -> {
-                    recClubs.visibility = View.VISIBLE
-                    loadingPb.visibility = View.INVISIBLE
-
-
-                    Log.d("PositionUser", "GetCurrentOK")
-                    //var clubRepo = viewModel.getDataClubShPr()
-
-
-                }
-
-
-            State.FAILURE -> {}
-            State.LOADING -> {
-            recClubs.visibility = View.INVISIBLE
-            loadingPb.visibility = View.VISIBLE
-
-        }
-            null -> {
-        }
-
-            else -> {}
-        }
-    }
-
 
 
     return v
