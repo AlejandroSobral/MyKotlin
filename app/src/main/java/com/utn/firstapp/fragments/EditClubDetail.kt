@@ -148,6 +148,7 @@ class EditClubDetail : Fragment() {
         htnNick.visibility = View.INVISIBLE
         htnImgURL.visibility = View.INVISIBLE
         htnNatFlag.visibility = View.INVISIBLE
+
         var clubID = EditClubDetailArgs.fromBundle(requireArguments()).clubID
 
         viewModel.getClubFromID(clubID)
@@ -196,7 +197,7 @@ class EditClubDetail : Fragment() {
                     txtNatFlag.text.toString()
                 )
 
-                viewModel.updateClub(auxClub)
+                viewModel.myUpdateClubCor(auxClub)
 
             }
         }

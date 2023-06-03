@@ -62,52 +62,43 @@ class HomeFragment : Fragment() {
 
         Glide.with(v).load(imgHomeLogoURL).into(imgHomeLogo)
 
-        viewModel.teams.observe(viewLifecycleOwner) { getClubList ->
-
-            var currentUser = viewModel.getUserfromPref()
-            var adapterclubList = getClubList.clubList
-            if (adapterclubList != null) {
-                adapter = ClubAdapter(adapterclubList) { position ->
-                    val action = HomeFragmentDirections.actionHomeFragmentToClubDDetail(
-                        ((adapterclubList?.get(position)?.id ?: -1) as String)
-                    )//as Int
-                    currentUser?.lastposition = (position).toString()
-
-                    if (currentUser != null) {
-                        viewModel.updateUserPref(currentUser)
-                    }
-                    findNavController().navigate(action)
-
-                }
-            }
-            recClubs.layoutManager = LinearLayoutManager(context)
-            recClubs.adapter = adapter
-
-            if (currentUser != null) {
-                Log.d("PositionUser", "Scroll to , ${currentUser.lastposition}")
-                recClubs.scrollToPosition((currentUser.lastposition).toInt())
-                loadingPb.visibility = View.GONE
-            }
-
-        }
-
-        return v
-    }
-
-
-    override fun onStart() {
-        super.onStart()
-
-        loadingPb.visibility = View.VISIBLE
-
-        viewModel.state.observe(this) { state ->
+        viewModel.state.observe(viewLifecycleOwner) { state ->
             when (state) {
                 State.SUCCESS -> {
+                    recClubs.visibility = View.VISIBLE
+                    loadingPb.visibility = View.INVISIBLE
+                    var currentUser = viewModel.getUserfromPref()
                     Log.d("PositionUser", "GetCurrentOK")
+                    var clubRepo = viewModel.getDataClubShPr()
+                    var adapterclubList = clubRepo?.clubList
+                    if (adapterclubList != null) {
+                        adapter = ClubAdapter(adapterclubList) { position ->
+                            val action = HomeFragmentDirections.actionHomeFragmentToClubDDetail(
+                                ((adapterclubList?.get(position)?.id ?: -1) as String)
+                            )//as Int
+                            currentUser?.lastposition = (position).toString()
+
+                            if (currentUser != null) {
+                                viewModel.updateUserPref(currentUser)
+                            }
+                            findNavController().navigate(action)
+
+                        }
+                    }
+                    recClubs.layoutManager = LinearLayoutManager(context)
+                    recClubs.adapter = adapter
+
+                    if (currentUser != null) {
+                        Log.d("PositionUser", "Scroll to , ${currentUser.lastposition}")
+                        recClubs.scrollToPosition((currentUser.lastposition).toInt())
+                        loadingPb.visibility = View.GONE
+                    }
                 }
 
                 State.FAILURE -> {}
                 State.LOADING -> {
+                    recClubs.visibility = View.INVISIBLE
+                    loadingPb.visibility = View.VISIBLE
 
                 }
                 null -> {
@@ -117,8 +108,19 @@ class HomeFragment : Fragment() {
             }
         }
 
-        var currentUser = viewModel.getUserfromPref() //Get current user information
-        viewModel.getClubsFromDB()
+
+
+        return v
+    }
+
+
+    override fun onStart() {
+        super.onStart()
+
+
+
+        viewModel.mygetClubsFromDBCor()
+
 
         btnLogOut.setOnClickListener {
             val context = requireContext()

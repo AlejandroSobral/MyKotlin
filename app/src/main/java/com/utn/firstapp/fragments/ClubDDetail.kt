@@ -78,13 +78,30 @@ class ClubDDetail : Fragment() {
             when(state){
                 State.SUCCESS ->{
                     Snackbar.make(v, "Club has been deleted", Snackbar.LENGTH_SHORT).show()
+                    txtName.visibility = View.VISIBLE
+                    txtFounded.visibility = View.VISIBLE
+                    txtLeague.visibility = View.VISIBLE
+                    txtNick.visibility = View.VISIBLE
+                    txtCountry.visibility = View.VISIBLE
+                    loadingBar.visibility = View.GONE
                     navController.navigateUp()
                 }
                 State.FAILURE ->{
                     Snackbar.make(v, "Delete failed", Snackbar.LENGTH_SHORT).show()
+                    txtName.visibility = View.VISIBLE
+                    txtFounded.visibility = View.VISIBLE
+                    txtLeague.visibility = View.VISIBLE
+                    txtNick.visibility = View.VISIBLE
+                    txtCountry.visibility = View.VISIBLE
+                    loadingBar.visibility = View.GONE
                 }
                 State.LOADING ->{
                     //Snackbar.make(v, "Loading", Snackbar.LENGTH_SHORT).show()
+                    txtName.visibility = View.INVISIBLE
+                    txtFounded.visibility = View.INVISIBLE
+                    txtLeague.visibility = View.INVISIBLE
+                    txtNick.visibility = View.INVISIBLE
+                    txtCountry.visibility = View.INVISIBLE
                     loadingBar.visibility = View.VISIBLE
                 }
                 null ->{
@@ -100,20 +117,13 @@ class ClubDDetail : Fragment() {
     override fun onStart(){
         super.onStart()
 
-        loadingBar.visibility = View.VISIBLE
-        txtName.visibility = View.GONE
-        txtFounded.visibility = View.GONE
-        txtLeague.visibility = View.GONE
-        txtNick.visibility = View.GONE
-        txtCountry.visibility = View.GONE
         var clubID  = ClubDDetailArgs.fromBundle(requireArguments()).clubID
 
         viewModel.getClubFromID(clubID)
 
-
         btnDelete.setOnClickListener{
 
-                viewModel.deleteClubFromID(clubID)
+                viewModel.myDeleteClubCor(clubID)
         }
         btnEdit.setOnClickListener{
 

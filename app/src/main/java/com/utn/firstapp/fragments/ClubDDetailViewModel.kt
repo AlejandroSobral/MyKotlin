@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.utn.firstapp.SingleLiveEvent
@@ -12,6 +13,9 @@ import com.utn.firstapp.entities.Club
 import com.utn.firstapp.entities.ClubRepository
 import com.utn.firstapp.entities.State
 import com.utn.firstapp.entities.User
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 import javax.inject.Inject
 
 
@@ -75,6 +79,34 @@ class ClubDDetailViewModel : ViewModel() {
                 Log.d("TestDB", "Club deleting has failed: ", exception)
 
             }
+    }
+
+    fun myDeleteClubCor(clubID: String) {
+        state.postValue(State.LOADING)
+        viewModelScope.launch(Dispatchers.IO) {
+            var result: String? = null
+            result = deleteFirestoreClub(clubID)
+
+            if (result != null) {
+                state.postValue(State.SUCCESS)
+
+            } else {
+                state.postValue(State.FAILURE)
+            }
+        }
+    }
+
+    suspend fun deleteFirestoreClub(clubID: String): String? {
+        val dbInt = Firebase.firestore
+        val collection = dbInt.collection("teams")
+        val documentRef = collection.document(clubID)
+
+        return try {
+            documentRef.delete().await()
+            clubID
+        } catch (e: Exception) {
+            null
+        }
     }
 }
 

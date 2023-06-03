@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.auth.ktx.auth
@@ -22,6 +23,9 @@ import com.utn.firstapp.entities.Club
 import com.utn.firstapp.entities.ClubRepository
 import com.utn.firstapp.entities.State
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 import javax.inject.Inject
 
 
@@ -33,6 +37,7 @@ class HomeFrgmtViewModel @Inject constructor(
     val state = SingleLiveEvent<State>()
     private val _teams = MutableLiveData<ClubRepository>()
     val dbInt = Firebase.firestore
+    private val clubListRepo = MutableLiveData<ClubRepository>()
     val teams: LiveData<ClubRepository>
         get() = _teams
 
@@ -40,14 +45,22 @@ class HomeFrgmtViewModel @Inject constructor(
         return preferencesManager.getCurrentUser()
         state.postValue(State.SUCCESS)
     }
+    fun saveDataClubShPr(clubList: ClubRepository)  {
+        preferencesManager.saveCurrentClubList(clubList)
+        state.postValue(State.SUCCESS)
+    }
 
-    fun updateUserPref(user:User) {
+    fun getDataClubShPr(): ClubRepository?  {
+        return preferencesManager.getCurrentClubList()
+
+    }
+
+    fun updateUserPref(user: User) {
         preferencesManager.saveCurrentUser(user)
         state.postValue(State.SUCCESS)
     }
 
-    fun updateUser(user: User)
-    {
+    fun updateUser(user: User) {
         state.postValue(State.LOADING)
         preferencesManager.saveCurrentUser(user)
         var auxUser = preferencesManager.getCurrentUser()
@@ -70,50 +83,50 @@ class HomeFrgmtViewModel @Inject constructor(
 
     fun updateUserInFirestore(updateUser: User) {
 
-            state.postValue(State.LOADING)
-            preferencesManager.saveCurrentUser(updateUser)
-            var auxUser = preferencesManager.getCurrentUser()
-            val auth = FirebaseAuth.getInstance()
-            val currentUser = auth.currentUser
+        state.postValue(State.LOADING)
+        preferencesManager.saveCurrentUser(updateUser)
+        var auxUser = preferencesManager.getCurrentUser()
+        val auth = FirebaseAuth.getInstance()
+        val currentUser = auth.currentUser
 
-            currentUser?.let { firebaseUser ->
-                val profileUpdates = UserProfileChangeRequest.Builder()
-                    //.setPhotoUri(Updateuser.photoUrl)
-                    .build()
+        currentUser?.let { firebaseUser ->
+            val profileUpdates = UserProfileChangeRequest.Builder()
+                //.setPhotoUri(Updateuser.photoUrl)
+                .build()
 
-                // Create a HashMap to store the "position" parameter
-                val positionMap = hashMapOf("position" to updateUser.lastposition)
+            // Create a HashMap to store the "position" parameter
+            val positionMap = hashMapOf("position" to updateUser.lastposition)
 
-                // Update the user's profile and custom claims in parallel
-                firebaseUser.updateProfile(profileUpdates)
-                    .addOnCompleteListener { profileTask ->
-                        if (profileTask.isSuccessful) {
-                            // User profile update successful
-                            println("User profile updated successfully: ${firebaseUser.uid}")
+            // Update the user's profile and custom claims in parallel
+            firebaseUser.updateProfile(profileUpdates)
+                .addOnCompleteListener { profileTask ->
+                    if (profileTask.isSuccessful) {
+                        // User profile update successful
+                        println("User profile updated successfully: ${firebaseUser.uid}")
 
-                            // Update the "position" field in Firestore user document
-                            val db = FirebaseFirestore.getInstance()
-                            val userRef = db.collection("users").document(firebaseUser.uid)
-                            userRef.update(positionMap as Map<String, Any>)
-                                .addOnSuccessListener {
-                                    // "position" field update successful
-                                    println("Position updated in Firestore: ${firebaseUser.uid}")
-                                    state.postValue(State.SUCCESS)
-                                }
-                                .addOnFailureListener { positionException ->
-                                    // Error occurred while updating "position" field
-                                    println("Failed to update position in Firestore: ${positionException.message}")
-                                }
-                        } else {
-                            // User profile update failed
-                            state.postValue(State.LOADING)
-                            val profileException = profileTask.exception
-                            // Handle the error
-                            println("Failed to update user profile: ${profileException?.message}")
-                        }
+                        // Update the "position" field in Firestore user document
+                        val db = FirebaseFirestore.getInstance()
+                        val userRef = db.collection("users").document(firebaseUser.uid)
+                        userRef.update(positionMap as Map<String, Any>)
+                            .addOnSuccessListener {
+                                // "position" field update successful
+                                println("Position updated in Firestore: ${firebaseUser.uid}")
+                                state.postValue(State.SUCCESS)
+                            }
+                            .addOnFailureListener { positionException ->
+                                // Error occurred while updating "position" field
+                                println("Failed to update position in Firestore: ${positionException.message}")
+                            }
+                    } else {
+                        // User profile update failed
+                        state.postValue(State.LOADING)
+                        val profileException = profileTask.exception
+                        // Handle the error
+                        println("Failed to update user profile: ${profileException?.message}")
                     }
-            }
+                }
         }
+    }
 
     fun getClubsFromDB(): MutableList<Club> {
         val dbInt = Firebase.firestore
@@ -151,5 +164,58 @@ class HomeFrgmtViewModel @Inject constructor(
             }
 
         return clubRepo.clubList
+    }
+
+    fun mygetClubsFromDBCor() {
+        state.postValue(State.LOADING)
+        var result: ClubRepository?
+        try {
+            viewModelScope.launch(Dispatchers.IO) {
+
+                result = getClubsCor()
+
+                if (result != null) {
+                    saveDataClubShPr(result!!)
+                    state.postValue(State.SUCCESS)
+
+                }
+                if (result == null) {
+                    state.postValue(State.FAILURE)
+                }
+            }
+
+        }
+        catch(e:Exception)
+        {
+        }
+
+    }
+
+    private suspend fun getClubsCor(): ClubRepository? {
+        val dbInt = Firebase.firestore
+        var clubRepo: ClubRepository = ClubRepository()
+
+        try {
+            var result = dbInt.collection("teams").orderBy("name").get().await()
+            for (document in result) {
+                var auxClub: Club = Club("", "", "", "", "", "", "", "")
+                //Log.d("TestDB", "${document.id} => ${document.data}")
+                auxClub.id = document.id
+                Log.d("AVEROBLAP", "{$document.id}")
+                auxClub.name = document.getString("name") ?: ""
+                auxClub.country = document.getString("country") ?: ""
+                auxClub.founded = document.getString("founded") ?: ""
+                auxClub.league = document.getString("league") ?: ""
+                auxClub.nickname = document.getString("nickname") ?: ""
+                auxClub.countryflag = document.getString("countryflag") ?: ""
+                auxClub.imageurl = document.getString("imageurl") ?: ""
+
+                clubRepo.clubList.add(auxClub)
+            }
+            return clubRepo
+        } catch (e: Exception) {
+            return null
+        }
+
     }
 }

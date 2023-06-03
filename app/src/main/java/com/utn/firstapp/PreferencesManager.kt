@@ -6,6 +6,8 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.gson.Gson
 import com.utn.firstapp.entities.User
+import com.utn.firstapp.entities.Club
+import com.utn.firstapp.entities.ClubRepository
 
 class PreferencesManager(private val sharedPreferences: SharedPreferences, private val gson: Gson) {
 
@@ -24,6 +26,21 @@ class PreferencesManager(private val sharedPreferences: SharedPreferences, priva
         sharedPreferences.edit().putString("currentUser", userJson).apply()
     }
 
+fun saveCurrentClubList(clubList: ClubRepository)
+{
+    val clubsJson = gson.toJson(clubList)
+    sharedPreferences.edit().putString("currentClubList", clubsJson).apply()
+}
+
+    fun getCurrentClubList(): ClubRepository?
+    {
+        val clubsJson = sharedPreferences.getString("currentClubList", null)
+        return if (clubsJson != null) {
+            gson.fromJson(clubsJson, ClubRepository::class.java)
+        } else {
+            return null
+        }
+    }
 
 
 
