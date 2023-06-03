@@ -15,6 +15,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -44,7 +46,7 @@ class HomeFragment : Fragment() {
     lateinit var btnLogOut: Button
     lateinit var btnAddClub: Button
 
-
+    private val sharedClubList: MutableLiveData<ClubRepository> = MutableLiveData()
     var clubRepository: ClubRepository = ClubRepository()
 
     override fun onCreateView(
@@ -62,103 +64,113 @@ class HomeFragment : Fragment() {
 
         Glide.with(v).load(imgHomeLogoURL).into(imgHomeLogo)
 
+
+        viewModel.teams?.observe(viewLifecycleOwner){clubRepo ->
+            Log.d("PositionUser", "ObserveClubRepo")
+            var currentUser = viewModel.getUserfromPref()
+            var adapterclubList = clubRepo?.clubList
+            if (adapterclubList != null) {
+                adapter = ClubAdapter(adapterclubList) { position ->
+                    val action = HomeFragmentDirections.actionHomeFragmentToClubDDetail(
+                        ((adapterclubList?.get(position)?.id ?: -1) as String)
+                    )//as Int
+                    currentUser?.lastposition = (position).toString()
+
+                    if (currentUser != null) {
+                        viewModel.updateUserPref(currentUser)
+                    }
+                    findNavController().navigate(action)
+
+                }
+            }
+            recClubs.layoutManager = LinearLayoutManager(context)
+            recClubs.adapter = adapter
+
+            if (currentUser != null) {
+                Log.d("PositionUser", "Scroll to , ${currentUser.lastposition}")
+                recClubs.scrollToPosition((currentUser.lastposition).toInt())
+                loadingPb.visibility = View.GONE
+            }
+        }
+
         viewModel.state.observe(viewLifecycleOwner) { state ->
             when (state) {
                 State.SUCCESS -> {
                     recClubs.visibility = View.VISIBLE
                     loadingPb.visibility = View.INVISIBLE
-                    var currentUser = viewModel.getUserfromPref()
+
+
                     Log.d("PositionUser", "GetCurrentOK")
-                    var clubRepo = viewModel.getDataClubShPr()
-                    var adapterclubList = clubRepo?.clubList
-                    if (adapterclubList != null) {
-                        adapter = ClubAdapter(adapterclubList) { position ->
-                            val action = HomeFragmentDirections.actionHomeFragmentToClubDDetail(
-                                ((adapterclubList?.get(position)?.id ?: -1) as String)
-                            )//as Int
-                            currentUser?.lastposition = (position).toString()
+                    //var clubRepo = viewModel.getDataClubShPr()
 
-                            if (currentUser != null) {
-                                viewModel.updateUserPref(currentUser)
-                            }
-                            findNavController().navigate(action)
-
-                        }
-                    }
-                    recClubs.layoutManager = LinearLayoutManager(context)
-                    recClubs.adapter = adapter
-
-                    if (currentUser != null) {
-                        Log.d("PositionUser", "Scroll to , ${currentUser.lastposition}")
-                        recClubs.scrollToPosition((currentUser.lastposition).toInt())
-                        loadingPb.visibility = View.GONE
-                    }
-                }
-
-                State.FAILURE -> {}
-                State.LOADING -> {
-                    recClubs.visibility = View.INVISIBLE
-                    loadingPb.visibility = View.VISIBLE
 
                 }
-                null -> {
-                }
 
-                else -> {}
-            }
+
+            State.FAILURE -> {}
+            State.LOADING -> {
+            recClubs.visibility = View.INVISIBLE
+            loadingPb.visibility = View.VISIBLE
+
+        }
+            null -> {
         }
 
-
-
-        return v
-    }
-
-
-    override fun onStart() {
-        super.onStart()
-
-
-
-        viewModel.mygetClubsFromDBCor()
-
-
-        btnLogOut.setOnClickListener {
-            val context = requireContext()
-            val builder = AlertDialog.Builder(context)
-
-            var currentUser = viewModel.getUserfromPref()
-            if (currentUser != null) { // When logging out, position returns to zero.
-                currentUser.lastposition = "0"
-                viewModel.updateUserPref(currentUser)
-            }
-
-            // set the message and title of the dialog
-            builder.setMessage("Are you sure you want to log out?")
-                .setTitle("Logout")
-            // add buttons to the dialog
-            builder.setPositiveButton("Accept",
-                DialogInterface.OnClickListener { dialog, id ->
-                    // user clicked Accept button
-                    // do your logout logic here
-                    val intent = Intent(activity, MainActivity::class.java)
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
-                    intent.putExtra("fragmentId", R.id.LoginFragment)
-                    startActivity(intent)
-
-                })
-            builder.setNegativeButton("Cancel",
-                DialogInterface.OnClickListener { dialog, id ->
-                    // user cancelled the dialog
-                    dialog.dismiss()
-                })
-
-            // create and show the dialog
-            val dialog = builder.create()
-            dialog.show()
-        }
-        btnAddClub.setOnClickListener {
-            val action = HomeFragmentDirections.actionHomeFragmentToAddClub(clubRepository)
-            findNavController().navigate(action)
+            else -> {}
         }
     }
+
+
+
+    return v
+}
+
+
+override fun onStart() {
+    super.onStart()
+
+
+
+    viewModel.mygetClubsFromDBCor()
+
+
+    btnLogOut.setOnClickListener {
+        val context = requireContext()
+        val builder = AlertDialog.Builder(context)
+
+        var currentUser = viewModel.getUserfromPref()
+        if (currentUser != null) { // When logging out, position returns to zero.
+            currentUser.lastposition = "0"
+            viewModel.updateUserPref(currentUser)
+        }
+
+        // set the message and title of the dialog
+        builder.setMessage("Are you sure you want to log out?")
+            .setTitle("Logout")
+        // add buttons to the dialog
+        builder.setPositiveButton("Accept",
+            DialogInterface.OnClickListener { dialog, id ->
+                // user clicked Accept button
+                // do your logout logic here
+                val intent = Intent(activity, MainActivity::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+                intent.putExtra("fragmentId", R.id.LoginFragment)
+                startActivity(intent)
+
+            })
+        builder.setNegativeButton("Cancel",
+            DialogInterface.OnClickListener { dialog, id ->
+                // user cancelled the dialog
+                dialog.dismiss()
+            })
+
+        // create and show the dialog
+        val dialog = builder.create()
+        dialog.show()
+    }
+    btnAddClub.setOnClickListener {
+        val action = HomeFragmentDirections.actionHomeFragmentToAddClub(clubRepository)
+        findNavController().navigate(action)
+    }
+}
 }

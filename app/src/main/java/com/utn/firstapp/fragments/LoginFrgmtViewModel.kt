@@ -10,6 +10,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.utn.firstapp.PreferencesManager
 import com.utn.firstapp.SingleLiveEvent
+import com.utn.firstapp.entities.ClubRepository
 import com.utn.firstapp.entities.State
 import com.utn.firstapp.entities.User
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -25,6 +26,7 @@ class LoginFrgmtViewModel @Inject constructor(
 
     val state = SingleLiveEvent<State>()
     private val _user = MutableLiveData<FirebaseUser?>()
+
     val user: MutableLiveData<FirebaseUser?>
         get() = _user
 

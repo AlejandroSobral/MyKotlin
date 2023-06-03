@@ -35,11 +35,10 @@ class HomeFrgmtViewModel @Inject constructor(
 ) : ViewModel() {
 
     val state = SingleLiveEvent<State>()
-    private val _teams = MutableLiveData<ClubRepository>()
+
     val dbInt = Firebase.firestore
-    private val clubListRepo = MutableLiveData<ClubRepository>()
-    val teams: LiveData<ClubRepository>
-        get() = _teams
+
+    var teams: MutableLiveData<ClubRepository?>? = null
 
     fun getUserfromPref(): User? {
         return preferencesManager.getCurrentUser()
@@ -128,7 +127,7 @@ class HomeFrgmtViewModel @Inject constructor(
         }
     }
 
-    fun getClubsFromDB(): MutableList<Club> {
+    /*fun getClubsFromDB(): MutableList<Club> {
         val dbInt = Firebase.firestore
         var clubRepo: ClubRepository = ClubRepository()
         var auxClub: Club = Club("", "", "", "", "", "", "", "")
@@ -164,19 +163,21 @@ class HomeFrgmtViewModel @Inject constructor(
             }
 
         return clubRepo.clubList
-    }
+    }*/
 
     fun mygetClubsFromDBCor() {
         state.postValue(State.LOADING)
-        var result: ClubRepository?
+        var result: ClubRepository? = null
         try {
             viewModelScope.launch(Dispatchers.IO) {
 
                 result = getClubsCor()
 
+
                 if (result != null) {
-                    saveDataClubShPr(result!!)
+                    //saveDataClubShPr(result!!)
                     state.postValue(State.SUCCESS)
+                    teams?.postValue(result)
 
                 }
                 if (result == null) {
@@ -201,7 +202,6 @@ class HomeFrgmtViewModel @Inject constructor(
                 var auxClub: Club = Club("", "", "", "", "", "", "", "")
                 //Log.d("TestDB", "${document.id} => ${document.data}")
                 auxClub.id = document.id
-                Log.d("AVEROBLAP", "{$document.id}")
                 auxClub.name = document.getString("name") ?: ""
                 auxClub.country = document.getString("country") ?: ""
                 auxClub.founded = document.getString("founded") ?: ""
