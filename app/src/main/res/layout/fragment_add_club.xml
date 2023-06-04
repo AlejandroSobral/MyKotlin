@@ -10,139 +10,284 @@
     <ImageView
         android:id="@+id/imgBackground"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:background="@drawable/fifa_background"
-        />
-
-    <EditText
-        android:id="@+id/edtTxtAddClubURL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="imageURL"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/edtTxtCountryFlagURL"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtTxtAddClubNick"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:visibility="visible" />
 
     <TextView
         android:id="@+id/txtAddClubTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="Add Club Screen"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toTopOf="@+id/edtTxtAddClubName"
+        android:text="Add Club"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/edtAddClubName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBackground"
         app:layout_constraintVertical_bias="0.5" />
 
-    <EditText
-        android:id="@+id/edtTxtAddClubFounded"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtAddLeague"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="270dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Founded Date"
-        android:inputType="date"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/edtTxtAddClubCountry"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtTxtAddClubName"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <EditText
-        android:id="@+id/edtTxtAddClubCountry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Country"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/edtTxtAddClubLeague"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtTxtAddClubFounded"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <EditText
-        android:id="@+id/edtTxtAddClubLeague"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
         android:hint="League"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/edtTxtAddClubNick"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeErrorColor="@color/black"
+        app:counterEnabled="false"
+        app:counterMaxLength="40"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="@color/black"
+        app:hintTextColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/edtAddImageURL"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtTxtAddClubCountry"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintTop_toBottomOf="@+id/edtAddCountry"
+        app:layout_constraintVertical_bias="0.5">
 
-    <EditText
-        android:id="@+id/edtTxtAddClubName"
-        android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/beautyboxLeague"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:maxLength="40"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="11dp"
+            tools:layout_editor_absoluteY="470dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtAddCountry"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="270dp"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:hint="Country"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeErrorColor="@color/black"
+        app:counterEnabled="false"
+        app:counterMaxLength="40"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="@color/black"
+        app:hintTextColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/edtAddLeague"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtAddFoundationDate"
+        app:layout_constraintVertical_bias="0.5"
+        tools:visibility="visible">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/beautyboxCountry"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:maxLength="40"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="11dp"
+            tools:layout_editor_absoluteY="386dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtAddNick"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:hint="Nick"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeErrorColor="@color/black"
+        app:counterEnabled="false"
+        app:counterMaxLength="40"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="@color/black"
+        app:hintTextColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/edtAddFoundationDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtAddClubName"
+        app:layout_constraintVertical_bias="0.5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/beautyboxNick"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:maxLength="40"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="11dp"
+            tools:layout_editor_absoluteY="219dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtAddFoundationDate"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:hint="Foundation Date"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeErrorColor="@color/black"
+        app:counterEnabled="false"
+        app:counterMaxLength="10"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="@color/black"
+        app:hintTextColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/edtAddCountry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtAddNick"
+        app:layout_constraintVertical_bias="0.5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/beautyboxFoundationDate"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:maxLength="10"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="11dp"
+            tools:layout_editor_absoluteY="303dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtAddClubName"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
         android:hint="Club Name"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/edtTxtAddClubFounded"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeErrorColor="@color/black"
+        app:counterEnabled="false"
+        app:counterMaxLength="80"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="@color/black"
+        app:hintTextColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/edtAddNick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtAddClubTitle"
-        app:layout_constraintVertical_bias="0.5" />
+        app:layout_constraintVertical_bias="0.5">
 
-    <Button
-        android:id="@+id/btnClubAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ADD CLUB"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtTxtCountryFlagURL"
-        app:layout_constraintVertical_bias="0.5" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/beautyboxEmail"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:maxLength="80"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="11dp"
+            tools:layout_editor_absoluteY="136dp" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/edtTxtAddClubNick"
-        android:layout_width="wrap_content"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtAddCountryFlagURL"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="270dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Nick"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/edtTxtAddClubURL"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtTxtAddClubLeague"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <EditText
-        android:id="@+id/edtTxtCountryFlagURL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
         android:hint="countryFlagURL"
-        android:inputType="text"
-        android:textSize="20sp"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeErrorColor="@color/black"
+        app:counterEnabled="false"
+        app:counterMaxLength="200"
+        app:counterTextAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="@color/black"
+        app:hintTextColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/btnClubAdd"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtTxtAddClubURL"
+        app:layout_constraintTop_toBottomOf="@+id/edtAddImageURL"
+        app:layout_constraintVertical_bias="0.5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/beautyboxCountryFlagURL"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:maxLength="200"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="11dp"
+            tools:layout_editor_absoluteY="637dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/edtAddImageURL"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="270dp"
+        android:layout_height="wrap_content"
+        android:hint="imageURL"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeErrorColor="@color/black"
+        app:counterEnabled="false"
+        app:counterMaxLength="200"
+        app:counterTextColor="@color/black"
+        app:endIconMode="clear_text"
+        app:helperTextTextColor="@color/black"
+        app:hintTextColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/edtAddCountryFlagURL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtAddLeague"
+        app:layout_constraintVertical_bias="0.5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/beautyboxImageURL"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:maxLength="200"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="11dp"
+            tools:layout_editor_absoluteY="553dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnClubAdd"
+        android:layout_width="123dp"
+        android:layout_height="45dp"
+        android:text="ADD CLUB"
+        app:cornerRadius="180dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtAddCountryFlagURL"
         app:layout_constraintVertical_bias="0.5" />
+
+    <ProgressBar
+        android:id="@+id/loadingPb"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="178dp"
+        android:layout_height="183dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        tools:visibility="gone" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
