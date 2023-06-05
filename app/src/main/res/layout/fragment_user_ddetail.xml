@@ -56,9 +56,11 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:visibility="gone" />
+        app:layout_constraintVertical_bias="0.65999997"
+        tools:visibility="invisible" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edtUserDetailTextPassCheck"
@@ -80,7 +82,7 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.776"
+        app:layout_constraintVertical_bias="0.822"
         tools:ignore="MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -114,7 +116,7 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.594">
+        app:layout_constraintVertical_bias="0.669">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/beautyboxTextPass"
@@ -146,7 +148,7 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.414">
+        app:layout_constraintVertical_bias="0.521">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/beautyboxOldPass"
@@ -161,15 +163,29 @@
 
     <Button
         android:id="@+id/btnUpdateUser"
-        android:layout_width="124dp"
+        android:layout_width="wrap_content"
         android:layout_height="67dp"
-        android:text="UPDATE"
-        android:textSize="20sp"
+        android:text="UPDATE PASSWORD"
+        android:textSize="16sp"
         android:visibility="visible"
         app:cornerRadius="180dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtUserDetailTextPassCheck" />
+
+    <Button
+        android:id="@+id/btnUpdateProPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHANGE PICTURE"
+        android:textSize="16sp"
+        app:cornerRadius="180dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.404" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

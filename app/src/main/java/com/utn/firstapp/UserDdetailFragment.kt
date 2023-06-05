@@ -1,5 +1,6 @@
 package com.utn.firstapp
 
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.text.method.PasswordTransformationMethod
 import android.view.LayoutInflater
@@ -30,6 +31,7 @@ class UserDdetailFragment() : Fragment() {
     lateinit var txtPasswordCheck: TextInputLayout
     lateinit var loadingPb: ProgressBar
     lateinit var updatebtn: Button
+    lateinit var updateProfPicebtn : Button
     lateinit var profilePic: ImageView
 
 
@@ -45,6 +47,11 @@ class UserDdetailFragment() : Fragment() {
         updatebtn = v.findViewById(R.id.btnUpdateUser)
         loadingPb = v.findViewById(R.id.loadingUserDetailprogressBar)
         profilePic = v.findViewById(R.id.profilePic)
+        updateProfPicebtn = v.findViewById(R.id.btnUpdateProPic)
+
+        txtUserOldPass.visibility = View.VISIBLE
+        txtPassword.visibility = View.VISIBLE
+        txtPasswordCheck.visibility = View.VISIBLE
 
 
 
@@ -55,7 +62,6 @@ class UserDdetailFragment() : Fragment() {
                     txtUserOldPass.visibility = View.VISIBLE
                     txtPassword.visibility = View.VISIBLE
                     txtPasswordCheck.visibility = View.VISIBLE
-                    profilePic.visibility = View.VISIBLE
                     txtPassword.editText?.setText("")
                     txtPasswordCheck.editText?.setText("")
                     txtUserOldPass.editText?.setText("")
@@ -66,7 +72,6 @@ class UserDdetailFragment() : Fragment() {
                     txtPassword.visibility = View.VISIBLE
                     txtPasswordCheck.visibility = View.VISIBLE
                     loadingPb.visibility = View.INVISIBLE
-                    profilePic.visibility = View.VISIBLE
                     txtPassword.editText?.setText("")
                     txtPasswordCheck.editText?.setText("")
                     txtUserOldPass.editText?.setText("")
@@ -77,7 +82,6 @@ class UserDdetailFragment() : Fragment() {
                     txtPassword.visibility = View.INVISIBLE
                     txtPasswordCheck.visibility = View.INVISIBLE
                     txtUserOldPass.visibility = View.INVISIBLE
-                    profilePic.visibility = View.INVISIBLE
 
                 }
 
@@ -90,7 +94,6 @@ class UserDdetailFragment() : Fragment() {
                     txtPassword.visibility = View.VISIBLE
                     txtPasswordCheck.visibility = View.VISIBLE
                     loadingPb.visibility = View.INVISIBLE
-                    profilePic.visibility = View.VISIBLE
                 }
 
                 State.PASSNOTEQUAL ->
@@ -101,7 +104,6 @@ class UserDdetailFragment() : Fragment() {
                     txtUserOldPass.visibility = View.VISIBLE
                     txtPassword.visibility = View.VISIBLE
                     txtPasswordCheck.visibility = View.VISIBLE
-                    profilePic.visibility = View.VISIBLE
                     loadingPb.visibility = View.INVISIBLE
 
                 }
@@ -113,17 +115,11 @@ class UserDdetailFragment() : Fragment() {
 
         viewModel.profilePic.observe(viewLifecycleOwner){ getprofilePic ->
 
-
-            loadingPb.visibility = View.INVISIBLE
-            txtUserOldPass.visibility = View.VISIBLE
-            txtPassword.visibility = View.VISIBLE
-            txtPasswordCheck.visibility = View.VISIBLE
-
-            if(getprofilePic!=null) {
+            if (getprofilePic != null) {
                 profilePic.visibility = View.VISIBLE
                 Glide.with(v).load(getprofilePic).into(profilePic)
             }
-            if(getprofilePic==null) {
+            if (getprofilePic == null) {
                 profilePic.visibility = View.VISIBLE
                 val drawable = resources.getDrawable(R.drawable.user)
 
@@ -131,15 +127,48 @@ class UserDdetailFragment() : Fragment() {
 
             }
         }
+
+        viewModel.profilePicstate.observe(viewLifecycleOwner) { state ->
+            when (state) {
+                State.SUCCESS -> {
+                    loadingPb.visibility = View.INVISIBLE
+                    profilePic.visibility = View.VISIBLE
+
+                    txtUserOldPass.visibility = View.VISIBLE
+                    txtPassword.visibility = View.VISIBLE
+                    txtPasswordCheck.visibility = View.VISIBLE
+                    //Snackbar.make(v, "Profile picture has been updated", Snackbar.LENGTH_SHORT).show()
+
+
+                }
+                State.LOADING -> {
+                    loadingPb.visibility = View.VISIBLE
+                    profilePic.visibility = View.INVISIBLE
+
+                    txtUserOldPass.visibility = View.INVISIBLE
+                    txtPassword.visibility = View.INVISIBLE
+                    txtPasswordCheck.visibility = View.INVISIBLE
+
+                }
+                State.FAILURE -> {
+                    loadingPb.visibility = View.INVISIBLE
+                    profilePic.visibility = View.VISIBLE
+                    txtUserOldPass.visibility = View.VISIBLE
+                    txtPassword.visibility = View.VISIBLE
+                    txtPasswordCheck.visibility = View.VISIBLE
+                    Snackbar.make(v, "Profile picture could not be reached", Snackbar.LENGTH_SHORT).show()
+
+                }
+                else -> {}
+            }
+        }
+
+
         return v
     }
 
     override fun onStart() {
         super.onStart()
-        loadingPb.visibility = View.VISIBLE
-        txtUserOldPass.visibility = View.INVISIBLE
-        txtPassword.visibility = View.INVISIBLE
-        txtPasswordCheck.visibility = View.INVISIBLE
 
         //Password stars hidden
         txtPassword.editText?.transformationMethod =
@@ -153,8 +182,7 @@ class UserDdetailFragment() : Fragment() {
         val getUser = viewModel.getUser()
         viewModel.myGetUserProfilePicCor()
 
-        profilePic.visibility = View.INVISIBLE
-        loadingPb.visibility = View.VISIBLE
+
 
 
         updatebtn.setOnClickListener {
@@ -166,6 +194,12 @@ class UserDdetailFragment() : Fragment() {
                 )
 
             }
+
+        updateProfPicebtn.setOnClickListener{
+            val bitmap = BitmapFactory.decodeResource(resources, R.drawable.fifa_logo)
+            viewModel.uploadStorageImage(bitmap)
+
+        }
 
 
             }

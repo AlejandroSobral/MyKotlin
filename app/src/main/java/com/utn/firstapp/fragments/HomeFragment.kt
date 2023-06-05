@@ -67,7 +67,6 @@ class HomeFragment : Fragment() {
         imgHomeLogo = v.findViewById(R.id.imgHomeLogo)
         btnLogOut = v.findViewById(R.id.btnLogOut)
         btnAddClub = v.findViewById(R.id.btnAddClub)
-        btnPic = v.findViewById(R.id.btnPicture)
         loadingPb = v.findViewById(R.id.homeLoadingProgressBar)
 
 
@@ -183,9 +182,5 @@ override fun onStart() {
         findNavController().navigate(action)
     }
 
-    btnPic.setOnClickListener{
-
-
-    }
 }
 }

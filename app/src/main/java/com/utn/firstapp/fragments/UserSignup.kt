@@ -45,6 +45,7 @@ class UserSignup : Fragment() {
 
 
 
+
         viewModel.state.observe(viewLifecycleOwner) { state ->
             when (state) {
 
@@ -106,25 +107,7 @@ class UserSignup : Fragment() {
                 addUserConfPasswd.editText?.text.toString(),
             )
 
-            /* OLD METHOD NO-COR
 
-            userFind = viewModel.getUserFromNameAndPass(addUserName.text.toString(), addUserPassword.text.toString())
-            if (userFind.name == "")
-                try {
-                    viewModel.insertUserAuthv2(auxUser)                     //ADD USER TO DB
-
-                    val message = "User, ${auxUser.name}, has been added correctly!"
-                    Snackbar.make(v, message, Snackbar.LENGTH_SHORT).show()
-                    addUserName.setText("")
-                    addUserEmail.setText("")
-                    addUserPassword.setText("")
-                    //addUserlastname.setText("")
-
-                    val intent = Intent(activity, SecondActivity::class.java)
-                    startActivity(intent)
-                } catch (e: Exception) {
-                    Snackbar.make(v, "Error on Signing Up", Snackbar.LENGTH_SHORT).show()
-                }*/
         }
     }
 }

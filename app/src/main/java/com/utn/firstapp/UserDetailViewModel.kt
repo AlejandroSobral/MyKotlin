@@ -1,5 +1,6 @@
 package com.utn.firstapp
 
+import android.graphics.Bitmap
 import android.net.Uri
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -18,6 +19,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
+import java.io.ByteArrayOutputStream
 import java.io.File
 import javax.inject.Inject
 
@@ -27,6 +29,7 @@ class UserDetailViewModel @Inject constructor(
 ) : ViewModel() {
 
     val state = SingleLiveEvent<State>()
+    val profilePicstate = SingleLiveEvent<State>()
     var profilePic = SingleLiveEvent<ByteArray?>()
 
     private val _user = MutableLiveData<User>()
@@ -125,11 +128,12 @@ class UserDetailViewModel @Inject constructor(
 
     fun myGetUserProfilePicCor()
     {
-        val currentUser = preferencesManager.getCurrentUser()
+        profilePicstate.postValue(State.LOADING)
         viewModelScope.launch(Dispatchers.IO)
         {
             val profilePicture = getProfilePic()
             profilePic.postValue(profilePicture)
+            profilePicstate.postValue(State.SUCCESS)
 
 
 
@@ -157,6 +161,73 @@ class UserDetailViewModel @Inject constructor(
         }
 
 
+    }
+
+    fun uploadStorageImage(bitmap: Bitmap){
+        profilePicstate.postValue(State.LOADING)
+
+
+        val currentUser = preferencesManager.getCurrentUser()
+        val path = "users/profPictures/" + (currentUser?.id ?: 0) + "/profilepic.png"
+
+
+        viewModelScope.launch(Dispatchers.IO) {
+            val result = myUploadStorageImage(bitmap, path)
+            if (result == "OK") {
+                profilePicstate.postValue(State.SUCCESS)
+                profilePic.postValue(bitmapToByteArray(bitmap))
+            }
+            else
+            {
+                profilePicstate.postValue(State.FAILURE)
+            }
+        }
+
+
+    }
+
+    fun bitmapToByteArray(bitmap: Bitmap): ByteArray {
+
+        // Create a byte array output stream.
+        val byteArrayOutputStream = ByteArrayOutputStream()
+
+        // Compress the bitmap to a PNG format.
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream)
+
+        // Get the byte array.
+        val byteArray = byteArrayOutputStream.toByteArray()
+
+        // Close the byte array output stream.
+        byteArrayOutputStream.close()
+
+        // Return the byte array.
+        return byteArray
+    }
+    private suspend fun myUploadStorageImage(bitmap: Bitmap, path:String):String
+    {
+        val storage = Firebase.storage
+        val storageRef = storage.reference
+        val imagesRef = storageRef.child(path)
+        lateinit var outstatus: String
+
+        try {
+
+                // Turn bitmap into stream
+                val stream = ByteArrayOutputStream()
+                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
+                val imageView = stream.toByteArray()
+
+                imagesRef.putBytes(imageView).await()
+                outstatus = "OK"
+
+
+            return outstatus
+        } catch (e: Exception) {
+            outstatus = "Catch"
+            return outstatus
+            Log.d("myUploadStorageImage", "Raised Exception")
+
+        }
     }
 
 }
