@@ -1,23 +1,25 @@
 package com.utn.firstapp
 
+import android.net.Uri
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.AuthResult
-import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.StorageReference
+import com.google.firebase.storage.ktx.storage
 import com.utn.firstapp.entities.State
 import com.utn.firstapp.entities.User
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
+import java.io.File
 import javax.inject.Inject
-import kotlin.system.exitProcess
 
 @HiltViewModel
 class UserDetailViewModel @Inject constructor(
@@ -25,6 +27,8 @@ class UserDetailViewModel @Inject constructor(
 ) : ViewModel() {
 
     val state = SingleLiveEvent<State>()
+    var profilePic = SingleLiveEvent<ByteArray?>()
+
     private val _user = MutableLiveData<User>()
     val user: LiveData<User>
         get() = _user
@@ -34,7 +38,6 @@ class UserDetailViewModel @Inject constructor(
         return preferencesManager.getCurrentUser()
         state.postValue(State.SUCCESS)
     }
-
 
 
     fun myUpdatePassFirebaseUser(
@@ -47,7 +50,7 @@ class UserDetailViewModel @Inject constructor(
         state.setValue(State.LOADING)
         if (newPassword != PasswordCheck) {
             state.postValue(State.PASSNOTEQUAL)
-           return
+            return
         }
         if (newPassword.length < 6) {
             state.postValue(State.PASSLENGTH)
@@ -81,10 +84,79 @@ class UserDetailViewModel @Inject constructor(
                 Log.d("UpdatePassFirebaseUser", "Error updating password:")
                 return null
             }
+        } catch (e: Exception) {
+            Log.d("UpdatePassFirebaseUser", "CATCH - Error updating password:")
+            return null
         }
-        catch(e: Exception)
-        { Log.d("UpdatePassFirebaseUser", "CATCH - Error updating password:")
-            return null}
+    }
+
+
+
+    fun myUploadProfilePicture() {
+
+        viewModelScope.launch(Dispatchers.IO)
+        {
+            val picture = UploadFile()
+
+
+
+        }
+
+    }
+
+    suspend fun UploadFile() {
+        val currentUser = preferencesManager.getCurrentUser()
+        val storage = Firebase.storage
+
+        var storageRef = storage.reference
+        val path = "users/profPictures" + (currentUser?.id ?: 0)
+
+            var imageRef: StorageReference? = storageRef.child(path)
+
+            var file = Uri.fromFile(File("path/to/images/rivers.jpg"))
+            val riversRef = storageRef.child("images/${file.lastPathSegment}")
+            try {
+                val taskSnap = riversRef.putFile(file).await()
+            } catch (e: java.lang.Exception) {
+                Log.d("Storage", "UploadFile raise exception")
+            }
+
+    }
+
+    fun myGetUserProfilePicCor()
+    {
+        val currentUser = preferencesManager.getCurrentUser()
+        viewModelScope.launch(Dispatchers.IO)
+        {
+            val profilePicture = getProfilePic()
+            profilePic.postValue(profilePicture)
+
+
+
+        }
+    }
+
+    suspend fun getProfilePic() : ByteArray? {
+
+        try {
+            val storage = Firebase.storage
+            var storageRef = storage.reference
+            val currentUser = preferencesManager.getCurrentUser()
+            val path = "users/profPictures/" + (currentUser?.id ?: 0) + "/profilepic.png"
+            Log.d("Storage", "$path")
+            var islandRef = storageRef.child(path)
+
+            val ONE_MEGABYTE: Long = 1024 * 1024
+            val pic = islandRef.getBytes(ONE_MEGABYTE).await()
+            return pic
+        }
+        catch(e:Exception)
+        {
+            val pic : ByteArray? = null
+            return pic
+        }
+
+
     }
 
 }

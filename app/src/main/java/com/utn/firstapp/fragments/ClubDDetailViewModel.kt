@@ -8,6 +8,8 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.StorageReference
+import com.google.firebase.storage.ktx.storage
 import com.utn.firstapp.SingleLiveEvent
 import com.utn.firstapp.entities.Club
 import com.utn.firstapp.entities.ClubRepository
@@ -108,5 +110,7 @@ class ClubDDetailViewModel : ViewModel() {
             null
         }
     }
+
+
 }
 

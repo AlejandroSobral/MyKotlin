@@ -6,11 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.ProgressBar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.bumptech.glide.Glide
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.StorageReference
+import com.google.firebase.storage.ktx.storage
 import com.utn.firstapp.entities.State
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -25,6 +30,7 @@ class UserDdetailFragment() : Fragment() {
     lateinit var txtPasswordCheck: TextInputLayout
     lateinit var loadingPb: ProgressBar
     lateinit var updatebtn: Button
+    lateinit var profilePic: ImageView
 
 
     override fun onCreateView(
@@ -38,6 +44,9 @@ class UserDdetailFragment() : Fragment() {
         txtPasswordCheck = v.findViewById(R.id.edtUserDetailTextPassCheck)
         updatebtn = v.findViewById(R.id.btnUpdateUser)
         loadingPb = v.findViewById(R.id.loadingUserDetailprogressBar)
+        profilePic = v.findViewById(R.id.profilePic)
+
+
 
         viewModel.state.observe(viewLifecycleOwner) { state ->
             when (state) {
@@ -46,7 +55,7 @@ class UserDdetailFragment() : Fragment() {
                     txtUserOldPass.visibility = View.VISIBLE
                     txtPassword.visibility = View.VISIBLE
                     txtPasswordCheck.visibility = View.VISIBLE
-                    loadingPb.visibility = View.INVISIBLE
+                    profilePic.visibility = View.VISIBLE
                     txtPassword.editText?.setText("")
                     txtPasswordCheck.editText?.setText("")
                     txtUserOldPass.editText?.setText("")
@@ -57,6 +66,7 @@ class UserDdetailFragment() : Fragment() {
                     txtPassword.visibility = View.VISIBLE
                     txtPasswordCheck.visibility = View.VISIBLE
                     loadingPb.visibility = View.INVISIBLE
+                    profilePic.visibility = View.VISIBLE
                     txtPassword.editText?.setText("")
                     txtPasswordCheck.editText?.setText("")
                     txtUserOldPass.editText?.setText("")
@@ -67,6 +77,7 @@ class UserDdetailFragment() : Fragment() {
                     txtPassword.visibility = View.INVISIBLE
                     txtPasswordCheck.visibility = View.INVISIBLE
                     txtUserOldPass.visibility = View.INVISIBLE
+                    profilePic.visibility = View.INVISIBLE
 
                 }
 
@@ -79,6 +90,7 @@ class UserDdetailFragment() : Fragment() {
                     txtPassword.visibility = View.VISIBLE
                     txtPasswordCheck.visibility = View.VISIBLE
                     loadingPb.visibility = View.INVISIBLE
+                    profilePic.visibility = View.VISIBLE
                 }
 
                 State.PASSNOTEQUAL ->
@@ -89,11 +101,34 @@ class UserDdetailFragment() : Fragment() {
                     txtUserOldPass.visibility = View.VISIBLE
                     txtPassword.visibility = View.VISIBLE
                     txtPasswordCheck.visibility = View.VISIBLE
+                    profilePic.visibility = View.VISIBLE
                     loadingPb.visibility = View.INVISIBLE
+
                 }
                 null -> {
                 }
                 else -> {}
+            }
+        }
+
+        viewModel.profilePic.observe(viewLifecycleOwner){ getprofilePic ->
+
+
+            loadingPb.visibility = View.INVISIBLE
+            txtUserOldPass.visibility = View.VISIBLE
+            txtPassword.visibility = View.VISIBLE
+            txtPasswordCheck.visibility = View.VISIBLE
+
+            if(getprofilePic!=null) {
+                profilePic.visibility = View.VISIBLE
+                Glide.with(v).load(getprofilePic).into(profilePic)
+            }
+            if(getprofilePic==null) {
+                profilePic.visibility = View.VISIBLE
+                val drawable = resources.getDrawable(R.drawable.user)
+
+                Glide.with(v).load(drawable).into(profilePic)
+
             }
         }
         return v
@@ -116,12 +151,10 @@ class UserDdetailFragment() : Fragment() {
         txtPasswordCheck.editText?.text = txtPasswordCheck.editText?.text
 
         val getUser = viewModel.getUser()
+        viewModel.myGetUserProfilePicCor()
 
-
-        txtUserOldPass.visibility = View.VISIBLE
-        txtPassword.visibility = View.VISIBLE
-        txtPasswordCheck.visibility = View.VISIBLE
-        loadingPb.visibility = View.GONE
+        profilePic.visibility = View.INVISIBLE
+        loadingPb.visibility = View.VISIBLE
 
 
         updatebtn.setOnClickListener {
@@ -137,6 +170,8 @@ class UserDdetailFragment() : Fragment() {
 
             }
         }
+
+
 
 /*        updatebtn.setOnClickListener {
 //

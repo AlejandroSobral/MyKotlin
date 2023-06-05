@@ -22,6 +22,8 @@ class User (id:String, email: String, password: String, lastposition: String = "
     @ColumnInfo(name = "lastposition")
     var lastposition: String
 
+
+
     init {
         this.id = id
         this.email = email
