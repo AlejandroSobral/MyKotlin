@@ -1,7 +1,5 @@
 package com.utn.firstapp.fragments
 
-import android.content.Context
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,13 +12,8 @@ import android.widget.TextView
 import androidx.fragment.app.viewModels
 import com.google.android.material.snackbar.Snackbar
 import com.utn.firstapp.R
-import com.utn.firstapp.UserDetailViewModel
-import com.utn.firstapp.database.AppDatabase
-import com.utn.firstapp.database.ClubDao
-import com.utn.firstapp.database.UserDao
 import com.utn.firstapp.entities.Club
 import com.utn.firstapp.entities.State
-import com.utn.firstapp.entities.User
 
 class EditClubDetail : Fragment() {
 

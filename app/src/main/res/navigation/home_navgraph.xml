@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/userDdetailFragment2"
-        android:name="com.utn.firstapp.UserDdetailFragment"
+        android:name="com.utn.firstapp.fragments.UserDdetailFragment"
         android:label="fragment_user_ddetail"
         tools:layout="@layout/fragment_user_ddetail" />
     <fragment

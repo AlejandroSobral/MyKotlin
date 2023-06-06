@@ -1,9 +1,14 @@
-package com.utn.firstapp
+package com.utn.firstapp.fragments
 
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.Canvas
 import android.graphics.Matrix
 import android.net.Uri
+import android.os.Handler
 import android.util.Log
+import android.view.View
+import android.widget.ImageView
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -14,6 +19,8 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.ktx.storage
+import com.utn.firstapp.PreferencesManager
+import com.utn.firstapp.SingleLiveEvent
 import com.utn.firstapp.entities.State
 import com.utn.firstapp.entities.User
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -32,6 +39,7 @@ class UserDetailViewModel @Inject constructor(
     val state = SingleLiveEvent<State>()
     val profilePicstate = SingleLiveEvent<State>()
     var profilePic = SingleLiveEvent<ByteArray?>()
+    var ViewProfilePicture = SingleLiveEvent<ByteArray?>()
 
     private val _user = MutableLiveData<User>()
     val user: LiveData<User>
@@ -127,6 +135,18 @@ class UserDetailViewModel @Inject constructor(
 
     }
 
+
+    fun myViewProfilePicCor()
+    {
+        viewModelScope.launch(Dispatchers.IO)
+        {
+            val profilePicture = getProfilePic()
+            ViewProfilePicture.postValue(profilePicture)
+
+        }
+
+    }
+
     fun myGetUserProfilePicCor()
     {
         profilePicstate.postValue(State.LOADING)
@@ -135,8 +155,6 @@ class UserDetailViewModel @Inject constructor(
             val profilePicture = getProfilePic()
             profilePic.postValue(profilePicture)
             profilePicstate.postValue(State.SUCCESS)
-
-
 
         }
     }
@@ -245,6 +263,33 @@ class UserDetailViewModel @Inject constructor(
         )
     }
 
+    fun imageView2Bitmap(imgview: ImageView): Bitmap {
+
+        // Get the size of the ImageView.
+        val width = imgview.width
+        val height = imgview.height
+
+        // Create a new Bitmap with the same size as the ImageView.
+        val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+
+        // Create a Canvas and draw the ImageView onto the Canvas.
+        val canvas = Canvas(bitmap)
+        imgview.draw(canvas)
+
+        // Return the Bitmap.
+        return bitmap
+
+
+    }
+
+    fun byteArrayToBitmap(byteArray: ByteArray): Bitmap {
+
+        // Create a new Bitmap from the ByteArray.
+        val bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
+
+        // Return the Bitmap.
+        return bitmap
+    }
 
 
 }

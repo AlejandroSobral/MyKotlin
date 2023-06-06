@@ -107,6 +107,9 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:32.0.0')
     implementation 'com.google.firebase:firebase-storage-ktx'
 
+    //Round image
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
 
 }
 

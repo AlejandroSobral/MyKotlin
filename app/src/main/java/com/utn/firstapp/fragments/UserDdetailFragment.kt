@@ -1,11 +1,10 @@
-package com.utn.firstapp
+package com.utn.firstapp.fragments
 
-import android.app.Activity
 import android.app.Activity.RESULT_OK
 import android.content.Intent
 import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import android.os.Bundle
+import android.os.Handler
 import android.provider.MediaStore
 import android.text.method.PasswordTransformationMethod
 import android.view.LayoutInflater
@@ -13,16 +12,15 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.ProgressBar
-import androidx.core.app.ActivityCompat
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.storage.StorageReference
-import com.google.firebase.storage.ktx.storage
+import com.utn.firstapp.R
 import com.utn.firstapp.entities.State
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -32,15 +30,16 @@ class UserDdetailFragment() : Fragment() {
 
     private val viewModel: UserDetailViewModel by viewModels()
     lateinit var v: View
+    lateinit var mainText : TextView
     lateinit var txtUserOldPass: TextInputLayout
     lateinit var txtPassword: TextInputLayout
     lateinit var txtPasswordCheck: TextInputLayout
     lateinit var loadingPb: ProgressBar
     lateinit var updatebtn: Button
     lateinit var updateProfPicebtn: Button
+    lateinit var viewProfPicbtn : Button
     lateinit var profilePic: ImageView
-
-
+    lateinit var viewProfPic : ImageView
 
 
     override fun onCreateView(
@@ -57,12 +56,55 @@ class UserDdetailFragment() : Fragment() {
         loadingPb = v.findViewById(R.id.loadingUserDetailprogressBar)
         profilePic = v.findViewById(R.id.profilePic)
         updateProfPicebtn = v.findViewById(R.id.btnUpdateProPic)
+        viewProfPicbtn = v.findViewById(R.id.btnViewProPic)
+        viewProfPic = v.findViewById(R.id.ViewProfilePicImg)
+        mainText = v.findViewById(R.id.txtUserDetailText)
 
         txtUserOldPass.visibility = View.VISIBLE
         txtPassword.visibility = View.VISIBLE
         txtPasswordCheck.visibility = View.VISIBLE
 
+        viewModel.ViewProfilePicture.observe(viewLifecycleOwner){ ViewPicture ->
 
+            if (ViewPicture != null) {
+
+                viewProfPic.visibility = View.VISIBLE
+                viewProfPicbtn.visibility = View.INVISIBLE
+                updateProfPicebtn.visibility = View.INVISIBLE
+                txtPassword.visibility = View.INVISIBLE
+                txtUserOldPass.visibility = View.INVISIBLE
+                txtPasswordCheck.visibility = View.INVISIBLE
+                updatebtn.visibility = View.INVISIBLE
+                mainText.visibility = View.INVISIBLE
+
+                Glide.with(v).load(ViewPicture).into(viewProfPic)
+
+
+                val handler = Handler()
+                handler.postDelayed({
+                    viewProfPic.visibility = View.INVISIBLE
+                    viewProfPicbtn.visibility = View.VISIBLE
+                    updateProfPicebtn.visibility = View.VISIBLE
+                    txtPassword.visibility = View.VISIBLE
+                    txtUserOldPass.visibility = View.VISIBLE
+                    txtPasswordCheck.visibility = View.VISIBLE
+                    updatebtn.visibility = View.VISIBLE
+                    mainText.visibility = View.VISIBLE
+                }, 1500)
+
+
+
+
+
+            }
+            if (ViewPicture == null) {
+                viewProfPic.visibility = View.GONE
+                //val drawable = resources.getDrawable(R.drawable.user)
+                //Glide.with(v).load(drawable).into(viewProfPic)
+            }
+
+
+        }
 
         viewModel.state.observe(viewLifecycleOwner) { state ->
             when (state) {
@@ -220,25 +262,30 @@ class UserDdetailFragment() : Fragment() {
             takePicture(v)
         }
 
+        viewProfPicbtn.setOnClickListener {
 
+            viewModel.myViewProfilePicCor()
+
+        }
     }
 
-    private val CAMERA_REQUEST = 1
+
 
     fun takePicture(view: View) {
 
+        val camReq = 1
         // Create an intent to start the camera.
         val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
 
         // Start the camera activity.
-        startActivityForResult(intent, CAMERA_REQUEST)
+        startActivityForResult(intent, camReq)
     }
 
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-
-        if (requestCode == CAMERA_REQUEST && resultCode == RESULT_OK) {
+        val camReq = 1
+        if (requestCode == camReq && resultCode == RESULT_OK) {
 
             // Get the image from the camera.
             val imageBitmap = data?.extras?.get("data") as Bitmap?
