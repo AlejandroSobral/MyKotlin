@@ -9,9 +9,9 @@
 
     <ImageView
         android:id="@+id/imgBackground"
-        android:layout_width="match_parent"
+        android:layout_width="360dp"
         android:layout_height="match_parent"
-        android:background="@drawable/fifa_background" />
+        android:background="@drawable/fifa_background_entire" />
 
     <TextView
         android:id="@+id/hntNationalFlagURL"

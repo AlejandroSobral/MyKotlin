@@ -65,7 +65,7 @@ class HomeFragment : Fragment() {
         //btnNavigate = v.findViewById(R.id.btnNav1)
         recClubs = v.findViewById(R.id.RecyView_Clubs)
         imgHomeLogo = v.findViewById(R.id.imgHomeLogo)
-        btnLogOut = v.findViewById(R.id.btnLogOut)
+
         btnAddClub = v.findViewById(R.id.btnAddClub)
         loadingPb = v.findViewById(R.id.homeLoadingProgressBar)
 
@@ -143,40 +143,7 @@ override fun onStart() {
     viewModel.mygetClubsFromDBCor()
 
 
-    btnLogOut.setOnClickListener {
-        val context = requireContext()
-        val builder = AlertDialog.Builder(context)
 
-        var currentUser = viewModel.getUserfromPref()
-        if (currentUser != null) { // When logging out, position returns to zero.
-            currentUser.lastposition = "0"
-            viewModel.updateUserPref(currentUser)
-        }
-
-        // set the message and title of the dialog
-        builder.setMessage("Are you sure you want to log out?")
-            .setTitle("Logout")
-        // add buttons to the dialog
-        builder.setPositiveButton("Accept",
-            DialogInterface.OnClickListener { dialog, id ->
-                // user clicked Accept button
-                // do your logout logic here
-                val intent = Intent(activity, MainActivity::class.java)
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
-                intent.putExtra("fragmentId", R.id.LoginFragment)
-                startActivity(intent)
-
-            })
-        builder.setNegativeButton("Cancel",
-            DialogInterface.OnClickListener { dialog, id ->
-                // user cancelled the dialog
-                dialog.dismiss()
-            })
-
-        // create and show the dialog
-        val dialog = builder.create()
-        dialog.show()
-    }
     btnAddClub.setOnClickListener {
         val action = HomeFragmentDirections.actionHomeFragmentToAddClub(clubRepository)
         findNavController().navigate(action)

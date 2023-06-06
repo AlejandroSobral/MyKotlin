@@ -11,7 +11,7 @@
         android:id="@+id/imgBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/fifa_background"
+        android:background="@drawable/fifa_background_entire"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,6 +74,7 @@
         android:hint="Password"
         app:boxStrokeColor="@color/black"
         app:boxStrokeErrorColor="@color/black"
+        app:boxStrokeWidth="2dp"
         app:counterEnabled="true"
         app:counterMaxLength="20"
         app:counterTextColor="@color/black"
@@ -92,7 +93,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLength="20"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textColorHint="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -103,6 +105,7 @@
         android:hint="Email"
         app:boxStrokeColor="@color/black"
         app:boxStrokeErrorColor="@color/black"
+        app:boxStrokeWidth="2dp"
         app:counterEnabled="true"
         app:counterMaxLength="20"
         app:counterTextColor="@color/black"
@@ -121,7 +124,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLength="20"
-            android:textColor="@color/black" />
+            android:textColor="@color/black"
+            android:textColorHint="#000000" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <ProgressBar

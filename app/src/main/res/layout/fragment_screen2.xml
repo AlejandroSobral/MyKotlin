@@ -9,9 +9,13 @@
 
     <ImageView
         android:id="@+id/imgBackground"
-        android:layout_width="match_parent"
+        android:layout_width="360dp"
         android:layout_height="match_parent"
-        android:background="@drawable/fifa_background" />
+        android:background="@drawable/fifa_background_entire"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imgHomeLogo"
@@ -41,29 +45,16 @@
         android:id="@+id/btnAddClub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
         android:text="ADD CLUB"
         android:textSize="16sp"
         app:cornerRadius="180dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/RecyView_Clubs"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Button
-        android:id="@+id/btnLogOut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="52dp"
-        android:text="LOG OUT"
-        android:textSize="16sp"
-        app:cornerRadius="180dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.96"
-        app:layout_constraintStart_toEndOf="@+id/btnAddClub"
-        app:layout_constraintTop_toTopOf="@+id/RecyView_Clubs"
-        app:layout_constraintVertical_bias="1.0" />
+
 
     <ProgressBar
         android:id="@+id/homeLoadingProgressBar"

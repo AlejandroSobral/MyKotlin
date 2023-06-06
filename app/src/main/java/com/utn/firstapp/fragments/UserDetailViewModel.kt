@@ -51,6 +51,12 @@ class UserDetailViewModel @Inject constructor(
         state.postValue(State.SUCCESS)
     }
 
+    fun updateUserPref(user: User) {
+        preferencesManager.saveCurrentUser(user)
+        //state.postValue(State.SUCCESS)
+    }
+
+
 
     fun myUpdatePassFirebaseUser(
         user: String,

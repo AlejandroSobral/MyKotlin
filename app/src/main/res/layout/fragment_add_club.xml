@@ -9,11 +9,13 @@
 
     <ImageView
         android:id="@+id/imgBackground"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:background="@drawable/fifa_background"
+        android:layout_width="360dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/fifa_background_entire"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp"
         tools:visibility="visible" />
 
     <TextView
