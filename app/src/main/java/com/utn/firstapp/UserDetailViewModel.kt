@@ -176,7 +176,10 @@ class UserDetailViewModel @Inject constructor(
             val result = myUploadStorageImage(bitmap, path)
             if (result == "OK") {
                 profilePicstate.postValue(State.SUCCESS)
-                profilePic.postValue(bitmapToByteArray(bitmap))
+                val rotate = rotateImage(bitmap, -90)
+                val partial = rotate?.let { bitmapToByteArray(it) }
+
+                profilePic.postValue(partial)
             }
             else
             {
