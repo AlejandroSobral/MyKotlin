@@ -1,7 +1,12 @@
 package com.utn.firstapp
 
+import android.app.Activity
+import android.app.Activity.RESULT_OK
+import android.content.Intent
+import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
+import android.provider.MediaStore
 import android.text.method.PasswordTransformationMethod
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +14,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.ProgressBar
+import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
@@ -31,14 +37,17 @@ class UserDdetailFragment() : Fragment() {
     lateinit var txtPasswordCheck: TextInputLayout
     lateinit var loadingPb: ProgressBar
     lateinit var updatebtn: Button
-    lateinit var updateProfPicebtn : Button
+    lateinit var updateProfPicebtn: Button
     lateinit var profilePic: ImageView
+
+
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         v = inflater.inflate(R.layout.fragment_user_ddetail, container, false)
+
 
 
         txtUserOldPass = v.findViewById(R.id.edtUserDetailOldPass)
@@ -58,7 +67,8 @@ class UserDdetailFragment() : Fragment() {
         viewModel.state.observe(viewLifecycleOwner) { state ->
             when (state) {
                 State.SUCCESS -> {
-                    Snackbar.make(v, "User has been updated properly.", Snackbar.LENGTH_SHORT).show()
+                    Snackbar.make(v, "User has been updated properly.", Snackbar.LENGTH_SHORT)
+                        .show()
                     txtUserOldPass.visibility = View.VISIBLE
                     txtPassword.visibility = View.VISIBLE
                     txtPasswordCheck.visibility = View.VISIBLE
@@ -66,6 +76,7 @@ class UserDdetailFragment() : Fragment() {
                     txtPasswordCheck.editText?.setText("")
                     txtUserOldPass.editText?.setText("")
                 }
+
                 State.FAILURE -> {
                     Snackbar.make(v, "User update has failed", Snackbar.LENGTH_SHORT).show()
                     txtUserOldPass.visibility = View.VISIBLE
@@ -76,6 +87,7 @@ class UserDdetailFragment() : Fragment() {
                     txtPasswordCheck.editText?.setText("")
                     txtUserOldPass.editText?.setText("")
                 }
+
                 State.LOADING -> {
                     //Snackbar.make(v, "Loading", Snackbar.LENGTH_SHORT).show()
                     loadingPb.visibility = View.VISIBLE
@@ -85,9 +97,12 @@ class UserDdetailFragment() : Fragment() {
 
                 }
 
-                State.PASSLENGTH ->
-                {
-                    Snackbar.make(v, "Password requires 6 characters at least", Snackbar.LENGTH_SHORT).show()
+                State.PASSLENGTH -> {
+                    Snackbar.make(
+                        v,
+                        "Password requires 6 characters at least",
+                        Snackbar.LENGTH_SHORT
+                    ).show()
                     txtPassword.editText?.setText("")
                     txtPasswordCheck.editText?.setText("")
                     txtUserOldPass.visibility = View.VISIBLE
@@ -96,8 +111,7 @@ class UserDdetailFragment() : Fragment() {
                     loadingPb.visibility = View.INVISIBLE
                 }
 
-                State.PASSNOTEQUAL ->
-                {
+                State.PASSNOTEQUAL -> {
                     Snackbar.make(v, "Password does not match", Snackbar.LENGTH_SHORT).show()
                     txtPassword.editText?.setText("")
                     txtPasswordCheck.editText?.setText("")
@@ -107,13 +121,15 @@ class UserDdetailFragment() : Fragment() {
                     loadingPb.visibility = View.INVISIBLE
 
                 }
+
                 null -> {
                 }
+
                 else -> {}
             }
         }
 
-        viewModel.profilePic.observe(viewLifecycleOwner){ getprofilePic ->
+        viewModel.profilePic.observe(viewLifecycleOwner) { getprofilePic ->
 
             if (getprofilePic != null) {
                 profilePic.visibility = View.VISIBLE
@@ -141,6 +157,7 @@ class UserDdetailFragment() : Fragment() {
 
 
                 }
+
                 State.LOADING -> {
                     loadingPb.visibility = View.VISIBLE
                     profilePic.visibility = View.INVISIBLE
@@ -150,15 +167,18 @@ class UserDdetailFragment() : Fragment() {
                     txtPasswordCheck.visibility = View.INVISIBLE
 
                 }
+
                 State.FAILURE -> {
                     loadingPb.visibility = View.INVISIBLE
                     profilePic.visibility = View.VISIBLE
                     txtUserOldPass.visibility = View.VISIBLE
                     txtPassword.visibility = View.VISIBLE
                     txtPasswordCheck.visibility = View.VISIBLE
-                    Snackbar.make(v, "Profile picture could not be reached", Snackbar.LENGTH_SHORT).show()
+                    Snackbar.make(v, "Profile picture could not be reached", Snackbar.LENGTH_SHORT)
+                        .show()
 
                 }
+
                 else -> {}
             }
         }
@@ -187,24 +207,48 @@ class UserDdetailFragment() : Fragment() {
 
         updatebtn.setOnClickListener {
 
-                viewModel.myUpdatePassFirebaseUser(getUser!!.email,
-                    txtUserOldPass.editText?.text.toString(),
-                    txtPassword.editText?.text.toString(),
-                    txtPasswordCheck.editText?.text.toString()
-                )
-
-            }
-
-        updateProfPicebtn.setOnClickListener{
-            val bitmap = BitmapFactory.decodeResource(resources, R.drawable.fifa_logo)
-            viewModel.uploadStorageImage(bitmap)
+            viewModel.myUpdatePassFirebaseUser(
+                getUser!!.email,
+                txtUserOldPass.editText?.text.toString(),
+                txtPassword.editText?.text.toString(),
+                txtPasswordCheck.editText?.text.toString()
+            )
 
         }
 
-
-            }
+        updateProfPicebtn.setOnClickListener {
+            takePicture(v)
         }
 
+
+    }
+
+    private val CAMERA_REQUEST = 1
+
+    fun takePicture(view: View) {
+
+        // Create an intent to start the camera.
+        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+
+        // Start the camera activity.
+        startActivityForResult(intent, CAMERA_REQUEST)
+    }
+
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == CAMERA_REQUEST && resultCode == RESULT_OK) {
+
+            // Get the image from the camera.
+            val imageBitmap = data?.extras?.get("data") as Bitmap?
+            if (imageBitmap != null) {
+                viewModel.uploadStorageImage(imageBitmap)
+            }
+        }
+    }
+
+}
 
 
 /*        updatebtn.setOnClickListener {

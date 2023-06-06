@@ -1,6 +1,7 @@
 package com.utn.firstapp
 
 import android.graphics.Bitmap
+import android.graphics.Matrix
 import android.net.Uri
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -203,7 +204,9 @@ class UserDetailViewModel @Inject constructor(
         // Return the byte array.
         return byteArray
     }
-    private suspend fun myUploadStorageImage(bitmap: Bitmap, path:String):String
+
+
+    private suspend fun myUploadStorageImage(inBitmap: Bitmap, path:String):String
     {
         val storage = Firebase.storage
         val storageRef = storage.reference
@@ -212,13 +215,13 @@ class UserDetailViewModel @Inject constructor(
 
         try {
 
-                // Turn bitmap into stream
-                val stream = ByteArrayOutputStream()
-                bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
-                val imageView = stream.toByteArray()
+            // Turn bitmap into stream
+            val stream = ByteArrayOutputStream()
+            rotateImage(inBitmap, -90)?.compress(Bitmap.CompressFormat.JPEG, 100, stream)
+            val imageView = stream.toByteArray()
 
-                imagesRef.putBytes(imageView).await()
-                outstatus = "OK"
+            imagesRef.putBytes(imageView).await()
+            outstatus = "OK"
 
 
             return outstatus
@@ -229,5 +232,16 @@ class UserDetailViewModel @Inject constructor(
 
         }
     }
+
+    fun rotateImage(source: Bitmap, angle: Int): Bitmap? {
+        val matrix = Matrix()
+        matrix.postRotate(angle.toFloat())
+        return Bitmap.createBitmap(
+            source, 0, 0, source.width, source.height,
+            matrix, true
+        )
+    }
+
+
 
 }

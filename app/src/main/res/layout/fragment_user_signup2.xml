@@ -135,8 +135,8 @@
     <ProgressBar
         android:id="@+id/signUpProgressBar"
         style="?android:attr/progressBarStyle"
-        android:layout_width="301dp"
-        android:layout_height="278dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/btnSgnUpAddUser"
         app:layout_constraintEnd_toEndOf="parent"
