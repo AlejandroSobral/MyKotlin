@@ -60,6 +60,40 @@ class EditClubDetail : Fragment() {
         htnNatFlag = v.findViewById(R.id.hntNationalFlagURL)
 
 
+        viewModel.getTeam.observe(viewLifecycleOwner) { getClub ->
+
+            if (getClub != null) {
+                txtName.setText(getClub.name)
+                txtFounded.setText(getClub.founded)
+                txtCountry.setText(getClub.country)
+                txtLeague.setText(getClub.league)
+                txtNick.setText(getClub.nickname)
+                txtURL.setText(getClub.imageurl)
+                txtNatFlag.setText(getClub.countryflag)
+            }
+
+
+            //Hints
+            htnName.visibility = View.VISIBLE
+            htnFounDate.visibility = View.VISIBLE
+            htnLeague.visibility = View.VISIBLE
+            htnCountry.visibility = View.VISIBLE
+            htnNick.visibility = View.VISIBLE
+            htnImgURL.visibility = View.VISIBLE
+            htnNatFlag.visibility = View.VISIBLE
+            //Texts
+            txtName.visibility = View.VISIBLE
+            txtFounded.visibility = View.VISIBLE
+            txtCountry.visibility = View.VISIBLE
+            txtLeague.visibility = View.VISIBLE
+            txtNick.visibility = View.VISIBLE
+            txtURL.visibility = View.VISIBLE
+            txtNatFlag.visibility = View.VISIBLE
+            //ProgressBar
+            loadingPb.visibility = View.GONE
+
+        }
+
         viewModel.state.observe(viewLifecycleOwner) { state ->
             when (state) {
                 State.SUCCESS -> {
@@ -144,37 +178,9 @@ class EditClubDetail : Fragment() {
 
         var clubID = EditClubDetailArgs.fromBundle(requireArguments()).clubID
 
-        viewModel.getClubFromID(clubID)
-        viewModel.team.observe(viewLifecycleOwner) { getClub ->
+        //viewModel.getClubFromID(clubID)
+        viewModel.myGetClubFromID(clubID)
 
-            txtName.setText(getClub.name)
-            txtFounded.setText(getClub.founded)
-            txtCountry.setText(getClub.country)
-            txtLeague.setText(getClub.league)
-            txtNick.setText(getClub.nickname)
-            txtURL.setText(getClub.imageurl)
-            txtNatFlag.setText(getClub.countryflag)
-
-            //Hints
-            htnName.visibility = View.VISIBLE
-            htnFounDate.visibility = View.VISIBLE
-            htnLeague.visibility = View.VISIBLE
-            htnCountry.visibility = View.VISIBLE
-            htnNick.visibility = View.VISIBLE
-            htnImgURL.visibility = View.VISIBLE
-            htnNatFlag.visibility = View.VISIBLE
-            //Texts
-            txtName.visibility = View.VISIBLE
-            txtFounded.visibility = View.VISIBLE
-            txtCountry.visibility = View.VISIBLE
-            txtLeague.visibility = View.VISIBLE
-            txtNick.visibility = View.VISIBLE
-            txtURL.visibility = View.VISIBLE
-            txtNatFlag.visibility = View.VISIBLE
-            //ProgressBar
-            loadingPb.visibility = View.GONE
-
-        }
 
         btnUpdate.setOnClickListener {
 

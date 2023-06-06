@@ -110,8 +110,6 @@ class UserDetailViewModel @Inject constructor(
         {
             val picture = UploadFile()
 
-
-
         }
 
     }
@@ -179,16 +177,13 @@ class UserDetailViewModel @Inject constructor(
             return pic
         }
 
-
     }
 
     fun uploadStorageImage(bitmap: Bitmap){
         profilePicstate.postValue(State.LOADING)
 
-
         val currentUser = preferencesManager.getCurrentUser()
         val path = "users/profPictures/" + (currentUser?.id ?: 0) + "/profilepic.png"
-
 
         viewModelScope.launch(Dispatchers.IO) {
             val result = myUploadStorageImage(bitmap, path)
@@ -226,7 +221,6 @@ class UserDetailViewModel @Inject constructor(
         return byteArray
     }
 
-
     private suspend fun myUploadStorageImage(inBitmap: Bitmap, path:String):String
     {
         val storage = Firebase.storage
@@ -263,33 +257,9 @@ class UserDetailViewModel @Inject constructor(
         )
     }
 
-    fun imageView2Bitmap(imgview: ImageView): Bitmap {
-
-        // Get the size of the ImageView.
-        val width = imgview.width
-        val height = imgview.height
-
-        // Create a new Bitmap with the same size as the ImageView.
-        val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
-
-        // Create a Canvas and draw the ImageView onto the Canvas.
-        val canvas = Canvas(bitmap)
-        imgview.draw(canvas)
-
-        // Return the Bitmap.
-        return bitmap
 
 
-    }
 
-    fun byteArrayToBitmap(byteArray: ByteArray): Bitmap {
-
-        // Create a new Bitmap from the ByteArray.
-        val bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
-
-        // Return the Bitmap.
-        return bitmap
-    }
 
 
 }

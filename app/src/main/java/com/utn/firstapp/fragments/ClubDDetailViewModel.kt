@@ -67,21 +67,7 @@ class ClubDDetailViewModel : ViewModel() {
             }
     }
 
-    fun deleteClubFromID (clubID: String) {
-        val dbInt = Firebase.firestore
-        state.postValue(State.LOADING)
-        dbInt.collection("teams").document(clubID)
-            .delete()
-            .addOnSuccessListener {
-                Log.d("TestDB", "Club has been deleted.")
-                state.postValue(State.SUCCESS)
-                    }
 
-            .addOnFailureListener { exception ->
-                Log.d("TestDB", "Club deleting has failed: ", exception)
-
-            }
-    }
 
     fun myDeleteClubCor(clubID: String) {
         state.postValue(State.LOADING)
