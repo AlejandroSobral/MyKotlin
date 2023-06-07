@@ -13,7 +13,10 @@
         android:layout_width="360dp"
         android:layout_height="match_parent"
         android:background="@drawable/fifa_background_entire"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
