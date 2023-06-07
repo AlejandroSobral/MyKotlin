@@ -55,7 +55,7 @@ class UserSignupViewModel @Inject constructor(
                     result = insertUserAuthCor(email, password)
                     if (result != null) { //Save user into the Shared Preference
                         val auxUser = User(result!!.uid, result!!.email.toString(), "",  "0")
-                        //preferencesManager.saveCurrentUser(auxUser)
+                        preferencesManager.saveCurrentUser(auxUser)
                         state.postValue(State.SUCCESS)
                     }
                 } else {
