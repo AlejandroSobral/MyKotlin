@@ -15,7 +15,9 @@
             app:argType="string" />
         <action
             android:id="@+id/action_clubDDetail_to_editClubDetail"
-            app:destination="@id/editClubDetail" />
+            app:destination="@id/editClubDetail"
+            app:enterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_right" />
     </fragment>
     <fragment
         android:id="@+id/HomeFragment"
@@ -25,16 +27,21 @@
         <action
             android:id="@+id/action_HomeFragment_to_clubDDetail"
             app:destination="@id/clubDDetail"
+            app:enterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_right"
             app:popUpTo="@id/HomeFragment" />
         <action
             android:id="@+id/action_HomeFragment_to_addClub"
-            app:destination="@id/addClub" />
+            app:destination="@id/addClub"
+            app:enterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_left" />
     </fragment>
     <fragment
         android:id="@+id/userDdetailFragment2"
         android:name="com.utn.firstapp.fragments.UserDdetailFragment"
         android:label="fragment_user_ddetail"
-        tools:layout="@layout/fragment_user_ddetail" />
+        tools:layout="@layout/fragment_user_ddetail"
+        />
     <fragment
         android:id="@+id/addClub"
         android:name="com.utn.firstapp.fragments.AddClub"

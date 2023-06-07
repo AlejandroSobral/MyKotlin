@@ -12,10 +12,14 @@
         tools:layout="@layout/fragment_screen1">
         <action
             android:id="@+id/action_LoginFragment_to_userSignup2"
-            app:destination="@id/userSignup" />
+            app:destination="@id/userSignup"
+            app:enterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_right" />
         <action
             android:id="@+id/action_LoginFragment_to_recuPassFrgmt"
-            app:destination="@id/recuPassFrgmt" />
+            app:destination="@id/recuPassFrgmt"
+            app:enterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_left" />
     </fragment>
     <fragment
         android:id="@+id/userSignup"
