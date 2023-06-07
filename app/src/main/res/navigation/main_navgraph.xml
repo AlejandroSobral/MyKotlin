@@ -13,10 +13,18 @@
         <action
             android:id="@+id/action_LoginFragment_to_userSignup2"
             app:destination="@id/userSignup" />
+        <action
+            android:id="@+id/action_LoginFragment_to_recuPassFrgmt"
+            app:destination="@id/recuPassFrgmt" />
     </fragment>
     <fragment
         android:id="@+id/userSignup"
         android:name="com.utn.firstapp.fragments.UserSignup"
         android:label="fragment_user_signup2"
         tools:layout="@layout/fragment_user_signup2" />
+    <fragment
+        android:id="@+id/recuPassFrgmt"
+        android:name="com.utn.firstapp.fragments.RecuPassFrgmt"
+        android:label="fragment_recu_pass_frgmt"
+        tools:layout="@layout/fragment_recu_pass_frgmt" />
 </navigation>

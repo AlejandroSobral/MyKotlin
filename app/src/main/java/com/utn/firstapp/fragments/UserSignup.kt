@@ -2,6 +2,7 @@ package com.utn.firstapp.fragments
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.method.PasswordTransformationMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -44,7 +45,14 @@ class UserSignup : Fragment() {
         loadingPb = v.findViewById(R.id.signUpProgressBar)
 
 
+        //Password stars hidden
+        addUserPassword.editText?.transformationMethod =
+            PasswordTransformationMethod.getInstance()
+        addUserPassword.editText?.text = addUserPassword.editText?.text
 
+        addUserConfPasswd.editText?.transformationMethod =
+            PasswordTransformationMethod.getInstance()
+        addUserConfPasswd.editText?.text = addUserConfPasswd.editText?.text
 
         viewModel.state.observe(viewLifecycleOwner) { state ->
             when (state) {

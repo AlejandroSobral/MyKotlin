@@ -344,52 +344,6 @@ class UserDdetailFragment() : Fragment() {
 }
 
 
-/*        updatebtn.setOnClickListener {
-//
-//
-//            val context = requireContext()
-//            val builder = AlertDialog.Builder(context)
-//
-//            // set the message and title of the dialog
-//            builder.setMessage("Are you sure you want to update user information?")
-//                .setTitle("Logout")
-//
-//            // add buttons to the dialog
-//            builder.setPositiveButton("Accept",
-//                DialogInterface.OnClickListener { dialog, id ->
-//                    // user clicked Accept button
-//                    // do your logout logic here
-//                    if (idUser != null) {
-//                        val username = txtUserName.text.toString()
-//                        val lastname = txtUserlastname.text.toString()
-//                        val pass = txtPassword.text.toString()
-//                        val email = txtUserEmail.text.toString()
-//
-//                        usertypeIn.name = username
-//                        usertypeIn.lastname = lastname
-//                        usertypeIn.password = pass
-//                        usertypeIn.email = email
-//
-//                        userDao?.updateUser(usertypeIn)
-//                        Snackbar.make(v, "User data correctly updated", Snackbar.LENGTH_SHORT).show()
-//                    }
-//
-//                })
-//            builder.setNegativeButton("Cancel",
-//                DialogInterface.OnClickListener { dialog, id ->
-//                    // user cancelled the dialog
-//                    dialog.dismiss()
-//                })
-//
-//            // create and show the dialog
-//            val dialog = builder.create()
-//            dialog.show()
-//
-//        }
-//
-//    }
-//}*/
-
 
 
 

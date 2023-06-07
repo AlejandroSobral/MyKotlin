@@ -22,6 +22,7 @@ import com.utn.firstapp.R
 import com.utn.firstapp.activities.SecondActivity
 import com.utn.firstapp.entities.State
 import dagger.hilt.android.AndroidEntryPoint
+import org.w3c.dom.Text
 
 
 @AndroidEntryPoint
@@ -31,10 +32,12 @@ class LoginFrgmt : Fragment() {
         fun newInstance() = LoginFrgmt()
     }
     private val viewModel: LoginFrgmtViewModel by viewModels()
+    lateinit var txtRecuPass : TextView
     lateinit var imgLoginLogo: ImageView
     lateinit var loadingPb: ProgressBar
     lateinit var btnNavigate: Button
     lateinit var btnSignUp: Button
+    lateinit var btnRecPass: Button
     lateinit var v: View
     lateinit var inputuser: TextInputLayout
     lateinit var inputpass: TextInputLayout
@@ -55,6 +58,8 @@ class LoginFrgmt : Fragment() {
         inputpass = v.findViewById(R.id.edtLoginSgnUpPassword)
         imgLoginLogo = v.findViewById(R.id.imgLoginLogo)
         loadingPb = v.findViewById(R.id.LoginProgressBar);
+        txtRecuPass = v.findViewById(R.id.txtRecPass)
+        btnRecPass = v.findViewById(R.id.btnRecPass)
         Glide.with(v).load(imgLoginLogoURL).into(imgLoginLogo)
 
         //Password stars hidden
@@ -98,6 +103,8 @@ class LoginFrgmt : Fragment() {
                     btnNavigate.visibility = View.INVISIBLE
                     inputpass.visibility = View.INVISIBLE
                     inputuser.visibility = View.INVISIBLE
+                    txtRecuPass.visibility = View.INVISIBLE
+                    btnRecPass.visibility = View.INVISIBLE
                 }
 
                 State.FAILURE -> {
@@ -106,6 +113,8 @@ class LoginFrgmt : Fragment() {
                     btnNavigate.visibility = View.VISIBLE
                     inputpass.visibility = View.VISIBLE
                     inputuser.visibility = View.VISIBLE
+                    txtRecuPass.visibility = View.VISIBLE
+                    btnRecPass.visibility = View.VISIBLE
                     loadingPb.visibility = View.GONE;
                 }
 
@@ -120,16 +129,24 @@ class LoginFrgmt : Fragment() {
 
         btnSignUp.setOnClickListener {
             val action = LoginFrgmtDirections.actionLoginFragmentToUserSignup2()
+
             findNavController().navigate(action)
         }
+
+
+        btnRecPass.setOnClickListener {
+            val action = LoginFrgmtDirections.actionLoginFragmentToRecuPassFrgmt()
+            findNavController().navigate(action)
+        }
+
 
         btnNavigate.setOnClickListener {
                 /* OLD METHODS
                 viewModel.getAuthFromFirestone(inputuser.text.toString(), inputpass.text.toString())
 
                 viewModel.getAuthFromFirestoneCour(inputuser.text.toString(), inputpass.text.toString()) */
-            inputuser.editText?.setText("dd@ew.com")
-            inputpass.editText?.setText("123456")
+            //inputuser.editText?.setText("dd@ew.com")
+            //inputpass.editText?.setText("123456")
                 viewModel.myFirebaseLogin(inputuser.editText?.text.toString(), inputpass.editText?.text.toString())
         }
     }

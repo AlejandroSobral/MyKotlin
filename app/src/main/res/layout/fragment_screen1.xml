@@ -143,5 +143,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgLoginLogo" />
 
+    <Button
+        android:id="@+id/btnRecPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F8ABAB"
+        android:text="Recover pass"
+        android:textColor="#000000"
+        app:cornerRadius="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp"
+        app:layout_constraintVertical_bias="0.582" />
+
+    <TextView
+        android:id="@+id/txtRecPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do not remember your password?"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnRecPass"
+        app:layout_constraintStart_toStartOf="@+id/btnRecPass"
+        app:layout_constraintTop_toBottomOf="@+id/btnRecPass"
+        app:layout_constraintVertical_bias="0.157" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
