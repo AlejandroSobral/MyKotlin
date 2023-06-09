@@ -11,6 +11,28 @@ import com.utn.firstapp.entities.ClubRepository
 
 class PreferencesManager(private val sharedPreferences: SharedPreferences, private val gson: Gson) {
 
+
+
+    fun saveNamedLoc(saveNamedLoc: String) {
+        val uJson = gson.toJson(saveNamedLoc)
+        sharedPreferences.edit().putString("NamedLoc", uJson).apply()
+    }
+
+    fun getNamedLoc() :String {
+        val uJson = sharedPreferences.getString("NamedLoc", null)
+        return gson.fromJson(uJson, String::class.java)
+    }
+
+    fun saveLocation(location: String) {
+        val uJson = gson.toJson(location)
+        sharedPreferences.edit().putString("GPSLoc", uJson).apply()
+    }
+
+    fun getLocation(): String {
+        val uJson = sharedPreferences.getString("GPSLoc", null)
+        return gson.fromJson(uJson, String::class.java)
+    }
+
     fun getCurrentUser(): User? {
         val userJson = sharedPreferences.getString("currentUser", null)
         return if (userJson != null) {
