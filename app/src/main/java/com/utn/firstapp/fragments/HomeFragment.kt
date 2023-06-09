@@ -97,7 +97,7 @@ class HomeFragment : Fragment() {
                 State.SUCCESS -> {
                     locationFlag.visibility = View.VISIBLE
                     val locationName = viewModel.getNamedLocation()
-                    Snackbar.make(v, "You location has been set at $locationName properly.", Snackbar.LENGTH_SHORT).show()
+                    //Snackbar.make(v, "You location has been set at $locationName properly.", Snackbar.LENGTH_SHORT).show()
                 }
                 State.FAILURE -> {
 
