@@ -1,8 +1,10 @@
 package com.utn.firstapp.fragments
 
+import android.Manifest
 import android.app.Activity.RESULT_OK
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.os.Handler
@@ -17,6 +19,8 @@ import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
@@ -271,7 +275,14 @@ class UserDdetailFragment() : Fragment() {
         }
 
         updateProfPicebtn.setOnClickListener {
-            takePicture(v)
+
+
+            if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(requireActivity(), arrayOf(Manifest.permission.CAMERA), 1)
+            }else{
+                takePicture(v)
+            }
+
         }
 
         viewProfPicbtn.setOnClickListener {
