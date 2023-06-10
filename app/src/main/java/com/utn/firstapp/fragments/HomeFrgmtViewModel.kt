@@ -47,7 +47,7 @@ class HomeFrgmtViewModel @Inject constructor(
     val dbInt = Firebase.firestore
 
 
-    fun getNamedLocation() :String {
+    fun getNamedLocation(): String {
         return preferencesManager.getNamedLoc()
     }
 
@@ -63,8 +63,6 @@ class HomeFrgmtViewModel @Inject constructor(
     }
 
 
-
-
     fun mygetClubsFromDBCorWithFilter() {
         state.postValue(State.LOADING)
         var result: ClubRepository? = null
@@ -74,7 +72,8 @@ class HomeFrgmtViewModel @Inject constructor(
 
                 result = getClubsCor()
                 Log.d("Filtering", "namedLocation $namedLocation")
-                val newList = result?.clubList?.filter { it.country == namedLocation } as MutableList<Club>
+                val newList =
+                    result?.clubList?.filter { it.country == namedLocation } as MutableList<Club>
                 Log.d("Filtering", "NewList $newList")
 
                 result!!.clubList = newList
@@ -91,9 +90,7 @@ class HomeFrgmtViewModel @Inject constructor(
                 }
             }
 
-        }
-        catch(e:Exception)
-        {
+        } catch (e: Exception) {
         }
 
     }
@@ -118,9 +115,7 @@ class HomeFrgmtViewModel @Inject constructor(
                 }
             }
 
-        }
-        catch(e:Exception)
-        {
+        } catch (e: Exception) {
         }
 
     }
@@ -193,24 +188,61 @@ class HomeFrgmtViewModel @Inject constructor(
                         preferencesManager.saveLocation(location.toString())
                         stateLocation.postValue(State.SUCCESS)
                     }
-                }
-                catch(e:Exception){
-                        // Handles errors
-                        Log.e("Loc", "Error at getting GeoLocation")
-                        stateLocation.postValue(State.FAILURE)
+                } catch (e: Exception) {
+                    // Handles errors
+                    Log.e("Loc", "Error at getting GeoLocation")
+                    stateLocation.postValue(State.FAILURE)
                 }
             }
-        }catch (e: Exception){
+        } catch (e: Exception) {
             stateLocation.postValue(State.FAILURE)
         }
     }
 
-    fun getFlagByLocation():String?{
+    fun getFlagByLocation(): String? {
         val country = preferencesManager.getNamedLoc()
-        if(country == "Argentina") {
+        if (country == "Argentina") {
             return "https://www.promiedos.com.ar/images/paises/ar.png"
         }
-        else return null
+        if (country == "Alemania") {
+            return "https://www.promiedos.com.ar/images/paises/de.png"
+        }
+        if (country == "Brasil") {
+            return "https://www.promiedos.com.ar/images/paises/br.png"
+        }
+        if (country == "Italia") {
+            return "https://www.promiedos.com.ar/images/paises/it.png"
+        }
+        if (country == "Inglaterra") {
+            return "https://www.promiedos.com.ar/images/paises/in.png"
+        }
+        if (country == "Paraguay") {
+            return "https://www.promiedos.com.ar/images/paises/py.png"
+        }
+        if (country == "Uruguay") {
+            return "https://www.promiedos.com.ar/images/paises/uy.png"
+        }
+        if (country == "España") {
+            return "https://www.promiedos.com.ar/images/paises/es.png"
+        }
+        if (country == "Francia") {
+            return "https://www.promiedos.com.ar/images/paises/fr.png"
+        }
+        if (country == "Colombia") {
+            return "https://www.promiedos.com.ar/images/paises/co.png"
+        }
+        if (country == "Países bajos") {
+            return "https://www.promiedos.com.ar/images/paises/ho.png"
+        }
+        if (country == "México") {
+            return "https://www.promiedos.com.ar/images/paises/mx.png"
+        }
+        if (country == "Chile") {
+            return "https://www.promiedos.com.ar/images/paises/cl.png"
+        }
+        if (country == "Estados Unidos") {
+            return "https://www.promiedos.com.ar/images/paises/us.png"
+        } else return null
     }
 
 }

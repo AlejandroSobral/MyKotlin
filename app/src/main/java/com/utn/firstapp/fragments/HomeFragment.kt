@@ -31,6 +31,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -157,6 +158,8 @@ class HomeFragment : Fragment() {
 
                 }
             }
+
+            recClubs.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
             recClubs.layoutManager = LinearLayoutManager(context)
             recClubs.adapter = adapter
 
