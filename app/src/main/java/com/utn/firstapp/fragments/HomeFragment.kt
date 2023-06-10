@@ -13,6 +13,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.ProgressBar
@@ -65,6 +66,7 @@ class HomeFragment : Fragment() {
     var imgHomeLogoURL: String = "https://assets.stickpng.com/images/609912b13ae4510004af4a22.png"
     lateinit var imgHomeLogo: ImageView
     lateinit var locationFlag : ImageView
+    lateinit var textFilter : AutoCompleteTextView
 
     private lateinit var switchLocFil: Switch
     lateinit var btnAddClub: Button
@@ -85,6 +87,7 @@ class HomeFragment : Fragment() {
         btnAddClub = v.findViewById(R.id.btnAddClub)
         loadingPb = v.findViewById(R.id.homeLoadingProgressBar)
         locationFlag = v.findViewById(R.id.locationCountryFlag)
+
 
         locationFlag.visibility = View.INVISIBLE
 
