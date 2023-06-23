@@ -145,8 +145,8 @@ class LoginFrgmt : Fragment() {
                 viewModel.getAuthFromFirestone(inputuser.text.toString(), inputpass.text.toString())
 
                 viewModel.getAuthFromFirestoneCour(inputuser.text.toString(), inputpass.text.toString()) */
-            inputuser.editText?.setText("asobralg1@gmail.com")
-            inputpass.editText?.setText("123456")
+            //inputuser.editText?.setText("asobralg1@gmail.com")
+            //inputpass.editText?.setText("123456")
                 viewModel.myFirebaseLogin(inputuser.editText?.text.toString(), inputpass.editText?.text.toString())
         }
     }
