@@ -91,8 +91,7 @@ class HomeFragment : Fragment() {
 
         locationFlag.visibility = View.INVISIBLE
 
-        val locationFlagURL = viewModel.getFlagByLocation()
-        Glide.with(v).load(locationFlagURL).into(locationFlag)
+
         Glide.with(v).load(imgHomeLogoURL).into(imgHomeLogo)
 
 
@@ -102,6 +101,8 @@ class HomeFragment : Fragment() {
                     locationFlag.visibility = View.VISIBLE
                     val locationName = viewModel.getNamedLocation()
                     //Snackbar.make(v, "You location has been set at $locationName properly.", Snackbar.LENGTH_SHORT).show()
+                    val locationFlagURL = viewModel.getFlagByLocation()
+                    Glide.with(v).load(locationFlagURL).into(locationFlag)
                 }
                 State.FAILURE -> {
 
