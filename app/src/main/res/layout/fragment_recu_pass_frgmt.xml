@@ -38,26 +38,27 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="232dp"
         android:hint="Email"
-        app:boxStrokeColor="@color/black"
+        app:boxStrokeColor="@color/white"
         app:boxStrokeErrorColor="@color/black"
         app:boxStrokeWidth="2dp"
         app:counterEnabled="true"
         app:counterMaxLength="30"
-        app:counterTextColor="@color/black"
+        app:counterTextColor="@color/white"
         app:endIconMode="password_toggle"
         app:helperTextTextColor="@color/black"
         app:hintTextColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:prefixTextColor="#FFFFFF">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/beautyboxPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:maxLength="30"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textColorHint="#000000" />
 
     </com.google.android.material.textfield.TextInputLayout>
